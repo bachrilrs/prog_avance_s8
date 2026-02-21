@@ -2,9 +2,118 @@
 # AUTHOR: Bachri Laroussi
 # DATE: 2025-11-26
 # M1 BBS - S7 Graphs
-
+"""Graphmaster: a simple graph library for educational purposes."""
 import math
 
+
+class Graph:
+    def __init__(self, directed=True, weighted=False, weight_attribute=None):
+        """Remplace create_graph"""
+        self.nodes = {}       # node_id -> attributes (dict)
+        self.edges = {}       # node_id1 -> {node_id2 -> edge_attributes}
+        self.directed = directed
+        self.weighted = weighted
+        self.weight_attribute = weight_attribute
+
+
+    def add_node(self, node_id, attributes=None):
+        """Remplace add_node(g, ...)"""
+        if node_id not in self.nodes:
+            self.nodes[node_id] = attributes if attributes is not None else {}
+            self.edges[node_id] = {}
+        return self.nodes[node_id]
+
+    def node_exists(self, n):
+        """Check if a node exists in the graph."""
+        return n in self.nodes
+
+    def nodes(self):
+        """Remplace nodes(g)"""
+        return sorted(self.nodes.keys())
+
+    def nb_nodes(self):
+        """Return the number of nodes in the graph."""
+        return len(Graph.nodes(self))
+
+    def get_edges(self):
+        """Remplace edges(g)"""
+        #TODO
+
+
+    def nb_edges(self):
+        """Return the number of edges in the graph.
+        For undirected graphs, each edge is counted once.
+        """
+        #TODO
+
+
+    def add_edge(self, u, v, attributes=None):
+        """Remplace add_edge(g, ...)"""
+        if not self.node_exists(u): self.add_node(u)
+        if not self.node_exists(v): self.add_node(v)
+
+        if v not in self.edges[u]:
+            attrs = attributes if attributes is not None else {}
+            self.edges[u][v] = attrs
+            if not self.directed:
+                self.edges[v][u] = self.edges[u][v]
+        return self.edges[u][v]
+
+    def edge_exists(self, u, v):
+        """Check if an edge from u to v exists."""
+        return self.node_exists(u) and v in self.edges[u]
+
+    def neighbors(self, node_id):
+        """Remplace neighbors(g, node_id)"""
+        return sorted(list(self.edges.get(node_id, {}).keys()))
+
+        # ... (les méthodes __init__, add_node, add_edge vues précédemment) ...
+
+    @classmethod
+    def from_delim(cls, filename, column_separator='\t',
+                   directed=True, weighted=False, weight_attribute=None):
+        """
+        Lit un fichier délimité et retourne une instance de la classe Graph.
+        Remplace la fonction read_delim.
+        """
+        g = cls(directed, weighted, weight_attribute)
+
+        with open(filename, 'r', encoding='utf-8') as f:
+            header = f.readline().rstrip()
+            if not header:
+                return g
+
+            attnames = header.split(column_separator)
+
+            if len(attnames) >= 2:
+                attnames.pop(0)
+                attnames.pop(0)
+            else:
+                attnames = []
+
+            # Lecture des lignes de données
+            for line in f:
+                line = line.rstrip()
+                if not line:
+                    continue
+
+                vals = line.split(column_separator)
+                if len(vals) < 2:
+                    continue
+
+                u = vals.pop(0) # Source
+                v = vals.pop(0) # Cible
+
+                # Construction du dictionnaire d'attributs pour l'arête
+                att = {}
+                for i, name in enumerate(attnames):
+                    if i < len(vals):
+                        att[name] = vals[i]
+
+                # Utilisation de la méthode interne de l'instance g
+                g.add_edge(u, v, att)
+
+        return g
 
 def create_graph(directed = True, weighted = False, weight_attribute = None):
     """Create and return an empty graph structure.
@@ -23,128 +132,15 @@ def create_graph(directed = True, weighted = False, weight_attribute = None):
     dict
         A graph represented as a dictionary with 'nodes' and 'edges' mappings.
     """
-    g = { 'nodes': {}, 'edges': {}, 'directed': directed, 'weighted': weighted, 'weight_attribute': weight_attribute }
+    g = { 'nodes': {}, 'edges': {}, 'directed': directed,
+          'weighted': weighted, 'weight_attribute': weight_attribute }
     return g
 
 
-def add_node(g, node_id, attributes = None):
-    """Add a node to the graph and return its attribute dictionary.
-
-    Parameters
-    ----------
-    g : dict
-        Graph object.
-    node_id :
-        Identifier of the node (string, int, ...).
-    attributes : dict, optional
-        Initial attributes for the node.
-
-    Returns
-    -------
-    dict
-        The attribute dictionary associated with this node.
-    """
-    if node_id not in g['nodes']: # ensure node does not already exist
-        if attributes is None: # create empty attributes if not provided
-            attributes = {}
-        g['nodes'][node_id] = attributes
-        g['edges'][node_id] = {} # init outgoing edges
-    return g['nodes'][node_id] # return node attributes
-
-
-def add_edge(g, node_id1, node_id2, attributes = None):
-    """Add a (directed) edge from node_id1 to node_id2 and return its attributes.
-
-    If the nodes do not exist yet, they are created automatically.
-
-    Parameters
-    ----------
-    g : dict
-        Graph object.
-    node_id1 : hashable
-        Source node identifier.
-    node_id2 : hashable
-        Target node identifier.
-    attributes : dict, optional
-        Initial attributes for the edge.
-
-    Returns
-    -------
-    dict
-        The attribute dictionary associated with this edge.
-    """
-    if not node_exists(g , node_id1):
-        add_node(g, node_id1) # ensure node1 exists
-    if not node_exists(g , node_id2):
-        add_node(g, node_id2) # ensure node2 exists
-
-    # add edge(s) only if they do not exist
-    if not edge_exists(g,node_id1,node_id2):
-        if attributes is None: # create empty attributes if not provided
-            attributes = {}
-        g['edges'][node_id1][node_id2] = attributes
-        if not g['directed']:
-            g['edges'][node_id2][node_id1] = g['edges'][node_id1][node_id2] # share the same attributes as n1->n2
-    return g['edges'][node_id1][node_id2] # return edge attributes
-
-def node_exists(g, n):
-    """Return True if the given node identifier exists in the graph."""
-    return n in g['nodes']
-
-def edge_exists(g, n1 , n2):
-    """Return True if an edge from n1 to n2 exists in the graph."""
-    return node_exists(g,n1) and n2 in g['edges'][n1]
-
-def nodes(g):
-    """Return the list of node identifiers of the graph, sorted."""
-    return sorted(g['nodes'].keys())
 
 
 
-def read_delim(filename, column_separator='\t', directed=True, weighted=False, weight_attribute=None):
-    """Read an edge list from a delimited text file and build a graph.
 
-    The file format is:
-        node_id1 <sep> node_id2 <sep> att1 <sep> att2 ...
-
-    Parameters
-    ----------
-    filename : str
-        Path to the input file.
-    column_separator : str, optional
-        Column separator used in the file (default '\\t').
-    directed : bool, optional
-        If True, build a directed graph.
-    weighted : bool, optional
-        If True, edges may carry a numeric weight.
-    weight_attribute : str or None, optional
-        Name of the edge attribute used to store weights.
-
-    Returns
-    -------
-    dict
-        A graph built from the file.
-    """
-    g = create_graph(directed, weighted, weight_attribute)
-    with open(filename, 'r', encoding='utf-8') as f:
-        # GET COLUMNS NAMES
-        tmp = f.readline().rstrip()
-        attnames= tmp.split(column_separator)
-        # REMOVES FIRST TWO COLUMNS WHICH CORRESPONDS TO THE LABELS OF THE CONNECTED VERTICES
-        attnames.pop(0)  # remove first column name (source node not to be in attribute names)
-        attnames.pop(0)  # remove second column (target node ...)
-        # PROCESS THE REMAINING LINES
-        row = f.readline().rstrip()
-        while row:
-            vals = row.split(column_separator)
-            u = vals.pop(0)
-            v = vals.pop(0)
-            att = {}
-            for i in range(len(attnames)):
-                att[ attnames[i] ] = vals[i]
-            add_edge(g, u, v, att)
-            row = f.readline().rstrip() # NEXT LINE
-        return g
 
 def nb_nodes(g):
     """Return the number of nodes in the graph."""
@@ -156,12 +152,6 @@ def nb_edges(g):
     """
     total = sum(len(adj) for adj in g['edges'].values())
     return total if g['directed'] else total //2
-
-
-def neighbors(g, node_id):
-    """Return the sorted list of neighbors (successors) of a given node."""
-
-    return sorted(list(g['edges'].get(node_id, {}).keys()))
 
 
 def enqueue(queue,element):

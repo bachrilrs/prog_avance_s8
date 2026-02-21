@@ -5,152 +5,97 @@
 
 import re
 from collections import Counter
-import src.graphmaster
+import src.graphmaster as gm
 
-file_obo = 'data/go-basic.obo'
-def load_OBO(filename='go-basic.obo'):
-    """
-    parse the OBO file and returns the graph
-    obsolete terms are discarded
-    only is_a and part_of relationships are loaded
+class GOTerm:
+    """Class representing a GO term."""
+    def __init__(self, go_id):
+        self.id = go_id
+        self.name = ""
+        self.namespace = ""
+        self.definition = ""
+        self.parents = []  # Liste d'objets GOTerm (is_a / part_of)
+        self.parent_ids_tmp = []
+        self._parent_ids = [] # temporaire pour stocker les IDs parents avant de les transformer en références vers les objets réels
 
-    Extract of a file to be parsed:
-    [Term]
-    id: GO:0000028
-    name: ribosomal small subunit assembly
-    namespace: biological_process
-    def: "The aggregation, arrangement and bonding together of constituent RNAs and proteins to form the small ribosomal subunit." [GOC:jl]
-    subset: gosubset_prok
-    synonym: "30S ribosomal subunit assembly" NARROW [GOC:mah]
-    synonym: "40S ribosomal subunit assembly" NARROW [GOC:mah]
-    is_a: GO:0022618 ! ribonucleoprotein complex assembly
-    relationship: part_of GO:0042255 ! ribosome assembly
-    relationship: part_of GO:0042274 ! ribosomal small subunit biogenesis
-    """
-    def parseTerm(lines):
-        # search for obsolete
-        for l in lines:
-            if l.startswith('is_obsolete: true'):
-                return
-        # otherwise create node
-        go_id = re_go_id.match(lines.pop(0)).group(1)
-        go_attr = src.graphmaster.add_node(go_graph, go_id) # add node to graph and get the node attribute dict
-        go_attr['type'] = 'GOTerm'
-        for line in lines:
-            if re_go_name.match(line): go_attr['name'] = re_go_name.match(line).group(1)
-            elif re_go_namespace.match(line): go_attr['namespace'] = re_go_namespace.match(line).group(1)
-            elif re_go_def.match(line): go_attr['def'] = re_go_def.match(line).group(1)
-            elif re_go_alt_id.match(line): go_graph['alt_id'][ re_go_alt_id.match(line).group(1) ] = go_id  # alt_id → go_id
-            elif re_go_is_a.match(line):
-                parent_id = re_go_is_a.match(line).group(1)
-                src.graphmaster.add_edge(go_graph, go_id, parent_id, { 'relationship': 'is a' })
-            elif re_go_part_of.match(line):
-                parent_id = re_go_part_of.match(line).group(1)
-                src.graphmaster.add_edge(go_graph, go_id, parent_id, { 'relationship': 'part of' })
-    # method main
-    go_graph          = src.graphmaster.create_graph(directed=True, weighted=False)
-    go_graph['alt_id'] = {} # alternate GO ids
-    # regexp to parse term lines
-    re_go_id          = re.compile(r'^id:\s+(GO:\d+)\s*$')
-    re_go_name        = re.compile(r'^name:\s+(.+)\s*$')
-    re_go_namespace   = re.compile(r'^namespace:\s+(.+)\s*$')
-    re_go_def         = re.compile(r'^def:\s+(.+)\s*$')
-    re_go_alt_id      = re.compile(r'^alt_id:\s+(GO:\d+)\s*$')
-    re_go_is_a        = re.compile(r'^is_a:\s+(GO:\d+)\s')
-    # re_go_xref        = re.compile(r'^xref:\s+(\S+)\s*$')
-    re_go_part_of      = re.compile(r'^relationship:\s+part_of\s+(GO:\d+)\s')
-    # buffer each term lines, then parse lines to create GOTerm node
-    with open(filename,	'r', encoding='utf-8') as f:
-        line = f.readline().rstrip()
-        # skip header until first [Term] is reached
-        while not line.startswith('[Term]'):
-            line = f.readline().rstrip()
-        buff = []
-        line = f.readline()
-        stop = False
-        while line and not stop:
-            line = line.rstrip()
-            # new Term
-            if line.startswith('[Term]'):
-                parseTerm(buff)
-                buff=[]
-            # last Term
-            elif line.startswith('[Typedef]'):
-                parseTerm(buff)
-                stop=True
-            # or append to buffer
-            else:
-                buff.append(line)
-            line = f.readline()
-    return go_graph
+class GeneProduct:
+    """Class representing a gene product (e.g. a protein) annotated to GO terms."""
+    def __init__(self, gp_id):
+        self.id = gp_id
+        self.name = ""
+        self.desc = ""
+        self.annotations = [] # Liste d'objets GOTerm
 
-def load_goa(go, filename, warnings=True):
-    """
-    parse GOA file and add annotated gene products to previsouly loaded graph go
+class GOGraph:
+    """Class representing the Gene Ontology graph, including GO terms and gene products."""
+    def __init__(self):
+        self.terms = {}         # go_id -> objet GOTerm
+        self.gene_products = {} # gp_id -> objet GeneProduct
+        self.alt_ids = {}       # alt_id -> go_id (pour la redirection)
 
-    Extract of a file to be parsed:
-    gaf-version: 2.1
-    !GO-version: http://purl.obolibrary.org/obo/go/releases/2020-11-28/extensions/go-plus.owl
-    UniProtKB       O05154  tagX            GO:0008360      GO_REF:0000043  IEA     UniProtKB-KW:KW-0133    P       Putative glycosyltransferase TagX       tagX|SAOUHSC_00644      protein 93061   20201128        UniProt
+    def load_obo(self, filename):
+        """Load GO terms from an OBO file."""
 
-    UniProtKB       O05154  tagX            GO:0016740      GO_REF:0000043  IEA     UniProtKB-KW:KW-0808    F       Putative glycosyltransferase TagX       tagX|SAOUHSC_00644      protein 93061   20201128        UniProt
+        re_go_id = re.compile(r'^id:\s+(GO:\d+)\s*$')
+        re_go_name = re.compile(r'^name:\s+(.+)\s*$')
+        re_go_namespace = re.compile(r'^namespace:\s+(.+)\s*$')
+        re_go_is_a = re.compile(r'^is_a:\s+(GO:\d+)\s')
+        re_go_alt_id = re.compile(r'^alt_id:\s+(GO:\d+)\s*$')
+        re_go_part_of = re.compile(r'^relationship:\s+part_of\s+(GO:\d+)\s')
 
-    UniProtKB       O05204  ahpF            GO:0000302      GO_REF:0000002  IEA     InterPro:IPR012081      P       Alkyl hydroperoxide reductase subunit F ahpF|SAOUHSC_00364      protein 93061   20201128        InterPro
+        with open(filename, encoding='utf-8') as f:
+            content = f.read().split('[Term]')
+            for block in content[1:]: # On saute le header
+                lines = block.strip().split('\n')
 
-        0        1       2   3       4             5          6        7      8             9                              10
-                id    name        go_id               evidence-codes                     desc                           aliases
+                # Check obsolescence
+                if any(l.startswith('is_obsolete: true') for l in lines):
+                    continue
 
-    GAF spec: http://geneontology.org/docs/go-annotation-file-gaf-format-2.1/
-    Column     Content                         Required?     Cardinality     Example
-    1         DB                                 required     1                 UniProtKB
-    2         DB Object ID                     required     1                 P12345
-    3         DB Object Symbol                 required     1                 PHO3
-    4         Qualifier                         optional     0 or greater     NOT
-    5         GO ID                             required     1                 GO:0003993
-    6         DB:Reference (|DB:Reference)     required     1 or greater     PMID:2676709
-    7         Evidence Code                     required     1                 IMP
-    8         With (or) From                     optional     0 or greater     GO:0000346
-    9         Aspect                             required     1                 F
-    10         DB Object Name                     optional     0 or 1             Toll-like receptor 4
-    11         DB Object Synonym (|Synonym)     optional     0 or greater     hToll     Tollbooth
-    12         DB Object Type                     required     1                 protein
-    13         Taxon(|taxon)                     required     1 or 2             taxon:9606
-    14         Date                             required     1                 20090118
-    15         Assigned By                     required     1                 SGD
-    16         Annotation Extension             optional     0 or greater     part_of(CL:0000576)
-    17         Gene Product Form ID             optional     0 or 1             UniProtKB:P12345-2
-    """
-    with open(filename, 'r', encoding='utf-8') as f:
-        line = f.readline()
-        while line:
-            if not line.startswith('!'): # skip comments
+                # Extraction de l'ID pour créer l'objet
+                main_id = re_go_id.match(lines[0]).group(1)
+                term = GOTerm(main_id)
+
+                temp_parents = []
+                for line in lines:
+                    if re_go_name.match(line):
+                        term.name = re_go_name.match(line).group(1)
+                    elif re_go_namespace.match(line):
+                        term.namespace = re_go_namespace.match(line).group(1)
+                    elif re_go_alt_id.match(line):
+                        self.alt_ids[re_go_alt_id.match(line).group(1)] = main_id
+                    elif re_go_is_a.match(line):
+                        temp_parents.append(re_go_is_a.match(line).group(1))
+                    elif re_go_part_of.match(line):
+                        temp_parents.append(re_go_part_of.match(line).group(1))
+                term._parent_ids = temp_parents
+                self.terms[main_id] = term
+
+        # Post-processing : transformer les IDs parents en références vers les objets réels
+        for term in self.terms.values():
+            term.parents = [self.terms[pid] for pid in term._parent_ids if pid in self.terms]
+
+    def load_goa(self, filename):
+        '''Load gene product annotations from a GOA file (GAF format).'''
+        with open(filename, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.startswith('!'): continue
                 cols = line.rstrip().split('\t')
-                gp_id = cols[1]
-                gt_id = cols[4]
-                if gt_id not in go['nodes']: # GOTerm not found search alternate ids
-                    while gt_id not in go['nodes'] and gt_id in go['alt_id']:
-                        gt_id = go['alt_id'][gt_id] # replace term by alternate
-                if gt_id not in go['nodes']: # failure: warn user
-                    if warnings:
-                        print(f'Warning: could not attach a gene product ({gp_id}) to a non existing GO Term ({gt_id})')
-                else: # success: GOTerm to attach to was found
-                    # create node for gene product if not already present
-                    if gp_id not in go['nodes']:
-                        gp_attr = src.graphmaster.add_node(go, gp_id, { 'id': gp_id, 'type': 'GeneProduct'})
-                    # create or update gene product attributes
-                    gp_attr = go['nodes'][gp_id]
-                    gp_attr['name'] = cols[2]
-                    gp_attr['desc'] = cols[9]
-                    gp_attr['aliases'] = cols[10].split('|')
-                    # attach gene product to GOTerm
-                    # gt_attr = go['nodes'][gt_id]
-                    e_attr = src.graphmaster.add_edge(go, gp_id, gt_id)
-                    e_attr['relationship'] = 'annotation'
-                    if 'evidence-codes' not in e_attr:
-                        e_attr['evidence-codes'] = []
-                    e_attr['evidence-codes'].append( cols[6] )
-            line = f.readline()
+                gp_id, go_id = cols[1], cols[4]
 
+                # Gestion des IDs alternatifs
+                actual_go_id = self.alt_ids.get(go_id, go_id)
+
+                if actual_go_id in self.terms:
+                    # Créer le GeneProduct s'il n'existe pas
+                    if gp_id not in self.gene_products:
+                        gp = GeneProduct(gp_id)
+                        gp.name = cols[2]
+                        gp.desc = cols[9]
+                        self.gene_products[gp_id] = gp
+
+                    # Lier le produit au terme GO (et vice-versa si tu veux)
+                    self.gene_products[gp_id].annotations.append(self.terms[actual_go_id])
 
 
 def is_goterm(go, node_id):
@@ -167,7 +112,7 @@ def go_parents(go, go_id): # just for clarity
     Parents are the neighbors reached by outgoing GO→GO edges
     (e.g. 'is a', 'part of').
     """
-    return src.graphmaster.neighbors(go,go_id)
+    return gm.Graph.neighbors(go,go_id)
 
 def go_to_gps_index(go):
     """Index: go_id -> set of geneproducts directly annotated to it.
@@ -238,7 +183,7 @@ def geneproducts(go, go_id, recursive=False, go_to_gps=None, children_index=None
     list of str
         Sorted list of GeneProduct identifiers.
         """
-    if not src.graphmaster.node_exists(go, go_id) or not is_goterm(go, go_id):
+    if not gm.Graph.node_exists(go, go_id) or not is_goterm(go, go_id):
         return []
 
     if go_to_gps is None: # can be precomputed for efficiency
@@ -289,7 +234,7 @@ def goterms(go, gp_id, recursive=False):
     if gp_id not in go['nodes']:
         return []
     # goterms directly associated
-    directs = [v for v in src.graphmaster.neighbors(go , gp_id) if is_goterm(go,v)]
+    directs = [v for v in gm.Graph.neighbors(go , gp_id) if is_goterm(go,v)]
     if not recursive:
         return sorted(set(directs))
     # 2) recursive=True → we also add ancestors
@@ -321,18 +266,18 @@ def induced_goterm_subgraph(go, namespace=None):
     """Subgraph induced by GO terms only (optionally filtered by namespace)."""
 
     keep = set(goterm_ids(go, namespace=namespace))
-    sg = src.graphmaster.create_graph(directed=True, weighted=False)
+    sg = gm.create_graph(directed=True, weighted=False)
     sg["alt_id"] = {}  # keeps compatibility with GO graph structure in case
 
     for t in keep:
-        src.graphmaster.add_node(sg, t, go["nodes"][t].copy())
+        gm.Graph.add_node(sg, t, go["nodes"][t].copy())
 
     for child in keep: # for each GO term
-        for parent in src.graphmaster.neighbors(go, child):
+        for parent in gm.Graph.neighbors(go, child):
             if parent in keep: # only GO terms
                 rel = go["edges"][child][parent].get("relationship")
                 if rel in ("is a", "part of"): # only hierarchy edges
-                    src.graphmaster.add_edge(sg, child, parent, go["edges"][child][parent].copy())
+                    gm.Graph.add_edge(sg, child, parent, go["edges"][child][parent].copy())
     return sg
 
 def max_depth_go(go, namespace=None, return_path=False, reverse_path=False):
@@ -365,19 +310,19 @@ def max_depth_go(go, namespace=None, return_path=False, reverse_path=False):
     """
     dag = induced_goterm_subgraph(go, namespace=namespace)
 
-    if src.graphmaster.topological_sort(dag) is None:
+    if gm.topological_sort(dag) is None:
         return False  # not a DAG!
-    order = src.graphmaster.topological_sort(dag)  # works because GO DAG is acyclic
+    order = gm.topological_sort(dag)  # works because GO DAG is acyclic
     depth = {}
     pred  = {}
-    for t in src.graphmaster.nodes(dag):
+    for t in gm.Graph.nodes(dag):
         depth[t] = 0
         pred[t] = None
 
 
     # Dynamic programming: we found a longer path to parent via child
     for child in reversed(order): # for each node in reverse topological order
-        for parent in src.graphmaster.neighbors(dag, child):
+        for parent in gm.Graph.neighbors(dag, child):
             if depth[child] < depth[parent] + 1:
                 depth[child] = depth[parent] + 1
                 pred[child] = parent
@@ -426,7 +371,7 @@ def count_goterm(go, by_namespace=False):
             'cellular_component' : 0
         }
         for el in dico.keys():
-            dico[el] = dico.get(el,0) + len(src.graphmaster.select_nodes(go , 'namespace', el))
+            dico[el] = dico.get(el,0) + len(gm.select_Graph.nodes(go , 'namespace', el))
         return dico
 
     res = 0
@@ -561,8 +506,8 @@ def summary(go):
         "annotations": nb_ann,
         "avg_ann_per_GP": nb_ann / nb_gp if nb_gp else 0.0,
     }
-    res = src.graphmaster.relationships(go)
-    for el in src.graphmaster.relationships(go).keys():
+    res = gm.relationships(go)
+    for el in gm.relationships(go).keys():
         sum_go[f"Nombre de relations {el}"] = res[el]
     return sum_go
 
