@@ -15,60 +15,6 @@ class Graph:
         self.weighted = weighted
         self.weight_attribute = weight_attribute
 
-    def add_node(self, node_id, attributes=None):
-        """Add a node to the graph if it doesn't exist, and return the Node object."""
-        if node_id not in self.nodes:
-            new_node = Node(node_id, attributes)
-            self.nodes[node_id] = new_node
-            self.edges[node_id] = {}
-        return self.nodes[node_id]
-
-    def add_edge(self, u_id, v_id, attributes=None):
-        """Add an edge from u_id to v_id with optional attributes. Creates nodes if they don't exist."""
-
-        u_node = self.add_node(u_id)
-        v_node = self.add_node(v_id)
-
-        if v_id not in self.edges[u_id]:
-            new_edge = Edge(u_node, v_node, attributes)
-            self.edges[u_id][v_id] = new_edge
-         
-            if not self.directed:
-
-                self.edges[v_id][u_id] = Edge(v_node, u_node, attributes)
-     
-        return self.edges[u_id][v_id]
-
-    def neighbors(self, node_id):
-        """Return a sorted list of neighbors of a node."""
-        return sorted(self.edges.get(node_id, {}).keys())
-    
-    def node_exists(self, n):
-        """Check if a node exists in the graph."""
-        return n in self.nodes
-
-    def nb_nodes(self):
-        """Return the number of nodes in the graph."""
-        return len(self.nodes)
-
-    def get_edges(self):
-        """Remplace edges(g)"""
-        all_edges = []
-        for neighbors_dict in self.edges.values():
-            all_edges.append(neighbors_dict.values())
-        return all_edges
-
-    def nb_edges(self):
-        """Return the number of edges in the graph.
-        For undirected graphs, each edge is counted once.
-        """
-        total = sum(len(adj) for adj in self.edges.values())
-        return total // (1 if self.directed else 2)
-
-    def edge_exists(self, u, v):
-        """Check if an edge from u to v exists."""
-        return self.node_exists(u) and v in self.edges[u]
-
     @classmethod
     def from_delim(cls, filename, column_separator='\t',
                    directed=True, weighted=False, weight_attribute=None):
@@ -115,12 +61,66 @@ class Graph:
 
         return g
 
+    def add_node(self, node_id, attributes=None):
+        """Add a node to the graph if it doesn't exist, and return the Node object."""
+        if node_id not in self.nodes:
+            new_node = Node(node_id, attributes)
+            self.nodes[node_id] = new_node
+            self.edges[node_id] = {}
+        return self.nodes[node_id]
+
+    def add_edge(self, u_id, v_id, attributes=None):
+        """Add an edge from u_id to v_id with optional attributes. Creates nodes if they don't exist."""
+
+        u_node = self.add_node(u_id)
+        v_node = self.add_node(v_id)
+
+        if v_id not in self.edges[u_id]:
+            new_edge = Edge(u_node, v_node, attributes)
+            self.edges[u_id][v_id] = new_edge
+
+            if not self.directed:
+
+                self.edges[v_id][u_id] = Edge(v_node, u_node, attributes)
+
+        return self.edges[u_id][v_id]
+
+    def neighbors(self, node_id):
+        """Return a sorted list of neighbors of a node."""
+        return sorted(self.edges.get(node_id, {}).keys())
+
+    def node_exists(self, n):
+        """Check if a node exists in the graph."""
+        return n in self.nodes
+
+    def nb_nodes(self):
+        """Return the number of nodes in the graph."""
+        return len(self.nodes)
+
+    def get_edges(self):
+        """Remplace edges(g)"""
+        all_edges = []
+        for neighbors_dict in self.edges.values():
+            all_edges.extend(neighbors_dict.values())
+        return all_edges
+
+    def nb_edges(self):
+        """Return the number of edges in the graph.
+        For undirected graphs, each edge is counted once.
+        """
+        total = sum(len(adj) for adj in self.edges.values())
+        return total // (1 if self.directed else 2)
+
+    def edge_exists(self, u, v):
+        """Check if an edge from u to v exists."""
+        return self.node_exists(u) and v in self.edges[u]
+
     def in_degree(self,node_id):
         """Return the in-degree of a node (number of incoming edges).
         Visits all nodes to count how many have an edge to node_id."""
         cpt= 0
-        for node in self.nodes:
-            if node in self.neighbors(node_id):
+        for other in self.nodes:
+            if node_id in self.neighbors(other):
                 cpt +=1
         return cpt
 
@@ -150,12 +150,12 @@ class Graph:
             Node identifiers matching the condition.
             Important point for the other functions that use Select nodes.
         """
-        res = list()
-        for n in self.nodes.values():
-            if attribut in n[n] and g['nodes'][n][attribut] == attribut_value:
-                res.append(n)
+        res = []
+        for node_obj in self.nodes.values():
+            if node_obj.get(attribut) == attribut_value:
+                res.append(node_obj.id)
         return res
- 
+
     def filter_edges(self,attribut , attribut_value):
         """Return a list of edges (u, v) whose attribute matches a given value.
 
@@ -173,7 +173,15 @@ class Graph:
         set of tuple
             Set of (u, v) edge pairs matching the condition.
         """
-        return (e for e in self.get_edges() if e.get(attribut) == attribut_value)
+        return [e for e in self.get_edges() if e.get(attribut) == attribut_value]
+
+    def relationships(self):
+        """Print the number of edges for each relationship type in the graph."""
+        liste = ['is a' , 'part of' , 'annotation']
+        res = {}
+        for el in liste:
+            res[el] = len(self.filter_edges('relationship',el))
+        return res
 
 
 class Node:
@@ -183,8 +191,11 @@ class Node:
         self.attributes = attributes if attributes is not None else {}
 
     def get(self, key, default=None):
-        """Accès facile aux attributs"""
+        """get node attributes"""
         return self.attributes.get(key, default)
+
+    def __str__(self):
+        return f"Node({self.id})"
 
 class Edge:
     """Edge class representing a connection between two nodes with optional attributes."""
@@ -194,9 +205,11 @@ class Edge:
         self.attributes = attributes if attributes is not None else {}
 
     def get(self, key, default=None):
-        """get attributes"""
+        """get edge attributes"""
         return self.attributes.get(key, default)
 
+    def __str__(self):
+        return f"Edge({self.source.id} -> {self.target.id})"
 
 
 
@@ -219,36 +232,6 @@ def dequeue(queue):
     if len(queue)==0:
         raise IndexError("Empty queue")
     return queue.pop(0) # first in first out, so pop(0)
-
-
-
-
-
-
-
-def filter_edges(g,attribut , attribut_value):
-    """Return a list of edges (u, v) whose attribute matches a given value.
-
-    Parameters
-    ----------
-    g : dict
-        Graph object.
-    attribut : str
-        Edge attribute name.
-    attribut_value : any
-        Value the attribute must have.
-
-    Returns
-    -------
-    list of tuple
-        List of (u, v) edge pairs.
-    """
-    res = list()
-    for u in nodes(g):
-        for v in neighbors(g,u):
-            if attribut in g['edges'][u][v] and g['edges'][u][v][attribut] == attribut_value:
-                res.append((u,v)) # adding edge in res in form of tuple
-    return res
 
 
 def relationships(g):
@@ -435,17 +418,7 @@ def topological_sort(g):
 
     parcours = dfs(g)
 
-    # Gets nodes and their 'finished' time.
-    # nodes = list(parcours['finished'].keys())
     fins = parcours['finished']
-
-    # Sort nodes by finished time
-    # for i in range(len(nodes)):
-    #    for j in range(i+1, len(nodes)):
-    #       if fins[nodes[i]] < fins[nodes[j]]:
-    #          som = nodes[i]
-    #          nodes[i] = nodes[j]
-    #          nodes[j] = som
 
 
     sorted_nodes = list(fins.keys())
@@ -469,7 +442,7 @@ def transpose_graph(g):
     dict
         New graph representing the transpose of g.
     """
-    gt = create_graph(
+    gt = Graph(
         directed = g['directed'],
         weighted = g['weighted'],
         weight_attribute = g['weight_attribute']

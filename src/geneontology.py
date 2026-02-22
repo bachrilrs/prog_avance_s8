@@ -371,7 +371,7 @@ def count_goterm(go, by_namespace=False):
             'cellular_component' : 0
         }
         for el in dico.keys():
-            dico[el] = dico.get(el,0) + len(gm.select_Graph.nodes(go , 'namespace', el))
+            dico[el] = dico.get(el,0) + len(gm.select.nodes(go , 'namespace', el))
         return dico
 
     res = 0
