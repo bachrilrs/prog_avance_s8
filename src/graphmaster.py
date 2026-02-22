@@ -2,72 +2,72 @@
 # AUTHOR: Bachri Laroussi
 # DATE: 2025-11-26
 # M1 BBS - S7 Graphs
-"""Graphmaster: a simple graph library for educational purposes."""
+"""Graphmaster module: a simple graph class and related functions."""
 import math
 
 
 class Graph:
+    """Graph class representing a directed or undirected graph with optional weighted edges."""
     def __init__(self, directed=True, weighted=False, weight_attribute=None):
-        """Remplace create_graph"""
-        self.nodes = {}       # node_id -> attributes (dict)
-        self.edges = {}       # node_id1 -> {node_id2 -> edge_attributes}
+        self.nodes = {} # node_id (str) -> objet Node
+        self.edges = {} # node_id (str) -> { target_id (str) -> objet Edge }
         self.directed = directed
         self.weighted = weighted
         self.weight_attribute = weight_attribute
 
-
     def add_node(self, node_id, attributes=None):
-        """Remplace add_node(g, ...)"""
+        """Add a node to the graph if it doesn't exist, and return the Node object."""
         if node_id not in self.nodes:
-            self.nodes[node_id] = attributes if attributes is not None else {}
+            new_node = Node(node_id, attributes)
+            self.nodes[node_id] = new_node
             self.edges[node_id] = {}
         return self.nodes[node_id]
 
+    def add_edge(self, u_id, v_id, attributes=None):
+        """Add an edge from u_id to v_id with optional attributes. Creates nodes if they don't exist."""
+
+        u_node = self.add_node(u_id)
+        v_node = self.add_node(v_id)
+
+        if v_id not in self.edges[u_id]:
+            new_edge = Edge(u_node, v_node, attributes)
+            self.edges[u_id][v_id] = new_edge
+         
+            if not self.directed:
+
+                self.edges[v_id][u_id] = Edge(v_node, u_node, attributes)
+     
+        return self.edges[u_id][v_id]
+
+    def neighbors(self, node_id):
+        """Return a sorted list of neighbors of a node."""
+        return sorted(self.edges.get(node_id, {}).keys())
+    
     def node_exists(self, n):
         """Check if a node exists in the graph."""
         return n in self.nodes
 
-    def nodes(self):
-        """Remplace nodes(g)"""
-        return sorted(self.nodes.keys())
-
     def nb_nodes(self):
         """Return the number of nodes in the graph."""
-        return len(Graph.nodes(self))
+        return len(self.nodes)
 
     def get_edges(self):
         """Remplace edges(g)"""
-        #TODO
-
+        all_edges = []
+        for neighbors_dict in self.edges.values():
+            all_edges.append(neighbors_dict.values())
+        return all_edges
 
     def nb_edges(self):
         """Return the number of edges in the graph.
         For undirected graphs, each edge is counted once.
         """
-        #TODO
-
-
-    def add_edge(self, u, v, attributes=None):
-        """Remplace add_edge(g, ...)"""
-        if not self.node_exists(u): self.add_node(u)
-        if not self.node_exists(v): self.add_node(v)
-
-        if v not in self.edges[u]:
-            attrs = attributes if attributes is not None else {}
-            self.edges[u][v] = attrs
-            if not self.directed:
-                self.edges[v][u] = self.edges[u][v]
-        return self.edges[u][v]
+        total = sum(len(adj) for adj in self.edges.values())
+        return total // (1 if self.directed else 2)
 
     def edge_exists(self, u, v):
         """Check if an edge from u to v exists."""
         return self.node_exists(u) and v in self.edges[u]
-
-    def neighbors(self, node_id):
-        """Remplace neighbors(g, node_id)"""
-        return sorted(list(self.edges.get(node_id, {}).keys()))
-
-        # ... (les méthodes __init__, add_node, add_edge vues précédemment) ...
 
     @classmethod
     def from_delim(cls, filename, column_separator='\t',
@@ -115,44 +115,93 @@ class Graph:
 
         return g
 
-def create_graph(directed = True, weighted = False, weight_attribute = None):
-    """Create and return an empty graph structure.
+    def in_degree(self,node_id):
+        """Return the in-degree of a node (number of incoming edges).
+        Visits all nodes to count how many have an edge to node_id."""
+        cpt= 0
+        for node in self.nodes:
+            if node in self.neighbors(node_id):
+                cpt +=1
+        return cpt
 
-    Parameters
-    ----------
-    directed : bool, optional
-        If True, edges are directed (default True).
-    weighted : bool, optional
-        If True, edges may carry a numeric weight.
-    weight_attribute : str or None, optional
-        Name of the edge attribute used to store weights.
+    def out_degree(self,node_id):
+        """Return the out-degree of a node (number of outgoing edges)."""
+        return len(self.neighbors(node_id))
 
-    Returns
-    -------
-    dict
-        A graph represented as a dictionary with 'nodes' and 'edges' mappings.
-    """
-    g = { 'nodes': {}, 'edges': {}, 'directed': directed,
-          'weighted': weighted, 'weight_attribute': weight_attribute }
-    return g
+    def degree(self,node_id):
+        """Return the total degree of a node (in-degree + out-degree)."""
+        return (self.in_degree(node_id) + self.out_degree(node_id))
+
+    def select_nodes(self,attribut,attribut_value):
+        """Return a list of node identifiers having a given attribute value.
+
+        Parameters
+        ----------
+        g : dict
+            Graph object.
+        attribut : str
+            Attribute name to test on nodes.
+        attribut_value : any
+            Value the attribute must have.
+
+        Returns
+        -------
+        list of hashable
+            Node identifiers matching the condition.
+            Important point for the other functions that use Select nodes.
+        """
+        res = list()
+        for n in self.nodes.values():
+            if attribut in n[n] and g['nodes'][n][attribut] == attribut_value:
+                res.append(n)
+        return res
+ 
+    def filter_edges(self,attribut , attribut_value):
+        """Return a list of edges (u, v) whose attribute matches a given value.
+
+        Parameters
+        ----------
+        g : dict
+            Graph object.
+        attribut : str
+            Edge attribute name.
+        attribut_value : any
+            Value the attribute must have.
+
+        Returns
+        -------
+        set of tuple
+            Set of (u, v) edge pairs matching the condition.
+        """
+        return (e for e in self.get_edges() if e.get(attribut) == attribut_value)
+
+
+class Node:
+    """Node class representing a graph node with optional attributes."""
+    def __init__(self, node_id, attributes=None):
+        self.id = node_id
+        self.attributes = attributes if attributes is not None else {}
+
+    def get(self, key, default=None):
+        """Accès facile aux attributs"""
+        return self.attributes.get(key, default)
+
+class Edge:
+    """Edge class representing a connection between two nodes with optional attributes."""
+    def __init__(self, source, target, attributes=None):
+        self.source = source # Objet Node
+        self.target = target # Objet Node
+        self.attributes = attributes if attributes is not None else {}
+
+    def get(self, key, default=None):
+        """get attributes"""
+        return self.attributes.get(key, default)
 
 
 
 
 
-
-
-def nb_nodes(g):
-    """Return the number of nodes in the graph."""
-    return len(g['nodes'])
-
-def nb_edges(g):
-    """Return the number of edges in the graph.
-    For undirected graphs, each edge is counted once.
-    """
-    total = sum(len(adj) for adj in g['edges'].values())
-    return total if g['directed'] else total //2
-
+# to do
 
 def enqueue(queue,element):
     """Append an element at the end of a queue (FIFO list)."""
@@ -172,47 +221,9 @@ def dequeue(queue):
     return queue.pop(0) # first in first out, so pop(0)
 
 
-def out_degree(g, node_id):
-    """Return the out-degree of a node (number of outgoing edges)."""
-    return len(g['edges'][node_id])
-
-def in_degree(g,node_id):
-    """Return the in-degree of a node (number of incoming edges).
-    Visits all nodes to count how many have an edge to node_id."""
-    cpt= 0
-    for n in nodes(g):
-        if node_id in neighbors(g,n):
-            cpt +=1
-    return cpt
-
-def degree(g,node_id):
-    """Return the total degree of a node (in-degree + out-degree)."""
-    return (in_degree(g,node_id) + out_degree(g,node_id))
 
 
-def select_nodes(g,attribut,attribut_value):
-    """Return a list of node identifiers having a given attribute value.
 
-    Parameters
-    ----------
-    g : dict
-        Graph object.
-    attribut : str
-        Attribute name to test on nodes.
-    attribut_value : any
-        Value the attribute must have.
-
-    Returns
-    -------
-    list of hashable
-        Node identifiers matching the condition.
-        Important point for the other functions that use Select nodes.
-    """
-    res = list()
-    for n in nodes(g):
-        if attribut in g['nodes'][n] and g['nodes'][n][attribut] == attribut_value:
-            res.append(n)
-    return res
 
 
 def filter_edges(g,attribut , attribut_value):
@@ -499,7 +510,7 @@ def induced_subgraph(g, induced_nodes):
     # add edges if they're in nodes
     node_set = set(induced_nodes)
     for t in induced_nodes:
-        for p in neighbors(g, t):
+        for p in Graph.neighbors(g, t):
             if p in node_set:
                 add_edge(sg, t, p, g['edges'][t][p].copy())
     return sg
