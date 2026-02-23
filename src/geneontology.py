@@ -266,7 +266,7 @@ def induced_goterm_subgraph(go, namespace=None):
     """Subgraph induced by GO terms only (optionally filtered by namespace)."""
 
     keep = set(goterm_ids(go, namespace=namespace))
-    sg = gm.create_graph(directed=True, weighted=False)
+    sg = gm.Graph(directed=True, weighted=False)
     sg["alt_id"] = {}  # keeps compatibility with GO graph structure in case
 
     for t in keep:

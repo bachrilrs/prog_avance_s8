@@ -5,7 +5,7 @@
 """Graphmaster module: a simple graph class and related functions."""
 import math
 from collections import deque
-
+from pprint import pprint
 
 class Graph:
     """Graph class representing a directed or undirected graph with optional weighted edges."""
@@ -192,7 +192,7 @@ class Graph:
             res[el] = len(self.filter_edges('relationship',el))
         return res
 
-    def bfs(self,s):
+    def bfs(self, s):
         """Perform a breadth-first search (BFS) from source node s.
 
         Parameters
@@ -210,31 +210,26 @@ class Graph:
             - distance[u] is the BFS distance from s (or -inf if unreachable)
             - predecessor[u] is the parent of u in the BFS tree (or None).
         """
-        state = {}
-        distance = {}
-        predecessor = {}
+        state = {node: 'Unexplored' for node in self.nodes}
+        distance = {node: -math.inf for node in self.nodes}
+        predecessor = {node: None for node in self.nodes}
 
-        for node in self.nodes:
-            state[node] = 'Unexplored'
-            distance[node] = -math.inf # float('-inf') works too
-            predecessor[node] = None
-
-        state[s]= 'Discovered'
+        state[s] = 'Discovered'
         distance[s] = 0
-        queue = []
-        q = deque([s])
-        while queue :
-            u = q.popleft()
+
+        queue = deque([s])
+
+        while queue:
+            u = queue.popleft()
             for v in self.neighbors(u):
-                if state[v]=='Unexplored':
+                if state[v] == 'Unexplored':
                     state[v] = 'Discovered'
-                    distance[v]= distance[u] + 1
+                    distance[v] = distance[u] + 1
                     predecessor[v] = u
                     queue.append(v)
+            state[u] = 'Finished'
 
-            state[u]='Finished'
-
-        return state , distance , predecessor
+        return state, distance, predecessor
 
     def path(self,bfs_res, source, target):
         """Reconstruct the shortest path from source to target using BFS results.
@@ -433,6 +428,7 @@ class Edge:
     def __str__(self):
         return f"Edge({self.source.id} -> {self.target.id})"
 
-
 if __name__ == "__main__":
     print("# Graphmaster module")
+
+    pprint(Graph.bfs(Graph.from_delim('data/dressing.tsv'), 'chaussettes'))
