@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Le nom doit être simple (pas d'espaces ni d'accents ici)
+name = "programmation-avancee-s8"
+version = "0.1.0"
+description = "Programmation avancée et génie logiciel"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "pandas",
+]
+
+[project.scripts]
+# Change 'mon_projet' par le nom du dossier qui contient ton code
+mon-outil = "mon_projet.main:main"
