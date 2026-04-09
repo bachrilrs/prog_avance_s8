@@ -199,3 +199,12 @@ def timsort(a):
     """Tri par Timsort."""
     runs = make_runs(a)
     return merge_all_runs(a, runs)
+
+if __name__ == "__main__":
+    l = generer_liste(20)
+    print("Liste originale:", l)
+    print("Tri à bulle:", bubble_sort(l.copy()))
+    print("Tri par sélection:", select_sort(l.copy()))
+    print("Tri par insertion:", insert_sort(l.copy()))
+    print("Tri rapide:", quick_sort(l.copy()))
+    print("Timsort:", timsort(l.copy()))
