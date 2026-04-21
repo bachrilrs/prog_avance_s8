@@ -1,19 +1,28 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-# Le nom doit être simple (pas d'espaces ni d'accents ici)
-name = "programmation-avancee-s8"
+name = "tsp-solver"
 version = "0.1.0"
-description = "Programmation avancée et génie logiciel"
+description = "TSP solver with KNN, K-opt, and Genetic algorithms"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
-    "numpy",
-    "pandas",
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "matplotlib>=3.5",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [project.scripts]
-# Change 'mon_projet' par le nom du dossier qui contient ton code
-mon-outil = "mon_projet.main:main"
+tsp-solve = "tsp.main:main"
