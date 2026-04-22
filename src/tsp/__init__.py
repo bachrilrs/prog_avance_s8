@@ -1,17 +1,15 @@
-"""TSP Solver - Travelling Salesman Problem solver"""
-
-__version__ = "0.1.0"
-
-from .structure import (Ville, DistanceGraph)
-from .solvers import KNN
-from .visualizer import TSPVisualizer
-
+from .structure import Ville, DistanceGraph, Pays
+from .solvers import KNN, TwoOpt
+from .io import load_cities
+from .visualizer import KNNVisualizer, TwoOptVisualizer
 
 __all__ = [
     "Ville",
     "DistanceGraph",
+    "Pays",
     "KNN",
-    "TSPVisualizer",
-    "load_cities",
-    "process_france_travel",
+    "TwoOpt",
+    "KNNVisualizer",
+    "TwoOptVisualizer",
+    "load_cities"
 ]

@@ -1,7 +1,107 @@
 import pandas as pd
 import numpy as np
 
-from pprint import pprint
+
+
+
+class Pays:
+    """Orchestre l'analyse complète du problème TSP"""
+
+    def __init__(self, nom ,villes: list['Ville'] = None):  
+        self.nom = nom
+        self.villes = villes if villes is not None else []
+        self.graph = DistanceGraph(self.villes)
+        
+        # Calculer les distances dans chaque ville
+        self.calculer_distances()
+        
+        from .solvers import KNN
+        from .solvers import TwoOpt
+        from .visualizer import KNNVisualizer , TwoOptVisualizer
+        # Créer le solveur KNN
+        self.knn = KNN(self.graph)
+        self.best_path_knn = None
+
+        #Twoopt 
+        self.two_opt = TwoOpt(self.graph)
+        self.best_path_two_opt = None
+
+        # Créer le visualizer
+        self.visualizer_knn = KNNVisualizer(self.graph, self.knn)
+        self.visualizer_two_opt = TwoOptVisualizer(self.graph)
+
+
+
+        self.matrix_df = self.graph.get_dataframe()
+
+    def __str__(self):
+        return f'{self.nom}: {", ".join([v.nom for v in self.villes])}'
+
+    def calculer_distances(self):
+        """Calcule les distances entre toutes les villes"""
+        for v in self.villes:
+            for ville in self.villes:
+                if v.nom != ville.nom:
+                    v.distance[f'{ville.nom}'] = v.eucledian_distance(ville)
+                else:
+                    v.distance[f'{ville.nom}'] = 0
+
+    def get_matrix_with_labels(self):
+        """Retourne la matrice de distances avec labels"""
+        return self.graph.get_dataframe()
+    
+    def compute_all_paths(self):
+        """Résout depuis tous les points de départ"""
+        self.knn.compute_all_paths()
+            
+    def compute_path_distance(self, path):
+        """Calcule la distance totale d'un chemin"""
+        indices = [self.graph.index[nom] for nom in path]
+        rows = indices[:-1]
+        cols = indices[1:]
+        return np.sum(self.graph.matrix[rows, cols])
+    
+    def print_distance_from_each_city(self):
+        """Affiche les distances pour chaque point de départ"""
+        self.knn.print_distance_from_each_city()
+
+    def print_from_a_city(self, nom_ville):
+        """Affiche le chemin partant d'une ville"""
+        return self.knn.print_from_a_city(nom_ville)
+    
+    def print_best_path(self):
+        """Affiche le meilleur chemin trouvé"""
+        if self.best_path is None:
+            print("Veuillez d'abord appeler get_optimal_path()")
+            return
+        
+        print(f"Meilleur chemin trouvé : {' -> '.join(self.best_path)}")
+    
+    def get_optimal_path(self):
+        """Retourne le meilleur chemin"""
+        start_point, path, distance = self.knn.get_optimal_path()
+        self.best_path_knn = path
+
+        self.best_path_two_opt = self.two_opt.compute_path_distance(path)
+
+        return start_point, path, distance
+    
+    def plot_path_knn(self):
+        """Affiche le meilleur chemin trouvé"""
+        if self.best_path_knn is None:
+            print("Veuillez d'abord appeler get_optimal_path()")
+            return
+        
+        self.visualizer_knn.plot_path_knn(self.best_path_knn, "Chemin optimal à travers les villes knn")
+
+
+    def plot_path_two_opt(self):
+        """Affiche le meilleur chemin trouvé"""
+        if self.best_path_two_opt is None:
+            print("Veuillez d'abord appeler get_optimal_path()")
+            return
+        self.visualizer_two_opt.plot_path_two_opt(self.best_path_two_opt, "Chemin optimal à travers les villes 2-opt")
+        
 
 
 class Ville:
@@ -69,10 +169,6 @@ class DistanceGraph:
         cols = indices[1:]
 
         return np.sum(self.matrix[rows, cols])
-    
-    # def path_distance(self, path_indices: list[int]) -> float:
-    #     """Calcule la distance totale d'un chemin (liste d'indices)"""
-    #     return np.sum(self.matrix[path_indices[:-1], path_indices[1:]])
     
     def get_dataframe(self) -> pd.DataFrame:
         """Retourne la matrice sous forme de DataFrame avec labels"""

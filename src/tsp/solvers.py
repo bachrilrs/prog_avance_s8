@@ -1,9 +1,9 @@
-import pandas as pd
+
+
+
 import numpy as np
 
-from pprint import pprint
-
-from .structure import Ville, DistanceGraph
+from .structure import DistanceGraph
 
 class KNN:
     """Implémentation de l'algorithme KNN pour trouver un chemin à travers les villes"""
@@ -67,3 +67,73 @@ class KNN:
         best_path = self.paths[start_point]
         
         return start_point, best_path, distances[start_point]
+
+
+class TwoOpt:
+    """Implémentation de l'algorithme K-Opt pour améliorer une solution initiale du TSP"""
+
+    def __init__(self,graph: DistanceGraph):
+        self.graph = graph
+        self.villes = graph.villes
+        self.matrix_distance = graph.matrix
+        self.index_ville = graph.index
+        self.paths = {}
+
+    def distance_route(self, path):
+        """calculer path d'un chemin"""
+        total = 0
+        n = len(path)
+        
+        for i in range(n):
+            current_city = self.index_ville[path[i]]
+            next_city = self.index_ville[path[(i + 1) % n]]  # % n pour boucler
+            total += self.matrix_distance[current_city][next_city]
+        
+        return total
+
+
+    def compute_path_distance(self, path):
+        """2-opt local search for closed TSP tour"""
+        best_path = path[:]
+        improved = True
+        n = len(best_path)
+        
+        while improved:
+            improved = False
+            
+            for i in range(n - 1):
+                for j in range(i + 2, n):
+                    #
+                    if i == 0 and j == n - 1:
+                        continue
+                    
+                    
+                    a_idx = self.index_ville[best_path[i]]
+                    b_idx = self.index_ville[best_path[i + 1]]
+                    
+                    c_idx = self.index_ville[best_path[j]]
+                    d_idx = self.index_ville[best_path[(j + 1) % n]]
+                    
+                    
+                    old_distance = (
+                        self.matrix_distance[a_idx][b_idx] +
+                        self.matrix_distance[c_idx][d_idx]
+                    )
+                    
+                    
+                    new_distance = (
+                        self.matrix_distance[a_idx][c_idx] +
+                        self.matrix_distance[b_idx][d_idx]
+                    )
+                    
+                    
+                    if new_distance < old_distance:
+                        best_path[i + 1:j + 1] = best_path[i + 1:j + 1][::-1]
+                        improved = True
+                        break
+                
+                if improved:
+                    break
+        
+        total_distance = self.distance_route(best_path)
+        return best_path, total_distance
