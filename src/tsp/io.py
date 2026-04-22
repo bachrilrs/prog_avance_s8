@@ -3,8 +3,7 @@ import re
 
 import pandas as pd
 
-from .structure import Ville
-from .structure import Pays
+from .structure import Ville , Pays
 
 def load_cities(filepath: str, separator: str = ";") -> list[Ville]:
     """Charge les villes depuis un fichier CSV"""
@@ -78,7 +77,7 @@ def process_pays_travel(file_path: str, nom_pays: str, separator: str = ";", all
             
         pays.best_path_three_opt = optimal_path_closed_3    
 
-        # TRÈS IMPORTANT : On retourne l'objet Pays rempli de ses données
+
         return pays
 
     except FileNotFoundError:

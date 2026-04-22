@@ -1,9 +1,6 @@
 import pandas as pd
 import numpy as np
 
-
-
-
 class Pays:
     """Orchestre l'analyse complète du problème TSP"""
 
@@ -15,23 +12,23 @@ class Pays:
 
         self.best_path_two_opt = None
         self.best_path_three_opt = None
-        # Calculer les distances dans chaque ville
+
         self.calculer_distances()
         
         from .solvers import KNN
-        from .solvers import TwoOpt
-        from .visualizer import KNNVisualizer , TwoOptVisualizer
+        from .solvers import LocalSearch
+        from .visualizer import TSPVisualizer
         # Créer le solveur KNN
         self.knn = KNN(self.graph)
         self.best_path_knn = None
 
         #Twoopt 
-        self.two_opt = TwoOpt(self.graph)
+        self.two_opt = LocalSearch(self.graph)
 
 
         # Créer le visualizer
-        self.visualizer_knn = KNNVisualizer(self.graph, self.knn)
-        self.visualizer_two_opt = TwoOptVisualizer(self.graph)
+        self.visualizer_knn = TSPVisualizer(self.graph)
+        self.visualizer_two_opt = TSPVisualizer(self.graph)
 
 
 
@@ -80,7 +77,7 @@ class Pays:
         
         print(f"Meilleur chemin trouvé : {' -> '.join(self.best_path)}")
     
-def get_optimal_path(self):
+    def get_optimal_path(self):
         """Retourne le meilleur chemin après KNN, 2-opt et 3-opt"""
         start_point, path, distance = self.knn.get_optimal_path()
         self.best_path_knn = path
@@ -95,25 +92,8 @@ def get_optimal_path(self):
         self.best_path_three_opt = optimized_path_3opt + [optimized_path_3opt[0]]
 
         return start_point, path, distance
-    
-    def plot_path_knn(self):
-        """Affiche le meilleur chemin trouvé"""
-        if self.best_path_knn is None:
-            print("Veuillez d'abord appeler get_optimal_path()")
-            return
+
         
-        self.visualizer_knn.plot_path_knn(self.best_path_knn, "Chemin optimal à travers les villes knn")
-
-
-    def plot_path_two_opt(self):
-        """Affiche le meilleur chemin trouvé"""
-        if self.best_path_two_opt is None:
-            print("Veuillez d'abord appeler get_optimal_path()")
-            return
-        self.visualizer_two_opt.plot_path_two_opt(self.best_path_two_opt, "Chemin optimal à travers les villes 2-opt")
-        
-
-
 class Ville:
     """classe ville"""
 
@@ -145,7 +125,6 @@ class Ville:
     @coord_Y.setter
     def coord_Y(self,y):
         self.__coord_Y = y
-
 
 class DistanceGraph:
     """Gère la matrice de distances entre villes"""

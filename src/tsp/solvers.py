@@ -69,7 +69,7 @@ class KNN:
         return start_point, best_path, distances[start_point]
 
 
-class TwoOpt:
+class LocalSearch:
     """Implémentation de l'algorithme K-Opt pour améliorer une solution initiale du TSP"""
 
     def __init__(self,graph: DistanceGraph):
@@ -133,7 +133,7 @@ class TwoOpt:
             """
             best_path = path[:]
             if best_path[0] != best_path[-1]:
-                best_path.append(best_path[0])
+                best_path.append(best_path[0]) # on crée un chemin fermé si ce n'est pas déjà le cas
                 
             n = len(best_path)
             improved = True
@@ -154,10 +154,14 @@ class TwoOpt:
                             cur = d[A][B] + d[C][D] + d[E][F]
 
                             # Les 7 reconnexions possibles (avec les Deltas exacts correspondants)
+
                             # 1: 2-opt (inverse segment 2)
-                            d1 = d[A][C] + d[B][D] + d[E][F] - cur
+                            d1 = d[A][C] + d[B][D] + d[E][F] - cur # -cur car on enlève les 3 arêtes d'origine et on ajoute les 3 nouvelles 
+                            # calcule juste le Delta de la reconnexion, pas besoin de recalculer la distance totale à chaque fois ! Evaluation locale très rapide O(1) grâce à la matrice de distances pré-calculée.
+                            # C'est la clé pour que le 3-opt soit rapide même sur des instances plus grandes.
+
                             # 2: 2-opt (inverse segment 3)
-                            d2 = d[A][B] + d[C][E] + d[D][F] - cur
+                            d2 = d[A][B] + d[C][E] + d[D][F] - cur 
                             # 3: 2-opt (inverse segment 2 et 3)
                             d3 = d[A][C] + d[B][E] + d[D][F] - cur
                             # 4: 3-opt pur (échange segment 2 et 3)
@@ -170,9 +174,9 @@ class TwoOpt:
                             d7 = d[A][E] + d[D][C] + d[B][F] - cur
 
                             deltas = [d1, d2, d3, d4, d5, d6, d7]
-                            min_delta = min(deltas)
 
-                            # Si on trouve une amélioration franche (on évite les micro-bugs de flottants)
+                            min_delta = min(deltas) # On cherche la meilleure reconnexion possible parmi les 7, et on applique la première qui améliore (First Improvement)
+
                             if min_delta < -1e-5:
                                 idx = deltas.index(min_delta)
                                 
@@ -182,19 +186,19 @@ class TwoOpt:
                                 seg4 = best_path[k:]
                                 
                                 # On applique EXACTEMENT la reconstruction qui correspond au Delta gagnant
-                                if idx == 0:
+                                if idx+1 == 1: # +1 pour correspondre à la numérotation classique des 7 cas de 3-opt
                                     best_path = seg1 + seg2[::-1] + seg3 + seg4
-                                elif idx == 1:
+                                elif idx+1 == 2:
                                     best_path = seg1 + seg2 + seg3[::-1] + seg4
-                                elif idx == 2:
+                                elif idx+1 == 3:
                                     best_path = seg1 + seg2[::-1] + seg3[::-1] + seg4
-                                elif idx == 3:
+                                elif idx+1 == 4:
                                     best_path = seg1 + seg3 + seg2 + seg4
-                                elif idx == 4:
+                                elif idx+1 == 5:
                                     best_path = seg1 + seg3[::-1] + seg2 + seg4
-                                elif idx == 5:
+                                elif idx+1 == 6:
                                     best_path = seg1 + seg3 + seg2[::-1] + seg4
-                                elif idx == 6:
+                                elif idx+1 == 7:
                                     best_path = seg1 + seg3[::-1] + seg2[::-1] + seg4
                                 
                                 improved = True
