@@ -126,104 +126,86 @@ class TwoOpt:
         total_distance = self.distance_route(best_path)
         return best_path, total_distance
     
-    def distance(p1, p2):
-        """Return Euclidean distance between two points."""
-        return (p1[0]-p2[0])**2 + (p1[1]-p2[1])**2
 
-    def three_opt(self, path):
-        """
-        path: list of city indices representing a Hamiltonian cycle
-        self.matrix_distance: dict mapping city index to (x, y) tuple
-        Returns a new path after applying 3-opt moves until no improvement.
-        """
-        improved = True
-        n = len(path)
-        # Ensure path is a cycle: first city = last city
-        if path[0] != path[-1]:
-            path = path + [path[0]]
-            n += 1
+    def three_opt(self, path: list[str]) -> tuple[list[str], float]:
+            """
+            Implémentation 3-opt optimisée (First Improvement) et corrigée.
+            """
+            best_path = path[:]
+            if best_path[0] != best_path[-1]:
+                best_path.append(best_path[0])
+                
+            n = len(best_path)
+            improved = True
 
-        while improved:
-            improved = False
-            best_delta = 0
-            best_tour = None
+            while improved:
+                improved = False
+                
+                for i in range(1, n - 2):
+                    for j in range(i + 1, n - 1):
+                        for k in range(j + 1, n):
+                            
+                            # Indices des 6 villes aux frontières des 3 arêtes coupées
+                            A, B = self.index_ville[best_path[i-1]], self.index_ville[best_path[i]]
+                            C, D = self.index_ville[best_path[j-1]], self.index_ville[best_path[j]]
+                            E, F = self.index_ville[best_path[k-1]], self.index_ville[best_path[k]]
 
-            for i in range(1, n-2):
-                for j in range(i+1, n-1):
-                    for k in range(j+1, n):
-                        # Current edges
-                        A, B = self.index_ville[path[i-1]], self.index_ville[path[i]]
-                        C, D = self.index_ville[path[j-1]], self.index_ville[path[j]]
-                        E, F = self.index_ville[path[k-1]], self.index_ville[path[k]]
+                            d = self.matrix_distance
+                            cur = d[A][B] + d[C][D] + d[E][F]
 
-                        # Compute current distance
-                        cur = (self.distance(self.matrix_distance[A], self.matrix_distance[B]) +
-                            self.distance(self.matrix_distance[C], self.matrix_distance[D]) +
-                            self.distance(self.matrix_distance[E], self.matrix_distance[F]))
+                            # Les 7 reconnexions possibles (avec les Deltas exacts correspondants)
+                            # 1: 2-opt (inverse segment 2)
+                            d1 = d[A][C] + d[B][D] + d[E][F] - cur
+                            # 2: 2-opt (inverse segment 3)
+                            d2 = d[A][B] + d[C][E] + d[D][F] - cur
+                            # 3: 2-opt (inverse segment 2 et 3)
+                            d3 = d[A][C] + d[B][E] + d[D][F] - cur
+                            # 4: 3-opt pur (échange segment 2 et 3)
+                            d4 = d[A][D] + d[E][B] + d[C][F] - cur
+                            # 5: 3-opt pur (segment 3 inversé, puis segment 2)
+                            d5 = d[A][E] + d[D][B] + d[C][F] - cur
+                            # 6: 3-opt pur (segment 3 normal, segment 2 inversé)
+                            d6 = d[A][D] + d[E][C] + d[B][F] - cur
+                            # 7: 3-opt pur (segment 3 inversé, segment 2 inversé)
+                            d7 = d[A][E] + d[D][C] + d[B][F] - cur
 
-                        # 7 possible reconnections
-                        # 1) A-D, C-B, E-F
-                        new1 = (self.distance(self.matrix_distance[A], self.matrix_distance[D]) +
-                                self.distance(self.matrix_distance[C], self.matrix_distance[B]) +
-                                self.distance(self.matrix_distance[E], self.matrix_distance[F]))
-                        delta1 = new1 - cur
+                            deltas = [d1, d2, d3, d4, d5, d6, d7]
+                            min_delta = min(deltas)
 
-                        # 2) A-D, C-F, E-B
-                        new2 = (self.distance(self.matrix_distance[A], self.matrix_distance[D]) +
-                                self.distance(self.matrix_distance[C], self.matrix_distance[F]) +
-                                self.distance(self.matrix_distance[E], self.matrix_distance[B]))
-                        delta2 = new2 - cur
+                            # Si on trouve une amélioration franche (on évite les micro-bugs de flottants)
+                            if min_delta < -1e-5:
+                                idx = deltas.index(min_delta)
+                                
+                                seg1 = best_path[:i]
+                                seg2 = best_path[i:j]
+                                seg3 = best_path[j:k]
+                                seg4 = best_path[k:]
+                                
+                                # On applique EXACTEMENT la reconstruction qui correspond au Delta gagnant
+                                if idx == 0:
+                                    best_path = seg1 + seg2[::-1] + seg3 + seg4
+                                elif idx == 1:
+                                    best_path = seg1 + seg2 + seg3[::-1] + seg4
+                                elif idx == 2:
+                                    best_path = seg1 + seg2[::-1] + seg3[::-1] + seg4
+                                elif idx == 3:
+                                    best_path = seg1 + seg3 + seg2 + seg4
+                                elif idx == 4:
+                                    best_path = seg1 + seg3[::-1] + seg2 + seg4
+                                elif idx == 5:
+                                    best_path = seg1 + seg3 + seg2[::-1] + seg4
+                                elif idx == 6:
+                                    best_path = seg1 + seg3[::-1] + seg2[::-1] + seg4
+                                
+                                improved = True
+                                break # On sort de la boucle k (First Improvement)
+                        if improved: 
+                            break # On sort de la boucle j
+                    if improved: 
+                        break # On sort de la boucle i et on relance le While !
 
-                        # 3) A-C, B-D, E-F
-                        new3 = (self.distance(self.matrix_distance[A], self.matrix_distance[C]) +
-                                self.distance(self.matrix_distance[B], self.matrix_distance[D]) +
-                                self.distance(self.matrix_distance[E], self.matrix_distance[F]))
-                        delta3 = new3 - cur
-
-                        # 4) A-C, B-E, D-F
-                        new4 = (self.distance(self.matrix_distance[A], self.matrix_distance[C]) +
-                                self.distance(self.matrix_distance[B], self.matrix_distance[E]) +
-                                self.distance(self.matrix_distance[D], self.matrix_distance[F]))
-                        delta4 = new4 - cur
-
-                        # 5) A-E, B-D, C-F
-                        new5 = (self.distance(self.matrix_distance[A], self.matrix_distance[E]) +
-                                self.distance(self.matrix_distance[B], self.matrix_distance[D]) +
-                                self.distance(self.matrix_distance[C], self.matrix_distance[F]))
-                        delta5 = new5 - cur
-
-                        # 6) A-B, C-E, D-F
-                        new6 = (self.distance(self.matrix_distance[A], self.matrix_distance[B]) +
-                                self.distance(self.matrix_distance[C], self.matrix_distance[E]) +
-                                self.distance(self.matrix_distance[D], self.matrix_distance[F]))
-                        delta6 = new6 - cur
-
-                        # 7) A-B, C-D, E-F (original, skip)
-
-                        deltas = [delta1, delta2, delta3, delta4, delta5, delta6]
-                        if min(deltas) < best_delta:
-                            best_delta = min(deltas)
-                            # Apply the move corresponding to best_delta
-                            if best_delta == delta1:
-                                new_tour = (path[:i] + [B] + path[i+1:j] + [C] +
-                                            path[j+1:k] + [D] + path[k+1:])
-                            elif best_delta == delta2:
-                                new_tour = (path[:i] + [B] + path[i+1:j] + [E] +
-                                            path[j+1:k] + [C] + path[k+1:])
-                            elif best_delta == delta3:
-                                new_tour = (path[:i] + [C] + path[i:j] + [B] +
-                                            path[j+1:k] + [D] + path[k+1:])
-                            elif best_delta == delta4:
-                                new_tour = (path[:i] + [C] + path[i:j] + [E] +
-                                            path[j+1:k] + [B] + path[k+1:])
-                            elif best_delta == delta5:
-                                new_tour = (path[:i] + [E] + path[i:j] + [B] +
-                                            path[j+1:k] + [C] + path[k+1:])
-                            elif best_delta == delta6:
-                                new_tour = path[:i] + path[i:j] + path[j:k] + path[k:]
-                            best_tour = new_tour
-
-            if best_tour is not None:
-                path = best_tour
-                improved = True
-        return path
+            # Retourne le chemin ouvert
+            open_path = best_path[:-1]
+            total_distance = self.distance_route(open_path)
+            
+            return open_path, total_distance

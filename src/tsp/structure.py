@@ -12,6 +12,9 @@ class Pays:
         self.villes = villes if villes is not None else []
         self.graph = DistanceGraph(self.villes)
         
+
+        self.best_path_two_opt = None
+        self.best_path_three_opt = None
         # Calculer les distances dans chaque ville
         self.calculer_distances()
         
@@ -24,7 +27,7 @@ class Pays:
 
         #Twoopt 
         self.two_opt = TwoOpt(self.graph)
-        self.best_path_two_opt = None
+
 
         # Créer le visualizer
         self.visualizer_knn = KNNVisualizer(self.graph, self.knn)
@@ -77,15 +80,19 @@ class Pays:
         
         print(f"Meilleur chemin trouvé : {' -> '.join(self.best_path)}")
     
-    def get_optimal_path(self):
-        """Retourne le meilleur chemin"""
+def get_optimal_path(self):
+        """Retourne le meilleur chemin après KNN, 2-opt et 3-opt"""
         start_point, path, distance = self.knn.get_optimal_path()
         self.best_path_knn = path
         
+        # 2-opt
         knn_path_open = path[:-1]
-        optimized_path_open, opt_distance = self.two_opt.two_opt(knn_path_open)
-        optimized_path_closed = optimized_path_open + [optimized_path_open[0]]
-        self.best_path_two_opt = optimized_path_closed
+        optimized_path_2opt, opt_distance_2 = self.two_opt.two_opt(knn_path_open)
+        self.best_path_two_opt = optimized_path_2opt + [optimized_path_2opt[0]]
+
+        # 3-opt (Prend le résultat du 2-opt pour l'améliorer encore plus)
+        optimized_path_3opt, opt_distance_3 = self.two_opt.three_opt(optimized_path_2opt)
+        self.best_path_three_opt = optimized_path_3opt + [optimized_path_3opt[0]]
 
         return start_point, path, distance
     
