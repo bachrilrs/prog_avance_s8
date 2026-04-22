@@ -21,58 +21,57 @@ def load_cities(filepath: str, separator: str = ";") -> list[Ville]:
     return villes
 
 
-def process_pays_travel(file_path: str, nom_pays, separator: str = ";", all_paths = False, show_matrix = False):
-    try:
-        # Charger les villes
-        villes = load_cities(file_path, separator)
+# def process_pays_travel(file_path: str, nom_pays, separator: str = ";", all_paths = False, show_matrix = False):
+#     try:
+#         # Charger les villes
+#         villes = load_cities(file_path, separator)
         
-        # Créer l'objet pays
-        pays = Pays(nom_pays, villes)
+#         # Créer l'objet pays
+#         pays = Pays(nom_pays, villes)
 
-        print(f"--- Analyse terminée pour : {file_path} ---")
+#         print(f"--- Analyse terminée pour : {file_path} ---")
         
-        if show_matrix:
-            print("\nMatrice de distances :")
-            print(pays.get_matrix_with_labels())
+#         if show_matrix:
+#             print("\nMatrice de distances :")
+#             print(pays.get_matrix_with_labels())
         
-        print("\nChemin trouvés :")
-        pays.compute_all_paths()
+#         print("\nChemin trouvés :")
+#         pays.compute_all_paths()
         
-        if all_paths:
-            print("\nDistance totale par point de départ :")
-            pays.print_distance_from_each_city()
-        
-        
-        print("\nMeilleur chemin trouvé avec KNN:")
-        start_point, path, distance = pays.get_optimal_path()
-
-
-        print(f"Point de départ {start_point}")
-        print(f"Chemin {path}")
-        print(f"Distance KNN : {distance}")
-
-        print("\nMeilleur chemin trouvé avec 2-opt:")
-
-        chemin_optimal_2opt, distance_2opt = pays.two_opt.compute_path_distance(pays.best_path_knn)
+#         if all_paths:
+#             print("\nDistance totale par point de départ :")
+#             pays.print_distance_from_each_city()
         
         
-        pays.best_path_two_opt = chemin_optimal_2opt
-        print(f"Chemin {chemin_optimal_2opt}")
-        print(f"Distance OPT : {distance_2opt}")
+#         print("\nMeilleur chemin trouvé avec KNN:")
+#         start_point, path, distance = pays.get_optimal_path()
 
-        print(f"Différence entre KNN et Two_opt {distance - distance_2opt}")
+
+#         print(f"Point de départ {start_point}")
+#         print(f"Chemin {path}")
+#         print(f"Distance KNN : {distance}")
+
+#         print("\nMeilleur chemin trouvé avec 2-opt:")
+
+#         chemin_optimal_2opt, distance_2opt = pays.two_opt.two_opt(pays.best_path_knn)
+
+#         pays.best_path_two_opt = chemin_optimal_2opt
+#         print(f"Chemin {chemin_optimal_2opt}")
+#         print(f"Distance OPT : {distance_2opt}")
+
+#         print(f"Différence entre KNN et Two_opt {distance - distance_2opt}")
         
         
 
-    except FileNotFoundError:
-        print(f"Erreur : Le fichier {file_path} est introuvable.")
-    except Exception as e:
-        print(f"Une erreur est survenue : {e}")
+#     except FileNotFoundError:
+#         print(f"Erreur : Le fichier {file_path} est introuvable.")
+#     except Exception as e:
+#         print(f"Une erreur est survenue : {e}")
 
-    return pays
+#     return pays
 
 
-def process_pays_travel_test(file_path: str, nom_pays, separator: str = ";", all_paths=False, show_matrix=False):
+def process_pays_travel(file_path: str, nom_pays, separator: str = ";", all_paths=False, show_matrix=False):
     try:
         villes = load_cities(file_path, separator)
         pays = Pays(nom_pays, villes)

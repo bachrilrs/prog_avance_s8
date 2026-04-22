@@ -92,8 +92,8 @@ class TwoOpt:
         return total
 
 
-    def compute_path_distance(self, path):
-        """2-opt local search for closed TSP tour"""
+    def two_opt(self, path: list[str]) -> tuple[list[str], float]:
+        """2-opt local search - assumes CLOSED path (returns to start)"""
         best_path = path[:]
         improved = True
         n = len(best_path)
@@ -103,29 +103,23 @@ class TwoOpt:
             
             for i in range(n - 1):
                 for j in range(i + 2, n):
-                    #
+
                     if i == 0 and j == n - 1:
                         continue
                     
-                    
                     a_idx = self.index_ville[best_path[i]]
                     b_idx = self.index_ville[best_path[i + 1]]
-                    
                     c_idx = self.index_ville[best_path[j]]
                     d_idx = self.index_ville[best_path[(j + 1) % n]]
-                    
                     
                     old_distance = (
                         self.matrix_distance[a_idx][b_idx] +
                         self.matrix_distance[c_idx][d_idx]
                     )
-                    
-                    
                     new_distance = (
                         self.matrix_distance[a_idx][c_idx] +
                         self.matrix_distance[b_idx][d_idx]
                     )
-                    
                     
                     if new_distance < old_distance:
                         best_path[i + 1:j + 1] = best_path[i + 1:j + 1][::-1]

@@ -81,8 +81,11 @@ class Pays:
         """Retourne le meilleur chemin"""
         start_point, path, distance = self.knn.get_optimal_path()
         self.best_path_knn = path
-
-        self.best_path_two_opt = self.two_opt.compute_path_distance(path)
+        
+        knn_path_open = path[:-1]
+        optimized_path_open, opt_distance = self.two_opt.two_opt(knn_path_open)
+        optimized_path_closed = optimized_path_open + [optimized_path_open[0]]
+        self.best_path_two_opt = optimized_path_closed
 
         return start_point, path, distance
     
