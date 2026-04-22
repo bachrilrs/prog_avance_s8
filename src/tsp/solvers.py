@@ -2,7 +2,7 @@
 
 
 import numpy as np
-
+import copy
 from .structure import DistanceGraph
 
 class KNN:
@@ -112,14 +112,8 @@ class TwoOpt:
                     c_idx = self.index_ville[best_path[j]]
                     d_idx = self.index_ville[best_path[(j + 1) % n]]
                     
-                    old_distance = (
-                        self.matrix_distance[a_idx][b_idx] +
-                        self.matrix_distance[c_idx][d_idx]
-                    )
-                    new_distance = (
-                        self.matrix_distance[a_idx][c_idx] +
-                        self.matrix_distance[b_idx][d_idx]
-                    )
+                    old_distance = (self.matrix_distance[a_idx][b_idx] + self.matrix_distance[c_idx][d_idx])
+                    new_distance = (self.matrix_distance[a_idx][c_idx] + self.matrix_distance[b_idx][d_idx])
                     
                     if new_distance < old_distance:
                         best_path[i + 1:j + 1] = best_path[i + 1:j + 1][::-1]
@@ -131,3 +125,105 @@ class TwoOpt:
         
         total_distance = self.distance_route(best_path)
         return best_path, total_distance
+    
+    def distance(p1, p2):
+        """Return Euclidean distance between two points."""
+        return (p1[0]-p2[0])**2 + (p1[1]-p2[1])**2
+
+    def three_opt(self, path):
+        """
+        path: list of city indices representing a Hamiltonian cycle
+        self.matrix_distance: dict mapping city index to (x, y) tuple
+        Returns a new path after applying 3-opt moves until no improvement.
+        """
+        improved = True
+        n = len(path)
+        # Ensure path is a cycle: first city = last city
+        if path[0] != path[-1]:
+            path = path + [path[0]]
+            n += 1
+
+        while improved:
+            improved = False
+            best_delta = 0
+            best_tour = None
+
+            for i in range(1, n-2):
+                for j in range(i+1, n-1):
+                    for k in range(j+1, n):
+                        # Current edges
+                        A, B = self.index_ville[path[i-1]], self.index_ville[path[i]]
+                        C, D = self.index_ville[path[j-1]], self.index_ville[path[j]]
+                        E, F = self.index_ville[path[k-1]], self.index_ville[path[k]]
+
+                        # Compute current distance
+                        cur = (self.distance(self.matrix_distance[A], self.matrix_distance[B]) +
+                            self.distance(self.matrix_distance[C], self.matrix_distance[D]) +
+                            self.distance(self.matrix_distance[E], self.matrix_distance[F]))
+
+                        # 7 possible reconnections
+                        # 1) A-D, C-B, E-F
+                        new1 = (self.distance(self.matrix_distance[A], self.matrix_distance[D]) +
+                                self.distance(self.matrix_distance[C], self.matrix_distance[B]) +
+                                self.distance(self.matrix_distance[E], self.matrix_distance[F]))
+                        delta1 = new1 - cur
+
+                        # 2) A-D, C-F, E-B
+                        new2 = (self.distance(self.matrix_distance[A], self.matrix_distance[D]) +
+                                self.distance(self.matrix_distance[C], self.matrix_distance[F]) +
+                                self.distance(self.matrix_distance[E], self.matrix_distance[B]))
+                        delta2 = new2 - cur
+
+                        # 3) A-C, B-D, E-F
+                        new3 = (self.distance(self.matrix_distance[A], self.matrix_distance[C]) +
+                                self.distance(self.matrix_distance[B], self.matrix_distance[D]) +
+                                self.distance(self.matrix_distance[E], self.matrix_distance[F]))
+                        delta3 = new3 - cur
+
+                        # 4) A-C, B-E, D-F
+                        new4 = (self.distance(self.matrix_distance[A], self.matrix_distance[C]) +
+                                self.distance(self.matrix_distance[B], self.matrix_distance[E]) +
+                                self.distance(self.matrix_distance[D], self.matrix_distance[F]))
+                        delta4 = new4 - cur
+
+                        # 5) A-E, B-D, C-F
+                        new5 = (self.distance(self.matrix_distance[A], self.matrix_distance[E]) +
+                                self.distance(self.matrix_distance[B], self.matrix_distance[D]) +
+                                self.distance(self.matrix_distance[C], self.matrix_distance[F]))
+                        delta5 = new5 - cur
+
+                        # 6) A-B, C-E, D-F
+                        new6 = (self.distance(self.matrix_distance[A], self.matrix_distance[B]) +
+                                self.distance(self.matrix_distance[C], self.matrix_distance[E]) +
+                                self.distance(self.matrix_distance[D], self.matrix_distance[F]))
+                        delta6 = new6 - cur
+
+                        # 7) A-B, C-D, E-F (original, skip)
+
+                        deltas = [delta1, delta2, delta3, delta4, delta5, delta6]
+                        if min(deltas) < best_delta:
+                            best_delta = min(deltas)
+                            # Apply the move corresponding to best_delta
+                            if best_delta == delta1:
+                                new_tour = (path[:i] + [B] + path[i+1:j] + [C] +
+                                            path[j+1:k] + [D] + path[k+1:])
+                            elif best_delta == delta2:
+                                new_tour = (path[:i] + [B] + path[i+1:j] + [E] +
+                                            path[j+1:k] + [C] + path[k+1:])
+                            elif best_delta == delta3:
+                                new_tour = (path[:i] + [C] + path[i:j] + [B] +
+                                            path[j+1:k] + [D] + path[k+1:])
+                            elif best_delta == delta4:
+                                new_tour = (path[:i] + [C] + path[i:j] + [E] +
+                                            path[j+1:k] + [B] + path[k+1:])
+                            elif best_delta == delta5:
+                                new_tour = (path[:i] + [E] + path[i:j] + [B] +
+                                            path[j+1:k] + [C] + path[k+1:])
+                            elif best_delta == delta6:
+                                new_tour = path[:i] + path[i:j] + path[j:k] + path[k:]
+                            best_tour = new_tour
+
+            if best_tour is not None:
+                path = best_tour
+                improved = True
+        return path
