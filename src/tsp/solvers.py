@@ -1,8 +1,6 @@
-
-
-
 import numpy as np
-import copy
+import random
+from tqdm import tqdm
 from .structure import DistanceGraph
 
 class KNN:
@@ -49,6 +47,26 @@ class KNN:
         """Résout depuis tous les points de départ"""
         for i in range(len(self.villes)):
             self.knn_with_matrix(i)
+            # self.paths[f"{self.villes[i].nom}"] = self.paths[f"{self.villes[i].nom}"]
+    
+    def get_min_distance_path(self):
+        distances = {}
+        for ville in self.paths.keys():
+            distances[ville] = self.compute_path_distance(self.paths[ville])
+        
+        start_point = min(distances, key=distances.get)
+        
+        return distances[start_point]
+
+    def get_optimal_path(self):
+        distances = {}
+        for ville in self.paths.keys():
+            distances[ville] = self.compute_path_distance(self.paths[ville])
+        
+        start_point = min(distances, key=distances.get)
+        best_path = self.paths[start_point]
+        self.best_path_knn = best_path
+        return start_point, best_path, distances[start_point]
 
     def print_distance_from_each_city(self):
         for ville in self.paths.keys():
@@ -57,18 +75,6 @@ class KNN:
     def print_from_a_city(self, nom_ville):
         if nom_ville in self.paths.keys():
             return self.paths[nom_ville]
-    
-    def get_optimal_path(self):
-        distances = {}
-        for ville in self.paths.keys():
-            distances[ville] = self.compute_path_distance(self.paths[ville])
-        
-        start_point = min(distances, key=distances.get)
-        best_path = self.paths[start_point]
-        
-        return start_point, best_path, distances[start_point]
-
-
 class LocalSearch:
     """Implémentation de l'algorithme K-Opt pour améliorer une solution initiale du TSP"""
 
@@ -77,8 +83,7 @@ class LocalSearch:
         self.villes = graph.villes
         self.matrix_distance = graph.matrix
         self.index_ville = graph.index
-        self.paths = {}
-
+        
     def distance_route(self, path):
         """calculer path d'un chemin"""
         total = 0
@@ -89,8 +94,7 @@ class LocalSearch:
             next_city = self.index_ville[path[(i + 1) % n]]  # % n pour boucler
             total += self.matrix_distance[current_city][next_city]
         
-        return total
-
+        return total 
 
     def two_opt(self, path: list[str]) -> tuple[list[str], float]:
         """2-opt local search - assumes CLOSED path (returns to start)"""
@@ -126,6 +130,14 @@ class LocalSearch:
         total_distance = self.distance_route(best_path)
         return best_path, total_distance
     
+    def compute_all_paths_two_opt(self,KNN_paths = None):
+        distances = {}
+        for path in KNN_paths:
+            path_two_opt , dist = self.two_opt(path)
+            distances[path] = dist
+        
+        return distances
+
 
     def three_opt(self, path: list[str]) -> tuple[list[str], float]:
             """
@@ -145,6 +157,10 @@ class LocalSearch:
                     for j in range(i + 1, n - 1):
                         for k in range(j + 1, n):
                             
+
+                            # TODO factoriser cette partie pour éviter les répétitions avec la 2-opt et rendre le code plus clair
+
+
                             # Indices des 6 villes aux frontières des 3 arêtes coupées
                             A, B = self.index_ville[best_path[i-1]], self.index_ville[best_path[i]]
                             C, D = self.index_ville[best_path[j-1]], self.index_ville[best_path[j]]
@@ -176,6 +192,7 @@ class LocalSearch:
                             deltas = [d1, d2, d3, d4, d5, d6, d7]
 
                             min_delta = min(deltas) # On cherche la meilleure reconnexion possible parmi les 7, et on applique la première qui améliore (First Improvement)
+                                                        # TODO factoriser cette partie pour éviter les répétitions avec la 2-opt et rendre le code plus clair
 
                             if min_delta < -1e-5:
                                 idx = deltas.index(min_delta)
@@ -206,10 +223,36 @@ class LocalSearch:
                         if improved: 
                             break # On sort de la boucle j
                     if improved: 
-                        break # On sort de la boucle i et on relance le While !
+                        break # On sort de la boucle i et on relance le While
 
             # Retourne le chemin ouvert
             open_path = best_path[:-1]
             total_distance = self.distance_route(open_path)
             
             return open_path, total_distance
+
+class AlgoGenetique:
+    """Implémentation d'un algorithme génétique pour résoudre le TSP"""
+    
+    def __init__(self, graph: DistanceGraph):
+        self.graph = graph
+        self.villes = graph.villes
+        self.matrix_distance = graph.matrix
+        self.index_ville = graph.index
+        self.paths = {}
+
+    def generate_initial_population(self, path : list, population_size: int) -> list[list[str]]:   
+        """Generer des paths aléatoires"""
+
+        liste_paths = []
+
+        for i in range(population_size):
+            random.shuffle(path)
+            liste_paths.append(path.copy())
+
+        return liste_paths
+
+    def compute_fitness(self, path: list[str]) -> float:
+        """Calculer la fitness d'un path (inverse de la distance totale)"""
+        return self.graph.path_distance(path)
+    

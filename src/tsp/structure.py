@@ -8,13 +8,7 @@ class Pays:
         self.nom = nom
         self.villes = villes if villes is not None else []
         self.graph = DistanceGraph(self.villes)
-        
 
-        self.best_path_two_opt = None
-        self.best_path_three_opt = None
-
-        self.calculer_distances()
-        
         from .solvers import KNN
         from .solvers import LocalSearch
         from .visualizer import TSPVisualizer
@@ -25,37 +19,61 @@ class Pays:
         #Twoopt 
         self.two_opt = LocalSearch(self.graph)
 
+        # calculer 3 opt et 2 opt
+
+        self.best_path_two_opt = None
+        self.best_path_three_opt = None
 
         # Créer le visualizer
         self.visualizer_knn = TSPVisualizer(self.graph)
         self.visualizer_two_opt = TSPVisualizer(self.graph)
 
-
-
-        self.matrix_df = self.graph.get_dataframe()
-
     def __str__(self):
         return f'{self.nom}: {", ".join([v.nom for v in self.villes])}'
 
-    def calculer_distances(self):
-        """Calcule les distances entre toutes les villes"""
-        for v in self.villes:
-            for ville in self.villes:
-                if v.nom != ville.nom:
-                    v.distance[f'{ville.nom}'] = v.eucledian_distance(ville)
-                else:
-                    v.distance[f'{ville.nom}'] = 0
+    # def calculer_distances(self):
+    #     """Calcule les distances entre toutes les villes"""
+    #     for v in self.villes:
+    #         for ville in self.villes:
+    #             if v.nom != ville.nom:
+    #                 v.distance[f'{ville.nom}'] = v.eucledian_distance(ville)
+    #             else:
+    #                 v.distance[f'{ville.nom}'] = 0
 
     def get_matrix_with_labels(self):
         """Retourne la matrice de distances avec labels"""
         return self.graph.get_dataframe()
     
-    def compute_all_paths(self):
-        """Résout depuis tous les points de départ"""
-        self.knn.compute_all_paths()
+    # def compute_all_paths(self):
+    #     """Résout depuis tous les points de départ"""
+    #     self.knn.compute_all_paths()
+
+    # def compute_2opt(self, path):
+    #     """Applique l'algorithme 2-opt à un chemin donné"""
+    #     return self.two_opt.two_opt(path)
+    
+    # def compute_3opt(self, path):
+    #     """Applique l'algorithme 3-opt à un chemin donné"""
+    #     return self.two_opt.three_opt(path)
+    
+    # def compute_all_paths_two_opt(self):
+    #     """Applique 2-opt à tous les chemins trouvés par KNN"""
+    #     for start, path in self.knn.paths.items():
+    #         knn_path_open = path[:-1]  
+    #         optimal_path_open, opt_distance = self.two_opt.two_opt(knn_path_open)
+    #         optimal_path_closed = optimal_path_open + [optimal_path_open[0]]  
+    #         self.two_opt.paths_2opt[start] = (optimal_path_closed, opt_distance)
+    
+    # def compute_all_paths_three_opt(self):
+    #     """Applique 3-opt à tous les chemins trouvés par 2-opt"""
+    #     for start, (path_2opt, dist_2opt) in self.two_opt.paths_2opt.items():
+    #         optimal_path_open_3, opt_distance_3 = self.two_opt.three_opt(path_2opt[:-1])  # Enlever le retour à la ville de départ
+    #         optimal_path_closed_3 = optimal_path_open_3 + [optimal_path_open_3[0]]  # Ajouter le retour à la ville de départ
+    #         self.two_opt.paths_3opt[start] = (optimal_path_closed_3, opt_distance_3)
             
     def compute_path_distance(self, path):
         """Calcule la distance totale d'un chemin"""
+
         indices = [self.graph.index[nom] for nom in path]
         rows = indices[:-1]
         cols = indices[1:]
@@ -101,7 +119,6 @@ class Ville:
         self.nom = nom
         self.__coord_X = None
         self.__coord_Y = None
-        self.distance = {}
 
     def __str__(self):
         return f'{self.nom} coordonées X : {self.__coord_X}, coorodonées Y: {self.__coord_Y}'
@@ -109,7 +126,6 @@ class Ville:
     def eucledian_distance(self, other):
         return np.sqrt((other.coord_X - self.coord_X)**2 + (other.coord_Y - self.coord_Y)**2)
     
-
     @property
     def coord_X(self):
         return self.__coord_X
@@ -133,16 +149,17 @@ class DistanceGraph:
         self.villes = villes
         self.index = {v.nom: i for i, v in enumerate(villes)}
         self.matrix = self._build_matrix()
-    
+        self.matrix_df = self.get_dataframe()
+
     def _build_matrix(self) -> np.ndarray:
         """Construit la matrice de distances"""
         n = len(self.villes)
         matrix = np.zeros((n, n))
         
         for i in range(n):
-            for j in range(n):
+            for j in range(i+1, n):
                 matrix[i][j] = self.villes[i].eucledian_distance(self.villes[j])
-        
+                matrix[j][i] = matrix[i][j]  
         return matrix
     
     def get_distance(self, ville1_idx: int, ville2_idx: int) -> float:
@@ -151,12 +168,10 @@ class DistanceGraph:
     
 
     def path_distance(self, path):
-
         indices = [self.index[nom] for nom in path]
         # créé tous les couples nécessaires pour calculer la distance totale
         rows = indices[:-1]
         cols = indices[1:]
-
         return np.sum(self.matrix[rows, cols])
     
     def get_dataframe(self) -> pd.DataFrame:
