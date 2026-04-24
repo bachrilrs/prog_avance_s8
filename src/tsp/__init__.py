@@ -1,5 +1,5 @@
 from .structure import Ville, DistanceGraph, Pays
-from .solvers import KNN, LocalSearch
+from .solvers import KNN, TwoOpt, ThreeOpt
 from .io import load_cities
 from .visualizer import TSPVisualizer
 
@@ -8,7 +8,8 @@ __all__ = [
     "DistanceGraph",
     "Pays",
     "KNN",
-    "LocalSearch",
+    "TwoOpt",
+    "ThreeOpt",
     "TSPVisualizer",
     "load_cities"
 ]
