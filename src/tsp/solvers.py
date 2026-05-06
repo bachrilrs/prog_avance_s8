@@ -115,7 +115,7 @@ class KNN(Heuristique):
         self.distance_knn = best_parcours.distance_path
         
         if verbose:
-            print(f"[1/3] KNN: {self.distance_knn:.2f} depuis {self.start_city_knn}")
+            print(f" KNN: {self.distance_knn:.2f} depuis {self.start_city_knn}")
             
         return best_parcours
     
@@ -124,17 +124,6 @@ class KNN(Heuristique):
         for ville_start in self.paths.keys():
             path = self.paths[ville_start]
             self.distances[ville_start] = self.graph.path_distance(path)
-    
-    def get_optimal_path_KNN(self) -> tuple[str, list[str], float]:
-        """Retourne le meilleur chemin KNN."""
-        if not self.distances:
-            raise ValueError("compute_all_paths_knn() d'abord")
-        
-        start_point = min(self.distances, key=self.distances.get)
-        best_path = self.paths[start_point]
-        best_distance = self.distances[start_point]
-        
-        return Parcours(parcours=best_path, distance_path=best_distance)
     
     def print_distance_from_each_city(self) -> None:
         """Affiche les distances pour chaque point de départ (pour diagnostic)."""
@@ -150,18 +139,7 @@ class TwoOpt(Heuristique):
         """ Args:
             graph: Instance de DistanceGraph
         """
-        super().__init__(graph)        
-    # def distance_route(self, path):
-    #     """calculer path d'un chemin"""
-    #     total = 0
-    #     n = len(path)
-        
-    #     for i in range(n):
-    #         current_city = self.index_ville[path[i]]
-    #         next_city = self.index_ville[path[(i + 1) % n]]  # % n pour boucler
-    #         total += self.matrix_distance[current_city][next_city]
-        
-    #     return total 
+        super().__init__(graph)
 
     def solve(self, path: list[str]) -> tuple[list[str], float]:
         """2-opt local search - assumes CLOSED path (returns to start)"""
@@ -195,15 +173,9 @@ class TwoOpt(Heuristique):
                     break
         
         total_distance = self.graph.path_distance(best_path)
+        print(f"2-opt: {total_distance:.2f}")
+        print(f"{' -> '.join(best_path)}")
         return best_path, total_distance
-    
-    # def compute_all_paths_two_opt(self, KNN_paths = None):
-    #     distances = {}
-    #     for path in KNN_paths:
-    #         path_two_opt , dist = self.solve(path)
-    #         distances[path] = dist
-        
-    #     return distances
 
 class ThreeOpt(Heuristique):
     """3 opt"""
@@ -317,7 +289,9 @@ class ThreeOpt(Heuristique):
         # Retourne le chemin ouvert
         open_path = best_path[:-1]
         total_distance = self.graph.path_distance(open_path)
-        
+
+        print(f"3-opt: {total_distance:.2f}")
+        print(f"{' -> '.join(open_path)}")
         return open_path, total_distance
 
     def three_opt_implemented(self, path: list[str]) -> tuple[list[str], float]:
@@ -373,7 +347,6 @@ class ThreeOpt(Heuristique):
                             deltas = [d1, d2, d3, d4, d5, d6, d7]
 
                             min_delta = min(deltas) # On cherche la meilleure reconnexion possible parmi les 7, et on applique la première qui améliore (First Improvement)
-                                                        # TODO factoriser cette partie pour éviter les répétitions avec la 2-opt et rendre le code plus clair
 
                             if min_delta < -1e-5:
                                 idx = deltas.index(min_delta)
@@ -449,8 +422,6 @@ class AlgoGenetique(Heuristique):
         best_parents = [path for score, path in top_entries]
         return best_parents
     
-    
-    
     def compute_fitness(self, path: list[str]) -> float:
         """Calculer la fitness d'un path (inverse de la distance totale)"""
         return 1 / self.graph.path_distance(path)
@@ -485,35 +456,11 @@ class AlgoGenetique(Heuristique):
         if len(p2_pool) != child.count(None):
             raise ValueError("Mismatch between remaining cities and empty slots in child")
 
-        p2 = [v for v in parent2 if v not in child]
         for i in range(len(child)):
             if child[i] is None:
-                child[i] = p2.pop(0)
+                child[i] = p2_pool.pop(0)
         return child
-    
-    # def _evolve(self):
-    #     """Effectuer une génération complète: sélection, crossover, mutation"""
-    #     chromosomes = self.population
 
-    #     new_population = []
-
-    #     while len(new_population) < len(chromosomes):
-    #         parent_1, parent_2 = self.select_parents(2)
-    #         child = self.ordered_crossover(parent_1,parent_2)
-    #         child = self.mutation(child)
-    #         new_population.append(child)
-
-        
-    #     self.population = new_population
-
-    #     best_path = min(self.population, key=lambda p: self.graph.path_distance(p))
-    #     best_distance = self.graph.path_distance(best_path)
-    #     return Parcours(parcours=best_path, distance_path=best_distance)
-    
-    # def solve(self,initial_path: list[str] = None) -> Parcours:
-    #     """evolve through generations"""
-    #     for _ in range(self.generations):
-    #         self._evolve()
 
     def solve(self, initial_path: list[str] = None) -> Parcours:
         if initial_path:

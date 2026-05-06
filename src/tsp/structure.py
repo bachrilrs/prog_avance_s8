@@ -1,5 +1,5 @@
-from encodings.punycode import T
 import re
+import time
 
 import pandas as pd
 import numpy as np
@@ -8,8 +8,7 @@ import numpy as np
 class Pays:
     """Orchestre l'analyse complète du problème TSP"""
 
-    def __init__(self, nom ,villes: list['Ville'] = None):  
-
+    def __init__(self, nom ,villes: list['Ville'] = None):
         """ Args:
             nom: Nom du pays (ex: "France")
             villes: Liste de Ville chargées depuis load_cities()
@@ -36,20 +35,39 @@ class Pays:
         print(f"\n Analyse TSP : {self.nom} ")
         
         # 1. KNN
-        self.results['knn'] = self.knn_solver.solve(verbose=True)
+        start_time = time.time()
+        parcours_knn = self.knn_solver.solve(verbose=True)
+        temps_knn = time.time() - start_time
         
+        # On stocke un dictionnaire avec le parcours ET le temps
+        self.results['knn'] = {'parcours': parcours_knn,'temps': temps_knn}
+        
+        print(f"Temps d'exécution KNN: {temps_knn:.4f} secondes\n\n")
         # 2. Two-Opt (basé sur KNN)
-        # On enlève le dernier élément pour le solver local qui travaille en "open path"
-        path_for_opt = self.results['knn'].parcours[:-1]
+        path_for_opt = parcours_knn.parcours[:-1]
+        
+        start_time = time.time()
         path_2opt, dist_2opt = self.two_opt_solver.solve(path_for_opt)
-        self.results['two_opt'] = Parcours(path_2opt + [path_2opt[0]], dist_2opt)
-
+        temps_2opt = time.time() - start_time
+        
+        self.results['two_opt'] = {'parcours': Parcours(path_2opt + [path_2opt[0]], dist_2opt),'temps': temps_2opt}
+        print(f"\nTemps d'exécution 2-OPT: {temps_2opt:.4f} secondes\n\n")
         # 3. Three-Opt (basé sur Two-Opt)
+        start_time = time.time()
         path_3opt, dist_3opt = self.three_opt_solver.solve(path_2opt)
-        self.results['three_opt'] = Parcours(path_3opt + [path_3opt[0]], dist_3opt)
+        temps_3opt = time.time() - start_time
+        print(f"Temps d'exécution 3-OPT: {temps_3opt:.4f} secondes\n\n")
+        
+        self.results['three_opt'] = {'parcours': Parcours(path_3opt + [path_3opt[0]], dist_3opt),'temps': temps_3opt}
 
         # 4. Algo Génétique
-        self.results['ga'] = self.ga_solver.solve(initial_path=path_for_opt)
+        start_time = time.time()
+        parcours_ga = self.ga_solver.solve(initial_path=path_for_opt)
+        temps_ga = time.time() - start_time
+        
+        self.results['ga'] = {'parcours': parcours_ga,'temps': temps_ga}
+        print(f"Temps d'exécution Algorithme Génétique: {temps_ga:.4f} secondes\n\n")
+        print(f"Parcours GA: {' -> '.join(parcours_ga.parcours)} - Distance: {parcours_ga.distance_path:.2f}")
 
     def print_summary(self) -> None:
         """Affiche le résumé final."""
@@ -78,10 +96,7 @@ class Pays:
             algo: "knn", "two_opt", ou "three_opt"
         
         Returns:
-            Liste de noms de villes (chemin fermé)
-
-
-        """
+            Liste de noms de villes (chemin fermé)"""
         if algo not in self.results:
             raise ValueError(f"Algorithme '{algo}' non trouvé. Choisissez parmi: {list(self.results.keys())}")
         paths = {
@@ -101,7 +116,7 @@ class Pays:
         
         Returns:
             Distance totale
-            
+           
         """
         distances = {
             "knn": self.distance_knn,
@@ -113,7 +128,6 @@ class Pays:
     def print_best_path(self, algo: str) -> None:
         """
         Affiche le meilleur chemin en format lisible.
-        
         Args:
             algo: "knn", "two_opt", ou "three_opt"
         """
@@ -128,12 +142,9 @@ class Pays:
         print(" -> ".join(path))
     
     def visualize(self, algo: str = "three_opt") -> None:
-        """
-        Visualise le meilleur chemin trouvé.
-        
+        """Visualise le meilleur chemin trouvé.
         Args:
-            algo: "knn", "two_opt", ou "three_opt"
-        """
+            algo: "knn", "two_opt", ou 'three_opt'"""
         path = self.get_best_path(algo)
         distance = self.get_distance(algo)
         title = f"{self.nom} - {algo.upper()}"
@@ -277,9 +288,54 @@ class Parcours:
 
 class Solution:
     """Représente une solution complète pour un pays, avec tous les parcours et distances associés, avec les differents algos"""
-    """VA afficher une matrice ou df avec les distances pour chaque algo et chaque point de départ, et aussi les chemins associés, temps et distance"""
-    def __init__(self, pays: Pays):
+    
+    def __init__(self, pays: 'Pays'):
         self.pays = pays
         self.graph = pays.graph
-    # TODO 
-    
+        self.dataframe_resultats = None
+
+    def _tronquer_chemin(self, chemin: list[str], max_villes: int = 6) -> str:
+        """Helper : Raccourcit l'affichage du chemin s'il est trop long pour le tableau."""
+        if len(chemin) <= max_villes:
+            return " -> ".join(chemin)
+        
+        # Affiche les 3 premières et les 3 dernières villes
+        debut = " -> ".join(chemin[:3])
+        fin = " -> ".join(chemin[-3:])
+        return f"{debut} ... -> {fin}"
+
+def generer_matrice(self) -> pd.DataFrame:
+        """Génère un DataFrame (matrice) contenant toutes les statistiques comparatives."""
+        lignes = []
+        
+        distance_reference = None
+        if 'knn' in self.pays.results:
+            # On va chercher la distance à l'intérieur de la nouvelle structure
+            distance_reference = self.pays.results['knn']['parcours'].distance_path
+
+        # On itère sur le dictionnaire contenant nos données enrichies
+        for nom_algo, data in self.pays.results.items():
+            
+            # Extraction propre
+            parcours = data['parcours']
+            temps_exec = data['temps']
+            
+            amelioration = 0.0
+            if distance_reference and distance_reference > 0:
+                amelioration = ((distance_reference - parcours.distance_path) / distance_reference) * 100
+
+            lignes.append({
+                'Algorithme': nom_algo.upper(),
+                'Point de Départ': parcours.point_depart,
+                'Distance Totale': round(parcours.distance_path, 2),
+                'Amélioration (%)': round(amelioration, 2),
+                'Temps (s)': round(temps_exec, 4), # On utilise le temps ici !
+                'Aperçu du Chemin': self._tronquer_chemin(parcours.parcours)
+            })
+
+        self.dataframe_resultats = pd.DataFrame(lignes)
+        
+        if not self.dataframe_resultats.empty:
+            self.dataframe_resultats.set_index('Algorithme', inplace=True)
+            
+        return self.dataframe_resultats
