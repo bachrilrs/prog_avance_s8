@@ -13,8 +13,8 @@ class TSPVisualizer:
         """Affiche n'importe quel chemin, peu importe l'algorithme qui l'a généré."""
         
         # Astuce : On utilise self.graph.index pour trouver les villes instantanément O(1)
-        x = [self.graph.villes[self.graph.index[nom]].coord_X for nom in path_names]
-        y = [self.graph.villes[self.graph.index[nom]].coord_Y for nom in path_names]
+        x = [self.graph.villes[nom].coord_X for nom in path_names]
+        y = [self.graph.villes[nom].coord_Y for nom in path_names]
         
         x = np.array(x)
         y = np.array(y)

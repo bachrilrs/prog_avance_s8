@@ -3,7 +3,7 @@ import random
 import time
 import heapq
 from tqdm import tqdm
-from .structure import DistanceGraph, Parcours
+from .structure import DistanceGraph, Path
 
 class Heuristique:
     """Classe regroupant les différentes heuristiques pour résoudre le TSP"""
@@ -85,7 +85,7 @@ class KNN(Heuristique):
             
             self._compute_distances()
     
-    def get_optimal_path(self) -> Parcours:
+    def get_optimal_path(self) -> Path:
         """Retourne le meilleur chemin KNN."""
         if not self.distances:
             raise ValueError("compute_all_paths_knn() d'abord")
@@ -94,9 +94,9 @@ class KNN(Heuristique):
         best_path = self.paths[start_point]
         best_distance = self.distances[start_point]
         
-        return Parcours(parcours=best_path, distance_path=best_distance)
+        return Path(path=best_path, distance_path=best_distance)
     
-    def solve(self, verbose: bool = False) -> Parcours:
+    def solve(self, verbose: bool = False) -> Path:
         """Étape 1: KNN amélioré - teste plusieurs stratégies."""
         
         # Version 1: Multi-start (rapide, robuste)
@@ -106,18 +106,18 @@ class KNN(Heuristique):
             self.compute_all_paths_knn(multistart=False)
         
         # 1. Call the correctly named method
-        # 2. Store the Parcours object instead of trying to unpack it as a tuple
-        best_parcours = self.get_optimal_path()
+        # 2. Store the Path object instead of trying to unpack it as a tuple
+        best_path = self.get_optimal_path()
         
         # Keep storing the attributes if your other classes rely on them
-        self.start_city_knn = best_parcours.point_depart
-        self.best_path_knn = best_parcours.parcours
-        self.distance_knn = best_parcours.distance_path
+        self.start_city_knn = best_path.point_depart
+        self.best_path_knn = best_path.path
+        self.distance_knn = best_path.distance_path
         
         if verbose:
             print(f" KNN: {self.distance_knn:.2f} depuis {self.start_city_knn}")
             
-        return best_parcours
+        return Path(path=self.best_path_knn, distance_path=self.distance_knn)
     
     def _compute_distances(self) -> None:
         """Calcule et stocke la distance de chaque chemin."""
@@ -175,7 +175,7 @@ class TwoOpt(Heuristique):
         total_distance = self.graph.path_distance(best_path)
         print(f"2-opt: {total_distance:.2f}")
         print(f"{' -> '.join(best_path)}")
-        return best_path, total_distance
+        return Path(path=best_path, distance_path=total_distance)
 
 class ThreeOpt(Heuristique):
     """3 opt"""
@@ -233,7 +233,7 @@ class ThreeOpt(Heuristique):
         
         return best_path    
 
-    def solve(self, path: list[str], max_iterations: int = 50, 
+    def solve(self, path, max_iterations: int = 50, 
               timeout: float = 60.0) -> tuple[list[str], float]:
         """
         Implémentation 3-opt optimisée avec timeout et limite d'itérations.
@@ -247,7 +247,7 @@ class ThreeOpt(Heuristique):
             (chemin amélioré, distance totale)
         """
         
-        best_path = path[:]
+        best_path = path.path
         if best_path[0] != best_path[-1]:
             best_path.append(best_path[0])
         
@@ -275,8 +275,7 @@ class ThreeOpt(Heuristique):
                         if min_delta < -1e-5:
                             # Applique la meilleure reconnexion
                             best_path = self._apply_three_opt_move(
-                                best_path, i, j, k, best_idx
-                            )
+                                best_path, i, j, k, best_idx)
                             improved = True
                             break
                     
@@ -292,7 +291,7 @@ class ThreeOpt(Heuristique):
 
         print(f"3-opt: {total_distance:.2f}")
         print(f"{' -> '.join(open_path)}")
-        return open_path, total_distance
+        return Path(path=open_path, distance_path=total_distance)
 
     def three_opt_implemented(self, path: list[str]) -> tuple[list[str], float]:
             """
@@ -388,7 +387,7 @@ class ThreeOpt(Heuristique):
 class AlgoGenetique(Heuristique):
     """Implémentation d'un algorithme génétique pour résoudre le TSP"""
     
-    def __init__(self, graph: DistanceGraph,  pop_size = 100, generations = 500, mutation_rate = 0.05):
+    def __init__(self, graph: DistanceGraph,  pop_size = 100, generations = 650, mutation_rate = 0.05):
         super().__init__(graph)
 
         self.pop_size = pop_size
@@ -462,7 +461,7 @@ class AlgoGenetique(Heuristique):
         return child
 
 
-    def solve(self, initial_path: list[str] = None) -> Parcours:
+    def solve(self, initial_path: list[str] = None) -> Path:
         if initial_path:
             
             if initial_path[0] == initial_path[-1]:
@@ -496,5 +495,5 @@ class AlgoGenetique(Heuristique):
 
         final_best = self.population[0] # Le premier est le meilleur grâce au tri
         final_dist = self.graph.path_distance(final_best + [final_best[0]])
-        return Parcours(parcours=final_best + [final_best[0]], distance_path=final_dist)
+        return Path(path=final_best + [final_best[0]], distance_path=final_dist)
 
