@@ -1,0 +1,5 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Créteil,59.5,0.0036
+TWO_OPT,Créteil,54.33,0.0589
+THREE_OPT,Créteil,54.21,0.0329
+AG,Créteil,57.99,0.4179

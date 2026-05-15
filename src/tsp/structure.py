@@ -1,215 +1,9 @@
 import time
-
 import pandas as pd
 import numpy as np
 
-
-class Pays:
-    """Orchestre l'analyse complète du problème TSP"""
-
-    def __init__(self, nom ,villes: list['Ville'] = None):
-        """ Args:
-            nom: Nom du pays (ex: "France")
-            villes: Liste de Ville chargées depuis load_cities()
-        """
-
-        from .solvers import KNN, TwoOpt, ThreeOpt, AlgoGenetique
-        from .visualizer import TSPVisualizer
-        
-        self.nom = nom
-        self.graph = DistanceGraph(villes)
-        
-        # Initialisation des solveurs
-        self.knn_solver = KNN(self.graph)
-        self.two_opt_solver = TwoOpt(self.graph)
-        self.three_opt_solver = ThreeOpt(self.graph)
-        self.ga_solver = AlgoGenetique(self.graph)
-        self.visualizer = TSPVisualizer(self.graph)
-
-        # Stockage des résultats (Objets Parcours)
-        self.results= {}
-
-    def __str__(self) -> str:
-        """Représentation textuelle du pays"""
-        if self.distance_three_opt is None:
-            return f'{self.nom}: {len(self.villes)} villes (non résolu)'
-        return (f'{self.nom}: {len(self.villes)} villes - '
-                f'Distance finale: {self.distance_three_opt:.2f}')
-        
-
-    def run_full_analysis(self):
-        print(f"\n Analyse TSP : {self.nom} ")
-        
-        # 1. KNN
-        start_time = time.time()
-        path_knn = self.knn_solver.solve(verbose=True)
-        temps_knn = time.time() - start_time
-        
-        # On stocke un dictionnaire avec le path ET le temps
-        self.results['knn'] = path_knn
-
-        print(f"Temps d'exécution KNN: {temps_knn:.4f} secondes\n\n")
-
-        # 2. Two-Opt (basé sur KNN)
-        path_for_opt = path_knn.path[:-1]
-        
-        start_time = time.time()
-        path_2opt = self.two_opt_solver.solve(path_for_opt)
-        temps_2opt = time.time() - start_time
-        
-        self.results['two_opt'] = path_2opt
-        print(f"\nTemps d'exécution 2-OPT: {temps_2opt:.4f} secondes\n\n")
-
-
-        # 3. Three-Opt (basé sur Two-Opt)
-        start_time = time.time()
-        path_3opt = self.three_opt_solver.solve(path_2opt)
-        temps_3opt = time.time() - start_time
-        print(f"Temps d'exécution 3-OPT: {temps_3opt:.4f} secondes\n\n")
-        
-        self.results['three_opt'] = path_3opt 
-
-        # 4. Algo Génétique
-        start_time = time.time()
-        path_ga = self.ga_solver.solve(initial_path=path_for_opt)
-        temps_ga = time.time() - start_time
-        
-        self.results['ga'] = path_ga
-        print(f"Temps d'exécution Algorithme Génétique: {temps_ga:.4f} secondes\n\n")
-        print(f"Parcours GA: {' -> '.join(path_ga.path)} - Distance: {path_ga.distance_path:.2f}")
-
-    def print_summary(self) -> None:
-        """Affiche le résumé final."""
-        total_improvement = self._calculate_improvement(self.distance_knn, self.distance_three_opt)
-        
-        print(f"\nRésumé: {self.nom} ({len(self.villes)} villes)")
-        print(f"  KNN   → {self.distance_knn:.2f}")
-        print(f"Chemin KNN: {' → '.join(self.best_path_knn)}")
-        print(f"  2-OPT → {self.distance_two_opt:.2f}")
-        print(f"Chemin 2-OPT: {' → '.join(self.best_path_two_opt)}")
-        print(f"  3-OPT → {self.distance_three_opt:.2f}")
-        print(f"Chemin 3-OPT: {' → '.join(self.best_path_three_opt)}")
-        print(f"  Amélioration totale: {total_improvement:.1f}%\n")
-
-    def _calculate_improvement(self, distance_before: float, distance_after: float) -> float:
-        """Calcule le pourcentage d'amélioration."""
-        if distance_before == 0:
-            return 0.0
-        return ((distance_before - distance_after) / distance_before) * 100
-    
-    def get_best_path(self, algo: str ) -> list[str]:
-        """
-        Retourne le meilleur chemin selon l'algorithme choisi.
-        
-        Args:
-            algo: "knn", "two_opt", ou "three_opt"
-        
-        Returns:
-            Liste de noms de villes (chemin fermé)"""
-        if algo not in self.results:
-            raise ValueError(f"Algorithme '{algo}' non trouvé. Choisissez parmi: {list(self.results.keys())}")
-        paths = {
-            "knn": self.results['knn'].path,
-            "two_opt": self.results['two_opt'].path,
-            "three_opt": self.results['three_opt'].path,
-            "ga": self.results['ga'].path}
-        
-        return paths.get(algo)
-    
-    def get_distance(self, algo: str = "three_opt") -> float:
-        """
-        Retourne la distance selon l'algorithme choisi.
-        
-        Args:
-            algo: "knn", "two_opt", ou "three_opt"
-        
-        Returns:
-            Distance totale
-           
-        """
-        distances = {
-            "knn": self.distance_knn,
-            "two_opt": self.distance_two_opt,
-            "three_opt": self.distance_three_opt
-        }
-        return distances.get(algo)
-    
-    def print_best_path(self, algo: str) -> None:
-        """
-        Affiche le meilleur chemin en format lisible.
-        Args:
-            algo: "knn", "two_opt", ou "three_opt"
-        """
-
-        if algo not in self.results:
-            raise ValueError(f"Algorithme '{algo}' non trouvé. Choisissez parmi: {list(self.results.keys())}")
-        
-        path = self.get_best_path(algo)
-        distance = self.get_distance(algo)
-        
-        print(f"\n{algo.upper()} - Distance: {distance:.2f}")
-        print(" -> ".join(path))
-    
-    def visualize(self, algo: str = "three_opt") -> None:
-        """Visualise le meilleur chemin trouvé.
-        Args:
-            algo: "knn", "two_opt", ou 'three_opt'"""
-        path = self.get_best_path(algo)
-        distance = self.get_distance(algo)
-        title = f"{self.nom} - {algo.upper()}"
-        
-        self.visualizer.plot_path(path, title, distance)
-    
-    def get_matrix_with_labels(self) -> pd.DataFrame:
-        """Retourne la matrice de distances avec labels"""
-        return self.graph.get_dataframe()
-    
-    def print_all_knn_results(self) -> None:
-        """Affiche les distances KNN pour chaque point de départ"""
-        self.knn.print_distance_from_each_city()
-            
-    def compute_path_distance(self, path):
-        """Calcule la distance totale d'un chemin"""
-
-        indices = [self.graph.index[nom] for nom in path]
-        rows = indices[:-1]
-        cols = indices[1:]
-        return np.sum(self.graph.matrix[rows, cols])
-    
-    def print_distance_from_each_city(self):
-        """Affiche les distances pour chaque point de départ"""
-        self.knn.print_distance_from_each_city()
-
-    def print_from_a_city(self, nom_ville):
-        """Affiche le chemin partant d'une ville"""
-        return self.knn.print_from_a_city(nom_ville)
-    
-    def print_best_path(self):
-        """Affiche le meilleur chemin trouvé"""
-        if self.best_path is None:
-            print("Veuillez d'abord appeler get_optimal_path()")
-            return
-        
-        print(f"Meilleur chemin trouvé : {' -> '.join(self.best_path)}")
-    
-    def get_optimal_path(self):
-        """Retourne le meilleur chemin après KNN, 2-opt et 3-opt"""
-        start_point, path, distance = self.knn.get_optimal_path()
-        self.best_path_knn = path
-        
-        # 2-opt
-        knn_path_open = path[:-1]
-        optimized_path_2opt, opt_distance_2 = self.two_opt.two_opt(knn_path_open)
-        self.best_path_two_opt = optimized_path_2opt + [optimized_path_2opt[0]]
-
-        # 3-opt (Prend le résultat du 2-opt pour l'améliorer encore plus)
-        optimized_path_3opt, opt_distance_3 = self.two_opt.three_opt(optimized_path_2opt)
-        self.best_path_three_opt = optimized_path_3opt + [optimized_path_3opt[0]]
-
-        return start_point, path, distance
-   
 class Ville:
-    """classe ville"""
+    """Représente une ville avec ses coordonnées."""
 
     def __init__(self, nom):
         self.nom = nom
@@ -225,118 +19,336 @@ class Ville:
         return self.__coord_Y
 
     @coord_X.setter
-    def coord_X(self,x):
+    def coord_X(self, x):
         self.__coord_X = x
 
     @coord_Y.setter
-    def coord_Y(self,y):
+    def coord_Y(self, y):
         self.__coord_Y = y
 
     def __str__(self):
-        return f'{self.nom} coordonées X : {self.__coord_X}, coorodonées Y: {self.__coord_Y}'
+        return f'{self.nom} (X: {self.__coord_X}, Y: {self.__coord_Y})'
     
     def eucledian_distance(self, other):
+        """Calcule la distance euclidienne vers une autre ville."""
         return np.sqrt((other.coord_X - self.coord_X)**2 + (other.coord_Y - self.coord_Y)**2)
-        # return np.linalg.norm(other-self)
-    
+
 class DistanceGraph:
-    """Gère la matrice de distances entre villes"""
+    """Gère la matrice de distances entre villes."""
     
-    def __init__(self, villes: list[Ville]):
+    def __init__(self, villes):
+        self.villes = villes
+        self.index = {v.nom: i for i, v in enumerate(villes)}
+        self.matrix = self._build_matrix()
 
-        self.villes = villes                              # Liste des Ville
-        self.index = {v.nom: i for i, v in enumerate(villes)}  # Dict nom -> indice
-        self.matrix = self._build_matrix()                # Matrice distances (n x n)
-        self.matrix_df = self.get_dataframe()
-
-    def _build_matrix(self) -> np.ndarray:
-        """Construit la matrice de distances"""
+    def _build_matrix(self):
+        """Construit la matrice de distances."""
         n = len(self.villes)
         matrix = np.zeros((n, n))
         
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 matrix[i][j] = self.villes[i].eucledian_distance(self.villes[j])
-                matrix[j][i] = matrix[i][j]  
+                matrix[j][i] = matrix[i][j]
         return matrix
     
-    def get_distance(self, ville1_idx: int, ville2_idx: int) -> float:
-        """Retourne la distance entre deux villes par indice"""
+    def get_distance(self, ville1_idx, ville2_idx):
+        """Retourne la distance entre deux villes."""
         return self.matrix[ville1_idx, ville2_idx]
     
-
     def path_distance(self, path):
+        """Calcule la distance totale d'un chemin."""
         indices = [self.index[nom] for nom in path]
-        # créé tous les couples nécessaires pour calculer la distance totale
         rows = indices[:-1]
         cols = indices[1:]
         return np.sum(self.matrix[rows, cols])
     
-    def get_dataframe(self) -> pd.DataFrame:
-        """Retourne la matrice sous forme de DataFrame avec labels"""
+    def get_dataframe(self):
+        """Retourne la matrice sous forme de DataFrame."""
         noms = [v.nom for v in self.villes]
         return pd.DataFrame(self.matrix, index=noms, columns=noms)
 
 class Path:
-    """Représente un path (chemin) dans le TSP"""
+    """Représente un chemin solution dans le TSP."""
 
-    #TODO cette classe gere les path, on ne va plus utiliser de variables classique pour stocker les path
-
-    def __init__(self,path: list[str], distance_path: float):
+    def __init__(self, path, distance_path, algo_name="Unknown"):
         self.path = path
-        self.point_depart = path[0] if path else None
         self.distance_path = distance_path
+        self.point_depart = path[0] if path else None
+        self.algo_name = algo_name
+        self.temps_execution = 0.0
 
-class Solution:
-    """Représente une solution complète pour un pays, avec tous les path et distances associés, avec les differents algos"""
+    def __str__(self):
+        """Affichage lisible du chemin."""
+        chemin_str = " → ".join(self.path[:3]) + " ... " + " → ".join(self.path[-3:]) \
+            if len(self.path) > 6 else " → ".join(self.path)
+        return f"{self.algo_name} ({self.point_depart}): {self.distance_path:.2f} | {chemin_str}"
     
-    def __init__(self, pays: 'Pays'):
-        self.pays = pays
-        self.graph = pays.graph
-        self.dataframe_resultats = None
+    def get_improvement_percent(self, reference_distance):
+        """Calcule le % d'amélioration vs une distance de référence."""
+        if reference_distance <= 0:
+            return 0.0
+        return ((reference_distance - self.distance_path) / reference_distance) * 100
 
-    def _tronquer_chemin(self, chemin: list[str], max_villes: int = 6) -> str:
-        """Helper : Raccourcit l'affichage du chemin s'il est trop long pour le tableau."""
-        if len(chemin) <= max_villes:
-            return " -> ".join(chemin)
+class Pays:
+    """Orchestre l'analyse complète du problème TSP."""
+
+    def __init__(self, nom, villes=None):
+        """
+        Args:
+            nom: Nom du pays/instance
+            villes: Liste de Ville chargées depuis load_cities()
+        """
+        self.nom = nom
+        self.graph = DistanceGraph(villes)
         
-        # Affiche les 3 premières et les 3 dernières villes
-        debut = " -> ".join(chemin[:3])
-        fin = " -> ".join(chemin[-3:])
-        return f"{debut} ... -> {fin}"
+        from .solvers import KNN, TwoOpt, ThreeOpt, AlgoGenetique
+        from .visualizer import TSPVisualizer
+        
+        # Initialisation des solveurs
+        self.knn_solver = KNN(self.graph)
+        self.two_opt_solver = TwoOpt(self.graph)
+        self.three_opt_solver = ThreeOpt(self.graph)
+        self.ga_solver = AlgoGenetique(self.graph)
+        self.visualizer = TSPVisualizer(self.graph)
 
-def generer_matrice(self) -> pd.DataFrame:
-        """Génère un DataFrame (matrice) contenant toutes les statistiques comparatives."""
+        # Stockage des résultats : {algo: {nom_ville: Path}}
+        self.results = {
+            'knn': {},
+            'two_opt': {},
+            'three_opt': {},
+            'ag': {}
+        }
+        
+        # Meilleur par algo
+        self.best_overall = {}
+
+    def __str__(self):
+        """Représentation textuelle du pays."""
+        if not self.best_overall:
+            return f'{self.nom}: {len(self.graph.villes)} villes (non résolu)'
+        best_dist = min(p.distance_path for p in self.best_overall.values())
+        return f'{self.nom}: {len(self.graph.villes)} villes - Distance finale: {best_dist:.2f}'
+    
+    def meilleur_par_algo(self, algo):
+        """Retourne le meilleur chemin pour un algorithme."""
+        if algo not in self.best_overall:
+            raise ValueError(f"Algorithme '{algo}' non trouvé. Disponibles: {list(self.best_overall.keys())}")
+        return self.best_overall[algo]
+    
+    def meilleur_global(self):
+        """Retourne le meilleur chemin parmi tous les algos."""
+        if not self.best_overall:
+            raise ValueError("Aucun résultat. Appelez run_all_algos_multi_depart() d'abord")
+        return min(self.best_overall.values(), key=lambda p: p.distance_path)
+
+    def _run_algo(self, algo_name, solver, input_results_key, output_results_key, 
+              verbose=True, **solver_kwargs):
+        """
+        Méthode générique pour exécuter n'importe quel algo.
+        
+        Args:
+            algo_name: Nom de l'algo pour affichage ("KNN", "2-OPT", etc)
+            solver: L'objet solver (knn_solver, two_opt_solver, etc)
+            input_results_key: Clé des résultats d'entrée (ex: 'knn', None si nouveau)
+            output_results_key: Clé des résultats de sortie (ex: 'two_opt')
+            verbose: Afficher progression
+            **solver_kwargs: Arguments supplémentaires pour solver.solve() # sert a faire passer max_iterations, timeout, etc
+        """
+        
+
+        # Vérifier que les entrées existent
+        if input_results_key and not self.results[input_results_key]:
+            print(f"{input_results_key.upper()} manquant pour {algo_name}. Exécutez d'abord {input_results_key.upper()}.")
+            self._run_algo(input_results_key, getattr(self, f'{input_results_key}_solver'),
+                        None, input_results_key, verbose=False)
+        
+        self.results[output_results_key] = {}
+        
+        if verbose:
+            kwargs_str = ", ".join(f"{k}={v}" for k, v in solver_kwargs.items())
+
+            print(f"{algo_name} - {self.nom} ({kwargs_str})")
+
+        
+        # Déterminer la source de données
+        input_dict = self.results[input_results_key] if input_results_key else None
+        
+        # Exécuter algo
+        if algo_name == "KNN":
+            # KNN est spécial : boucle sur les départs
+            for idx, ville in enumerate(self.graph.villes):
+                start_t = time.time()
+                path = solver.solve(start_idx=idx)
+                path.temps_execution = time.time() - start_t
+                self.results[output_results_key][ville.nom] = path
+                if verbose and idx % max(1, len(self.graph.villes) // 5) == 0:
+                    print(f"  {idx+1}/{len(self.graph.villes)} villes traitées...")
+        else:
+            # 2-OPT, 3-OPT, AG : boucle sur résultats précédents
+            for key, path_input in input_dict.items():
+                start_t = time.time()
+                path = solver.solve(path_input, **solver_kwargs) 
+                path.temps_execution = time.time() - start_t
+                self.results[output_results_key][key] = path
+                
+                if verbose:
+                    improvement = ((path_input.distance_path - path.distance_path) / 
+                                path_input.distance_path) * 100
+                    print(f"  {key:15s} → {path.distance_path:.2f} ({improvement:+.1f}%)")
+        
+        self._compute_best_overall()
+        if verbose:
+            self._print_resume()
+
+    def run_knn_only(self, verbose=True):
+        """Exécute KNN uniquement."""
+        self._run_algo("KNN", self.knn_solver, None, 'knn', verbose=verbose)
+
+    def run_two_opt_only(self, verbose=True, max_no_improve=100):
+        """Exécute 2-OPT sur KNN existant."""
+        self._run_algo("2-OPT", self.two_opt_solver, 'knn', 'two_opt', verbose=verbose, max_no_improve=max_no_improve)
+
+    def run_three_opt_only(self, verbose=True, max_iterations=50, timeout=60.0):
+        """Exécute 3-OPT sur 2-OPT existant."""
+        self._run_algo("3-OPT", self.three_opt_solver, 'two_opt', 'three_opt',  verbose=verbose, max_iterations=max_iterations, timeout=timeout)
+
+    def run_three_opt_best_only(self, verbose=True, max_iterations=10, timeout=60.0):
+        """
+        Exécute 3-OPT UNIQUEMENT sur le meilleur chemin 2-OPT.
+        
+        Beaucoup plus rapide que sur tous les chemins.
+        """
+        if not self.results['two_opt']:
+            print("2-OPT manquant. Exécutez d'abord 2-OPT.")
+            self.run_two_opt_only(verbose=False)
+        
+        self.results['three_opt'] = {}
+        
+        if verbose:
+            print(f"\n{'='*70}")
+            print(f"3-OPT (meilleur 2-OPT uniquement) - {self.nom}")
+            print(f"{'='*70}\n")
+        
+        #Récupérer le meilleur 2-OPT
+        best_2opt_path = min(
+            self.results['two_opt'].values(), key=lambda p: p.distance_path)
+        best_start = best_2opt_path.point_depart
+        
+        if verbose:
+            print(f"Amélioration du meilleur 2-OPT depuis {best_start}: {best_2opt_path.distance_path:.2f}")
+        
+        #Appliquer 3-OPT uniquement sur le meilleur
+        start_t = time.time()
+        path_3opt = self.three_opt_solver.solve(
+            best_2opt_path, 
+            verbose=verbose,
+            max_iterations=max_iterations, 
+            timeout=timeout
+        )
+        path_3opt.temps_execution = time.time() - start_t
+        
+        #Stocker UNIQUEMENT ce résultat
+        self.results['three_opt'][best_start] = path_3opt
+        
+        if verbose:
+            improvement = ((best_2opt_path.distance_path - path_3opt.distance_path) / 
+                        best_2opt_path.distance_path) * 100
+            print(f"  {best_start:15s} → {path_3opt.distance_path:.2f} ({improvement:+.1f}%)")
+        
+        self._compute_best_overall()
+        if verbose:
+            self._print_resume()
+
+    def run_ga_only(self, verbose=True, pop_size=100, generations=100, mutation_rate=0.05):
+        """Exécute AG sur KNN existant."""
+        from .solvers import AlgoGenetique
+        ga = AlgoGenetique(self.graph, pop_size=pop_size, 
+                        generations=generations, mutation_rate=mutation_rate)
+        
+        self.results['ag'] = {}
+        
+        if verbose:
+            print(f"AG - {self.nom} (pop={pop_size}, gen={generations})")
+        
+        # Récupérer le meilleur KNN
+        best_knn = min(self.results['knn'].values(), key=lambda p: p.distance_path)
+        
+        start_t = time.time()
+        path_ag = ga.solve(initial_path=best_knn.path[:-1], verbose=verbose)
+        path_ag.temps_execution = time.time() - start_t
+        self.results['ag'] = {"AG": path_ag}
+        
+        if verbose:
+            print(f"  AG → {path_ag.distance_path:.2f} (Temps: {path_ag.temps_execution:.2f}s)")
+        
+        self._compute_best_overall()
+        if verbose:
+            self._print_resume()
+
+    def run_all_algos_multi_depart(self, verbose=True, run_knn=True, run_2opt=True, 
+                                run_3opt=True, run_ga=True, **kwargs):
+        """
+        Lance les algos en cascade selon paramètres.
+        
+        Args:
+            run_knn, run_2opt, run_3opt, run_ga: Boolean pour chaque algo
+            **kwargs: Paramètres spécifiques (max_iterations, pop_size, etc)
+        """
+        if run_knn:
+            self.run_knn_only(verbose=verbose)
+        
+        if run_2opt:
+            self.run_two_opt_only(verbose=verbose, 
+                                max_no_improve=kwargs.get('max_no_improve', 100))
+        
+        if run_3opt:
+            self.run_three_opt_only(verbose=verbose, 
+                                max_iterations=kwargs.get('max_iterations', 50),
+                                timeout=kwargs.get('timeout', 60.0))
+        
+        if run_ga:
+            self.run_ga_only(verbose=verbose,
+                            pop_size=kwargs.get('pop_size', 100),
+                            generations=kwargs.get('generations', 100),
+                            mutation_rate=kwargs.get('mutation_rate', 0.05))
+
+    def _compute_best_overall(self):
+        """Calcule et stocke le meilleur chemin par algorithme."""
+        self.best_overall = {}
+        for algo in self.results:
+            if self.results[algo]:
+                dists = {v: p.distance_path for v, p in self.results[algo].items()}
+                best_start = min(dists, key=dists.get)
+                self.best_overall[algo] = self.results[algo][best_start]
+
+    def _print_resume(self):
+        """Affiche le résumé des résultats."""
+
+        print("RÉSUMÉ DES RÉSULTATS")
+
+        for algo, path in self.best_overall.items():
+            print(f"{algo.upper():6s} → {path.distance_path:.2f} (temps: {path.temps_execution:.4f}s)")
+
+    def to_results_dataframe(self):
+        """Retourne un DataFrame synthétique sur tous les résultats."""
         lignes = []
+        for algo, dict_res in self.results.items():
+            for start, path_obj in dict_res.items():
+                chemin = path_obj.path
+                chemin_str = (" → ".join(chemin[:3]) + " ... " + " → ".join(chemin[-3:])
+                             if len(chemin) > 7 else " → ".join(chemin))
+                lignes.append({
+                    'Algo': algo.upper(),
+                    'Départ': start,
+                    'Distance': round(path_obj.distance_path, 2),
+                    'Temps (s)': round(path_obj.temps_execution, 4),
+                    'Aperçu': chemin_str
+                })
         
-        distance_reference = None
-        if 'knn' in self.pays.results:
-            # On va chercher la distance à l'intérieur de la nouvelle structure
-            distance_reference = self.pays.results['knn']['path'].distance_path
+        df = pd.DataFrame(lignes)
+        return df.sort_values(['Algo', 'Distance'])
 
-        # On itère sur le dictionnaire contenant nos données enrichies
-        for nom_algo, data in self.pays.results.items():
-            
-            # Extraction propre
-            path = data['path']
-            temps_exec = data['temps']
-            
-            amelioration = 0.0
-            if distance_reference and distance_reference > 0:
-                amelioration = ((distance_reference - path.distance_path) / distance_reference) * 100
-
-            lignes.append({
-                'Algorithme': nom_algo.upper(),
-                'Point de Départ': path.point_depart,
-                'Distance Totale': round(path.distance_path, 2),
-                'Amélioration (%)': round(amelioration, 2),
-                'Temps (s)': round(temps_exec, 4), # On utilise le temps ici !
-                'Aperçu du Chemin': self._tronquer_chemin(path.path)
-            })
-
-        self.dataframe_resultats = pd.DataFrame(lignes)
-        
-        if not self.dataframe_resultats.empty:
-            self.dataframe_resultats.set_index('Algorithme', inplace=True)
-            
-        return self.dataframe_resultats
+    def get_matrix_with_labels(self):
+        """Retourne la matrice de distances avec labels."""
+        return self.graph.get_dataframe()

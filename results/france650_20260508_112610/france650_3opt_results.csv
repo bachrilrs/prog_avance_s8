@@ -1,0 +1,4 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Valence,111.47,0.0136
+TWO_OPT,Rive-de-Gier,91.89,11.5865
+THREE_OPT,Rive-de-Gier,91.85,4.7041

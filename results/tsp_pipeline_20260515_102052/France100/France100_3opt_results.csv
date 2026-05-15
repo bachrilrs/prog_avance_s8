@@ -1,0 +1,4 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Versailles,60.79,0.0014
+TWO_OPT,Saint-Quentin,58.13,0.2452
+THREE_OPT,Saint-Quentin,58.09,0.2807

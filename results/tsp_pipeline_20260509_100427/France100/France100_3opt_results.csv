@@ -1,0 +1,4 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Versailles,60.79,0.0014
+TWO_OPT,Créteil,59.05,0.2337
+THREE_OPT,Créteil,58.99,0.3781
