@@ -1,0 +1,23 @@
+Algo,Départ,Distance,Temps (s),Aperçu
+AG,AG,30.35,0.0161,Montpellier → Lyon → Marseille ... Bordeaux → Toulouse → Montpellier
+KNN,Lyon,30.94,0.0,Lyon → Montpellier → Marseille ... Bordeaux → Toulouse → Lyon
+KNN,Paris,31.89,0.0001,Paris → Lille → Strasbourg ... Bordeaux → Nantes → Paris
+KNN,Toulouse,31.89,0.0,Toulouse → Bordeaux → Nantes ... Marseille → Nice → Toulouse
+KNN,Strasbourg,31.89,0.0,Strasbourg → Lyon → Montpellier ... Paris → Lille → Strasbourg
+KNN,Marseille,32.1,0.0,Marseille → Montpellier → Lyon ... Bordeaux → Toulouse → Marseille
+KNN,Bordeaux,34.41,0.0,Bordeaux → Toulouse → Montpellier ... Strasbourg → Nantes → Bordeaux
+KNN,Nantes,34.41,0.0,Nantes → Bordeaux → Toulouse ... Lille → Strasbourg → Nantes
+KNN,Lille,35.31,0.0,Lille → Paris → Lyon ... Bordeaux → Nantes → Lille
+KNN,Montpellier,37.13,0.0,Montpellier → Marseille → Nice ... Bordeaux → Nantes → Montpellier
+KNN,Nice,39.28,0.0,Nice → Marseille → Montpellier ... Bordeaux → Nantes → Nice
+THREE_OPT,Nice,29.33,0.0001,Nice → Marseille → Montpellier ... Strasbourg → Lyon → Nice
+TWO_OPT,Bordeaux,29.33,0.0012,Bordeaux → Toulouse → Montpellier ... Paris → Nantes → Bordeaux
+TWO_OPT,Nice,29.33,0.0012,Nice → Marseille → Montpellier ... Strasbourg → Lyon → Nice
+TWO_OPT,Nantes,29.33,0.0012,Nantes → Bordeaux → Toulouse ... Lille → Paris → Nantes
+TWO_OPT,Paris,30.35,0.0012,Paris → Lille → Strasbourg ... Bordeaux → Nantes → Paris
+TWO_OPT,Marseille,30.35,0.0011,Marseille → Nice → Strasbourg ... Montpellier → Lyon → Marseille
+TWO_OPT,Lyon,30.35,0.0011,Lyon → Montpellier → Toulouse ... Nice → Marseille → Lyon
+TWO_OPT,Toulouse,30.35,0.0012,Toulouse → Bordeaux → Nantes ... Lyon → Montpellier → Toulouse
+TWO_OPT,Montpellier,30.35,0.0012,Montpellier → Toulouse → Bordeaux ... Marseille → Lyon → Montpellier
+TWO_OPT,Strasbourg,30.35,0.0011,Strasbourg → Nice → Marseille ... Paris → Lille → Strasbourg
+TWO_OPT,Lille,30.35,0.0011,Lille → Paris → Nantes ... Nice → Strasbourg → Lille

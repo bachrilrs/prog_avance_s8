@@ -1,0 +1,4 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Créteil,59.5,0.0001
+TWO_OPT,Limoges,50.01,0.0356
+THREE_OPT,Limoges,49.87,0.0582

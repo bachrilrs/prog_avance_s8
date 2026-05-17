@@ -1,0 +1,5 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Versailles,60.79,0.0001
+TWO_OPT,Tours,57.27,0.1687
+THREE_OPT,Tours,57.26,0.384
+AG,Versailles,60.79,1.5319

@@ -1,0 +1,203 @@
+Algo,Départ,Distance,Temps (s),Aperçu
+AG,AG,60.79,1.4659,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Marseille,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Nantes,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Saint-Étienne,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Le Havre,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Annecy,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Metz,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Besançon,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Rueil-Malmaison,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Antibes,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Cergy,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Ivry-sur-Seine,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Antony,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Villejuif,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Clamart,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Évry,60.79,0.0014,Versailles → Rueil-Malmaison → Nanterre ... Angers → Orléans → Versailles
+KNN,Nice,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Villeurbanne,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Limoges,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Orléans,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Montreuil,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Créteil,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Pau,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Troyes,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Neuilly-sur-Seine,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Meaux,61.12,0.0014,Montreuil → Bobigny → Drancy ... Angers → Orléans → Montreuil
+KNN,Noisy-le-Grand,61.16,0.0014,Saint-Denis → Saint-Ouen → Clichy ... Angers → Orléans → Saint-Denis
+KNN,Calais,61.16,0.0014,Saint-Denis → Saint-Ouen → Clichy ... Angers → Orléans → Saint-Denis
+KNN,Lorient,61.16,0.0014,Saint-Denis → Saint-Ouen → Clichy ... Angers → Orléans → Saint-Denis
+KNN,Épinay-sur-Seine,61.16,0.0014,Saint-Denis → Saint-Ouen → Clichy ... Angers → Orléans → Saint-Denis
+KNN,Bayonne,61.16,0.0014,Saint-Denis → Saint-Ouen → Clichy ... Angers → Orléans → Saint-Denis
+KNN,Nancy,61.17,0.0014,Meaux → Chelles → Noisy-le-Grand ... Angers → Orléans → Meaux
+KNN,Colombes,61.17,0.0014,Meaux → Chelles → Noisy-le-Grand ... Angers → Orléans → Meaux
+KNN,Lyon,61.18,0.0014,Vitry-sur-Seine → Ivry-sur-Seine → Villejuif ... Angers → Orléans → Vitry-sur-Seine
+KNN,Mulhouse,61.18,0.0014,Vitry-sur-Seine → Ivry-sur-Seine → Villejuif ... Angers → Orléans → Vitry-sur-Seine
+KNN,Maisons-Alfort,61.18,0.0014,Vitry-sur-Seine → Ivry-sur-Seine → Villejuif ... Angers → Orléans → Vitry-sur-Seine
+KNN,Paris,61.19,0.0015,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Amiens,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Perpignan,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Saint-Denis,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,La Rochelle,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Champigny-sur-Marne,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Saint-Nazaire,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Vaulx-en-Velin,61.19,0.0014,Clichy → Levallois-Perret → Neuilly-sur-Seine ... Angers → Orléans → Clichy
+KNN,Bordeaux,61.2,0.0014,Saint-Ouen → Clichy → Levallois-Perret ... Angers → Orléans → Saint-Ouen
+KNN,Aix-en-Provence,61.2,0.0014,Saint-Ouen → Clichy → Levallois-Perret ... Angers → Orléans → Saint-Ouen
+KNN,Saint-Maur-des-Fossés,61.2,0.0014,Saint-Ouen → Clichy → Levallois-Perret ... Angers → Orléans → Saint-Ouen
+KNN,Drancy,61.2,0.0014,Saint-Ouen → Clichy → Levallois-Perret ... Angers → Orléans → Saint-Ouen
+KNN,Cagnes-sur-Mer,61.2,0.0014,Saint-Ouen → Clichy → Levallois-Perret ... Angers → Orléans → Saint-Ouen
+KNN,Montpellier,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Rennes,61.21,0.0014,Sarcelles → Saint-Denis → Saint-Ouen ... Angers → Orléans → Sarcelles
+KNN,Toulon,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Reims,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Grenoble,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Rouen,61.21,0.0014,Aubervilliers → Pantin → Bellevue ... Angers → Orléans → Aubervilliers
+KNN,Caen,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Tourcoing,61.21,0.0014,Sarcelles → Saint-Denis → Saint-Ouen ... Angers → Orléans → Sarcelles
+KNN,Roubaix,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Aulnay-sous-Bois,61.21,0.0014,Aubervilliers → Pantin → Bellevue ... Angers → Orléans → Aubervilliers
+KNN,Courbevoic,61.21,0.0014,Sarcelles → Saint-Denis → Saint-Ouen ... Angers → Orléans → Sarcelles
+KNN,Pessac,61.21,0.0014,Villejuif → Ivry-sur-Seine → Vitry-sur-Seine ... Angers → Orléans → Villejuif
+KNN,Clichy,61.21,0.0014,Aubervilliers → Pantin → Bellevue ... Angers → Orléans → Aubervilliers
+KNN,Le Blanc-Mesnil,61.21,0.0014,Sarcelles → Saint-Denis → Saint-Ouen ... Angers → Orléans → Sarcelles
+KNN,Corbeil-Essonnes,61.21,0.0014,Sarcelles → Saint-Denis → Saint-Ouen ... Angers → Orléans → Sarcelles
+KNN,Nîmes,61.22,0.0014,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Angers → Orléans → Maisons-Alfort
+KNN,Nanterre,61.22,0.0014,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Angers → Orléans → Maisons-Alfort
+KNN,Aubervilliers,61.22,0.0014,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Angers → Orléans → Maisons-Alfort
+KNN,Angers,61.23,0.0014,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Angers → Orléans → Ivry-sur-Seine
+KNN,Issy-les-Moulineaux,61.23,0.0014,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Angers → Orléans → Ivry-sur-Seine
+KNN,Valence,61.23,0.0014,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Angers → Orléans → Ivry-sur-Seine
+KNN,Pantin,61.23,0.0014,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Angers → Orléans → Ivry-sur-Seine
+KNN,Brest,61.24,0.0014,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Angers → Orléans → Saint-Maur-des-Fossés
+KNN,Chelles,61.24,0.0014,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Angers → Orléans → Saint-Maur-des-Fossés
+KNN,Sevran,61.24,0.0014,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Angers → Orléans → Saint-Maur-des-Fossés
+KNN,Vannes,61.26,0.0014,Créteil → Maisons-Alfort → Vitry-sur-Seine ... Angers → Orléans → Créteil
+KNN,Saint-Ouen,61.26,0.0014,Créteil → Maisons-Alfort → Vitry-sur-Seine ... Angers → Orléans → Créteil
+KNN,Saint-Quentin,61.26,0.0014,Créteil → Maisons-Alfort → Vitry-sur-Seine ... Angers → Orléans → Créteil
+KNN,Dijon,61.28,0.0014,Bondy → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Bondy
+KNN,Tours,61.28,0.0014,Bondy → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Bondy
+KNN,Poitiers,61.28,0.0014,Aulnay-sous-Bois → Le Blanc-Mesnil → Drancy ... Angers → Orléans → Aulnay-sous-Bois
+KNN,Dunkerque,61.28,0.0014,Aulnay-sous-Bois → Le Blanc-Mesnil → Drancy ... Angers → Orléans → Aulnay-sous-Bois
+KNN,Sarcelles,61.28,0.0014,Aulnay-sous-Bois → Le Blanc-Mesnil → Drancy ... Angers → Orléans → Aulnay-sous-Bois
+KNN,Cannes,61.31,0.0014,Drancy → Le Blanc-Mesnil → Aulnay-sous-Bois ... Angers → Orléans → Drancy
+KNN,Le Mans,61.32,0.0014,Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Sevran
+KNN,Argenteuil,61.32,0.0014,Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Sevran
+KNN,Versailles,61.32,0.0014,Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Sevran
+KNN,Mérignac,61.32,0.0014,Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Sevran
+KNN,La Seyne-sur-Mer,61.32,0.0014,Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil ... Angers → Orléans → Sevran
+KNN,Toulouse,61.33,0.0014,Champigny-sur-Marne → Saint-Maur-des-Fossés → Créteil ... Angers → Orléans → Champigny-sur-Marne
+KNN,Bobigny,61.33,0.0014,Champigny-sur-Marne → Saint-Maur-des-Fossés → Créteil ... Angers → Orléans → Champigny-sur-Marne
+KNN,Lille,61.4,0.0014,Chelles → Noisy-le-Grand → Champigny-sur-Marne ... Angers → Orléans → Chelles
+KNN,Beauvais,61.4,0.0014,Chelles → Noisy-le-Grand → Champigny-sur-Marne ... Angers → Orléans → Chelles
+KNN,Vénissieux,61.64,0.0014,Beauvais → Cergy → Nanterre ... Angers → Orléans → Beauvais
+KNN,Levallois-Perret,61.89,0.0014,Amiens → Beauvais → Cergy ... Angers → Orléans → Amiens
+KNN,Bondy,61.89,0.0014,Amiens → Beauvais → Cergy ... Angers → Orléans → Amiens
+KNN,Bellevue,63.71,0.0014,Saint-Quentin → Lille → Roubaix ... Nancy → Metz → Saint-Quentin
+KNN,Clermont-Ferrand,63.82,0.0014,Pantin → Aubervilliers → Saint-Denis ... Nancy → Metz → Pantin
+KNN,Strasbourg,63.99,0.0014,Roubaix → Tourcoing → Lille ... Nancy → Metz → Roubaix
+KNN,Boulogne-Billancourt,63.99,0.0014,Roubaix → Tourcoing → Lille ... Nancy → Metz → Roubaix
+KNN,Vitry-sur-Seine,63.99,0.0014,Roubaix → Tourcoing → Lille ... Nancy → Metz → Roubaix
+KNN,Chambéry,64.08,0.0014,La Seyne-sur-Mer → Toulon → Marseille ... Antibes → Cannes → La Seyne-sur-Mer
+THREE_OPT,Roubaix,58.09,0.2822,Roubaix → Tourcoing → Lille ... Reims → Saint-Quentin → Roubaix
+TWO_OPT,Strasbourg,58.12,0.1352,Roubaix → Tourcoing → Lille ... Reims → Saint-Quentin → Roubaix
+TWO_OPT,Boulogne-Billancourt,58.12,0.1359,Roubaix → Tourcoing → Lille ... Reims → Saint-Quentin → Roubaix
+TWO_OPT,Vitry-sur-Seine,58.12,0.1372,Roubaix → Tourcoing → Lille ... Reims → Saint-Quentin → Roubaix
+TWO_OPT,Bellevue,58.13,0.1368,Saint-Quentin → Lille → Roubaix ... Metz → Reims → Saint-Quentin
+TWO_OPT,Vannes,59.05,0.1261,Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne ... Évry → Corbeil-Essonnes → Créteil
+TWO_OPT,Saint-Ouen,59.05,0.1258,Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne ... Évry → Corbeil-Essonnes → Créteil
+TWO_OPT,Saint-Quentin,59.05,0.1261,Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne ... Évry → Corbeil-Essonnes → Créteil
+TWO_OPT,Montpellier,59.09,0.1253,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Toulon,59.09,0.1254,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Reims,59.09,0.1255,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Grenoble,59.09,0.1259,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Caen,59.09,0.1263,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Roubaix,59.09,0.1257,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Pessac,59.09,0.1255,Villejuif → Ivry-sur-Seine → Maisons-Alfort ... Évry → Vitry-sur-Seine → Villejuif
+TWO_OPT,Lyon,59.12,0.1374,Vitry-sur-Seine → Évry → Corbeil-Essonnes ... Créteil → Maisons-Alfort → Vitry-sur-Seine
+TWO_OPT,Mulhouse,59.12,0.1377,Vitry-sur-Seine → Évry → Corbeil-Essonnes ... Créteil → Maisons-Alfort → Vitry-sur-Seine
+TWO_OPT,Maisons-Alfort,59.12,0.1377,Vitry-sur-Seine → Évry → Corbeil-Essonnes ... Créteil → Maisons-Alfort → Vitry-sur-Seine
+TWO_OPT,Dijon,59.18,0.1207,Bondy → Aulnay-sous-Bois → Sevran ... Drancy → Bobigny → Bondy
+TWO_OPT,Brest,59.18,0.1264,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Corbeil-Essonnes → Créteil → Saint-Maur-des-Fossés
+TWO_OPT,Tours,59.18,0.1184,Bondy → Aulnay-sous-Bois → Sevran ... Drancy → Bobigny → Bondy
+TWO_OPT,Chelles,59.18,0.1265,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Corbeil-Essonnes → Créteil → Saint-Maur-des-Fossés
+TWO_OPT,Sevran,59.18,0.1264,Saint-Maur-des-Fossés → Champigny-sur-Marne → Noisy-le-Grand ... Corbeil-Essonnes → Créteil → Saint-Maur-des-Fossés
+TWO_OPT,Bordeaux,59.19,0.1376,Saint-Ouen → Saint-Denis → Sarcelles ... Pantin → Aubervilliers → Saint-Ouen
+TWO_OPT,Angers,59.19,0.1231,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Issy-les-Moulineaux → Paris → Ivry-sur-Seine
+TWO_OPT,Aix-en-Provence,59.19,0.1374,Saint-Ouen → Saint-Denis → Sarcelles ... Pantin → Aubervilliers → Saint-Ouen
+TWO_OPT,Poitiers,59.19,0.1571,Aulnay-sous-Bois → Sevran → Meaux ... Le Blanc-Mesnil → Bondy → Aulnay-sous-Bois
+TWO_OPT,Dunkerque,59.19,0.1487,Aulnay-sous-Bois → Sevran → Meaux ... Le Blanc-Mesnil → Bondy → Aulnay-sous-Bois
+TWO_OPT,Saint-Maur-des-Fossés,59.19,0.1373,Saint-Ouen → Saint-Denis → Sarcelles ... Pantin → Aubervilliers → Saint-Ouen
+TWO_OPT,Drancy,59.19,0.1374,Saint-Ouen → Saint-Denis → Sarcelles ... Pantin → Aubervilliers → Saint-Ouen
+TWO_OPT,Issy-les-Moulineaux,59.19,0.123,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Issy-les-Moulineaux → Paris → Ivry-sur-Seine
+TWO_OPT,Valence,59.19,0.1231,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Issy-les-Moulineaux → Paris → Ivry-sur-Seine
+TWO_OPT,Pantin,59.19,0.1233,Ivry-sur-Seine → Villejuif → Vitry-sur-Seine ... Issy-les-Moulineaux → Paris → Ivry-sur-Seine
+TWO_OPT,Sarcelles,59.19,0.1491,Aulnay-sous-Bois → Sevran → Meaux ... Le Blanc-Mesnil → Bondy → Aulnay-sous-Bois
+TWO_OPT,Cagnes-sur-Mer,59.19,0.1376,Saint-Ouen → Saint-Denis → Sarcelles ... Pantin → Aubervilliers → Saint-Ouen
+TWO_OPT,Marseille,59.22,0.1202,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Toulouse,59.22,0.1266,Champigny-sur-Marne → Montreuil → Bobigny ... Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne
+TWO_OPT,Nantes,59.22,0.1196,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Rennes,59.22,0.1286,Sarcelles → Bobigny → Drancy ... Colombes → Épinay-sur-Seine → Sarcelles
+TWO_OPT,Saint-Étienne,59.22,0.12,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Le Havre,59.22,0.1203,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Nîmes,59.22,0.1294,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Évry → Corbeil-Essonnes → Maisons-Alfort
+TWO_OPT,Annecy,59.22,0.1199,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Metz,59.22,0.1204,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Besançon,59.22,0.12,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Tourcoing,59.22,0.1293,Sarcelles → Bobigny → Drancy ... Colombes → Épinay-sur-Seine → Sarcelles
+TWO_OPT,Nanterre,59.22,0.1295,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Évry → Corbeil-Essonnes → Maisons-Alfort
+TWO_OPT,Aubervilliers,59.22,0.1299,Maisons-Alfort → Créteil → Saint-Maur-des-Fossés ... Évry → Corbeil-Essonnes → Maisons-Alfort
+TWO_OPT,Courbevoic,59.22,0.1285,Sarcelles → Bobigny → Drancy ... Colombes → Épinay-sur-Seine → Sarcelles
+TWO_OPT,Rueil-Malmaison,59.22,0.1197,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Antibes,59.22,0.1197,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Cergy,59.22,0.1197,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Ivry-sur-Seine,59.22,0.1196,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Antony,59.22,0.1194,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Le Blanc-Mesnil,59.22,0.1291,Sarcelles → Bobigny → Drancy ... Colombes → Épinay-sur-Seine → Sarcelles
+TWO_OPT,Villejuif,59.22,0.12,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Bobigny,59.22,0.1271,Champigny-sur-Marne → Montreuil → Bobigny ... Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne
+TWO_OPT,Clamart,59.22,0.1201,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Évry,59.22,0.1201,Versailles → Antony → Clamart ... Le Mans → Orléans → Versailles
+TWO_OPT,Corbeil-Essonnes,59.22,0.1289,Sarcelles → Bobigny → Drancy ... Colombes → Épinay-sur-Seine → Sarcelles
+TWO_OPT,Nice,59.24,0.1424,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Villeurbanne,59.24,0.1427,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Limoges,59.24,0.1435,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Orléans,59.24,0.1435,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Montreuil,59.24,0.1433,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Nancy,59.24,0.1248,Meaux → Chelles → Noisy-le-Grand ... Évry → Corbeil-Essonnes → Meaux
+TWO_OPT,Créteil,59.24,0.1412,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Colombes,59.24,0.1254,Meaux → Chelles → Noisy-le-Grand ... Évry → Corbeil-Essonnes → Meaux
+TWO_OPT,Pau,59.24,0.1427,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Troyes,59.24,0.1425,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Neuilly-sur-Seine,59.24,0.1434,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Meaux,59.24,0.1434,Montreuil → Bobigny → Drancy ... Maisons-Alfort → Créteil → Montreuil
+TWO_OPT,Paris,59.26,0.1225,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Amiens,59.26,0.1222,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Perpignan,59.26,0.1225,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Saint-Denis,59.26,0.1224,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,La Rochelle,59.26,0.1219,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Champigny-sur-Marne,59.26,0.122,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Saint-Nazaire,59.26,0.1219,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Vaulx-en-Velin,59.26,0.1222,Clichy → Saint-Ouen → Saint-Denis ... Neuilly-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Le Mans,59.28,0.1319,Sevran → Meaux → Chelles ... Maisons-Alfort → Créteil → Sevran
+TWO_OPT,Argenteuil,59.28,0.1321,Sevran → Meaux → Chelles ... Maisons-Alfort → Créteil → Sevran
+TWO_OPT,Versailles,59.28,0.1315,Sevran → Meaux → Chelles ... Maisons-Alfort → Créteil → Sevran
+TWO_OPT,Mérignac,59.28,0.1315,Sevran → Meaux → Chelles ... Maisons-Alfort → Créteil → Sevran
+TWO_OPT,La Seyne-sur-Mer,59.28,0.1315,Sevran → Meaux → Chelles ... Maisons-Alfort → Créteil → Sevran
+TWO_OPT,Rouen,59.3,0.1176,Aubervilliers → Pantin → Bellevue ... Saint-Ouen → Saint-Denis → Aubervilliers
+TWO_OPT,Aulnay-sous-Bois,59.3,0.117,Aubervilliers → Pantin → Bellevue ... Saint-Ouen → Saint-Denis → Aubervilliers
+TWO_OPT,Cannes,59.3,0.146,Drancy → Le Blanc-Mesnil → Aulnay-sous-Bois ... Montreuil → Bondy → Drancy
+TWO_OPT,Clichy,59.3,0.117,Aubervilliers → Pantin → Bellevue ... Saint-Ouen → Saint-Denis → Aubervilliers
+TWO_OPT,Lille,59.33,0.1198,Chelles → Sevran → Noisy-le-Grand ... Corbeil-Essonnes → Meaux → Chelles
+TWO_OPT,Beauvais,59.33,0.1194,Chelles → Sevran → Noisy-le-Grand ... Corbeil-Essonnes → Meaux → Chelles
+TWO_OPT,Vénissieux,59.39,0.1327,Beauvais → Amiens → Calais ... Épinay-sur-Seine → Sarcelles → Beauvais
+TWO_OPT,Noisy-le-Grand,59.4,0.1161,Saint-Denis → Aubervilliers → Bellevue ... Clichy → Saint-Ouen → Saint-Denis
+TWO_OPT,Calais,59.4,0.1161,Saint-Denis → Aubervilliers → Bellevue ... Clichy → Saint-Ouen → Saint-Denis
+TWO_OPT,Lorient,59.4,0.1163,Saint-Denis → Aubervilliers → Bellevue ... Clichy → Saint-Ouen → Saint-Denis
+TWO_OPT,Épinay-sur-Seine,59.4,0.1162,Saint-Denis → Aubervilliers → Bellevue ... Clichy → Saint-Ouen → Saint-Denis
+TWO_OPT,Bayonne,59.4,0.1163,Saint-Denis → Aubervilliers → Bellevue ... Clichy → Saint-Ouen → Saint-Denis
+TWO_OPT,Levallois-Perret,59.44,0.1335,Amiens → Calais → Dunkerque ... Cergy → Beauvais → Amiens
+TWO_OPT,Bondy,59.44,0.1338,Amiens → Calais → Dunkerque ... Cergy → Beauvais → Amiens
+TWO_OPT,Clermont-Ferrand,59.86,0.1417,Pantin → Aubervilliers → Sarcelles ... Maisons-Alfort → Montreuil → Pantin
+TWO_OPT,Chambéry,60.1,0.1242,La Seyne-sur-Mer → Toulon → Cannes ... Aix-en-Provence → Marseille → La Seyne-sur-Mer

@@ -1,3 +1,4 @@
+from calendar import c
 import time
 import pandas as pd
 import numpy as np
@@ -110,7 +111,7 @@ class Pays:
         self.two_opt_solver = TwoOpt(self.graph)
         self.three_opt_solver = ThreeOpt(self.graph)
         self.ga_solver = AlgoGenetique(self.graph)
-        self.visualizer = TSPVisualizer(self.graph)
+        self.visualizer = TSPVisualizer(self.graph,country_name=self.nom)
 
         # Stockage des résultats : {algo: {nom_ville: Path}}
         self.results = {
@@ -261,28 +262,41 @@ class Pays:
             self._print_resume()
 
     def run_ga_only(self, verbose=True, pop_size=100, generations=100, mutation_rate=0.05):
-        """Exécute AG sur KNN existant."""
+        """Exécute AG avec injection du meilleur KNN si disponible."""
         from .solvers import AlgoGenetique
-        ga = AlgoGenetique(self.graph, pop_size=pop_size, 
-                        generations=generations, mutation_rate=mutation_rate)
-        
-        self.results['ag'] = {}
-        
+
+        if not self.results["knn"]:
+            self.run_knn_only(verbose=False)
+
+        ga = AlgoGenetique(
+            self.graph,
+            pop_size=pop_size,
+            generations=generations,
+            mutation_rate=mutation_rate
+        )
+
+        self.results["ag"] = {}
+
         if verbose:
-            print(f"AG - {self.nom} (pop={pop_size}, gen={generations})")
-        
-        # Récupérer le meilleur KNN
-        best_knn = min(self.results['knn'].values(), key=lambda p: p.distance_path)
-        
+            print(f"AG - {self.nom} (pop={pop_size}, gen={generations}, mut={mutation_rate})")
+
+        best_knn = min(self.results["knn"].values(), key=lambda p: p.distance_path)
+
+        initial_path = best_knn.path[:]
+        if initial_path[0] == initial_path[-1]:
+            initial_path = initial_path[:-1]
+
         start_t = time.time()
-        path_ag = ga.solve(initial_path=best_knn.path[:-1], verbose=verbose)
+        path_ag = ga.solve(initial_path=initial_path, verbose=verbose)
         path_ag.temps_execution = time.time() - start_t
-        self.results['ag'] = {"AG": path_ag}
-        
+
+        self.results["ag"] = {"AG": path_ag}
+
         if verbose:
             print(f"  AG → {path_ag.distance_path:.2f} (Temps: {path_ag.temps_execution:.2f}s)")
-        
+
         self._compute_best_overall()
+
         if verbose:
             self._print_resume()
 

@@ -1,0 +1,103 @@
+Algo,Départ,Distance,Temps (s),Aperçu
+AG,AG,59.08,0.2314,Créteil → Vitry-sur-Seine → Paris ... Toulon → Nice → Créteil
+KNN,Créteil,59.5,0.0001,Créteil → Vitry-sur-Seine → Paris ... Toulon → Nice → Créteil
+KNN,Boulogne-Billancourt,59.55,0.0001,Boulogne-Billancourt → Nanterre → Colombes ... Toulon → Nice → Boulogne-Billancourt
+KNN,Paris,59.57,0.0001,Paris → Aubervilliers → Saint-Denis ... Toulon → Nice → Paris
+KNN,Vitry-sur-Seine,59.58,0.0001,Vitry-sur-Seine → Créteil → Montreuil ... Toulon → Nice → Vitry-sur-Seine
+KNN,Montreuil,59.62,0.0001,Montreuil → Créteil → Vitry-sur-Seine ... Toulon → Nice → Montreuil
+KNN,Colombes,59.75,0.0001,Colombes → Argenteuil → Nanterre ... Toulon → Nice → Colombes
+KNN,Argenteuil,59.76,0.0001,Argenteuil → Colombes → Nanterre ... Toulon → Nice → Argenteuil
+KNN,Orléans,60.06,0.0001,Orléans → Boulogne-Billancourt → Nanterre ... Toulon → Nice → Orléans
+KNN,Dijon,60.69,0.0001,Dijon → Besançon → Annecy ... Bordeaux → Brest → Dijon
+KNN,Rouen,61.97,0.0001,Rouen → Le Havre → Caen ... Toulon → Nice → Rouen
+KNN,Besançon,62.56,0.0001,Besançon → Dijon → Villeurbanne ... Bordeaux → Brest → Besançon
+KNN,Bordeaux,62.6,0.0001,Bordeaux → Poitiers → Tours ... Strasbourg → Brest → Bordeaux
+KNN,Angers,62.73,0.0001,Angers → Le Mans → Tours ... Dunkerque → Brest → Angers
+KNN,Poitiers,62.74,0.0001,Poitiers → Tours → Le Mans ... Strasbourg → Brest → Poitiers
+KNN,Le Havre,62.77,0.0001,Le Havre → Caen → Le Mans ... Toulon → Nice → Le Havre
+KNN,Limoges,62.79,0.0001,Limoges → Poitiers → Tours ... Bordeaux → Brest → Limoges
+KNN,Nancy,62.93,0.0001,Nancy → Metz → Strasbourg ... Bordeaux → Brest → Nancy
+KNN,Tours,63.03,0.0001,Tours → Le Mans → Angers ... Strasbourg → Brest → Tours
+KNN,Annecy,63.04,0.0001,Annecy → Grenoble → Villeurbanne ... Bordeaux → Brest → Annecy
+KNN,Grenoble,63.07,0.0001,Grenoble → Annecy → Villeurbanne ... Bordeaux → Brest → Grenoble
+KNN,Le Mans,63.56,0.0001,Le Mans → Tours → Poitiers ... Dunkerque → Brest → Le Mans
+KNN,Strasbourg,63.81,0.0001,Strasbourg → Mulhouse → Besançon ... Bordeaux → Brest → Strasbourg
+KNN,Nanterre,63.81,0.0001,Nanterre → Colombes → Argenteuil ... Strasbourg → Brest → Nanterre
+KNN,Saint-Denis,63.93,0.0001,Saint-Denis → Aubervilliers → Paris ... Strasbourg → Brest → Saint-Denis
+KNN,Aulnay-sous-Bois,63.93,0.0001,Aulnay-sous-Bois → Montreuil → Créteil ... Strasbourg → Brest → Aulnay-sous-Bois
+KNN,Toulouse,63.97,0.0001,Toulouse → Perpignan → Montpellier ... Bordeaux → Brest → Toulouse
+KNN,Aubervilliers,63.97,0.0001,Aubervilliers → Saint-Denis → Paris ... Strasbourg → Brest → Aubervilliers
+KNN,Amiens,64.07,0.0001,Amiens → Argenteuil → Colombes ... Strasbourg → Brest → Amiens
+KNN,Metz,64.14,0.0001,Metz → Nancy → Besançon ... Bordeaux → Brest → Metz
+KNN,Mulhouse,64.48,0.0001,Mulhouse → Strasbourg → Nancy ... Bordeaux → Brest → Mulhouse
+KNN,Dunkerque,64.87,0.0001,Dunkerque → Lille → Roubaix ... Strasbourg → Brest → Dunkerque
+KNN,Villeurbanne,64.94,0.0001,Villeurbanne → Lyon → Saint-Étienne ... Mulhouse → Strasbourg → Villeurbanne
+KNN,Lyon,65.01,0.0001,Lyon → Villeurbanne → Saint-Étienne ... Mulhouse → Strasbourg → Lyon
+KNN,Perpignan,65.23,0.0001,Perpignan → Montpellier → Nîmes ... Bordeaux → Brest → Perpignan
+KNN,Rennes,65.26,0.0001,Rennes → Nantes → Angers ... Nice → Brest → Rennes
+KNN,Brest,65.26,0.0001,Brest → Rennes → Nantes ... Toulon → Nice → Brest
+KNN,Aix-en-Provence,65.35,0.0001,Aix-en-Provence → Marseille → Toulon ... Bordeaux → Brest → Aix-en-Provence
+KNN,Lille,65.39,0.0001,Lille → Roubaix → Tourcoing ... Strasbourg → Brest → Lille
+KNN,Marseille,65.43,0.0001,Marseille → Aix-en-Provence → Toulon ... Bordeaux → Brest → Marseille
+KNN,Tourcoing,65.46,0.0001,Tourcoing → Roubaix → Lille ... Strasbourg → Brest → Tourcoing
+KNN,Saint-Étienne,65.48,0.0001,Saint-Étienne → Lyon → Villeurbanne ... Bordeaux → Brest → Saint-Étienne
+KNN,Roubaix,65.48,0.0001,Roubaix → Tourcoing → Lille ... Strasbourg → Brest → Roubaix
+KNN,Montpellier,65.51,0.0001,Montpellier → Nîmes → Aix-en-Provence ... Bordeaux → Brest → Montpellier
+KNN,Caen,65.6,0.0001,Caen → Le Havre → Rouen ... Nice → Brest → Caen
+KNN,Nantes,65.86,0.0001,Nantes → Rennes → Angers ... Nice → Brest → Nantes
+KNN,Reims,66.75,0.0001,Reims → Aulnay-sous-Bois → Montreuil ... Strasbourg → Brest → Reims
+KNN,Clermont-Ferrand,67.67,0.0001,Clermont-Ferrand → Saint-Étienne → Lyon ... Nice → Brest → Clermont-Ferrand
+KNN,Nîmes,68.23,0.0001,Nîmes → Montpellier → Perpignan ... Bordeaux → Brest → Nîmes
+KNN,Nice,70.13,0.0001,Nice → Toulon → Marseille ... Bordeaux → Brest → Nice
+KNN,Toulon,71.39,0.0001,Toulon → Marseille → Aix-en-Provence ... Bordeaux → Brest → Toulon
+THREE_OPT,Limoges,49.87,0.0582,Limoges → Poitiers → Tours ... Toulouse → Bordeaux → Limoges
+TWO_OPT,Limoges,50.01,0.0356,Limoges → Poitiers → Tours ... Toulouse → Bordeaux → Limoges
+TWO_OPT,Bordeaux,50.55,0.0399,Bordeaux → Toulouse → Perpignan ... Poitiers → Limoges → Bordeaux
+TWO_OPT,Montpellier,50.95,0.0392,Montpellier → Nîmes → Aix-en-Provence ... Toulouse → Perpignan → Montpellier
+TWO_OPT,Toulon,50.95,0.0401,Toulon → Nice → Grenoble ... Aix-en-Provence → Marseille → Toulon
+TWO_OPT,Villeurbanne,50.97,0.0355,Villeurbanne → Dijon → Besançon ... Saint-Étienne → Lyon → Villeurbanne
+TWO_OPT,Caen,51.54,0.0326,Caen → Le Havre → Rouen ... Brest → Rennes → Caen
+TWO_OPT,Aubervilliers,51.65,0.0304,Aubervilliers → Saint-Denis → Argenteuil ... Vitry-sur-Seine → Paris → Aubervilliers
+TWO_OPT,Lille,51.68,0.0354,Lille → Dunkerque → Amiens ... Roubaix → Tourcoing → Lille
+TWO_OPT,Tours,51.72,0.0368,Tours → Poitiers → Bordeaux ... Angers → Le Mans → Tours
+TWO_OPT,Mulhouse,51.78,0.0338,Mulhouse → Strasbourg → Metz ... Grenoble → Annecy → Mulhouse
+TWO_OPT,Marseille,51.79,0.0364,Marseille → Toulon → Nice ... Nîmes → Aix-en-Provence → Marseille
+TWO_OPT,Amiens,51.79,0.0342,Amiens → Dunkerque → Lille ... Le Havre → Rouen → Amiens
+TWO_OPT,Dijon,51.83,0.0329,Dijon → Besançon → Mulhouse ... Montreuil → Aulnay-sous-Bois → Dijon
+TWO_OPT,Saint-Denis,51.86,0.0331,Saint-Denis → Aubervilliers → Paris ... Colombes → Argenteuil → Saint-Denis
+TWO_OPT,Reims,51.88,0.0335,Reims → Roubaix → Tourcoing ... Aulnay-sous-Bois → Amiens → Reims
+TWO_OPT,Tourcoing,52.01,0.0384,Tourcoing → Roubaix → Metz ... Dunkerque → Lille → Tourcoing
+TWO_OPT,Lyon,52.13,0.035,Lyon → Villeurbanne → Dijon ... Clermont-Ferrand → Saint-Étienne → Lyon
+TWO_OPT,Nanterre,52.24,0.0346,Nanterre → Argenteuil → Colombes ... Le Mans → Orléans → Nanterre
+TWO_OPT,Clermont-Ferrand,52.32,0.0336,Clermont-Ferrand → Orléans → Tours ... Bordeaux → Limoges → Clermont-Ferrand
+TWO_OPT,Toulouse,52.38,0.0373,Toulouse → Bordeaux → Poitiers ... Clermont-Ferrand → Limoges → Toulouse
+TWO_OPT,Strasbourg,52.42,0.033,Strasbourg → Mulhouse → Besançon ... Metz → Nancy → Strasbourg
+TWO_OPT,Besançon,52.42,0.0327,Besançon → Dijon → Saint-Étienne ... Strasbourg → Mulhouse → Besançon
+TWO_OPT,Poitiers,52.69,0.0321,Poitiers → Limoges → Clermont-Ferrand ... Nantes → Angers → Poitiers
+TWO_OPT,Aulnay-sous-Bois,52.73,0.0308,Aulnay-sous-Bois → Montreuil → Vitry-sur-Seine ... Dijon → Créteil → Aulnay-sous-Bois
+TWO_OPT,Angers,52.81,0.0339,Angers → Bordeaux → Toulouse ... Brest → Nantes → Angers
+TWO_OPT,Montreuil,53.03,0.0326,Montreuil → Aulnay-sous-Bois → Lille ... Vitry-sur-Seine → Créteil → Montreuil
+TWO_OPT,Dunkerque,53.05,0.0329,Dunkerque → Lille → Tourcoing ... Le Havre → Rouen → Dunkerque
+TWO_OPT,Vitry-sur-Seine,53.06,0.0321,Vitry-sur-Seine → Créteil → Aulnay-sous-Bois ... Aubervilliers → Montreuil → Vitry-sur-Seine
+TWO_OPT,Boulogne-Billancourt,53.14,0.0326,Boulogne-Billancourt → Nanterre → Colombes ... Vitry-sur-Seine → Paris → Boulogne-Billancourt
+TWO_OPT,Le Mans,53.24,0.0327,Le Mans → Tours → Orléans ... Nantes → Angers → Le Mans
+TWO_OPT,Rouen,53.24,0.0324,Rouen → Le Havre → Caen ... Dunkerque → Amiens → Rouen
+TWO_OPT,Grenoble,53.49,0.0352,Grenoble → Nice → Toulon ... Lyon → Villeurbanne → Grenoble
+TWO_OPT,Orléans,53.5,0.0331,Orléans → Boulogne-Billancourt → Nanterre ... Besançon → Dijon → Orléans
+TWO_OPT,Nice,53.56,0.0345,Nice → Toulon → Marseille ... Saint-Étienne → Grenoble → Nice
+TWO_OPT,Rennes,53.64,0.0337,Rennes → Angers → Caen ... Nantes → Brest → Rennes
+TWO_OPT,Brest,53.64,0.0343,Brest → Rennes → Angers ... Bordeaux → Nantes → Brest
+TWO_OPT,Roubaix,53.67,0.0306,Roubaix → Tourcoing → Lille ... Nancy → Metz → Roubaix
+TWO_OPT,Paris,53.9,0.0304,Paris → Aubervilliers → Saint-Denis ... Créteil → Vitry-sur-Seine → Paris
+TWO_OPT,Perpignan,53.92,0.0369,Perpignan → Toulouse → Limoges ... Lyon → Clermont-Ferrand → Perpignan
+TWO_OPT,Argenteuil,53.94,0.0307,Argenteuil → Colombes → Nanterre ... Lille → Amiens → Argenteuil
+TWO_OPT,Colombes,54.02,0.0309,Colombes → Argenteuil → Nanterre ... Saint-Denis → Paris → Colombes
+TWO_OPT,Nîmes,54.1,0.0342,Nîmes → Montpellier → Perpignan ... Saint-Étienne → Clermont-Ferrand → Nîmes
+TWO_OPT,Annecy,54.27,0.0332,Annecy → Grenoble → Nice ... Mulhouse → Besançon → Annecy
+TWO_OPT,Créteil,54.33,0.0318,Créteil → Montreuil → Aulnay-sous-Bois ... Besançon → Dijon → Créteil
+TWO_OPT,Nantes,54.34,0.0334,Nantes → Bordeaux → Toulouse ... Rennes → Brest → Nantes
+TWO_OPT,Metz,54.39,0.0333,Metz → Strasbourg → Mulhouse ... Tourcoing → Roubaix → Metz
+TWO_OPT,Saint-Étienne,54.8,0.039,Saint-Étienne → Lyon → Villeurbanne ... Limoges → Clermont-Ferrand → Saint-Étienne
+TWO_OPT,Nancy,55.01,0.032,Nancy → Metz → Roubaix ... Amiens → Reims → Nancy
+TWO_OPT,Le Havre,55.12,0.0315,Le Havre → Caen → Rennes ... Dunkerque → Rouen → Le Havre
+TWO_OPT,Aix-en-Provence,55.44,0.0361,Aix-en-Provence → Nice → Toulon ... Limoges → Nîmes → Aix-en-Provence

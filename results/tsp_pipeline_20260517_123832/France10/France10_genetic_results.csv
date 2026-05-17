@@ -1,0 +1,5 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Lyon,30.94,0.0
+TWO_OPT,Nice,29.33,0.0012
+THREE_OPT,Nice,29.33,0.0001
+AG,Montpellier,30.35,0.0161

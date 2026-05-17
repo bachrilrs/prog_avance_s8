@@ -90,7 +90,7 @@ class TSPVisualizer:
             
             ax.scatter(x[0], y[0], color='green', s=200, marker='*', zorder=10)
             
-            title = f"{path.algo_name}\nDistance: {path.distance_path:.2f} | Temps: {path.temps_execution:.4f}s"
+            title = f"{path.algo_name} \nDistance: {path.distance_path:.2f} | Temps: {path.temps_execution:.4f}s"
             ax.set_title(title, fontsize=11, fontweight='bold')
             ax.grid(True, alpha=0.3)
         

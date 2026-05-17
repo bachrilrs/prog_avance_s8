@@ -46,27 +46,34 @@ class KNN(BaseSolver):
         distance = self.graph.path_distance(path)
         
         return Path(path=path, distance_path=distance, algo_name="KNN")
-    
-    def solve(self, start_idx=None, verbose=False):
-        """
-        Optimisation : tester seulement les 10 meilleurs départs aléatoires
-        au lieu de tous les n départs (pour n > 50)
-        """
-        n = len(self.villes)
         
-        #  Pour petit n, tester tous. Pour grand n, tester aléatoirement
+    def solve(self, start_idx=None, verbose=False):
+
+        """
+
+        Si start_idx est fourni : calcule KNN depuis cette ville uniquement.
+
+        Sinon : teste plusieurs départs.
+
+        """
+
+        n = len(self.villes)
+        if start_idx is not None:
+            path = self._knn_from_start(start_idx)
+            self.all_paths = {self.villes[start_idx].nom: path}
+            return path
         if n <= 50:
             starts = range(n)
+
         else:
             starts = np.random.choice(n, min(10, n), replace=False)
-        
+
         self.all_paths = {}
         for i in starts:
             path = self._knn_from_start(i)
             self.all_paths[self.villes[i].nom] = path
             if verbose and i % max(1, n // 5) == 0:
-                print(f"  {i+1}/{n} testés")
-        
+                print(f"  {i + 1}/{n} testés")
         best = min(self.all_paths.values(), key=lambda p: p.distance_path)
         return best
 
