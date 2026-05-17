@@ -1,129 +1,166 @@
-Traceback (most recent call last):
-  File "/home/laroussi/Documents/prog_avance_s8/./run_tsp.py", line 87, in process_country
-    export_comparison_csv(pays, os.path.join(country_save_dir, f"{country_name}_{algo}"))
-  File "/home/laroussi/Documents/prog_avance_s8/src/tsp/io.py", line 86, in export_comparison_csv
-    last_dist = pays.results[available_algos[-1]][start_city].distance_path
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-KeyError: 'Paris'
-Traceback (most recent call last):
-  File "/home/laroussi/Documents/prog_avance_s8/./run_tsp.py", line 87, in process_country
-    export_comparison_csv(pays, os.path.join(country_save_dir, f"{country_name}_{algo}"))
-  File "/home/laroussi/Documents/prog_avance_s8/src/tsp/io.py", line 86, in export_comparison_csv
-    last_dist = pays.results[available_algos[-1]][start_city].distance_path
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-KeyError: 'Paris'
-Traceback (most recent call last):
-  File "/home/laroussi/Documents/prog_avance_s8/./run_tsp.py", line 87, in process_country
-    export_comparison_csv(pays, os.path.join(country_save_dir, f"{country_name}_{algo}"))
-  File "/home/laroussi/Documents/prog_avance_s8/src/tsp/io.py", line 86, in export_comparison_csv
-    last_dist = pays.results[available_algos[-1]][start_city].distance_path
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-KeyError: 'Paris'
-Traceback (most recent call last):
-  File "/home/laroussi/Documents/prog_avance_s8/./run_tsp.py", line 87, in process_country
-    export_comparison_csv(pays, os.path.join(country_save_dir, f"{country_name}_{algo}"))
-  File "/home/laroussi/Documents/prog_avance_s8/src/tsp/io.py", line 86, in export_comparison_csv
-    last_dist = pays.results[available_algos[-1]][start_city].distance_path
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-KeyError: 'Paris'
 
 ============================================================
-TSP SOLVER PIPELINE - MULTI-COUNTRY RUNNER
+TSP SOLVER PIPELINE
 ============================================================
-Start time: 2026-05-15 07:09:46
-Output directory: results/tsp_pipeline_20260515_070946/
-Countries: 4
-
-
-============================================================
-PROCESSING: France650
-============================================================
-[1/5] Loading cities from data/fr.csv...
-  First 5 cities: ['Paris', 'Bordeaux', 'Marseille', 'Lyon', 'Toulouse']
-✓ 625 cities loaded
-
-[2/5] Running algorithms: knn, 2opt, 3opt...
-  [1/3] Running KNN...
-results/tsp_pipeline_20260515_070946/France650/France650_knn_results.csv
-  [2/3] Running 2OPT...
-results/tsp_pipeline_20260515_070946/France650/France650_2opt_results.csv
-results/tsp_pipeline_20260515_070946/France650/France650_2opt_comparison.csv
-  [3/3] Running 3OPT...
-results/tsp_pipeline_20260515_070946/France650/France650_3opt_results.csv
-
-✗ France650 failed with error:
-   KeyError: 'Paris'
-
-
-============================================================
-PROCESSING: France100
-============================================================
-[1/5] Loading cities from data/fr-100.csv...
-  First 5 cities: ['Paris', 'Bordeaux', 'Marseille', 'Lyon', 'Toulouse']
-✓ 100 cities loaded
-
-[2/5] Running algorithms: knn, 2opt, 3opt, genetic...
-  [1/4] Running KNN...
-results/tsp_pipeline_20260515_070946/France100/France100_knn_results.csv
-  [2/4] Running 2OPT...
-results/tsp_pipeline_20260515_070946/France100/France100_2opt_results.csv
-results/tsp_pipeline_20260515_070946/France100/France100_2opt_comparison.csv
-  [3/4] Running 3OPT...
-results/tsp_pipeline_20260515_070946/France100/France100_3opt_results.csv
-
-✗ France100 failed with error:
-   KeyError: 'Paris'
-
-
-============================================================
-PROCESSING: France50
-============================================================
-[1/5] Loading cities from data/fr-50.csv...
-  First 5 cities: ['Paris', 'Bordeaux', 'Marseille', 'Lyon', 'Toulouse']
-✓ 50 cities loaded
-
-[2/5] Running algorithms: knn, 2opt, 3opt, genetic...
-  [1/4] Running KNN...
-results/tsp_pipeline_20260515_070946/France50/France50_knn_results.csv
-  [2/4] Running 2OPT...
-results/tsp_pipeline_20260515_070946/France50/France50_2opt_results.csv
-results/tsp_pipeline_20260515_070946/France50/France50_2opt_comparison.csv
-  [3/4] Running 3OPT...
-results/tsp_pipeline_20260515_070946/France50/France50_3opt_results.csv
-
-✗ France50 failed with error:
-   KeyError: 'Paris'
-
+Output directory: results/tsp_pipeline_20260517_114412
 
 ============================================================
 PROCESSING: France10
 ============================================================
 [1/5] Loading cities from data/fr-10.csv...
-  First 5 cities: ['Paris', 'Bordeaux', 'Marseille', 'Lyon', 'Toulouse']
 ✓ 10 cities loaded
 
-[2/5] Running algorithms: knn, 2opt, 3opt, genetic...
+[2/5] Running algorithms: knn, 2opt, 3opt, genetic
   [1/4] Running KNN...
-results/tsp_pipeline_20260515_070946/France10/France10_knn_results.csv
+results/tsp_pipeline_20260517_114412/France10/France10_knn_results.csv
   [2/4] Running 2OPT...
-results/tsp_pipeline_20260515_070946/France10/France10_2opt_results.csv
-results/tsp_pipeline_20260515_070946/France10/France10_2opt_comparison.csv
+results/tsp_pipeline_20260517_114412/France10/France10_2opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France10/France10_2opt_comparison.csv
   [3/4] Running 3OPT...
-results/tsp_pipeline_20260515_070946/France10/France10_3opt_results.csv
+results/tsp_pipeline_20260517_114412/France10/France10_3opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France10/France10_3opt_comparison.csv
+  [4/4] Running GENETIC...
+results/tsp_pipeline_20260517_114412/France10/France10_genetic_results.csv
+✓ results/tsp_pipeline_20260517_114412/France10/France10_genetic_comparison.csv
 
-✗ France10 failed with error:
-   KeyError: 'Paris'
+[3/5] Generating local visualizations...
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_best_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_comparison_paths.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_distances.png
+Génération des plots pour France10...
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_knn_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_two_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_three_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_ag_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_comparison.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France10/France10_distances.png
+✓ Tous les plots générés pour France10 dans 'results/tsp_pipeline_20260517_114412/France10'
 
+[4/5] Saving summary...
+✓ Summary saved: results/tsp_pipeline_20260517_114412/France10/France10_summary.csv
+
+[5/5] Done
+
+============================================================
+PROCESSING: France50
+============================================================
+[1/5] Loading cities from data/fr-50.csv...
+✓ 50 cities loaded
+
+[2/5] Running algorithms: knn, 2opt, 3opt, genetic
+  [1/4] Running KNN...
+results/tsp_pipeline_20260517_114412/France50/France50_knn_results.csv
+  [2/4] Running 2OPT...
+results/tsp_pipeline_20260517_114412/France50/France50_2opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France50/France50_2opt_comparison.csv
+  [3/4] Running 3OPT...
+results/tsp_pipeline_20260517_114412/France50/France50_3opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France50/France50_3opt_comparison.csv
+  [4/4] Running GENETIC...
+results/tsp_pipeline_20260517_114412/France50/France50_genetic_results.csv
+✓ results/tsp_pipeline_20260517_114412/France50/France50_genetic_comparison.csv
+
+[3/5] Generating local visualizations...
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_best_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_comparison_paths.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_distances.png
+Génération des plots pour France50...
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_knn_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_two_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_three_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_ag_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_comparison.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France50/France50_distances.png
+✓ Tous les plots générés pour France50 dans 'results/tsp_pipeline_20260517_114412/France50'
+
+[4/5] Saving summary...
+✓ Summary saved: results/tsp_pipeline_20260517_114412/France50/France50_summary.csv
+
+[5/5] Done
+
+============================================================
+PROCESSING: France100
+============================================================
+[1/5] Loading cities from data/fr-100.csv...
+✓ 100 cities loaded
+
+[2/5] Running algorithms: knn, 2opt, 3opt, genetic
+  [1/4] Running KNN...
+results/tsp_pipeline_20260517_114412/France100/France100_knn_results.csv
+  [2/4] Running 2OPT...
+results/tsp_pipeline_20260517_114412/France100/France100_2opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France100/France100_2opt_comparison.csv
+  [3/4] Running 3OPT...
+results/tsp_pipeline_20260517_114412/France100/France100_3opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France100/France100_3opt_comparison.csv
+  [4/4] Running GENETIC...
+results/tsp_pipeline_20260517_114412/France100/France100_genetic_results.csv
+✓ results/tsp_pipeline_20260517_114412/France100/France100_genetic_comparison.csv
+
+[3/5] Generating local visualizations...
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_best_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_comparison_paths.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_distances.png
+Génération des plots pour France100...
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_knn_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_two_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_three_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_ag_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_comparison.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France100/France100_distances.png
+✓ Tous les plots générés pour France100 dans 'results/tsp_pipeline_20260517_114412/France100'
+
+[4/5] Saving summary...
+✓ Summary saved: results/tsp_pipeline_20260517_114412/France100/France100_summary.csv
+
+[5/5] Done
+
+============================================================
+PROCESSING: France650
+============================================================
+[1/5] Loading cities from data/fr.csv...
+✓ 625 cities loaded
+
+[2/5] Running algorithms: knn, 2opt, 3opt, genetic
+  [1/4] Running KNN...
+results/tsp_pipeline_20260517_114412/France650/France650_knn_results.csv
+  [2/4] Running 2OPT...
+results/tsp_pipeline_20260517_114412/France650/France650_2opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France650/France650_2opt_comparison.csv
+  [3/4] Running 3OPT...
+results/tsp_pipeline_20260517_114412/France650/France650_3opt_results.csv
+✓ results/tsp_pipeline_20260517_114412/France650/France650_3opt_comparison.csv
+  [4/4] Running GENETIC...
+results/tsp_pipeline_20260517_114412/France650/France650_genetic_results.csv
+✓ results/tsp_pipeline_20260517_114412/France650/France650_genetic_comparison.csv
+
+[3/5] Generating local visualizations...
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_best_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_comparison_paths.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_distances.png
+Génération des plots pour France650...
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_knn_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_two_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_three_opt_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_ag_path.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_comparison.png
+✓ Saved: results/tsp_pipeline_20260517_114412/France650/France650_distances.png
+✓ Tous les plots générés pour France650 dans 'results/tsp_pipeline_20260517_114412/France650'
+
+[4/5] Saving summary...
+✓ Summary saved: results/tsp_pipeline_20260517_114412/France650/France650_summary.csv
+
+[5/5] Done
+
+Generating global comparison figures...
 
 ============================================================
 PIPELINE SUMMARY
 ============================================================
-✓ Success: 0/4
-  ✗ France650
-  ✗ France100
-  ✗ France50
-  ✗ France10
+✓ France10
+✓ France50
+✓ France100
+✓ France650
 
-⏱️  Total time: 7495.72s (124.93m)
-📁 Results: results/tsp_pipeline_20260515_070946/
-
+Total time: 6857.33s
+Results: results/tsp_pipeline_20260517_114412
