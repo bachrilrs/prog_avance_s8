@@ -1,0 +1,5 @@
+Algorithme,Point de Départ,Distance,Temps (s)
+KNN,Valence,103.76,0.0014
+TWO_OPT,Corbeil-Essonnes,91.32,8.1962
+THREE_OPT,Corbeil-Essonnes,91.28,13.6747
+AG,Valence,103.76,2.1662
