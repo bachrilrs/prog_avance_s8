@@ -62,7 +62,7 @@ class DistanceGraph:
         indices = [self.index[nom] for nom in path]
         rows = indices[:-1]
         cols = indices[1:]
-        return np.sum(self.matrix[rows, cols])
+        return np.sum(self.matrix[rows, cols]) # version vectorisée pour plus de rapidité
     
     def get_dataframe(self):
         """Retourne la matrice sous forme de DataFrame."""
@@ -157,12 +157,10 @@ class Pays:
             **solver_kwargs: Arguments supplémentaires pour solver.solve() # sert a faire passer max_iterations, timeout, etc
         """
         
-
         # Vérifier que les entrées existent
         if input_results_key and not self.results[input_results_key]:
             print(f"{input_results_key.upper()} manquant pour {algo_name}. Exécutez d'abord {input_results_key.upper()}.")
-            self._run_algo(input_results_key, getattr(self, f'{input_results_key}_solver'),
-                        None, input_results_key, verbose=False)
+            self._run_algo(input_results_key, getattr(self, f'{input_results_key}_solver'), None, input_results_key, verbose=False)
         
         self.results[output_results_key] = {}
         
@@ -183,8 +181,7 @@ class Pays:
                 path = solver.solve(start_idx=idx)
                 path.temps_execution = time.time() - start_t
                 self.results[output_results_key][ville.nom] = path
-                if verbose and idx % max(1, len(self.graph.villes) // 5) == 0:
-                    print(f"  {idx+1}/{len(self.graph.villes)} villes traitées...")
+
         else:
             # 2-OPT, 3-OPT, AG : boucle sur résultats précédents
             for key, path_input in input_dict.items():
@@ -221,19 +218,16 @@ class Pays:
         Beaucoup plus rapide que sur tous les chemins.
         """
         if not self.results['two_opt']:
-            print("2-OPT manquant. Exécutez d'abord 2-OPT.")
+            print("2-OPT manquant. Run 2-OPT...")
             self.run_two_opt_only(verbose=False)
         
         self.results['three_opt'] = {}
         
         if verbose:
-            print(f"\n{'='*70}")
             print(f"3-OPT (meilleur 2-OPT uniquement) - {self.nom}")
-            print(f"{'='*70}\n")
         
         #Récupérer le meilleur 2-OPT
-        best_2opt_path = min(
-            self.results['two_opt'].values(), key=lambda p: p.distance_path)
+        best_2opt_path = min(self.results['two_opt'].values(), key=lambda p: p.distance_path)
         best_start = best_2opt_path.point_depart
         
         if verbose:
@@ -241,20 +235,14 @@ class Pays:
         
         #Appliquer 3-OPT uniquement sur le meilleur
         start_t = time.time()
-        path_3opt = self.three_opt_solver.solve(
-            best_2opt_path, 
-            verbose=verbose,
-            max_iterations=max_iterations, 
-            timeout=timeout
-        )
+        path_3opt = self.three_opt_solver.solve(best_2opt_path, verbose=verbose,max_iterations=max_iterations, timeout=timeout)
         path_3opt.temps_execution = time.time() - start_t
         
         #Stocker UNIQUEMENT ce résultat
         self.results['three_opt'][best_start] = path_3opt
         
         if verbose:
-            improvement = ((best_2opt_path.distance_path - path_3opt.distance_path) / 
-                        best_2opt_path.distance_path) * 100
+            improvement = ((best_2opt_path.distance_path - path_3opt.distance_path) / best_2opt_path.distance_path) * 100
             print(f"  {best_start:15s} → {path_3opt.distance_path:.2f} ({improvement:+.1f}%)")
         
         self._compute_best_overall()
@@ -284,7 +272,7 @@ class Pays:
 
         initial_path = best_knn.path[:]
         if initial_path[0] == initial_path[-1]:
-            initial_path = initial_path[:-1]
+            initial_path = initial_path[:-1] # retirer le retour au départ pour AG
 
         start_t = time.time()
         path_ag = ga.solve(initial_path=initial_path, verbose=verbose)
@@ -300,8 +288,7 @@ class Pays:
         if verbose:
             self._print_resume()
 
-    def run_all_algos_multi_depart(self, verbose=True, run_knn=True, run_2opt=True, 
-                                run_3opt=True, run_ga=True, **kwargs):
+    def run_all_algos_multi_depart(self, verbose=True, run_knn=True, run_2opt=True, run_3opt=True, run_ga=True, **kwargs):
         """
         Lance les algos en cascade selon paramètres.
         

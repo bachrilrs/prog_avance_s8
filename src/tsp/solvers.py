@@ -344,9 +344,7 @@ class TSPOrchestrator:
         Returns: avec tous les résultats
         """
         if verbose:
-            print(f"\n{'='*70}")
             print(f"RÉSOLUTION TSP - {len(self.graph.villes)} villes")
-            print(f"{'='*70}")
         
         # --- KNN sur tous les départs ---
         if verbose:

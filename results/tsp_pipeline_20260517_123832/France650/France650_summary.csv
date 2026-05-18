@@ -1,0 +1,1253 @@
+Algo,Départ,Distance,Temps (s),Aperçu
+AG,AG,103.76,2.1087,Valence → Rive-de-Gier → Grigny_2 ... Beausoleil → Menton → Valence
+KNN,Valence,103.76,0.0014,Valence → Rive-de-Gier → Grigny_2 ... Beausoleil → Menton → Valence
+KNN,Roanne,104.2,0.0014,Roanne → L’Arbresle → Craponne ... Beausoleil → Menton → Roanne
+KNN,Bourg-en-Bresse,104.42,0.0014,Bourg-en-Bresse → Pont-de-Chéruy → Villefontaine ... Beausoleil → Menton → Bourg-en-Bresse
+KNN,Saint-Priest,104.51,0.0014,Saint-Priest → Bron → Vaulx-en-Velin ... Beausoleil → Menton → Saint-Priest
+KNN,Grigny_2,104.57,0.0014,Grigny_2 → Saint-Genis-Laval → Oullins ... Beausoleil → Menton → Grigny_2
+KNN,Rive-de-Gier,104.6,0.0014,Rive-de-Gier → Grigny_2 → Saint-Genis-Laval ... Beausoleil → Menton → Rive-de-Gier
+KNN,Villefranche-sur-Saône,104.74,0.0014,Villefranche-sur-Saône → L’Arbresle → Craponne ... Beausoleil → Menton → Villefranche-sur-Saône
+KNN,Chalon-sur-Saône,104.92,0.0014,Chalon-sur-Saône → Chenôve → Dijon ... Beausoleil → Menton → Chalon-sur-Saône
+KNN,Firminy,104.98,0.0014,Firminy → Saint-Étienne → Saint-Priest-en-Jarez ... Beausoleil → Menton → Firminy
+KNN,Lons-le-Saunier,104.98,0.0014,Lons-le-Saunier → Bourg-en-Bresse → Pont-de-Chéruy ... Beausoleil → Menton → Lons-le-Saunier
+KNN,Terrenoire,105.02,0.0014,Terrenoire → Saint-Étienne → Saint-Priest-en-Jarez ... Beausoleil → Menton → Terrenoire
+KNN,Saint-Étienne,105.11,0.0014,Saint-Étienne → Saint-Priest-en-Jarez → Terrenoire ... Beausoleil → Menton → Saint-Étienne
+KNN,Vénissieux,105.11,0.0014,Vénissieux → Saint-Fons → Pierre-Bénite ... Beausoleil → Menton → Vénissieux
+KNN,Saint-Priest-en-Jarez,105.12,0.0014,Saint-Priest-en-Jarez → Saint-Étienne → Terrenoire ... Beausoleil → Menton → Saint-Priest-en-Jarez
+KNN,Fontaine-lès-Dijon,105.14,0.0014,Fontaine-lès-Dijon → Talant → Dijon ... Beausoleil → Menton → Fontaine-lès-Dijon
+KNN,Dijon,105.15,0.0014,Dijon → Talant → Fontaine-lès-Dijon ... Beausoleil → Menton → Dijon
+KNN,Talant,105.15,0.0014,Talant → Fontaine-lès-Dijon → Dijon ... Beausoleil → Menton → Talant
+KNN,Saint-Fons,105.16,0.0014,Saint-Fons → Pierre-Bénite → Oullins ... Beausoleil → Menton → Saint-Fons
+KNN,Chenôve,105.16,0.0014,Chenôve → Dijon → Talant ... Beausoleil → Menton → Chenôve
+KNN,Besançon,105.57,0.0014,Besançon → Vesoul → Montbéliard ... Beausoleil → Menton → Besançon
+KNN,Vichy,105.63,0.0014,Vichy → Moulins → Nevers ... Beausoleil → Menton → Vichy
+KNN,Vesoul,105.76,0.0018,Vesoul → Besançon → Lons-le-Saunier ... Beausoleil → Menton → Vesoul
+KNN,Audincourt,106.69,0.0014,Audincourt → Sochaux → Montbéliard ... Beausoleil → Menton → Audincourt
+KNN,Montbéliard,106.74,0.0014,Montbéliard → Sochaux → Audincourt ... Beausoleil → Menton → Montbéliard
+KNN,Meaux,106.76,0.0014,Meaux → Crégy-lès-Meaux → Esbly ... Beausoleil → Menton → Meaux
+KNN,Sochaux,106.76,0.0014,Sochaux → Montbéliard → Audincourt ... Beausoleil → Menton → Sochaux
+KNN,Crégy-lès-Meaux,106.77,0.0014,Crégy-lès-Meaux → Meaux → Esbly ... Beausoleil → Menton → Crégy-lès-Meaux
+KNN,Belfort,106.91,0.0014,Belfort → Sochaux → Montbéliard ... Beausoleil → Menton → Belfort
+KNN,Saint-Maur-des-Fossés,107.0,0.0014,Saint-Maur-des-Fossés → Champigny-sur-Marne → Bry-sur-Marne ... Beausoleil → Menton → Saint-Maur-des-Fossés
+KNN,Bussy-Saint-Georges,107.0,0.0014,Bussy-Saint-Georges → Thorigny-sur-Marne → Montévrain ... Beausoleil → Menton → Bussy-Saint-Georges
+KNN,Noisy-le-Grand,107.13,0.0014,Noisy-le-Grand → Neuilly-sur-Marne → Villiers-sur-Marne ... Beausoleil → Menton → Noisy-le-Grand
+KNN,Neuilly-sur-Marne,107.13,0.0014,Neuilly-sur-Marne → Noisy-le-Grand → Villiers-sur-Marne ... Beausoleil → Menton → Neuilly-sur-Marne
+KNN,Le Perreux-Sur-Marne,107.17,0.0014,Le Perreux-Sur-Marne → Bry-sur-Marne → Champigny-sur-Marne ... Beausoleil → Menton → Le Perreux-Sur-Marne
+KNN,Livry-Gargan,107.18,0.0014,Livry-Gargan → Sevran → Villepinte ... Beausoleil → Menton → Livry-Gargan
+KNN,Neuilly-Plaisance,107.18,0.0014,Neuilly-Plaisance → Le Perreux-Sur-Marne → Bry-sur-Marne ... Beausoleil → Menton → Neuilly-Plaisance
+KNN,Le Raincy,107.23,0.0014,Le Raincy → Les Pavillons-sous-Bois → Villemomble ... Beausoleil → Menton → Le Raincy
+KNN,Clichy-sous-Bois,107.24,0.0014,Clichy-sous-Bois → Montfermeil → Vaujours ... Beausoleil → Menton → Clichy-sous-Bois
+KNN,Guingamp,108.21,0.0014,Guingamp → Saint-Brieuc → Dinan ... La Rochelle → Les Sables-d’Olonne → Guingamp
+KNN,Montigny-lès-Metz,108.46,0.0014,Montigny-lès-Metz → Le Ban-Saint-Martin → Longeville-lès-Metz ... Beausoleil → Menton → Montigny-lès-Metz
+KNN,Longeville-lès-Metz,108.47,0.0014,Longeville-lès-Metz → Le Ban-Saint-Martin → Montigny-lès-Metz ... Beausoleil → Menton → Longeville-lès-Metz
+KNN,Metz,108.48,0.0014,Metz → Le Ban-Saint-Martin → Longeville-lès-Metz ... Beausoleil → Menton → Metz
+KNN,Le Ban-Saint-Martin,108.48,0.0014,Le Ban-Saint-Martin → Longeville-lès-Metz → Montigny-lès-Metz ... Beausoleil → Menton → Le Ban-Saint-Martin
+KNN,Longwy,108.6,0.0014,Longwy → Villerupt → Nilvange ... Beausoleil → Menton → Longwy
+KNN,Villerupt,108.66,0.0014,Villerupt → Longwy → Nilvange ... Beausoleil → Menton → Villerupt
+KNN,Saint-Nazaire,108.7,0.0014,Saint-Nazaire → Paimbœuf → La Montagne ... Firminy → Roanne → Saint-Nazaire
+KNN,Paimbœuf,108.7,0.0014,Paimbœuf → Saint-Nazaire → La Montagne ... Firminy → Roanne → Paimbœuf
+KNN,Beaumont,108.78,0.0014,Beaumont → Chamalières → Clermont-Ferrand ... Valence → Perpignan → Beaumont
+KNN,Nilvange,108.78,0.0014,Nilvange → Terville → Hagondange ... Beausoleil → Menton → Nilvange
+KNN,Dinan,108.79,0.0014,Dinan → Rennes → Fougères ... Le Relecq-Kerhuon → Brest → Dinan
+KNN,Clermont-Ferrand,108.83,0.0014,Clermont-Ferrand → Chamalières → Beaumont ... Valence → Perpignan → Clermont-Ferrand
+KNN,Chamalières,108.83,0.0014,Chamalières → Clermont-Ferrand → Beaumont ... Valence → Perpignan → Chamalières
+KNN,Vannes,108.88,0.0014,Vannes → Auray → Port-Louis ... Le Relecq-Kerhuon → Brest → Vannes
+KNN,Auray,108.89,0.0014,Auray → Vannes → Port-Louis ... Le Relecq-Kerhuon → Brest → Auray
+KNN,Neuves-Maisons,108.97,0.0014,Neuves-Maisons → Vandœuvre-lès-Nancy → Villers-lès-Nancy ... Beausoleil → Menton → Neuves-Maisons
+KNN,Heillecourt,109.05,0.0014,Heillecourt → Jarville-la-Malgrange → Tomblaine ... Beausoleil → Menton → Heillecourt
+KNN,Maxéville,109.09,0.0014,Maxéville → Nancy → Saint-Max ... Beausoleil → Menton → Maxéville
+KNN,Saint-Brieuc,109.1,0.0014,Saint-Brieuc → Guingamp → Lorient ... Le Relecq-Kerhuon → Brest → Saint-Brieuc
+KNN,Jarville-la-Malgrange,109.1,0.0014,Jarville-la-Malgrange → Tomblaine → Saint-Max ... Beausoleil → Menton → Jarville-la-Malgrange
+KNN,Villers-lès-Nancy,109.11,0.0014,Villers-lès-Nancy → Vandœuvre-lès-Nancy → Heillecourt ... Beausoleil → Menton → Villers-lès-Nancy
+KNN,Nancy,109.12,0.0014,Nancy → Saint-Max → Essey-lès-Nancy ... Beausoleil → Menton → Nancy
+KNN,Vandœuvre-lès-Nancy,109.12,0.0014,Vandœuvre-lès-Nancy → Villers-lès-Nancy → Nancy ... Beausoleil → Menton → Vandœuvre-lès-Nancy
+KNN,Saint-Max,109.12,0.0014,Saint-Max → Essey-lès-Nancy → Tomblaine ... Beausoleil → Menton → Saint-Max
+KNN,Essey-lès-Nancy,109.12,0.0014,Essey-lès-Nancy → Saint-Max → Tomblaine ... Beausoleil → Menton → Essey-lès-Nancy
+KNN,Tomblaine,109.13,0.0014,Tomblaine → Jarville-la-Malgrange → Heillecourt ... Beausoleil → Menton → Tomblaine
+KNN,Le Relecq-Kerhuon,109.15,0.0014,Le Relecq-Kerhuon → Brest → Lorient ... Firminy → Roanne → Le Relecq-Kerhuon
+KNN,Brest,109.17,0.0014,Brest → Le Relecq-Kerhuon → Lorient ... Firminy → Roanne → Brest
+KNN,Lorient,109.2,0.0014,Lorient → Port-Louis → Auray ... Firminy → Roanne → Lorient
+KNN,Port-Louis,109.2,0.0014,Port-Louis → Lorient → Auray ... Firminy → Roanne → Port-Louis
+KNN,Octeville,109.23,0.0014,Octeville → Cherbourg → Avranches ... Le Relecq-Kerhuon → Brest → Octeville
+KNN,Cherbourg,109.26,0.0014,Cherbourg → Octeville → Avranches ... Le Relecq-Kerhuon → Brest → Cherbourg
+KNN,Avranches,109.27,0.0014,Avranches → Fougères → Laval ... Le Relecq-Kerhuon → Brest → Avranches
+KNN,Laval,109.43,0.0014,Laval → Fougères → Avranches ... Le Relecq-Kerhuon → Brest → Laval
+KNN,Combs-la-Ville,109.6,0.0014,Combs-la-Ville → Quincy-sous-Sénart → Boussy-Saint-Antoine ... Beausoleil → Menton → Combs-la-Ville
+KNN,Quincy-sous-Sénart,109.63,0.0014,Quincy-sous-Sénart → Combs-la-Ville → Boussy-Saint-Antoine ... Beausoleil → Menton → Quincy-sous-Sénart
+KNN,Boussy-Saint-Antoine,109.63,0.0014,Boussy-Saint-Antoine → Épinay-sous-Sénart → Brunoy ... Beausoleil → Menton → Boussy-Saint-Antoine
+KNN,Épinay-sous-Sénart,109.64,0.0014,Épinay-sous-Sénart → Brunoy → Yerres ... Beausoleil → Menton → Épinay-sous-Sénart
+KNN,Mandres-les-Roses,109.65,0.0014,Mandres-les-Roses → Boussy-Saint-Antoine → Épinay-sous-Sénart ... Beausoleil → Menton → Mandres-les-Roses
+KNN,Villecresnes,109.69,0.0014,Villecresnes → Mandres-les-Roses → Boussy-Saint-Antoine ... Beausoleil → Menton → Villecresnes
+KNN,Vincennes,109.78,0.0014,Vincennes → Montreuil → Romainville ... Beausoleil → Menton → Vincennes
+KNN,Stiring-Wendel,109.83,0.0014,Stiring-Wendel → Talange → Hagondange ... Beausoleil → Menton → Stiring-Wendel
+KNN,Aubervilliers,109.84,0.0014,Aubervilliers → La Courneuve → Stains ... Beausoleil → Menton → Aubervilliers
+KNN,Bry-sur-Marne,109.85,0.0014,Bry-sur-Marne → Le Perreux-Sur-Marne → Neuilly-Plaisance ... Beausoleil → Menton → Bry-sur-Marne
+KNN,Saint-Jean-de-Braye,109.88,0.0014,Saint-Jean-de-Braye → Fleury-les-Aubrais → Orléans ... Les Sables-d’Olonne → La Rochelle → Saint-Jean-de-Braye
+KNN,Chelles,109.89,0.0014,Chelles → Champs-Sur-Marne → Noisiel ... Beausoleil → Menton → Chelles
+KNN,Villemomble,109.9,0.0014,Villemomble → Les Pavillons-sous-Bois → Le Raincy ... Beausoleil → Menton → Villemomble
+KNN,Nevers,109.93,0.0014,Nevers → Moulins → Vichy ... Valence → Perpignan → Nevers
+KNN,Magnanville,109.94,0.0014,Magnanville → Mantes-la-Ville → Mantes-la-Jolie ... Les Sables-d’Olonne → La Rochelle → Magnanville
+KNN,Villeneuve-le-Roi,109.95,0.0014,Villeneuve-le-Roi → Ablon-sur-Seine → Vigneux-sur-Seine ... Beausoleil → Menton → Villeneuve-le-Roi
+KNN,Gournay-sur-Marne,109.96,0.0014,Gournay-sur-Marne → Champs-Sur-Marne → Noisiel ... Beausoleil → Menton → Gournay-sur-Marne
+KNN,Gagny,109.99,0.0014,Gagny → Le Raincy → Les Pavillons-sous-Bois ... Beausoleil → Menton → Gagny
+KNN,Courtry,110.01,0.0014,Courtry → Villeparisis → Vaujours ... Beausoleil → Menton → Courtry
+KNN,Mantes-la-Jolie,110.03,0.0014,Mantes-la-Jolie → Mantes-la-Ville → Magnanville ... Les Sables-d’Olonne → La Rochelle → Mantes-la-Jolie
+KNN,Voisins-le-Bretonneux,110.03,0.0014,Voisins-le-Bretonneux → Montigny-le-Bretonneux → Bois-d’Arcy ... Les Sables-d’Olonne → La Rochelle → Voisins-le-Bretonneux
+KNN,La Rochelle,110.04,0.0014,La Rochelle → Les Sables-d’Olonne → Montaigu ... Le Relecq-Kerhuon → Brest → La Rochelle
+KNN,Fontenay-sous-Bois,110.05,0.0014,Fontenay-sous-Bois → Nogent-sur-Marne → Joinville-le-Pont ... Beausoleil → Menton → Fontenay-sous-Bois
+KNN,Vanves,110.05,0.0014,Vanves → Malakoff → Châtillon ... Beausoleil → Menton → Vanves
+KNN,Mantes-la-Ville,110.05,0.0014,Mantes-la-Ville → Mantes-la-Jolie → Limay ... Les Sables-d’Olonne → La Rochelle → Mantes-la-Ville
+KNN,Lucé,110.05,0.0014,Lucé → Luisant → Chartres ... Le Relecq-Kerhuon → Brest → Lucé
+KNN,Issy-les-Moulineaux,110.06,0.0014,Issy-les-Moulineaux → Vanves → Malakoff ... Beausoleil → Menton → Issy-les-Moulineaux
+KNN,Clamart,110.06,0.0014,Clamart → Le Plessis-Robinson → Châtenay-Malabry ... Beausoleil → Menton → Clamart
+KNN,Les Pavillons-sous-Bois,110.06,0.0014,Les Pavillons-sous-Bois → Villemomble → Neuilly-Plaisance ... Beausoleil → Menton → Les Pavillons-sous-Bois
+KNN,Saint-Cyr-l’École,110.06,0.0014,Saint-Cyr-l’École → Fontenay-le-Fleury → Bois-d’Arcy ... Les Sables-d’Olonne → La Rochelle → Saint-Cyr-l’École
+KNN,Limay,110.06,0.0014,Limay → Mantes-la-Jolie → Mantes-la-Ville ... Les Sables-d’Olonne → La Rochelle → Limay
+KNN,Nogent-sur-Marne,110.07,0.0014,Nogent-sur-Marne → Fontenay-sous-Bois → Rosny-sous-Bois ... Beausoleil → Menton → Nogent-sur-Marne
+KNN,Vaujours,110.07,0.0014,Vaujours → Clichy-sous-Bois → Montfermeil ... Beausoleil → Menton → Vaujours
+KNN,Luisant,110.07,0.0014,Luisant → Lucé → Chartres ... Le Relecq-Kerhuon → Brest → Luisant
+KNN,Versailles,110.08,0.0014,Versailles → Le Chesnay → La Celle-Saint-Cloud ... Les Sables-d’Olonne → La Rochelle → Versailles
+KNN,Romainville,110.08,0.0014,Romainville → Les Lilas → Bagnolet ... Beausoleil → Menton → Romainville
+KNN,Montgeron,110.08,0.0014,Montgeron → Crosne → Villeneuve-Saint-Georges ... Beausoleil → Menton → Montgeron
+KNN,La Celle-Saint-Cloud,110.08,0.0014,La Celle-Saint-Cloud → Le Chesnay → Versailles ... Les Sables-d’Olonne → La Rochelle → La Celle-Saint-Cloud
+KNN,Vaucresson,110.08,0.0014,Vaucresson → La Celle-Saint-Cloud → Le Chesnay ... Les Sables-d’Olonne → La Rochelle → Vaucresson
+KNN,Aulnay-sous-Bois,110.09,0.0014,Aulnay-sous-Bois → Le Blanc-Mesnil → Drancy ... Beausoleil → Menton → Aulnay-sous-Bois
+KNN,Meudon,110.09,0.0014,Meudon → Boulogne-Billancourt → Saint-Cloud ... Beausoleil → Menton → Meudon
+KNN,Noisy-le-Sec,110.09,0.0014,Noisy-le-Sec → Romainville → Les Lilas ... Beausoleil → Menton → Noisy-le-Sec
+KNN,Valenton,110.09,0.0014,Valenton → Limeil-Brévannes → Boissy-Saint-Léger ... Beausoleil → Menton → Valenton
+KNN,Drancy,110.1,0.0014,Drancy → Le Blanc-Mesnil → Aulnay-sous-Bois ... Beausoleil → Menton → Drancy
+KNN,Sevran,110.1,0.0014,Sevran → Livry-Gargan → Clichy-sous-Bois ... Beausoleil → Menton → Sevran
+KNN,Chartres,110.1,0.0014,Chartres → Luisant → Lucé ... Le Relecq-Kerhuon → Brest → Chartres
+KNN,Le Blanc-Mesnil,110.11,0.0014,Le Blanc-Mesnil → Drancy → Bobigny ... Beausoleil → Menton → Le Blanc-Mesnil
+KNN,Crosne,110.11,0.0014,Crosne → Montgeron → Villeneuve-Saint-Georges ... Beausoleil → Menton → Crosne
+KNN,Bobigny,110.12,0.0014,Bobigny → Drancy → Le Blanc-Mesnil ... Beausoleil → Menton → Bobigny
+KNN,Jœuf,110.14,0.0014,Jœuf → Nilvange → Terville ... Beausoleil → Menton → Jœuf
+KNN,Boulogne-Billancourt,110.18,0.0014,Boulogne-Billancourt → Saint-Cloud → Sèvres ... Beausoleil → Menton → Boulogne-Billancourt
+KNN,Saint-Cloud,110.18,0.0014,Saint-Cloud → Sèvres → Ville-d’Avray ... Beausoleil → Menton → Saint-Cloud
+KNN,Talange,110.18,0.0014,Talange → Hagondange → Terville ... Beausoleil → Menton → Talange
+KNN,Nanterre,110.22,0.0014,Nanterre → Rueil-Malmaison → Chatou ... Beausoleil → Menton → Nanterre
+KNN,Rueil-Malmaison,110.22,0.0014,Rueil-Malmaison → Chatou → Croissy-sur-Seine ... Beausoleil → Menton → Rueil-Malmaison
+KNN,Hagondange,110.22,0.0014,Hagondange → Talange → Terville ... Beausoleil → Menton → Hagondange
+KNN,Cachan,110.23,0.0014,Cachan → L’Haÿ-les-Roses → Chevilly-Larue ... Les Sables-d’Olonne → La Rochelle → Cachan
+KNN,Croissy-sur-Seine,110.23,0.0014,Croissy-sur-Seine → Bougival → Le Vésinet ... Beausoleil → Menton → Croissy-sur-Seine
+KNN,Bougival,110.23,0.0014,Bougival → Croissy-sur-Seine → Le Vésinet ... Beausoleil → Menton → Bougival
+KNN,Montrouge,110.26,0.0014,Montrouge → Arcueil → Gentilly ... Les Sables-d’Olonne → La Rochelle → Montrouge
+KNN,Évreux,110.26,0.0014,Évreux → Caudebec-lès-Elbeuf → Saint-Aubin-lès-Elbeuf ... Les Sables-d’Olonne → La Rochelle → Évreux
+KNN,Terville,110.28,0.0014,Terville → Nilvange → Jœuf ... Beausoleil → Menton → Terville
+KNN,Saint-Sébastien-sur-Loire,110.36,0.0014,Saint-Sébastien-sur-Loire → Nantes → Rezé ... Le Relecq-Kerhuon → Brest → Saint-Sébastien-sur-Loire
+KNN,Angers,110.37,0.0014,Angers → Laval → Fougères ... Le Relecq-Kerhuon → Brest → Angers
+KNN,Rezé,110.37,0.0014,Rezé → Nantes → Saint-Sébastien-sur-Loire ... Le Relecq-Kerhuon → Brest → Rezé
+KNN,Nantes,110.39,0.0014,Nantes → Rezé → Saint-Sébastien-sur-Loire ... Le Relecq-Kerhuon → Brest → Nantes
+KNN,Bourg-la-Reine,110.39,0.0014,Bourg-la-Reine → Bagneux → Cachan ... Les Sables-d’Olonne → La Rochelle → Bourg-la-Reine
+KNN,Bagneux,110.4,0.0014,Bagneux → Bourg-la-Reine → Cachan ... Les Sables-d’Olonne → La Rochelle → Bagneux
+KNN,Orly,110.41,0.0014,Orly → Thiais → Choisy-le-Roi ... Les Sables-d’Olonne → La Rochelle → Orly
+KNN,Beauvais,110.42,0.0014,Beauvais → Clermont → Liancourt ... Beausoleil → Menton → Beauvais
+KNN,Ablon-sur-Seine,110.45,0.0014,Ablon-sur-Seine → Villeneuve-le-Roi → Orly ... Les Sables-d’Olonne → La Rochelle → Ablon-sur-Seine
+KNN,Viry-Châtillon,110.46,0.0014,Viry-Châtillon → Juvisy-sur-Orge → Athis-Mons ... Les Sables-d’Olonne → La Rochelle → Viry-Châtillon
+KNN,Arcueil,110.48,0.0014,Arcueil → Gentilly → Le Kremlin-Bicêtre ... Les Sables-d’Olonne → La Rochelle → Arcueil
+KNN,Chevilly-Larue,110.49,0.0014,Chevilly-Larue → L’Haÿ-les-Roses → Cachan ... Beausoleil → Menton → Chevilly-Larue
+KNN,Vitry-sur-Seine,110.5,0.0014,Vitry-sur-Seine → Thiais → Choisy-le-Roi ... Beausoleil → Menton → Vitry-sur-Seine
+KNN,Bonneuil-sur-Marne,110.5,0.0014,Bonneuil-sur-Marne → Limeil-Brévannes → Valenton ... Beausoleil → Menton → Bonneuil-sur-Marne
+KNN,Ivry-sur-Seine,110.51,0.0014,Ivry-sur-Seine → Le Kremlin-Bicêtre → Gentilly ... Beausoleil → Menton → Ivry-sur-Seine
+KNN,Maisons-Alfort,110.52,0.0014,Maisons-Alfort → Alfortville → Charenton-le-Pont ... Beausoleil → Menton → Maisons-Alfort
+KNN,Le Kremlin-Bicêtre,110.52,0.0014,Le Kremlin-Bicêtre → Gentilly → Arcueil ... Beausoleil → Menton → Le Kremlin-Bicêtre
+KNN,Clichy,110.53,0.0014,Clichy → Carrières-sur-Seine → Levallois-Perret ... Beausoleil → Menton → Clichy
+KNN,L’Île-Saint-Denis,110.53,0.0014,L’Île-Saint-Denis → Villeneuve-la-Garenne → Saint-Ouen ... Beausoleil → Menton → L’Île-Saint-Denis
+KNN,Brunoy,110.54,0.0014,Brunoy → Épinay-sous-Sénart → Boussy-Saint-Antoine ... Les Sables-d’Olonne → La Rochelle → Brunoy
+KNN,Joinville-le-Pont,110.54,0.0014,Joinville-le-Pont → Saint-Maurice → Maisons-Alfort ... Beausoleil → Menton → Joinville-le-Pont
+KNN,Gentilly,110.54,0.0014,Gentilly → Arcueil → Cachan ... Beausoleil → Menton → Gentilly
+KNN,Charenton-le-Pont,110.55,0.0014,Charenton-le-Pont → Saint-Mandé → Vincennes ... Beausoleil → Menton → Charenton-le-Pont
+KNN,Carrières-sur-Seine,110.56,0.0014,Carrières-sur-Seine → Levallois-Perret → Neuilly-sur-Seine ... Beausoleil → Menton → Carrières-sur-Seine
+KNN,La Garenne-Colombes,110.59,0.0014,La Garenne-Colombes → Courbevoic → Neuilly-sur-Seine ... Beausoleil → Menton → La Garenne-Colombes
+KNN,Le Pré-Saint-Gervais,110.59,0.0014,Le Pré-Saint-Gervais → Pantin → Les Lilas ... Beausoleil → Menton → Le Pré-Saint-Gervais
+KNN,Enghien-les-Bains,110.6,0.0014,Enghien-les-Bains → Épinay-sur-Seine → Gennevilliers ... Beausoleil → Menton → Enghien-les-Bains
+KNN,Sannois,110.63,0.0014,Sannois → Ermont → Eaubonne ... Beausoleil → Menton → Sannois
+KNN,Charleville-Mézières,110.64,0.0014,Charleville-Mézières → Reims → Tinqueux ... Beausoleil → Menton → Charleville-Mézières
+KNN,Courbevoic,110.66,0.0014,Courbevoic → La Garenne-Colombes → Colombes ... Beausoleil → Menton → Courbevoic
+KNN,Levallois-Perret,110.66,0.0014,Levallois-Perret → Carrières-sur-Seine → Clichy ... Beausoleil → Menton → Levallois-Perret
+KNN,Colombes,110.67,0.0014,Colombes → Bois-Colombes → Carrières-sur-Seine ... Beausoleil → Menton → Colombes
+KNN,La Courneuve,110.68,0.0014,La Courneuve → Stains → Pierrefitte-sur-Seine ... Beausoleil → Menton → La Courneuve
+KNN,Montmorency,110.68,0.0014,Montmorency → Deuil-la-Barre → Montmagny ... Beausoleil → Menton → Montmorency
+KNN,Dugny,110.7,0.0014,Dugny → Le Bourget → Drancy ... Beausoleil → Menton → Dugny
+KNN,Grigny,110.71,0.0014,Grigny → Viry-Châtillon → Juvisy-sur-Orge ... Les Sables-d’Olonne → La Rochelle → Grigny
+KNN,Pierrefitte-sur-Seine,110.72,0.0014,Pierrefitte-sur-Seine → Montmagny → Groslay ... Beausoleil → Menton → Pierrefitte-sur-Seine
+KNN,Ris-Orangis,110.72,0.0014,Ris-Orangis → Grigny → Viry-Châtillon ... Beausoleil → Menton → Ris-Orangis
+KNN,Élancourt,110.73,0.0014,Élancourt → La Verrière → Maurepas ... Les Sables-d’Olonne → La Rochelle → Élancourt
+KNN,Montmagny,110.75,0.0014,Montmagny → Groslay → Saint-Brice-sous-Forêt ... Beausoleil → Menton → Montmagny
+KNN,Athis-Mons,110.76,0.0014,Athis-Mons → Juvisy-sur-Orge → Viry-Châtillon ... Beausoleil → Menton → Athis-Mons
+KNN,Vigneux-sur-Seine,110.76,0.0014,Vigneux-sur-Seine → Draveil → Athis-Mons ... Les Sables-d’Olonne → La Rochelle → Vigneux-sur-Seine
+KNN,Le Plessis-Bouchard,110.76,0.0014,Le Plessis-Bouchard → Franconville → Ermont ... Beausoleil → Menton → Le Plessis-Bouchard
+KNN,Argenteuil,110.77,0.0014,Argenteuil → Sannois → Ermont ... Beausoleil → Menton → Argenteuil
+KNN,Trappes,110.77,0.0014,Trappes → Montigny-le-Bretonneux → Voisins-le-Bretonneux ... Les Sables-d’Olonne → La Rochelle → Trappes
+KNN,Saint-Leu-la-Forêt,110.77,0.0014,Saint-Leu-la-Forêt → Le Plessis-Bouchard → Franconville ... Beausoleil → Menton → Saint-Leu-la-Forêt
+KNN,Amiens,110.78,0.0014,Amiens → Longueau → Clermont ... Beausoleil → Menton → Amiens
+KNN,Choisy-le-Roi,110.78,0.0014,Choisy-le-Roi → Thiais → Orly ... Les Sables-d’Olonne → La Rochelle → Choisy-le-Roi
+KNN,Plaisir,110.78,0.0014,Plaisir → Élancourt → La Verrière ... Les Sables-d’Olonne → La Rochelle → Plaisir
+KNN,Thiais,110.78,0.0014,Thiais → Choisy-le-Roi → Orly ... Les Sables-d’Olonne → La Rochelle → Thiais
+KNN,Eysines,110.79,0.0014,Eysines → Mérignac → Pessac ... Le Relecq-Kerhuon → Brest → Eysines
+KNN,Ézanville,110.79,0.0014,Ézanville → Saint-Brice-sous-Forêt → Groslay ... Beausoleil → Menton → Ézanville
+KNN,Mérignac,110.8,0.0014,Mérignac → Pessac → Gradignan ... Le Relecq-Kerhuon → Brest → Mérignac
+KNN,Montigny-le-Bretonneux,110.8,0.0014,Montigny-le-Bretonneux → Voisins-le-Bretonneux → Guyancourt ... Les Sables-d’Olonne → La Rochelle → Montigny-le-Bretonneux
+KNN,Neauphle-le-Château,110.8,0.0014,Neauphle-le-Château → Plaisir → Élancourt ... Les Sables-d’Olonne → La Rochelle → Neauphle-le-Château
+KNN,Bois-d’Arcy,110.81,0.0014,Bois-d’Arcy → Fontenay-le-Fleury → Saint-Cyr-l’École ... Les Sables-d’Olonne → La Rochelle → Bois-d’Arcy
+KNN,Yerres,110.84,0.0014,Yerres → Brunoy → Épinay-sous-Sénart ... Les Sables-d’Olonne → La Rochelle → Yerres
+KNN,Fontenay-le-Fleury,110.84,0.0014,Fontenay-le-Fleury → Saint-Cyr-l’École → Guyancourt ... Les Sables-d’Olonne → La Rochelle → Fontenay-le-Fleury
+KNN,Le Bouscat,110.85,0.0014,Le Bouscat → Bordeaux → Talence ... Le Relecq-Kerhuon → Brest → Le Bouscat
+KNN,Guyancourt,110.86,0.0014,Guyancourt → Voisins-le-Bretonneux → Montigny-le-Bretonneux ... Les Sables-d’Olonne → La Rochelle → Guyancourt
+KNN,Hendaye,110.87,0.0014,Hendaye → Biarritz → Anglet ... Le Relecq-Kerhuon → Brest → Hendaye
+KNN,Carbon-Blanc,110.88,0.0014,Carbon-Blanc → Lormont → Cenon ... Le Relecq-Kerhuon → Brest → Carbon-Blanc
+KNN,Longueau,110.88,0.0014,Longueau → Amiens → Beauvais ... Beausoleil → Menton → Longueau
+KNN,Bordeaux,110.89,0.0015,Bordeaux → Le Bouscat → Mérignac ... Le Relecq-Kerhuon → Brest → Bordeaux
+KNN,Fosses,110.89,0.0014,Fosses → Goussainville → Arnouville-lès-Gonesse ... Beausoleil → Menton → Fosses
+KNN,Savigny-le-Temple,110.9,0.0014,Savigny-le-Temple → Cesson → Le Mée-sur-Seine ... Beausoleil → Menton → Savigny-le-Temple
+KNN,Lormont,110.9,0.0014,Lormont → Carbon-Blanc → Cenon ... Le Relecq-Kerhuon → Brest → Lormont
+KNN,Cesson,110.9,0.0014,Cesson → Savigny-le-Temple → Le Mée-sur-Seine ... Beausoleil → Menton → Cesson
+KNN,Pessac,110.91,0.0014,Pessac → Mérignac → Eysines ... Le Relecq-Kerhuon → Brest → Pessac
+KNN,Savigny-sur-Orge,110.93,0.0014,Savigny-sur-Orge → Morsang-sur-Orge → Villemoisson-sur-Orge ... Beausoleil → Menton → Savigny-sur-Orge
+KNN,Talence,110.94,0.0014,Talence → Villenave-d’Ornon → Bègles ... Le Relecq-Kerhuon → Brest → Talence
+KNN,Gradignan,110.95,0.0014,Gradignan → Pessac → Mérignac ... Le Relecq-Kerhuon → Brest → Gradignan
+KNN,Villenave-d’Ornon,110.97,0.0014,Villenave-d’Ornon → Talence → Bègles ... Le Relecq-Kerhuon → Brest → Villenave-d’Ornon
+KNN,Floirac,110.98,0.0014,Floirac → Cenon → Lormont ... Le Relecq-Kerhuon → Brest → Floirac
+KNN,Bègles,111.01,0.0014,Bègles → Villenave-d’Ornon → Talence ... Le Relecq-Kerhuon → Brest → Bègles
+KNN,Juvisy-sur-Orge,111.02,0.0014,Juvisy-sur-Orge → Viry-Châtillon → Grigny ... Beausoleil → Menton → Juvisy-sur-Orge
+KNN,Clermont,111.08,0.0014,Clermont → Liancourt → Nogent-sur-Oise ... Beausoleil → Menton → Clermont
+KNN,Maurepas,111.12,0.0014,Maurepas → La Verrière → Élancourt ... Les Sables-d’Olonne → La Rochelle → Maurepas
+KNN,Cenon,111.13,0.0014,Cenon → Floirac → Bègles ... Le Relecq-Kerhuon → Brest → Cenon
+KNN,La Verrière,111.13,0.0014,La Verrière → Maurepas → Élancourt ... Les Sables-d’Olonne → La Rochelle → La Verrière
+KNN,Boucau,111.14,0.0014,Boucau → Bayonne → Anglet ... Le Relecq-Kerhuon → Brest → Boucau
+KNN,Sarcelles,111.18,0.0014,Sarcelles → Villiers-le-Bel → Arnouville-lès-Gonesse ... Les Sables-d’Olonne → La Rochelle → Sarcelles
+KNN,Bayonne,111.18,0.0014,Bayonne → Boucau → Anglet ... Le Relecq-Kerhuon → Brest → Bayonne
+KNN,Les Clayes-sous-Bois,111.19,0.0014,Les Clayes-sous-Bois → Plaisir → Élancourt ... Les Sables-d’Olonne → La Rochelle → Les Clayes-sous-Bois
+KNN,Anglet,111.2,0.0014,Anglet → Bayonne → Boucau ... Le Relecq-Kerhuon → Brest → Anglet
+KNN,Arnouville-lès-Gonesse,111.2,0.0014,Arnouville-lès-Gonesse → Garges-lès-Gonesse → Dugny ... Les Sables-d’Olonne → La Rochelle → Arnouville-lès-Gonesse
+KNN,Biarritz,111.22,0.0014,Biarritz → Anglet → Bayonne ... Le Relecq-Kerhuon → Brest → Biarritz
+KNN,Jouy-le-Moutier,111.26,0.0014,Jouy-le-Moutier → Vauréal → Cergy ... Les Sables-d’Olonne → La Rochelle → Jouy-le-Moutier
+KNN,Pontoise,111.38,0.0014,Pontoise → Saint-Ouen-l’Aumône → Éragny ... Les Sables-d’Olonne → La Rochelle → Pontoise
+KNN,Le Chesnay,111.38,0.0014,Le Chesnay → Versailles → Viroflay ... Les Sables-d’Olonne → La Rochelle → Le Chesnay
+KNN,Saint-Ouen-l’Aumône,111.39,0.0014,Saint-Ouen-l’Aumône → Pontoise → Éragny ... Les Sables-d’Olonne → La Rochelle → Saint-Ouen-l’Aumône
+KNN,Vélizy-Villacoublay,111.39,0.0014,Vélizy-Villacoublay → Viroflay → Chaville ... Les Sables-d’Olonne → La Rochelle → Vélizy-Villacoublay
+KNN,Viroflay,111.39,0.0014,Viroflay → Chaville → Ville-d’Avray ... Les Sables-d’Olonne → La Rochelle → Viroflay
+KNN,Massy,111.41,0.0014,Massy → Verrières-le-Buisson → Châtenay-Malabry ... Les Sables-d’Olonne → La Rochelle → Massy
+KNN,Goussainville,111.45,0.0014,Goussainville → Arnouville-lès-Gonesse → Garges-lès-Gonesse ... Les Sables-d’Olonne → La Rochelle → Goussainville
+KNN,Sèvres,111.46,0.0014,Sèvres → Saint-Cloud → Boulogne-Billancourt ... Les Sables-d’Olonne → La Rochelle → Sèvres
+KNN,Ville-d’Avray,111.46,0.0014,Ville-d’Avray → Chaville → Viroflay ... Les Sables-d’Olonne → La Rochelle → Ville-d’Avray
+KNN,Garches,111.47,0.0014,Garches → Ville-d’Avray → Chaville ... Les Sables-d’Olonne → La Rochelle → Garches
+KNN,Montigny-en-Gohelle,111.5,0.0014,Montigny-en-Gohelle → Fouquières-lès-Lens → Billy-Montigny ... Beausoleil → Menton → Montigny-en-Gohelle
+KNN,Morangis,111.51,0.0014,Morangis → Chilly-Mazarin → Longjumeau ... Les Sables-d’Olonne → La Rochelle → Morangis
+KNN,Fontenay-aux-Roses,111.52,0.0014,Fontenay-aux-Roses → Châtillon → Malakoff ... Les Sables-d’Olonne → La Rochelle → Fontenay-aux-Roses
+KNN,Courcelles-les-Lens,111.52,0.0014,Courcelles-les-Lens → Oignies → Montigny-en-Gohelle ... Beausoleil → Menton → Courcelles-les-Lens
+KNN,Fouquières-lès-Lens,111.52,0.0014,Fouquières-lès-Lens → Montigny-en-Gohelle → Billy-Montigny ... Beausoleil → Menton → Fouquières-lès-Lens
+KNN,Malakoff,111.53,0.0014,Malakoff → Vanves → Issy-les-Moulineaux ... Les Sables-d’Olonne → La Rochelle → Malakoff
+KNN,Chaville,111.55,0.0014,Chaville → Ville-d’Avray → Sèvres ... Les Sables-d’Olonne → La Rochelle → Chaville
+KNN,Wingles,111.58,0.0014,Wingles → Pont-à-Vendin → Billy-Montigny ... Beausoleil → Menton → Wingles
+KNN,Béthune,111.63,0.0014,Béthune → Bully-les-Mines → Grenay ... Beausoleil → Menton → Béthune
+KNN,Arras,111.64,0.0014,Arras → Saint-Nicolas → Liévin ... Beausoleil → Menton → Arras
+KNN,L’Haÿ-les-Roses,111.66,0.0014,L’Haÿ-les-Roses → Cachan → Arcueil ... Les Sables-d’Olonne → La Rochelle → L’Haÿ-les-Roses
+KNN,Saint-Nicolas,111.66,0.0014,Saint-Nicolas → Arras → Liévin ... Beausoleil → Menton → Saint-Nicolas
+KNN,Paris,111.76,0.0018,Paris → Bellevue → Le Pré-Saint-Gervais ... Les Sables-d’Olonne → La Rochelle → Paris
+KNN,Bellevue,111.76,0.0014,Bellevue → Le Pré-Saint-Gervais → Pantin ... Les Sables-d’Olonne → La Rochelle → Bellevue
+KNN,Sallaumines,111.78,0.0014,Sallaumines → Noyelles-sous-Lens → Loison-sous-Lens ... Beausoleil → Menton → Sallaumines
+KNN,Beauchamp,111.78,0.0014,Beauchamp → Montigny-lès-Cormeilles → Cormeilles-en-Parisis ... Les Sables-d’Olonne → La Rochelle → Beauchamp
+KNN,Pantin,111.79,0.0014,Pantin → Le Pré-Saint-Gervais → Bellevue ... Les Sables-d’Olonne → La Rochelle → Pantin
+KNN,Poitiers,111.8,0.0014,Poitiers → Tours → Le Mans ... Le Relecq-Kerhuon → Brest → Poitiers
+KNN,Auchel,111.8,0.0014,Auchel → Béthune → Bully-les-Mines ... Beausoleil → Menton → Auchel
+KNN,Cambrai,111.81,0.0014,Cambrai → Neuville-Saint-Rémy → Aniche ... Beausoleil → Menton → Cambrai
+KNN,Champigny-sur-Marne,111.83,0.0014,Champigny-sur-Marne → Saint-Maur-des-Fossés → Bonneuil-sur-Marne ... Les Sables-d’Olonne → La Rochelle → Champigny-sur-Marne
+KNN,Neuville-Saint-Rémy,111.84,0.0014,Neuville-Saint-Rémy → Cambrai → Aniche ... Beausoleil → Menton → Neuville-Saint-Rémy
+KNN,Stains,111.85,0.0014,Stains → La Courneuve → Aubervilliers ... Les Sables-d’Olonne → La Rochelle → Stains
+KNN,Bouffémont,111.85,0.0014,Bouffémont → Domont → Ézanville ... Les Sables-d’Olonne → La Rochelle → Bouffémont
+KNN,Éleu-dit-Leauwette,111.85,0.0014,Éleu-dit-Leauwette → Lens → Loison-sous-Lens ... Beausoleil → Menton → Éleu-dit-Leauwette
+KNN,Lens,111.86,0.0014,Lens → Loison-sous-Lens → Sallaumines ... Beausoleil → Menton → Lens
+KNN,Ormesson-sur-Marne,111.86,0.0014,Ormesson-sur-Marne → Chennevières-sur-Marne → Champigny-sur-Marne ... Les Sables-d’Olonne → La Rochelle → Ormesson-sur-Marne
+KNN,Groslay,111.86,0.0014,Groslay → Montmagny → Pierrefitte-sur-Seine ... Les Sables-d’Olonne → La Rochelle → Groslay
+KNN,Lomme,111.9,0.0014,Lomme → Lambersart → Saint-André ... Beausoleil → Menton → Lomme
+KNN,Loos,111.9,0.0014,Loos → Lomme → Lambersart ... Beausoleil → Menton → Loos
+KNN,Le Plessis-Trévise,111.9,0.0014,Le Plessis-Trévise → Villiers-sur-Marne → Noisy-le-Grand ... Les Sables-d’Olonne → La Rochelle → Le Plessis-Trévise
+KNN,Garges-lès-Gonesse,111.91,0.0014,Garges-lès-Gonesse → Arnouville-lès-Gonesse → Villiers-le-Bel ... Les Sables-d’Olonne → La Rochelle → Garges-lès-Gonesse
+KNN,La Montagne,111.91,0.0014,La Montagne → Saint-Herblain → Rezé ... Le Relecq-Kerhuon → Brest → La Montagne
+KNN,Haubourdin,111.92,0.0014,Haubourdin → Loos → Lomme ... Beausoleil → Menton → Haubourdin
+KNN,Villiers-le-Bel,111.93,0.0014,Villiers-le-Bel → Sarcelles → Saint-Brice-sous-Forêt ... Les Sables-d’Olonne → La Rochelle → Villiers-le-Bel
+KNN,Creil,111.96,0.0014,Creil → Nogent-sur-Oise → Liancourt ... Les Sables-d’Olonne → La Rochelle → Creil
+KNN,Moulins,111.96,0.0014,Moulins → Vichy → Clermont-Ferrand ... Beausoleil → Menton → Moulins
+KNN,Saint-Herblain,111.97,0.0014,Saint-Herblain → La Montagne → Rezé ... Le Relecq-Kerhuon → Brest → Saint-Herblain
+KNN,Soissons,111.98,0.0014,Soissons → Saint-Quentin → Cambrai ... Beausoleil → Menton → Soissons
+KNN,Nogent-sur-Oise,111.98,0.0014,Nogent-sur-Oise → Creil → Liancourt ... Les Sables-d’Olonne → La Rochelle → Nogent-sur-Oise
+KNN,Pérenchies,111.98,0.0014,Pérenchies → Lomme → Lambersart ... Beausoleil → Menton → Pérenchies
+KNN,Leers,112.01,0.0014,Leers → Toufflers → Lys-lès-Lannoy ... Beausoleil → Menton → Leers
+KNN,Lys-lès-Lannoy,112.02,0.0014,Lys-lès-Lannoy → Toufflers → Leers ... Beausoleil → Menton → Lys-lès-Lannoy
+KNN,Hem,112.03,0.0014,Hem → Lys-lès-Lannoy → Toufflers ... Beausoleil → Menton → Hem
+KNN,Flers-lez-Lille,112.03,0.0014,Flers-lez-Lille → Mons-en-Baroeul → Hellemmes-Lille ... Beausoleil → Menton → Flers-lez-Lille
+KNN,Ascq,112.03,0.0014,Ascq → Flers-lez-Lille → Mons-en-Baroeul ... Beausoleil → Menton → Ascq
+KNN,Fâches-Thumesnil,112.05,0.0014,Fâches-Thumesnil → Ronchin → Hellemmes-Lille ... Beausoleil → Menton → Fâches-Thumesnil
+KNN,Méricourt,112.05,0.0014,Méricourt → Sallaumines → Noyelles-sous-Lens ... Beausoleil → Menton → Méricourt
+KNN,Toufflers,112.05,0.0014,Toufflers → Lys-lès-Lannoy → Wattrelos ... Beausoleil → Menton → Toufflers
+KNN,Mouvaux,112.06,0.0014,Mouvaux → Croix → Wasquehal ... Beausoleil → Menton → Mouvaux
+KNN,Liancourt,112.07,0.0014,Liancourt → Nogent-sur-Oise → Creil ... Les Sables-d’Olonne → La Rochelle → Liancourt
+KNN,Wattrelos,112.08,0.0014,Wattrelos → Lys-lès-Lannoy → Toufflers ... Beausoleil → Menton → Wattrelos
+KNN,Montluçon,112.08,0.0014,Montluçon → Chamalières → Clermont-Ferrand ... Beausoleil → Menton → Montluçon
+KNN,Croix,112.08,0.0014,Croix → Wasquehal → Marcq-en-Baroeul ... Beausoleil → Menton → Croix
+KNN,Noyelles-sous-Lens,112.08,0.0014,Noyelles-sous-Lens → Sallaumines → Méricourt ... Beausoleil → Menton → Noyelles-sous-Lens
+KNN,Roubaix,112.09,0.0014,Roubaix → Croix → Wasquehal ... Beausoleil → Menton → Roubaix
+KNN,Halluin,112.09,0.0014,Halluin → Neuville-en-Ferrain → Tourcoing ... Beausoleil → Menton → Halluin
+KNN,Lille,112.11,0.0014,Lille → La Madeleine → Marquette-lès-Lille ... Beausoleil → Menton → Lille
+KNN,Marcq-en-Baroeul,112.11,0.0014,Marcq-en-Baroeul → La Madeleine → Marquette-lès-Lille ... Beausoleil → Menton → Marcq-en-Baroeul
+KNN,La Madeleine,112.11,0.0014,La Madeleine → Marquette-lès-Lille → Saint-André ... Beausoleil → Menton → La Madeleine
+KNN,Tours,112.12,0.0014,Tours → Le Mans → Coulaines ... Le Relecq-Kerhuon → Brest → Tours
+KNN,Wasquehal,112.12,0.0014,Wasquehal → Croix → Mouvaux ... Beausoleil → Menton → Wasquehal
+KNN,Ronchin,112.12,0.0014,Ronchin → Fâches-Thumesnil → Lille ... Beausoleil → Menton → Ronchin
+KNN,Loison-sous-Lens,112.12,0.0014,Loison-sous-Lens → Sallaumines → Noyelles-sous-Lens ... Beausoleil → Menton → Loison-sous-Lens
+KNN,Tourcoing,112.13,0.0014,Tourcoing → Neuville-en-Ferrain → Mouvaux ... Beausoleil → Menton → Tourcoing
+KNN,Liévin,112.13,0.0014,Liévin → Éleu-dit-Leauwette → Lens ... Beausoleil → Menton → Liévin
+KNN,Hellemmes-Lille,112.13,0.0014,Hellemmes-Lille → Mons-en-Baroeul → Flers-lez-Lille ... Beausoleil → Menton → Hellemmes-Lille
+KNN,Marquette-lès-Lille,112.13,0.0014,Marquette-lès-Lille → La Madeleine → Saint-André ... Beausoleil → Menton → Marquette-lès-Lille
+KNN,Neuville-en-Ferrain,112.13,0.0014,Neuville-en-Ferrain → Tourcoing → Mouvaux ... Beausoleil → Menton → Neuville-en-Ferrain
+KNN,Billy-Montigny,112.13,0.0014,Billy-Montigny → Fouquières-lès-Lens → Montigny-en-Gohelle ... Beausoleil → Menton → Billy-Montigny
+KNN,Mons-en-Baroeul,112.15,0.0014,Mons-en-Baroeul → Hellemmes-Lille → Flers-lez-Lille ... Beausoleil → Menton → Mons-en-Baroeul
+KNN,La Bassée,112.15,0.0014,La Bassée → Wingles → Pont-à-Vendin ... Beausoleil → Menton → La Bassée
+KNN,Bully-les-Mines,112.16,0.0014,Bully-les-Mines → Grenay → Liévin ... Beausoleil → Menton → Bully-les-Mines
+KNN,Grenay,112.17,0.0014,Grenay → Bully-les-Mines → Liévin ... Beausoleil → Menton → Grenay
+KNN,Saint-André-les-Vergers,112.19,0.0014,Saint-André-les-Vergers → Les Noës-près-Troyes → Troyes ... Beausoleil → Menton → Saint-André-les-Vergers
+KNN,Pont-à-Vendin,112.19,0.0014,Pont-à-Vendin → Billy-Montigny → Fouquières-lès-Lens ... Beausoleil → Menton → Pont-à-Vendin
+KNN,Troyes,112.21,0.0014,Troyes → Saint-André-les-Vergers → Les Noës-près-Troyes ... Beausoleil → Menton → Troyes
+KNN,Les Noës-près-Troyes,112.21,0.0014,Les Noës-près-Troyes → Saint-André-les-Vergers → Troyes ... Beausoleil → Menton → Les Noës-près-Troyes
+KNN,Caudebec-lès-Elbeuf,112.23,0.0014,Caudebec-lès-Elbeuf → Saint-Aubin-lès-Elbeuf → Le Grand-Quevilly ... Beausoleil → Menton → Caudebec-lès-Elbeuf
+KNN,Saint-Aubin-lès-Elbeuf,112.24,0.0014,Saint-Aubin-lès-Elbeuf → Caudebec-lès-Elbeuf → Saint-Étienne-du-Rouvray ... Beausoleil → Menton → Saint-Aubin-lès-Elbeuf
+KNN,Franconville,112.26,0.0014,Franconville → Le Plessis-Bouchard → Saint-Leu-la-Forêt ... Les Sables-d’Olonne → La Rochelle → Franconville
+KNN,Yvetot,112.36,0.0014,Yvetot → Maromme → Déville-lès-Rouen ... Le Relecq-Kerhuon → Brest → Yvetot
+KNN,Montargis,112.37,0.0014,Montargis → Saint-Mammès → Avon ... Beausoleil → Menton → Montargis
+KNN,Limeil-Brévannes,112.39,0.0014,Limeil-Brévannes → Valenton → Villeneuve-Saint-Georges ... Beausoleil → Menton → Limeil-Brévannes
+KNN,Maromme,112.4,0.0014,Maromme → Déville-lès-Rouen → Mont-Saint-Aignan ... Le Relecq-Kerhuon → Brest → Maromme
+KNN,Déville-lès-Rouen,112.41,0.0014,Déville-lès-Rouen → Maromme → Mont-Saint-Aignan ... Le Relecq-Kerhuon → Brest → Déville-lès-Rouen
+KNN,Villeneuve-Saint-Georges,112.43,0.0014,Villeneuve-Saint-Georges → Crosne → Montgeron ... Beausoleil → Menton → Villeneuve-Saint-Georges
+KNN,Créteil,112.44,0.0014,Créteil → Saint-Maurice → Joinville-le-Pont ... Beausoleil → Menton → Créteil
+KNN,Saint-Maurice,112.44,0.0014,Saint-Maurice → Joinville-le-Pont → Nogent-sur-Marne ... Beausoleil → Menton → Saint-Maurice
+KNN,Bois-Guillaume,112.44,0.0014,Bois-Guillaume → Bihorel → Bonsecours ... Le Relecq-Kerhuon → Brest → Bois-Guillaume
+KNN,Rouen,112.48,0.0014,Rouen → Mont-Saint-Aignan → Bois-Guillaume ... Le Relecq-Kerhuon → Brest → Rouen
+KNN,Sotteville-lès-Rouen,112.48,0.0014,Sotteville-lès-Rouen → Rouen → Mont-Saint-Aignan ... Le Relecq-Kerhuon → Brest → Sotteville-lès-Rouen
+KNN,Le Grand-Quevilly,112.48,0.0014,Le Grand-Quevilly → Le Petit-Quevilly → Rouen ... Le Relecq-Kerhuon → Brest → Le Grand-Quevilly
+KNN,Bonsecours,112.48,0.0014,Bonsecours → Le Mesnil-Esnard → Darnétal ... Le Relecq-Kerhuon → Brest → Bonsecours
+KNN,Le Petit-Quevilly,112.49,0.0014,Le Petit-Quevilly → Le Grand-Quevilly → Sotteville-lès-Rouen ... Le Relecq-Kerhuon → Brest → Le Petit-Quevilly
+KNN,Mont-Saint-Aignan,112.49,0.0014,Mont-Saint-Aignan → Rouen → Bois-Guillaume ... Le Relecq-Kerhuon → Brest → Mont-Saint-Aignan
+KNN,Le Mesnil-Esnard,112.49,0.0014,Le Mesnil-Esnard → Bonsecours → Darnétal ... Le Relecq-Kerhuon → Brest → Le Mesnil-Esnard
+KNN,Saint-Étienne-du-Rouvray,112.51,0.0014,Saint-Étienne-du-Rouvray → Sotteville-lès-Rouen → Rouen ... Le Relecq-Kerhuon → Brest → Saint-Étienne-du-Rouvray
+KNN,Montereau-faut-Yonne,112.51,0.0014,Montereau-faut-Yonne → Saint-Mammès → Avon ... Beausoleil → Menton → Montereau-faut-Yonne
+KNN,Le Bourget,112.51,0.0014,Le Bourget → Dugny → La Courneuve ... Les Sables-d’Olonne → La Rochelle → Le Bourget
+KNN,Darnétal,112.55,0.0014,Darnétal → Bonsecours → Le Mesnil-Esnard ... Le Relecq-Kerhuon → Brest → Darnétal
+KNN,Bihorel,112.55,0.0014,Bihorel → Bois-Guillaume → Mont-Saint-Aignan ... Le Relecq-Kerhuon → Brest → Bihorel
+KNN,Saint-Mammès,112.66,0.0014,Saint-Mammès → Avon → Dammarie-lè-Lys ... Beausoleil → Menton → Saint-Mammès
+KNN,Vitry-le-François,112.74,0.0014,Vitry-le-François → Châlons-en-Champagne → Reims ... Beausoleil → Menton → Vitry-le-François
+KNN,Bondy,112.78,0.0014,Bondy → Les Pavillons-sous-Bois → Villemomble ... Beausoleil → Menton → Bondy
+KNN,Melun,112.83,0.0014,Melun → Dammarie-lè-Lys → Le Mée-sur-Seine ... Beausoleil → Menton → Melun
+KNN,Dammarie-lè-Lys,112.85,0.0014,Dammarie-lè-Lys → Le Mée-sur-Seine → Melun ... Beausoleil → Menton → Dammarie-lè-Lys
+KNN,Le Mée-sur-Seine,112.87,0.0014,Le Mée-sur-Seine → Dammarie-lè-Lys → Melun ... Beausoleil → Menton → Le Mée-sur-Seine
+KNN,Avon,112.87,0.0014,Avon → Saint-Mammès → Montereau-faut-Yonne ... Beausoleil → Menton → Avon
+KNN,Saint-Ouen,112.95,0.0014,Saint-Ouen → L’Île-Saint-Denis → Villeneuve-la-Garenne ... Poitiers → Perpignan → Saint-Ouen
+KNN,Gennevilliers,112.97,0.0014,Gennevilliers → Épinay-sur-Seine → Enghien-les-Bains ... Poitiers → Perpignan → Gennevilliers
+KNN,Suresnes,112.97,0.0014,Suresnes → Puteaux → Courbevoic ... Poitiers → Perpignan → Suresnes
+KNN,Grand-Fort-Philippe,112.98,0.0014,Grand-Fort-Philippe → Fort-Mardyck → Saint-Pol-sur-Mer ... Beausoleil → Menton → Grand-Fort-Philippe
+KNN,Dieppe,112.99,0.0014,Dieppe → Neuville-lès-Dieppe → Maromme ... Le Relecq-Kerhuon → Brest → Dieppe
+KNN,Épinay-sur-Seine,113.01,0.0014,Épinay-sur-Seine → Enghien-les-Bains → Soisy-sous-Montmorency ... Poitiers → Perpignan → Épinay-sur-Seine
+KNN,Deuil-la-Barre,113.01,0.0014,Deuil-la-Barre → Montmorency → Soisy-sous-Montmorency ... Poitiers → Perpignan → Deuil-la-Barre
+KNN,Neuville-lès-Dieppe,113.01,0.0014,Neuville-lès-Dieppe → Dieppe → Maromme ... Le Relecq-Kerhuon → Brest → Neuville-lès-Dieppe
+KNN,Houilles,113.02,0.0014,Houilles → Sartrouville → Maisons-Laffitte ... Poitiers → Perpignan → Houilles
+KNN,Saint-Gratien,113.02,0.0014,Saint-Gratien → Eaubonne → Ermont ... Poitiers → Perpignan → Saint-Gratien
+KNN,Soisy-sous-Montmorency,113.04,0.0014,Soisy-sous-Montmorency → Eaubonne → Ermont ... Poitiers → Perpignan → Soisy-sous-Montmorency
+KNN,Neuilly-sur-Seine,113.05,0.0014,Neuilly-sur-Seine → Courbevoic → La Garenne-Colombes ... Beausoleil → Menton → Neuilly-sur-Seine
+KNN,Chatou,113.05,0.0014,Chatou → Croissy-sur-Seine → Bougival ... Poitiers → Perpignan → Chatou
+KNN,Eaubonne,113.05,0.0014,Eaubonne → Ermont → Sannois ... Poitiers → Perpignan → Eaubonne
+KNN,Bois-Colombes,113.06,0.0014,Bois-Colombes → Colombes → La Garenne-Colombes ... Beausoleil → Menton → Bois-Colombes
+KNN,Montesson,113.07,0.0014,Montesson → Chatou → Croissy-sur-Seine ... Poitiers → Perpignan → Montesson
+KNN,Tinqueux,113.07,0.0014,Tinqueux → Reims → Châlons-en-Champagne ... Beausoleil → Menton → Tinqueux
+KNN,Saint-Denis,113.08,0.0014,Saint-Denis → L’Île-Saint-Denis → Villeneuve-la-Garenne ... Beausoleil → Menton → Saint-Denis
+KNN,Sartrouville,113.08,0.0014,Sartrouville → Maisons-Laffitte → Le Mesnil-le-Roi ... Poitiers → Perpignan → Sartrouville
+KNN,La Frette-sur-Seine,113.08,0.0014,La Frette-sur-Seine → Cormeilles-en-Parisis → Montigny-lès-Cormeilles ... Poitiers → Perpignan → La Frette-sur-Seine
+KNN,Reims,113.09,0.0014,Reims → Tinqueux → Châlons-en-Champagne ... Beausoleil → Menton → Reims
+KNN,Puteaux,113.09,0.0014,Puteaux → Courbevoic → La Garenne-Colombes ... Beausoleil → Menton → Puteaux
+KNN,Cormeilles-en-Parisis,113.09,0.0014,Cormeilles-en-Parisis → Montigny-lès-Cormeilles → Beauchamp ... Poitiers → Perpignan → Cormeilles-en-Parisis
+KNN,Maisons-Laffitte,113.09,0.0014,Maisons-Laffitte → Le Mesnil-le-Roi → Montesson ... Poitiers → Perpignan → Maisons-Laffitte
+KNN,Billère,113.1,0.0014,Billère → Pau → Tarbes ... Le Relecq-Kerhuon → Brest → Billère
+KNN,Saint-Quentin,113.11,0.0014,Saint-Quentin → Cambrai → Neuville-Saint-Rémy ... Beausoleil → Menton → Saint-Quentin
+KNN,Châlons-en-Champagne,113.11,0.0014,Châlons-en-Champagne → Vitry-le-François → Troyes ... Beausoleil → Menton → Châlons-en-Champagne
+KNN,Taverny,113.11,0.0014,Taverny → Saint-Leu-la-Forêt → Le Plessis-Bouchard ... Poitiers → Perpignan → Taverny
+KNN,Villeneuve-la-Garenne,113.11,0.0014,Villeneuve-la-Garenne → L’Île-Saint-Denis → Saint-Denis ... Beausoleil → Menton → Villeneuve-la-Garenne
+KNN,Pau,113.13,0.0014,Pau → Billère → Tarbes ... Le Relecq-Kerhuon → Brest → Pau
+KNN,Montigny-lès-Cormeilles,113.13,0.0014,Montigny-lès-Cormeilles → Beauchamp → Taverny ... Poitiers → Perpignan → Montigny-lès-Cormeilles
+KNN,Marly-le-Roi,113.14,0.0014,Marly-le-Roi → Mareil-Marly → Le Pecq ... Poitiers → Perpignan → Marly-le-Roi
+KNN,Domont,113.15,0.0014,Domont → Bouffémont → Eaubonne ... Poitiers → Perpignan → Domont
+KNN,Le Vésinet,113.15,0.0014,Le Vésinet → Croissy-sur-Seine → Bougival ... Poitiers → Perpignan → Le Vésinet
+KNN,Poissy,113.16,0.0014,Poissy → Carrières-sous-Poissy → Achères ... Poitiers → Perpignan → Poissy
+KNN,Conflans-Sainte-Honorine,113.16,0.0014,Conflans-Sainte-Honorine → Éragny → Saint-Ouen-l’Aumône ... Poitiers → Perpignan → Conflans-Sainte-Honorine
+KNN,Mareil-Marly,113.16,0.0014,Mareil-Marly → Marly-le-Roi → Le Pecq ... Poitiers → Perpignan → Mareil-Marly
+KNN,Le Pecq,113.17,0.0014,Le Pecq → Le Port-Marly → Le Vésinet ... Poitiers → Perpignan → Le Pecq
+KNN,Carrières-sous-Poissy,113.18,0.0014,Carrières-sous-Poissy → Poissy → Achères ... Poitiers → Perpignan → Carrières-sous-Poissy
+KNN,Le Port-Marly,113.18,0.0014,Le Port-Marly → Le Pecq → Le Vésinet ... Poitiers → Perpignan → Le Port-Marly
+KNN,Blagnac,113.21,0.0014,Blagnac → Beauzelle → Saint-Alban ... Le Relecq-Kerhuon → Brest → Blagnac
+KNN,Beauzelle,113.21,0.0014,Beauzelle → Blagnac → Aucamville ... Le Relecq-Kerhuon → Brest → Beauzelle
+KNN,Tournefeuille,113.22,0.0014,Tournefeuille → Colomiers → Blagnac ... Le Relecq-Kerhuon → Brest → Tournefeuille
+KNN,Andrésy,113.23,0.0014,Andrésy → Achères → Carrières-sous-Poissy ... Poitiers → Perpignan → Andrésy
+KNN,La Salvetat-Saint-Gilles,113.24,0.0014,La Salvetat-Saint-Gilles → Tournefeuille → Colomiers ... Le Relecq-Kerhuon → Brest → La Salvetat-Saint-Gilles
+KNN,Éragny,113.25,0.0014,Éragny → Conflans-Sainte-Honorine → Andrésy ... Poitiers → Perpignan → Éragny
+KNN,Roissy-en-Brie,113.27,0.0014,Roissy-en-Brie → Lognes → Noisiel ... Poitiers → Perpignan → Roissy-en-Brie
+KNN,Torcy,113.29,0.0014,Torcy → Vaires-sur-Marne → Noisiel ... Poitiers → Perpignan → Torcy
+KNN,Lognes,113.29,0.0014,Lognes → Noisiel → Torcy ... Poitiers → Perpignan → Lognes
+KNN,Cugnaux,113.3,0.0014,Cugnaux → Villeneuve-Tolosane → Tournefeuille ... Le Relecq-Kerhuon → Brest → Cugnaux
+KNN,Vaires-sur-Marne,113.3,0.0014,Vaires-sur-Marne → Torcy → Noisiel ... Poitiers → Perpignan → Vaires-sur-Marne
+KNN,Villeneuve-Tolosane,113.3,0.0014,Villeneuve-Tolosane → Cugnaux → Tournefeuille ... Le Relecq-Kerhuon → Brest → Villeneuve-Tolosane
+KNN,Toulouse,113.31,0.0014,Toulouse → Blagnac → Beauzelle ... Le Relecq-Kerhuon → Brest → Toulouse
+KNN,Bezons,113.31,0.0014,Bezons → Houilles → Sartrouville ... Poitiers → Perpignan → Bezons
+KNN,Noisiel,113.32,0.0014,Noisiel → Lognes → Torcy ... Poitiers → Perpignan → Noisiel
+KNN,Le Mesnil-le-Roi,113.34,0.0014,Le Mesnil-le-Roi → Maisons-Laffitte → Sartrouville ... Poitiers → Perpignan → Le Mesnil-le-Roi
+KNN,Champs-Sur-Marne,113.35,0.0014,Champs-Sur-Marne → Noisiel → Lognes ... Poitiers → Perpignan → Champs-Sur-Marne
+KNN,Alençon,113.35,0.0014,Alençon → Coulaines → Le Mans ... Perpignan → Valence → Alençon
+KNN,Colomiers,113.37,0.0014,Colomiers → Tournefeuille → Cugnaux ... Le Relecq-Kerhuon → Brest → Colomiers
+KNN,Saint-Brice-sous-Forêt,113.37,0.0014,Saint-Brice-sous-Forêt → Groslay → Montmagny ... Poitiers → Perpignan → Saint-Brice-sous-Forêt
+KNN,Ramonville-Saint-Agne,113.37,0.0014,Ramonville-Saint-Agne → Castanet-Tolosan → Toulouse ... Le Relecq-Kerhuon → Brest → Ramonville-Saint-Agne
+KNN,Castanet-Tolosan,113.37,0.0014,Castanet-Tolosan → Ramonville-Saint-Agne → Toulouse ... Le Relecq-Kerhuon → Brest → Castanet-Tolosan
+KNN,Thorigny-sur-Marne,113.38,0.0014,Thorigny-sur-Marne → Bussy-Saint-Georges → Torcy ... Poitiers → Perpignan → Thorigny-sur-Marne
+KNN,Montévrain,113.39,0.0014,Montévrain → Thorigny-sur-Marne → Bussy-Saint-Georges ... Poitiers → Perpignan → Montévrain
+KNN,Magny-le-Hongre,113.43,0.0014,Magny-le-Hongre → Serris → Montévrain ... Poitiers → Perpignan → Magny-le-Hongre
+KNN,Calais,113.46,0.0014,Calais → Grand-Fort-Philippe → Fort-Mardyck ... Beausoleil → Menton → Calais
+KNN,Saint-Jean,113.48,0.0014,Saint-Jean → L’Union → Aucamville ... Le Relecq-Kerhuon → Brest → Saint-Jean
+KNN,Serris,113.48,0.0014,Serris → Magny-le-Hongre → Esbly ... Poitiers → Perpignan → Serris
+KNN,Saint-Alban,113.48,0.0014,Saint-Alban → Aucamville → Blagnac ... Le Relecq-Kerhuon → Brest → Saint-Alban
+KNN,Villiers-sur-Marne,113.49,0.0014,Villiers-sur-Marne → Noisy-le-Grand → Neuilly-sur-Marne ... Poitiers → Perpignan → Villiers-sur-Marne
+KNN,L’Union,113.49,0.0014,L’Union → Saint-Jean → Aucamville ... Le Relecq-Kerhuon → Brest → L’Union
+KNN,Aucamville,113.49,0.0014,Aucamville → Saint-Alban → Beauzelle ... Le Relecq-Kerhuon → Brest → Aucamville
+KNN,Esbly,113.52,0.0014,Esbly → Magny-le-Hongre → Serris ... Poitiers → Perpignan → Esbly
+KNN,Ermont,113.55,0.0014,Ermont → Sannois → Argenteuil ... Poitiers → Perpignan → Ermont
+KNN,Achères,113.6,0.0014,Achères → Andrésy → Chanteloup-les-Vignes ... Poitiers → Perpignan → Achères
+KNN,Chanteloup-les-Vignes,113.62,0.0014,Chanteloup-les-Vignes → Andrésy → Achères ... Poitiers → Perpignan → Chanteloup-les-Vignes
+KNN,Rosny-sous-Bois,113.64,0.0014,Rosny-sous-Bois → Fontenay-sous-Bois → Nogent-sur-Marne ... Beausoleil → Menton → Rosny-sous-Bois
+KNN,Verneuil-sur-Seine,113.64,0.0014,Verneuil-sur-Seine → Vernouillet → Chanteloup-les-Vignes ... Poitiers → Perpignan → Verneuil-sur-Seine
+KNN,Les Mureaux,113.69,0.0014,Les Mureaux → Verneuil-sur-Seine → Vernouillet ... Poitiers → Perpignan → Les Mureaux
+KNN,Vauréal,113.7,0.0014,Vauréal → Jouy-le-Moutier → Chanteloup-les-Vignes ... Poitiers → Perpignan → Vauréal
+KNN,Bondoufle,113.71,0.0014,Bondoufle → Fleury-Mérogis → Sainte-Geneviève-des-Bois ... Poitiers → Perpignan → Bondoufle
+KNN,Vernouillet,113.71,0.0014,Vernouillet → Verneuil-sur-Seine → Menucourt ... Poitiers → Perpignan → Vernouillet
+KNN,Rennes,113.72,0.0014,Rennes → Dinan → Saint-Brieuc ... Beausoleil → Menton → Rennes
+KNN,Cergy,113.73,0.0014,Cergy → Vauréal → Jouy-le-Moutier ... Poitiers → Perpignan → Cergy
+KNN,Menucourt,113.73,0.0014,Menucourt → Verneuil-sur-Seine → Vernouillet ... Poitiers → Perpignan → Menucourt
+KNN,Fougères,113.79,0.0014,Fougères → Avranches → Rennes ... Le Relecq-Kerhuon → Brest → Fougères
+KNN,Fleury-Mérogis,113.8,0.0014,Fleury-Mérogis → Sainte-Geneviève-des-Bois → Morsang-sur-Orge ... Poitiers → Perpignan → Fleury-Mérogis
+KNN,Montlhéry,113.81,0.0014,Montlhéry → La Ville-du-Bois → Villiers-sur-Orge ... Brest → Perpignan → Montlhéry
+KNN,Brétigny-sur-Orge,113.83,0.0014,Brétigny-sur-Orge → Saint-Michel-sur-Orge → Villiers-sur-Orge ... Brest → Perpignan → Brétigny-sur-Orge
+KNN,Bagnolet,113.87,0.0015,Bagnolet → Les Lilas → Romainville ... Poitiers → Perpignan → Bagnolet
+KNN,Les Lilas,113.88,0.0014,Les Lilas → Bagnolet → Romainville ... Poitiers → Perpignan → Les Lilas
+KNN,Saint-Michel-sur-Orge,113.88,0.0014,Saint-Michel-sur-Orge → Brétigny-sur-Orge → Leuville-sur-Orge ... Brest → Perpignan → Saint-Michel-sur-Orge
+KNN,Palaiseau,113.93,0.0014,Palaiseau → Massy → Verrières-le-Buisson ... Brest → Perpignan → Palaiseau
+KNN,Morsang-sur-Orge,113.93,0.0014,Morsang-sur-Orge → Villemoisson-sur-Orge → Épinay-sur-Orge ... Brest → Perpignan → Morsang-sur-Orge
+KNN,Bures-sur-Yvette,113.93,0.0014,Bures-sur-Yvette → Orsay → Igny ... Brest → Perpignan → Bures-sur-Yvette
+KNN,Épinay-sur-Orge,113.94,0.0014,Épinay-sur-Orge → Villemoisson-sur-Orge → Morsang-sur-Orge ... Brest → Perpignan → Épinay-sur-Orge
+KNN,Longjumeau,113.95,0.0014,Longjumeau → Chilly-Mazarin → Morangis ... Brest → Perpignan → Longjumeau
+KNN,Orsay,113.95,0.0014,Orsay → Bures-sur-Yvette → Igny ... Brest → Perpignan → Orsay
+KNN,Antony,113.97,0.0014,Antony → Châtenay-Malabry → Sceaux ... Brest → Perpignan → Antony
+KNN,Châtenay-Malabry,113.98,0.0014,Châtenay-Malabry → Sceaux → Fontenay-aux-Roses ... Brest → Perpignan → Châtenay-Malabry
+KNN,Le Plessis-Robinson,113.98,0.0014,Le Plessis-Robinson → Clamart → Issy-les-Moulineaux ... Brest → Perpignan → Le Plessis-Robinson
+KNN,Sceaux,113.98,0.0014,Sceaux → Fontenay-aux-Roses → Châtillon ... Brest → Perpignan → Sceaux
+KNN,Fresnes,113.99,0.0014,Fresnes → Antony → Châtenay-Malabry ... Brest → Perpignan → Fresnes
+KNN,Igny,113.99,0.0014,Igny → Palaiseau → Massy ... Brest → Perpignan → Igny
+KNN,Châtillon,114.1,0.0014,Châtillon → Fontenay-aux-Roses → Sceaux ... Brest → Perpignan → Châtillon
+KNN,Villejuif,114.11,0.0014,Villejuif → Le Kremlin-Bicêtre → Gentilly ... Brest → Perpignan → Villejuif
+KNN,Châteauroux,114.12,0.0014,Châteauroux → Montluçon → Chamalières ... Beausoleil → Menton → Châteauroux
+KNN,Montfermeil,114.12,0.0014,Montfermeil → Clichy-sous-Bois → Livry-Gargan ... Brest → Perpignan → Montfermeil
+KNN,Villepinte,114.18,0.0014,Villepinte → Sevran → Livry-Gargan ... Brest → Perpignan → Villepinte
+KNN,La Ville-du-Bois,114.18,0.0014,La Ville-du-Bois → Montlhéry → Leuville-sur-Orge ... Brest → Perpignan → La Ville-du-Bois
+KNN,Angoulême,114.23,0.0014,Angoulême → Périgueux → Sainte-Foy-la-Grande ... Le Relecq-Kerhuon → Brest → Angoulême
+KNN,Montreuil,114.25,0.0014,Montreuil → Vincennes → Saint-Mandé ... Brest → Perpignan → Montreuil
+KNN,Alfortville,114.26,0.0014,Alfortville → Maisons-Alfort → Saint-Maurice ... Brest → Perpignan → Alfortville
+KNN,Saint-Mandé,114.34,0.0014,Saint-Mandé → Charenton-le-Pont → Alfortville ... Brest → Perpignan → Saint-Mandé
+KNN,Évry,114.56,0.0014,Évry → Courcouronnes → Ris-Orangis ... Brest → Perpignan → Évry
+KNN,Courcouronnes,114.56,0.0014,Courcouronnes → Évry → Ris-Orangis ... Brest → Perpignan → Courcouronnes
+KNN,Saintry-sur-Seine,114.56,0.0014,Saintry-sur-Seine → Corbeil-Essonnes → Saint-Germain-lès-Corbeil ... Brest → Perpignan → Saintry-sur-Seine
+KNN,Corbeil-Essonnes,114.6,0.0014,Corbeil-Essonnes → Saint-Germain-lès-Corbeil → Saintry-sur-Seine ... Brest → Perpignan → Corbeil-Essonnes
+KNN,Saint-Germain-lès-Corbeil,114.6,0.0014,Saint-Germain-lès-Corbeil → Corbeil-Essonnes → Saintry-sur-Seine ... Brest → Perpignan → Saint-Germain-lès-Corbeil
+KNN,Wattignies,114.64,0.0014,Wattignies → Fâches-Thumesnil → Ronchin ... Beausoleil → Menton → Wattignies
+KNN,Sainte-Foy-la-Grande,114.66,0.0014,Sainte-Foy-la-Grande → Périgueux → Angoulême ... Roanne → Perpignan → Sainte-Foy-la-Grande
+KNN,Draveil,114.68,0.0014,Draveil → Vigneux-sur-Seine → Ablon-sur-Seine ... Brest → Perpignan → Draveil
+KNN,Chilly-Mazarin,114.72,0.0014,Chilly-Mazarin → Longjumeau → Épinay-sur-Orge ... Brest → Perpignan → Chilly-Mazarin
+KNN,Boissy-Saint-Léger,114.77,0.0014,Boissy-Saint-Léger → Sucy-en-Brie → Ormesson-sur-Marne ... Brest → Perpignan → Boissy-Saint-Léger
+KNN,Verrières-le-Buisson,114.79,0.0014,Verrières-le-Buisson → Massy → Palaiseau ... Brest → Perpignan → Verrières-le-Buisson
+KNN,Tarbes,114.99,0.0014,Tarbes → Pau → Billère ... Le Relecq-Kerhuon → Brest → Tarbes
+KNN,Rodez,114.99,0.0014,Rodez → Saint-Jean → L’Union ... Le Relecq-Kerhuon → Brest → Rodez
+KNN,Périgueux,115.1,0.0014,Périgueux → Sainte-Foy-la-Grande → Carbon-Blanc ... Le Relecq-Kerhuon → Brest → Périgueux
+KNN,Armentières,115.59,0.0014,Armentières → Pérenchies → Lomme ... Le Relecq-Kerhuon → Brest → Armentières
+KNN,Courchelettes,115.74,0.0014,Courchelettes → Douai → Waziers ... Le Relecq-Kerhuon → Brest → Courchelettes
+KNN,Douai,115.79,0.0014,Douai → Waziers → Courchelettes ... Le Relecq-Kerhuon → Brest → Douai
+KNN,Waziers,115.79,0.0014,Waziers → Douai → Courchelettes ... Le Relecq-Kerhuon → Brest → Waziers
+KNN,Oignies,115.8,0.0014,Oignies → Courcelles-les-Lens → Douai ... Le Relecq-Kerhuon → Brest → Oignies
+KNN,Agen,115.95,0.0014,Agen → Sainte-Foy-la-Grande → Périgueux ... Beausoleil → Menton → Agen
+KNN,Montaigu,115.97,0.0014,Montaigu → Saint-Sébastien-sur-Loire → Nantes ... Valence → Perpignan → Montaigu
+KNN,Lambersart,115.98,0.0014,Lambersart → Lomme → Loos ... Le Relecq-Kerhuon → Brest → Lambersart
+KNN,Limoges,116.02,0.0014,Limoges → Périgueux → Sainte-Foy-la-Grande ... Perpignan → Valence → Limoges
+KNN,Saint-André,116.02,0.0014,Saint-André → Lambersart → Lomme ... Le Relecq-Kerhuon → Brest → Saint-André
+KNN,Avesnes-sur-Helpe,116.08,0.0014,Avesnes-sur-Helpe → Maubeuge → Marly ... Le Relecq-Kerhuon → Brest → Avesnes-sur-Helpe
+KNN,Le Portel,116.12,0.0014,Le Portel → Outreau → Boulogne-sur-Mer ... Le Relecq-Kerhuon → Brest → Le Portel
+KNN,Maubeuge,116.16,0.0014,Maubeuge → Avesnes-sur-Helpe → Marly ... Le Relecq-Kerhuon → Brest → Maubeuge
+KNN,Outreau,116.16,0.0014,Outreau → Le Portel → Boulogne-sur-Mer ... Le Relecq-Kerhuon → Brest → Outreau
+KNN,Boulogne-sur-Mer,116.21,0.0014,Boulogne-sur-Mer → Outreau → Le Portel ... Le Relecq-Kerhuon → Brest → Boulogne-sur-Mer
+KNN,Le Mans,116.43,0.0014,Le Mans → Coulaines → Alençon ... Valence → Perpignan → Le Mans
+KNN,Coulaines,116.46,0.0014,Coulaines → Le Mans → Alençon ... Valence → Perpignan → Coulaines
+KNN,Perpignan,116.48,0.0014,Perpignan → Valras-Plage → Sète ... Le Relecq-Kerhuon → Brest → Perpignan
+KNN,Égly,116.66,0.0014,Égly → Arpajon → Saint-Germain-lès-Arpajon ... Maisons-Alfort → Perpignan → Égly
+KNN,Les Sables-d’Olonne,116.67,0.0014,Les Sables-d’Olonne → Montaigu → Saint-Sébastien-sur-Loire ... Valence → Perpignan → Les Sables-d’Olonne
+KNN,Arcachon,116.69,0.0014,Arcachon → Mérignac → Pessac ... Roanne → Perpignan → Arcachon
+KNN,Saint-Germain-lès-Arpajon,116.71,0.0014,Saint-Germain-lès-Arpajon → Arpajon → Égly ... Maisons-Alfort → Perpignan → Saint-Germain-lès-Arpajon
+KNN,Arpajon,116.77,0.0014,Arpajon → Saint-Germain-lès-Arpajon → Leuville-sur-Orge ... Maisons-Alfort → Perpignan → Arpajon
+KNN,Sucy-en-Brie,116.82,0.0014,Sucy-en-Brie → Boissy-Saint-Léger → Limeil-Brévannes ... Neauphle-le-Château → Perpignan → Sucy-en-Brie
+KNN,Denain,116.83,0.0014,Denain → Lourches → Aniche ... Le Relecq-Kerhuon → Brest → Denain
+KNN,Chennevières-sur-Marne,116.84,0.0014,Chennevières-sur-Marne → Ormesson-sur-Marne → Sucy-en-Brie ... Neauphle-le-Château → Perpignan → Chennevières-sur-Marne
+KNN,Montpellier,117.12,0.0014,Montpellier → Castelnau-le-Lez → Jacou ... Le Relecq-Kerhuon → Brest → Montpellier
+KNN,Bayeux,117.14,0.0014,Bayeux → Caen → Hérouville-Saint-Clair ... Menton → Perpignan → Bayeux
+KNN,Le Crès,117.16,0.0014,Le Crès → Jacou → Castelnau-le-Lez ... Le Relecq-Kerhuon → Brest → Le Crès
+KNN,Castelnau-le-Lez,117.17,0.0014,Castelnau-le-Lez → Jacou → Le Crès ... Le Relecq-Kerhuon → Brest → Castelnau-le-Lez
+KNN,Jacou,117.17,0.0014,Jacou → Castelnau-le-Lez → Montpellier ... Le Relecq-Kerhuon → Brest → Jacou
+KNN,Persan,117.18,0.0014,Persan → Beaumont-sur-Oise → Bouffémont ... Le Relecq-Kerhuon → Brest → Persan
+KNN,Hérouville-Saint-Clair,117.21,0.0014,Hérouville-Saint-Clair → Caen → Bayeux ... Menton → Perpignan → Hérouville-Saint-Clair
+KNN,Beaumont-sur-Oise,117.21,0.0014,Beaumont-sur-Oise → Persan → Bouffémont ... Le Relecq-Kerhuon → Brest → Beaumont-sur-Oise
+KNN,Palavas-les-Flots,117.22,0.0014,Palavas-les-Flots → Pérols → Le Crès ... Le Relecq-Kerhuon → Brest → Palavas-les-Flots
+KNN,Caen,117.23,0.0014,Caen → Hérouville-Saint-Clair → Bayeux ... Menton → Perpignan → Caen
+KNN,Pérols,117.3,0.0014,Pérols → Palavas-les-Flots → Montpellier ... Le Relecq-Kerhuon → Brest → Pérols
+KNN,Bergues,117.56,0.0014,Bergues → Coudekerque-Branche → Dunkerque ... Le Relecq-Kerhuon → Brest → Bergues
+KNN,Fort-Mardyck,117.57,0.0014,Fort-Mardyck → Saint-Pol-sur-Mer → Petite-Synthe ... Le Relecq-Kerhuon → Brest → Fort-Mardyck
+KNN,Cappelle-la-Grande,117.58,0.0014,Cappelle-la-Grande → Petite-Synthe → Saint-Pol-sur-Mer ... Le Relecq-Kerhuon → Brest → Cappelle-la-Grande
+KNN,Saint-Pol-sur-Mer,117.59,0.0014,Saint-Pol-sur-Mer → Petite-Synthe → Cappelle-la-Grande ... Le Relecq-Kerhuon → Brest → Saint-Pol-sur-Mer
+KNN,Dunkerque,117.72,0.0014,Dunkerque → Coudekerque-Branche → Rosendaël ... Le Relecq-Kerhuon → Brest → Dunkerque
+KNN,Petite-Synthe,117.72,0.0014,Petite-Synthe → Saint-Pol-sur-Mer → Dunkerque ... Le Relecq-Kerhuon → Brest → Petite-Synthe
+KNN,Coudekerque-Branche,117.73,0.0014,Coudekerque-Branche → Dunkerque → Rosendaël ... Le Relecq-Kerhuon → Brest → Coudekerque-Branche
+KNN,Rosendaël,117.75,0.0014,Rosendaël → Coudekerque-Branche → Dunkerque ... Le Relecq-Kerhuon → Brest → Rosendaël
+KNN,Villeparisis,118.07,0.0014,Villeparisis → Courtry → Chelles ... Gagny → Perpignan → Villeparisis
+KNN,Villefontaine,118.17,0.0014,Villefontaine → L’Isle-d’Abeau → Pont-de-Chéruy ... Le Relecq-Kerhuon → Brest → Villefontaine
+KNN,L’Isle-d’Abeau,118.25,0.0014,L’Isle-d’Abeau → Villefontaine → Pont-de-Chéruy ... Le Relecq-Kerhuon → Brest → L’Isle-d’Abeau
+KNN,La Tour-du-Pin,118.29,0.0014,La Tour-du-Pin → L’Isle-d’Abeau → Villefontaine ... Le Relecq-Kerhuon → Brest → La Tour-du-Pin
+KNN,Saint-Jean-de-la-Ruelle,118.36,0.0014,Saint-Jean-de-la-Ruelle → Orléans → Fleury-les-Aubrais ... Beausoleil → Menton → Saint-Jean-de-la-Ruelle
+KNN,Fleury-les-Aubrais,118.37,0.0014,Fleury-les-Aubrais → Orléans → Saint-Jean-de-la-Ruelle ... Beausoleil → Menton → Fleury-les-Aubrais
+KNN,Orléans,118.38,0.0014,Orléans → Fleury-les-Aubrais → Saint-Jean-de-la-Ruelle ... Beausoleil → Menton → Orléans
+KNN,Alès,118.78,0.0014,Alès → Nîmes → Le Crès ... Le Relecq-Kerhuon → Brest → Alès
+KNN,Aniche,118.8,0.0014,Aniche → Lourches → Denain ... Le Relecq-Kerhuon → Brest → Aniche
+KNN,Beuvrages,118.88,0.0014,Beuvrages → Anzin → Valenciennes ... Le Relecq-Kerhuon → Brest → Beuvrages
+KNN,Lourches,118.88,0.0014,Lourches → Denain → Anzin ... Le Relecq-Kerhuon → Brest → Lourches
+KNN,Valenciennes,118.89,0.0014,Valenciennes → Anzin → Beuvrages ... Le Relecq-Kerhuon → Brest → Valenciennes
+KNN,Anzin,118.89,0.0014,Anzin → Beuvrages → Valenciennes ... Le Relecq-Kerhuon → Brest → Anzin
+KNN,Bruay-sur-l’Escaut,118.89,0.0014,Bruay-sur-l’Escaut → Beuvrages → Anzin ... Le Relecq-Kerhuon → Brest → Bruay-sur-l’Escaut
+KNN,Marly,118.9,0.0014,Marly → Valenciennes → Anzin ... Le Relecq-Kerhuon → Brest → Marly
+KNN,Sainte-Geneviève-des-Bois,118.91,0.0014,Sainte-Geneviève-des-Bois → Fleury-Mérogis → Bondoufle ... Beausoleil → Menton → Sainte-Geneviève-des-Bois
+KNN,Villemoisson-sur-Orge,118.92,0.0014,Villemoisson-sur-Orge → Épinay-sur-Orge → Savigny-sur-Orge ... Beausoleil → Menton → Villemoisson-sur-Orge
+KNN,Menton,118.94,0.0014,Menton → Beausoleil → Cap-d’Ail ... Le Relecq-Kerhuon → Brest → Menton
+KNN,Leuville-sur-Orge,118.97,0.0014,Leuville-sur-Orge → Montlhéry → La Ville-du-Bois ... Beausoleil → Menton → Leuville-sur-Orge
+KNN,Cap-d’Ail,118.98,0.0014,Cap-d’Ail → Beausoleil → Menton ... Le Relecq-Kerhuon → Brest → Cap-d’Ail
+KNN,Nice,118.99,0.0014,Nice → Saint-André-de-la-Roche → Beaulieu-sur-Mer ... Le Relecq-Kerhuon → Brest → Nice
+KNN,Cagnes-sur-Mer,118.99,0.0014,Cagnes-sur-Mer → Saint-Laurent-du-Var → Nice ... Le Relecq-Kerhuon → Brest → Cagnes-sur-Mer
+KNN,Villiers-sur-Orge,118.99,0.0014,Villiers-sur-Orge → Saint-Michel-sur-Orge → Brétigny-sur-Orge ... Beausoleil → Menton → Villiers-sur-Orge
+KNN,Saint-André-de-la-Roche,119.01,0.0014,Saint-André-de-la-Roche → Nice → Beaulieu-sur-Mer ... Le Relecq-Kerhuon → Brest → Saint-André-de-la-Roche
+KNN,Cannes,119.11,0.0014,Cannes → Le Cannet → Vallauris ... Le Relecq-Kerhuon → Brest → Cannes
+KNN,Le Cannet,119.12,0.0014,Le Cannet → Cannes → Vallauris ... Le Relecq-Kerhuon → Brest → Le Cannet
+KNN,Vallauris,119.18,0.0014,Vallauris → Le Cannet → Cannes ... Le Relecq-Kerhuon → Brest → Vallauris
+KNN,Nîmes,119.23,0.0014,Nîmes → Alès → Jacou ... Le Relecq-Kerhuon → Brest → Nîmes
+KNN,Antibes,119.29,0.0014,Antibes → Vallauris → Le Cannet ... Le Relecq-Kerhuon → Brest → Antibes
+KNN,Saint-Laurent-du-Var,119.44,0.0014,Saint-Laurent-du-Var → Cagnes-sur-Mer → Antibes ... Le Relecq-Kerhuon → Brest → Saint-Laurent-du-Var
+KNN,Le Pontet,119.46,0.0014,Le Pontet → Nîmes → Alès ... Le Relecq-Kerhuon → Brest → Le Pontet
+KNN,Craponne,119.56,0.0014,Craponne → Francheville → Tassin-la-Demi-Lune ... Le Relecq-Kerhuon → Brest → Craponne
+KNN,L’Arbresle,119.56,0.0014,L’Arbresle → Craponne → Francheville ... Le Relecq-Kerhuon → Brest → L’Arbresle
+KNN,Francheville,119.57,0.0014,Francheville → Tassin-la-Demi-Lune → Écully ... Le Relecq-Kerhuon → Brest → Francheville
+KNN,Pierre-Bénite,119.64,0.0014,Pierre-Bénite → Oullins → La Mulatière ... Le Relecq-Kerhuon → Brest → Pierre-Bénite
+KNN,Aix-en-Provence,119.67,0.0014,Aix-en-Provence → Marseille → La Penne-sur-Huveaune ... Le Relecq-Kerhuon → Brest → Aix-en-Provence
+KNN,Tassin-la-Demi-Lune,119.67,0.0014,Tassin-la-Demi-Lune → Écully → Champagne-au-Mont-d’Or ... Le Relecq-Kerhuon → Brest → Tassin-la-Demi-Lune
+KNN,Saint-Genis-Laval,119.69,0.0014,Saint-Genis-Laval → Oullins → La Mulatière ... Le Relecq-Kerhuon → Brest → Saint-Genis-Laval
+KNN,Beaulieu-sur-Mer,119.7,0.0014,Beaulieu-sur-Mer → Saint-André-de-la-Roche → Nice ... Le Relecq-Kerhuon → Brest → Beaulieu-sur-Mer
+KNN,Caluire-et-Cuire,119.73,0.0014,Caluire-et-Cuire → Lyon → Villeurbanne ... Le Relecq-Kerhuon → Brest → Caluire-et-Cuire
+KNN,Champagne-au-Mont-d’Or,119.8,0.0014,Champagne-au-Mont-d’Or → Écully → Tassin-la-Demi-Lune ... Le Relecq-Kerhuon → Brest → Champagne-au-Mont-d’Or
+KNN,Beausoleil,119.87,0.0014,Beausoleil → Cap-d’Ail → Beaulieu-sur-Mer ... Le Relecq-Kerhuon → Brest → Beausoleil
+KNN,Meyzieu,119.91,0.0014,Meyzieu → Décines-Charpieu → Vaulx-en-Velin ... Le Relecq-Kerhuon → Brest → Meyzieu
+KNN,Fontaines-sur-Saône,119.97,0.0014,Fontaines-sur-Saône → Sathonay-Camp → Rillieux-la-Pape ... Le Relecq-Kerhuon → Brest → Fontaines-sur-Saône
+KNN,Lisieux,119.99,0.0014,Lisieux → Harfleur → Rouelles ... Perpignan → Valence → Lisieux
+KNN,Marseille,120.01,0.0014,Marseille → La Penne-sur-Huveaune → Carnoux-en-Provence ... Le Relecq-Kerhuon → Brest → Marseille
+KNN,Sathonay-Camp,120.03,0.0014,Sathonay-Camp → Rillieux-la-Pape → Vaulx-en-Velin ... Le Relecq-Kerhuon → Brest → Sathonay-Camp
+KNN,Vaulx-en-Velin,120.09,0.0014,Vaulx-en-Velin → Bron → Villeurbanne ... Le Relecq-Kerhuon → Brest → Vaulx-en-Velin
+KNN,Bron,120.09,0.0014,Bron → Vaulx-en-Velin → Villeurbanne ... Le Relecq-Kerhuon → Brest → Bron
+KNN,Sète,120.12,0.0014,Sète → Palavas-les-Flots → Pérols ... Le Relecq-Kerhuon → Brest → Sète
+KNN,Sainte-Foy-lès-Lyon,120.13,0.0014,Sainte-Foy-lès-Lyon → La Mulatière → Oullins ... Le Relecq-Kerhuon → Brest → Sainte-Foy-lès-Lyon
+KNN,Décines-Charpieu,120.14,0.0014,Décines-Charpieu → Vaulx-en-Velin → Bron ... Le Relecq-Kerhuon → Brest → Décines-Charpieu
+KNN,Écully,120.15,0.0014,Écully → Tassin-la-Demi-Lune → Francheville ... Le Relecq-Kerhuon → Brest → Écully
+KNN,Carnoux-en-Provence,120.15,0.0014,Carnoux-en-Provence → La Penne-sur-Huveaune → Marseille ... Le Relecq-Kerhuon → Brest → Carnoux-en-Provence
+KNN,La Mulatière,120.15,0.0014,La Mulatière → Sainte-Foy-lès-Lyon → Oullins ... Le Relecq-Kerhuon → Brest → La Mulatière
+KNN,La Penne-sur-Huveaune,120.15,0.0014,La Penne-sur-Huveaune → Carnoux-en-Provence → Marseille ... Le Relecq-Kerhuon → Brest → La Penne-sur-Huveaune
+KNN,Oullins,120.16,0.0014,Oullins → La Mulatière → Sainte-Foy-lès-Lyon ... Le Relecq-Kerhuon → Brest → Oullins
+KNN,Rillieux-la-Pape,120.18,0.0014,Rillieux-la-Pape → Sathonay-Camp → Fontaines-sur-Saône ... Le Relecq-Kerhuon → Brest → Rillieux-la-Pape
+KNN,Saint-Genis-Pouilly,120.19,0.0014,Saint-Genis-Pouilly → Ferney-Voltaire → Saint-Julien-en-Genevois ... Le Relecq-Kerhuon → Brest → Saint-Genis-Pouilly
+KNN,Saint-Julien-en-Genevois,120.25,0.0014,Saint-Julien-en-Genevois → Saint-Genis-Pouilly → Ferney-Voltaire ... Le Relecq-Kerhuon → Brest → Saint-Julien-en-Genevois
+KNN,Ferney-Voltaire,120.26,0.0014,Ferney-Voltaire → Saint-Genis-Pouilly → Saint-Julien-en-Genevois ... Le Relecq-Kerhuon → Brest → Ferney-Voltaire
+KNN,Lyon,120.28,0.0014,Lyon → Caluire-et-Cuire → Sathonay-Camp ... Le Relecq-Kerhuon → Brest → Lyon
+KNN,Valras-Plage,120.29,0.0014,Valras-Plage → Sète → Palavas-les-Flots ... Le Relecq-Kerhuon → Brest → Valras-Plage
+KNN,Villeurbanne,120.31,0.0014,Villeurbanne → Vaulx-en-Velin → Bron ... Le Relecq-Kerhuon → Brest → Villeurbanne
+KNN,Harfleur,120.34,0.0014,Harfleur → Rouelles → Le Havre ... Perpignan → Valence → Harfleur
+KNN,Le Havre,120.38,0.0014,Le Havre → Sainte-Adresse → Rouelles ... Perpignan → Valence → Le Havre
+KNN,Sainte-Adresse,120.4,0.0014,Sainte-Adresse → Le Havre → Rouelles ... Perpignan → Valence → Sainte-Adresse
+KNN,Rouelles,120.41,0.0014,Rouelles → Harfleur → Le Havre ... Perpignan → Valence → Rouelles
+KNN,Thonon-les-Bains,120.46,0.0014,Thonon-les-Bains → Évian-les-Bains → Cluses ... Le Relecq-Kerhuon → Brest → Thonon-les-Bains
+KNN,Gaillard,120.5,0.0014,Gaillard → Ambilly → Annemasse ... Le Relecq-Kerhuon → Brest → Gaillard
+KNN,Annemasse,120.51,0.0014,Annemasse → Ville-la-Grand → Ambilly ... Le Relecq-Kerhuon → Brest → Annemasse
+KNN,Ville-la-Grand,120.51,0.0014,Ville-la-Grand → Annemasse → Ambilly ... Le Relecq-Kerhuon → Brest → Ville-la-Grand
+KNN,Ambilly,120.51,0.0014,Ambilly → Annemasse → Ville-la-Grand ... Le Relecq-Kerhuon → Brest → Ambilly
+KNN,Pont-de-Chéruy,120.52,0.0014,Pont-de-Chéruy → Villefontaine → L’Isle-d’Abeau ... Le Relecq-Kerhuon → Brest → Pont-de-Chéruy
+KNN,Meythet,120.55,0.0014,Meythet → Cran-Gévrier → Annecy ... Le Relecq-Kerhuon → Brest → Meythet
+KNN,Annecy,120.58,0.0014,Annecy → Cran-Gévrier → Meythet ... Le Relecq-Kerhuon → Brest → Annecy
+KNN,Cran-Gévrier,120.58,0.0014,Cran-Gévrier → Meythet → Annecy ... Le Relecq-Kerhuon → Brest → Cran-Gévrier
+KNN,Cluses,120.64,0.0014,Cluses → Thonon-les-Bains → Évian-les-Bains ... Le Relecq-Kerhuon → Brest → Cluses
+KNN,Cognin,120.71,0.0014,Cognin → Jacob-Bellecombette → Chambéry ... Le Relecq-Kerhuon → Brest → Cognin
+KNN,Jacob-Bellecombette,120.72,0.0014,Jacob-Bellecombette → Cognin → Chambéry ... Le Relecq-Kerhuon → Brest → Jacob-Bellecombette
+KNN,Chambéry,120.73,0.0014,Chambéry → Jacob-Bellecombette → Cognin ... Le Relecq-Kerhuon → Brest → Chambéry
+KNN,Barby,120.77,0.0014,Barby → Bassens → Chambéry ... Le Relecq-Kerhuon → Brest → Barby
+KNN,Aix-les-Bains,120.78,0.0014,Aix-les-Bains → Bassens → Chambéry ... Le Relecq-Kerhuon → Brest → Aix-les-Bains
+KNN,Bassens,120.78,0.0014,Bassens → Chambéry → Jacob-Bellecombette ... Le Relecq-Kerhuon → Brest → Bassens
+KNN,Évian-les-Bains,121.07,0.0014,Évian-les-Bains → Thonon-les-Bains → Ville-la-Grand ... Le Relecq-Kerhuon → Brest → Évian-les-Bains
+KNN,Saint-Égrève,121.19,0.0014,Saint-Égrève → Fontaine → Grenoble ... Le Relecq-Kerhuon → Brest → Saint-Égrève
+KNN,Fontaine,121.23,0.0014,Fontaine → Saint-Égrève → Grenoble ... Le Relecq-Kerhuon → Brest → Fontaine
+KNN,Le Pont-de-Claix,121.29,0.0014,Le Pont-de-Claix → Échirolles → Grenoble ... Le Relecq-Kerhuon → Brest → Le Pont-de-Claix
+KNN,Meylan,121.31,0.0014,Meylan → Saint-Martin-d’Hères → Eybens ... Le Relecq-Kerhuon → Brest → Meylan
+KNN,Grenoble,121.32,0.0014,Grenoble → Échirolles → Le Pont-de-Claix ... Le Relecq-Kerhuon → Brest → Grenoble
+KNN,Échirolles,121.32,0.0014,Échirolles → Le Pont-de-Claix → Grenoble ... Le Relecq-Kerhuon → Brest → Échirolles
+KNN,Saint-Martin-d’Hères,121.34,0.0014,Saint-Martin-d’Hères → Eybens → Échirolles ... Le Relecq-Kerhuon → Brest → Saint-Martin-d’Hères
+KNN,Eybens,121.34,0.0014,Eybens → Saint-Martin-d’Hères → Grenoble ... Le Relecq-Kerhuon → Brest → Eybens
+KNN,Toulon,121.5,0.0014,Toulon → La Valette-du-Var → La Garde ... Le Relecq-Kerhuon → Brest → Toulon
+KNN,La Garde,121.5,0.0014,La Garde → La Valette-du-Var → Toulon ... Le Relecq-Kerhuon → Brest → La Garde
+KNN,La Valette-du-Var,121.5,0.0014,La Valette-du-Var → La Garde → Toulon ... Le Relecq-Kerhuon → Brest → La Valette-du-Var
+KNN,La Seyne-sur-Mer,121.51,0.0014,La Seyne-sur-Mer → Toulon → La Valette-du-Var ... Le Relecq-Kerhuon → Brest → La Seyne-sur-Mer
+KNN,Huningue,121.74,0.0014,Huningue → Riedisheim → Mulhouse ... Le Relecq-Kerhuon → Brest → Huningue
+KNN,Pfastatt,121.77,0.0014,Pfastatt → Mulhouse → Riedisheim ... Le Relecq-Kerhuon → Brest → Pfastatt
+KNN,Mulhouse,121.82,0.0016,Mulhouse → Riedisheim → Illzach ... Le Relecq-Kerhuon → Brest → Mulhouse
+KNN,Kingersheim,121.84,0.0014,Kingersheim → Illzach → Mulhouse ... Le Relecq-Kerhuon → Brest → Kingersheim
+KNN,Riedisheim,121.85,0.0014,Riedisheim → Mulhouse → Illzach ... Le Relecq-Kerhuon → Brest → Riedisheim
+KNN,Illzach,121.86,0.0014,Illzach → Kingersheim → Mulhouse ... Le Relecq-Kerhuon → Brest → Illzach
+KNN,Lingolsheim,123.0,0.0014,Lingolsheim → Ostwald → Strasbourg ... Le Relecq-Kerhuon → Brest → Lingolsheim
+KNN,Strasbourg,123.01,0.0014,Strasbourg → Schiltigheim → Bischheim ... Le Relecq-Kerhuon → Brest → Strasbourg
+KNN,Ostwald,123.03,0.0014,Ostwald → Lingolsheim → Oberhausbergen ... Le Relecq-Kerhuon → Brest → Ostwald
+KNN,Oberhausbergen,123.04,0.0014,Oberhausbergen → Lingolsheim → Ostwald ... Le Relecq-Kerhuon → Brest → Oberhausbergen
+KNN,Souffelweyersheim,123.05,0.0014,Souffelweyersheim → Hœnheim → Bischheim ... Le Relecq-Kerhuon → Brest → Souffelweyersheim
+KNN,Hœnheim,123.06,0.0014,Hœnheim → Bischheim → Schiltigheim ... Le Relecq-Kerhuon → Brest → Hœnheim
+KNN,Schiltigheim,123.08,0.0014,Schiltigheim → Bischheim → Hœnheim ... Le Relecq-Kerhuon → Brest → Schiltigheim
+KNN,Bischheim,123.09,0.0014,Bischheim → Schiltigheim → Hœnheim ... Le Relecq-Kerhuon → Brest → Bischheim
+THREE_OPT,Corbeil-Essonnes,91.28,13.4307,Corbeil-Essonnes → Saintry-sur-Seine → Évry ... Ris-Orangis → Saint-Germain-lès-Corbeil → Corbeil-Essonnes
+TWO_OPT,Corbeil-Essonnes,91.32,8.6274,Corbeil-Essonnes → Saintry-sur-Seine → Évry ... Ris-Orangis → Saint-Germain-lès-Corbeil → Corbeil-Essonnes
+TWO_OPT,Courcelles-les-Lens,91.72,12.3501,Courcelles-les-Lens → Courchelettes → Neuville-Saint-Rémy ... Waziers → Douai → Courcelles-les-Lens
+TWO_OPT,Lys-lès-Lannoy,91.74,12.7935,Lys-lès-Lannoy → Toufflers → Leers ... Hem → Roubaix → Lys-lès-Lannoy
+TWO_OPT,Courcouronnes,91.75,12.0438,Courcouronnes → Évry → Saintry-sur-Seine ... Fleury-Mérogis → Bondoufle → Courcouronnes
+TWO_OPT,Antony,91.77,11.424,Antony → Fresnes → Longjumeau ... Fontenay-aux-Roses → Sceaux → Antony
+TWO_OPT,Noyelles-sous-Lens,91.77,11.6533,Noyelles-sous-Lens → Pont-à-Vendin → Billy-Montigny ... Sallaumines → Méricourt → Noyelles-sous-Lens
+TWO_OPT,Grigny_2,91.8,10.5088,Grigny_2 → Saint-Genis-Laval → Oullins ... Saint-Fons → Pierre-Bénite → Grigny_2
+TWO_OPT,Montfermeil,91.81,11.5182,Montfermeil → Clichy-sous-Bois → Gagny ... Champs-Sur-Marne → Chelles → Montfermeil
+TWO_OPT,Saint-Michel-sur-Orge,91.84,11.2685,Saint-Michel-sur-Orge → Villiers-sur-Orge → Montlhéry ... Leuville-sur-Orge → Brétigny-sur-Orge → Saint-Michel-sur-Orge
+TWO_OPT,Châtillon,91.86,9.8549,Châtillon → Le Plessis-Robinson → Châtenay-Malabry ... Sceaux → Fontenay-aux-Roses → Châtillon
+TWO_OPT,Montlhéry,91.87,11.479,Montlhéry → Brétigny-sur-Orge → Saint-Michel-sur-Orge ... Saint-Germain-lès-Arpajon → Leuville-sur-Orge → Montlhéry
+TWO_OPT,Sainte-Geneviève-des-Bois,91.89,14.725,Sainte-Geneviève-des-Bois → Fleury-Mérogis → Bondoufle ... Saint-Michel-sur-Orge → Brétigny-sur-Orge → Sainte-Geneviève-des-Bois
+TWO_OPT,Longjumeau,91.91,11.1868,Longjumeau → Villiers-sur-Orge → Saint-Michel-sur-Orge ... Villemoisson-sur-Orge → Épinay-sur-Orge → Longjumeau
+TWO_OPT,Saint-Mandé,91.98,12.9737,Saint-Mandé → Montreuil → Vincennes ... Vitry-sur-Seine → Charenton-le-Pont → Saint-Mandé
+TWO_OPT,Croix,91.99,12.7625,Croix → Wasquehal → Marcq-en-Baroeul ... Halluin → Mouvaux → Croix
+TWO_OPT,Ascq,91.99,12.9621,Ascq → Hem → Lys-lès-Lannoy ... Mons-en-Baroeul → Flers-lez-Lille → Ascq
+TWO_OPT,Épinay-sur-Orge,92.0,8.9862,Épinay-sur-Orge → Villemoisson-sur-Orge → Morsang-sur-Orge ... La Ville-du-Bois → Villiers-sur-Orge → Épinay-sur-Orge
+TWO_OPT,Rive-de-Gier,92.01,11.1799,Rive-de-Gier → Grigny_2 → Saint-Genis-Laval ... Firminy → Roanne → Rive-de-Gier
+TWO_OPT,Lille,92.02,12.9307,Lille → Saint-André → Marquette-lès-Lille ... Lomme → Lambersart → Lille
+TWO_OPT,Hem,92.02,13.0871,Hem → Lys-lès-Lannoy → Toufflers ... Ascq → Flers-lez-Lille → Hem
+TWO_OPT,La Bassée,92.02,12.8896,La Bassée → Wingles → Pont-à-Vendin ... Pérenchies → Armentières → La Bassée
+TWO_OPT,Montreuil,92.03,8.0162,Montreuil → Vincennes → Maisons-Alfort ... Charenton-le-Pont → Saint-Mandé → Montreuil
+TWO_OPT,Hellemmes-Lille,92.03,13.1341,Hellemmes-Lille → Ronchin → Fâches-Thumesnil ... Lourches → Aniche → Hellemmes-Lille
+TWO_OPT,Morsang-sur-Orge,92.04,9.0959,Morsang-sur-Orge → Sainte-Geneviève-des-Bois → Fleury-Mérogis ... Saint-Michel-sur-Orge → Villemoisson-sur-Orge → Morsang-sur-Orge
+TWO_OPT,Haubourdin,92.04,13.0544,Haubourdin → Loos → Lille ... Oignies → Wattignies → Haubourdin
+TWO_OPT,Pérenchies,92.05,12.93,Pérenchies → Armentières → La Bassée ... Saint-André → Lambersart → Pérenchies
+TWO_OPT,Wasquehal,92.06,13.7128,Wasquehal → Croix → Hem ... Halluin → Mouvaux → Wasquehal
+TWO_OPT,Chennevières-sur-Marne,92.07,11.4008,Chennevières-sur-Marne → Ormesson-sur-Marne → Sucy-en-Brie ... Roissy-en-Brie → Le Plessis-Trévise → Chennevières-sur-Marne
+TWO_OPT,Noisy-le-Grand,92.08,14.1296,Noisy-le-Grand → Gournay-sur-Marne → Champs-Sur-Marne ... Bry-sur-Marne → Neuilly-sur-Marne → Noisy-le-Grand
+TWO_OPT,Roubaix,92.09,14.2136,Roubaix → Hem → Ascq ... Leers → Wattrelos → Roubaix
+TWO_OPT,Villejuif,92.1,9.8767,Villejuif → Chevilly-Larue → L’Haÿ-les-Roses ... Ivry-sur-Seine → Le Kremlin-Bicêtre → Villejuif
+TWO_OPT,Sallaumines,92.1,15.0468,Sallaumines → Loison-sous-Lens → Pont-à-Vendin ... Noyelles-sous-Lens → Méricourt → Sallaumines
+TWO_OPT,L’Arbresle,92.1,9.7903,L’Arbresle → Craponne → Tassin-la-Demi-Lune ... Chalon-sur-Saône → Villefranche-sur-Saône → L’Arbresle
+TWO_OPT,Tourcoing,92.2,13.3309,Tourcoing → Neuville-en-Ferrain → Halluin ... Wattrelos → Roubaix → Tourcoing
+TWO_OPT,Neuville-en-Ferrain,92.2,12.785,Neuville-en-Ferrain → Halluin → Mouvaux ... Roubaix → Tourcoing → Neuville-en-Ferrain
+TWO_OPT,Villeparisis,92.21,8.3046,Villeparisis → Courtry → Chelles ... Villepinte → Vaujours → Villeparisis
+TWO_OPT,Marcq-en-Baroeul,92.24,13.2767,Marcq-en-Baroeul → Wasquehal → Croix ... Halluin → Mouvaux → Marcq-en-Baroeul
+TWO_OPT,Brétigny-sur-Orge,92.24,10.6223,Brétigny-sur-Orge → Saint-Michel-sur-Orge → Villiers-sur-Orge ... Montereau-faut-Yonne → Montargis → Brétigny-sur-Orge
+TWO_OPT,Toufflers,92.25,13.5081,Toufflers → Leers → Wattrelos ... Denain → Lourches → Toufflers
+TWO_OPT,Bures-sur-Yvette,92.26,10.2612,Bures-sur-Yvette → Orsay → Igny ... Arpajon → Égly → Bures-sur-Yvette
+TWO_OPT,Leers,92.27,13.452,Leers → Wattrelos → Lys-lès-Lannoy ... Denain → Lourches → Leers
+TWO_OPT,Blagnac,92.28,8.2967,Blagnac → Beauzelle → Saint-Alban ... Tournefeuille → Colomiers → Blagnac
+TWO_OPT,Saintry-sur-Seine,92.31,10.0645,Saintry-sur-Seine → Corbeil-Essonnes → Saint-Germain-lès-Corbeil ... Courcouronnes → Évry → Saintry-sur-Seine
+TWO_OPT,Grenay,92.34,16.1727,Grenay → Bully-les-Mines → Béthune ... Wingles → La Bassée → Grenay
+TWO_OPT,Taverny,92.43,12.8255,Taverny → Saint-Leu-la-Forêt → Bouffémont ... Franconville → Le Plessis-Bouchard → Taverny
+TWO_OPT,La Frette-sur-Seine,92.45,11.4695,La Frette-sur-Seine → Cormeilles-en-Parisis → Montigny-lès-Cormeilles ... Maisons-Laffitte → Sartrouville → La Frette-sur-Seine
+TWO_OPT,Cormeilles-en-Parisis,92.47,11.7388,Cormeilles-en-Parisis → La Frette-sur-Seine → Houilles ... Franconville → Montigny-lès-Cormeilles → Cormeilles-en-Parisis
+TWO_OPT,Gennevilliers,92.5,10.0911,Gennevilliers → Épinay-sur-Seine → Enghien-les-Bains ... Bois-Colombes → Carrières-sur-Seine → Gennevilliers
+TWO_OPT,Marly-le-Roi,92.51,10.204,Marly-le-Roi → Le Chesnay → Versailles ... La Celle-Saint-Cloud → Bougival → Marly-le-Roi
+TWO_OPT,Houilles,92.52,11.502,Houilles → Sartrouville → Maisons-Laffitte ... Chatou → Montesson → Houilles
+TWO_OPT,Castanet-Tolosan,92.55,8.7871,Castanet-Tolosan → Ramonville-Saint-Agne → Villeneuve-Tolosane ... Valras-Plage → Perpignan → Castanet-Tolosan
+TWO_OPT,Maisons-Laffitte,92.63,11.4996,Maisons-Laffitte → Le Mesnil-le-Roi → Le Port-Marly ... Chatou → Montesson → Maisons-Laffitte
+TWO_OPT,Conflans-Sainte-Honorine,92.65,11.5008,Conflans-Sainte-Honorine → Éragny → Jouy-le-Moutier ... Andrésy → Achères → Conflans-Sainte-Honorine
+TWO_OPT,Vénissieux,92.66,10.8753,Vénissieux → Saint-Fons → Pierre-Bénite ... Bron → Villeurbanne → Vénissieux
+TWO_OPT,Saint-Priest,92.66,10.9023,Saint-Priest → Bron → Vénissieux ... L’Isle-d’Abeau → Villefontaine → Saint-Priest
+TWO_OPT,Achères,92.69,10.7659,Achères → Andrésy → Chanteloup-les-Vignes ... Poissy → Carrières-sous-Poissy → Achères
+TWO_OPT,Épinay-sur-Seine,92.7,8.3402,Épinay-sur-Seine → Gennevilliers → Villeneuve-la-Garenne ... Argenteuil → Saint-Gratien → Épinay-sur-Seine
+TWO_OPT,Mont-Saint-Aignan,92.7,13.4482,Mont-Saint-Aignan → Rouen → Le Petit-Quevilly ... Maromme → Déville-lès-Rouen → Mont-Saint-Aignan
+TWO_OPT,Morangis,92.72,10.1654,Morangis → Chilly-Mazarin → Longjumeau ... Bourg-la-Reine → Fresnes → Morangis
+TWO_OPT,Chanteloup-les-Vignes,92.73,10.2818,Chanteloup-les-Vignes → Achères → Andrésy ... Poissy → Carrières-sous-Poissy → Chanteloup-les-Vignes
+TWO_OPT,Vernouillet,92.73,9.4442,Vernouillet → Carrières-sous-Poissy → Poissy ... Jouy-le-Moutier → Chanteloup-les-Vignes → Vernouillet
+TWO_OPT,Poissy,92.76,11.5547,Poissy → Carrières-sous-Poissy → Achères ... Marly-le-Roi → Mareil-Marly → Poissy
+TWO_OPT,Neuilly-Plaisance,92.76,9.6985,Neuilly-Plaisance → Le Perreux-Sur-Marne → Bry-sur-Marne ... Gagny → Le Raincy → Neuilly-Plaisance
+TWO_OPT,Valence,92.79,11.4956,Valence → Rive-de-Gier → Grigny_2 ... Beausoleil → Menton → Valence
+TWO_OPT,Villiers-sur-Marne,92.8,8.5428,Villiers-sur-Marne → Champigny-sur-Marne → Saint-Maur-des-Fossés ... Le Perreux-Sur-Marne → Bry-sur-Marne → Villiers-sur-Marne
+TWO_OPT,Bussy-Saint-Georges,92.8,7.4764,Bussy-Saint-Georges → Roissy-en-Brie → Combs-la-Ville ... Serris → Montévrain → Bussy-Saint-Georges
+TWO_OPT,Le Crès,92.84,8.5599,Le Crès → Jacou → Castelnau-le-Lez ... Nîmes → Alès → Le Crès
+TWO_OPT,Jacou,92.84,8.5434,Jacou → Castelnau-le-Lez → Montpellier ... Alès → Le Crès → Jacou
+TWO_OPT,Joinville-le-Pont,92.85,12.8682,Joinville-le-Pont → Nogent-sur-Marne → Fontenay-sous-Bois ... Maisons-Alfort → Saint-Maurice → Joinville-le-Pont
+TWO_OPT,Pont-de-Chéruy,92.86,8.0956,Pont-de-Chéruy → Bourg-en-Bresse → Lons-le-Saunier ... Décines-Charpieu → Meyzieu → Pont-de-Chéruy
+TWO_OPT,Saint-Maur-des-Fossés,92.89,10.9599,Saint-Maur-des-Fossés → Nogent-sur-Marne → Fontenay-sous-Bois ... Chennevières-sur-Marne → Champigny-sur-Marne → Saint-Maur-des-Fossés
+TWO_OPT,Livry-Gargan,92.89,8.7117,Livry-Gargan → Clichy-sous-Bois → Montfermeil ... Villepinte → Vaujours → Livry-Gargan
+TWO_OPT,Montigny-en-Gohelle,92.89,12.6135,Montigny-en-Gohelle → Fouquières-lès-Lens → Billy-Montigny ... Neuville-Saint-Rémy → Courchelettes → Montigny-en-Gohelle
+TWO_OPT,Massy,92.91,14.1613,Massy → Verrières-le-Buisson → Châtenay-Malabry ... Chilly-Mazarin → Longjumeau → Massy
+TWO_OPT,Wingles,92.92,9.9955,Wingles → La Bassée → Armentières ... Billy-Montigny → Pont-à-Vendin → Wingles
+TWO_OPT,Aulnay-sous-Bois,92.93,12.897,Aulnay-sous-Bois → Les Pavillons-sous-Bois → Le Raincy ... Villemomble → Bondy → Aulnay-sous-Bois
+TWO_OPT,Illzach,92.93,10.1339,Illzach → Kingersheim → Pfastatt ... Riedisheim → Mulhouse → Illzach
+TWO_OPT,Kingersheim,92.93,10.2354,Kingersheim → Pfastatt → Belfort ... Mulhouse → Illzach → Kingersheim
+TWO_OPT,Voisins-le-Bretonneux,92.93,10.3804,Voisins-le-Bretonneux → Guyancourt → Saint-Cyr-l’École ... Trappes → Montigny-le-Bretonneux → Voisins-le-Bretonneux
+TWO_OPT,Calais,92.94,10.6042,Calais → Grand-Fort-Philippe → Fort-Mardyck ... Outreau → Boulogne-sur-Mer → Calais
+TWO_OPT,Méricourt,92.94,12.3273,Méricourt → Sallaumines → Loison-sous-Lens ... Pont-à-Vendin → Noyelles-sous-Lens → Méricourt
+TWO_OPT,Billy-Montigny,92.94,8.3081,Billy-Montigny → Noyelles-sous-Lens → Sallaumines ... Montigny-en-Gohelle → Fouquières-lès-Lens → Billy-Montigny
+TWO_OPT,Mons-en-Baroeul,92.96,8.0811,Mons-en-Baroeul → Hellemmes-Lille → Ronchin ... Ascq → Flers-lez-Lille → Mons-en-Baroeul
+TWO_OPT,Pierre-Bénite,92.96,8.8428,Pierre-Bénite → Saint-Fons → Vénissieux ... La Mulatière → Oullins → Pierre-Bénite
+TWO_OPT,Sartrouville,92.97,12.9964,Sartrouville → Le Mesnil-le-Roi → Maisons-Laffitte ... Chatou → Montesson → Sartrouville
+TWO_OPT,Tarbes,92.97,8.0518,Tarbes → Pau → Billère ... Villeneuve-Tolosane → La Salvetat-Saint-Gilles → Tarbes
+TWO_OPT,Gagny,92.97,9.9466,Gagny → Le Raincy → Les Pavillons-sous-Bois ... Chelles → Montfermeil → Gagny
+TWO_OPT,Marquette-lès-Lille,92.97,8.2837,Marquette-lès-Lille → La Madeleine → Marcq-en-Baroeul ... Lambersart → Saint-André → Marquette-lès-Lille
+TWO_OPT,Saint-Priest-en-Jarez,92.97,11.1956,Saint-Priest-en-Jarez → Saint-Étienne → Firminy ... Beaumont → Roanne → Saint-Priest-en-Jarez
+TWO_OPT,Colomiers,92.99,9.8949,Colomiers → Blagnac → Toulouse ... Cugnaux → Tournefeuille → Colomiers
+TWO_OPT,Lomme,92.99,8.5353,Lomme → Lambersart → Saint-André ... Mons-en-Baroeul → La Madeleine → Lomme
+TWO_OPT,Halluin,92.99,8.3463,Halluin → Neuville-en-Ferrain → Tourcoing ... Croix → Mouvaux → Halluin
+TWO_OPT,Ronchin,92.99,8.225,Ronchin → Fâches-Thumesnil → Wattignies ... Flers-lez-Lille → Hellemmes-Lille → Ronchin
+TWO_OPT,Crégy-lès-Meaux,92.99,6.8972,Crégy-lès-Meaux → Meaux → Magny-le-Hongre ... Thorigny-sur-Marne → Esbly → Crégy-lès-Meaux
+TWO_OPT,Pont-à-Vendin,92.99,11.7421,Pont-à-Vendin → Oignies → Haubourdin ... Fouquières-lès-Lens → Billy-Montigny → Pont-à-Vendin
+TWO_OPT,Trappes,93.0,11.9383,Trappes → Bois-d’Arcy → Fontenay-le-Fleury ... Maurepas → La Verrière → Trappes
+TWO_OPT,Élancourt,93.0,11.5933,Élancourt → Les Clayes-sous-Bois → Plaisir ... La Verrière → Maurepas → Élancourt
+TWO_OPT,Loos,93.0,8.3926,Loos → Wattignies → Oignies ... Fâches-Thumesnil → Lille → Loos
+TWO_OPT,Le Pecq,93.01,10.8468,Le Pecq → Mareil-Marly → Marly-le-Roi ... Le Vésinet → Le Port-Marly → Le Pecq
+TWO_OPT,Montmagny,93.02,14.402,Montmagny → Groslay → Deuil-la-Barre ... Villeneuve-la-Garenne → Pierrefitte-sur-Seine → Montmagny
+TWO_OPT,Le Perreux-Sur-Marne,93.03,8.6708,Le Perreux-Sur-Marne → Bry-sur-Marne → Champigny-sur-Marne ... Rosny-sous-Bois → Neuilly-Plaisance → Le Perreux-Sur-Marne
+TWO_OPT,Malakoff,93.04,10.9775,Malakoff → Vanves → Issy-les-Moulineaux ... Le Plessis-Robinson → Clamart → Malakoff
+TWO_OPT,Alès,93.05,12.8319,Alès → Nîmes → Le Pontet ... Jacou → Le Crès → Alès
+TWO_OPT,Tournefeuille,93.05,9.5671,Tournefeuille → Castanet-Tolosan → Ramonville-Saint-Agne ... Villeneuve-Tolosane → Cugnaux → Tournefeuille
+TWO_OPT,Yerres,93.05,11.0604,Yerres → Mandres-les-Roses → Villecresnes ... Montgeron → Crosne → Yerres
+TWO_OPT,L’Union,93.05,9.4666,L’Union → Saint-Jean → Aucamville ... Ramonville-Saint-Agne → Toulouse → L’Union
+TWO_OPT,Maromme,93.05,12.3729,Maromme → Yvetot → Dieppe ... Le Petit-Quevilly → Déville-lès-Rouen → Maromme
+TWO_OPT,Le Pont-de-Claix,93.05,11.0599,Le Pont-de-Claix → Échirolles → Eybens ... Fontaine → Grenoble → Le Pont-de-Claix
+TWO_OPT,Saint-Germain-lès-Corbeil,93.05,6.5354,Saint-Germain-lès-Corbeil → Corbeil-Essonnes → Saintry-sur-Seine ... Combs-la-Ville → Quincy-sous-Sénart → Saint-Germain-lès-Corbeil
+TWO_OPT,Paris,93.06,8.9674,Paris → Gentilly → Arcueil ... Bagneux → Montrouge → Paris
+TWO_OPT,Champigny-sur-Marne,93.06,13.2095,Champigny-sur-Marne → Chennevières-sur-Marne → Ormesson-sur-Marne ... Bonneuil-sur-Marne → Saint-Maur-des-Fossés → Champigny-sur-Marne
+TWO_OPT,Wattrelos,93.06,8.2978,Wattrelos → Leers → Toufflers ... Halluin → Neuville-en-Ferrain → Wattrelos
+TWO_OPT,Chalon-sur-Saône,93.07,10.006,Chalon-sur-Saône → Chenôve → Dijon ... Pont-de-Chéruy → Bourg-en-Bresse → Chalon-sur-Saône
+TWO_OPT,Saint-Genis-Laval,93.07,8.7251,Saint-Genis-Laval → Pierre-Bénite → Vénissieux ... Rive-de-Gier → Grigny_2 → Saint-Genis-Laval
+TWO_OPT,Chenôve,93.07,9.894,Chenôve → Dijon → Talant ... Bourg-en-Bresse → Chalon-sur-Saône → Chenôve
+TWO_OPT,Bully-les-Mines,93.07,13.2999,Bully-les-Mines → Grenay → La Bassée ... Saint-Nicolas → Liévin → Bully-les-Mines
+TWO_OPT,Talant,93.07,9.807,Talant → Fontaine-lès-Dijon → Lons-le-Saunier ... Chenôve → Dijon → Talant
+TWO_OPT,Épinay-sous-Sénart,93.07,9.4423,Épinay-sous-Sénart → Brunoy → Yerres ... Quincy-sous-Sénart → Boussy-Saint-Antoine → Épinay-sous-Sénart
+TWO_OPT,Boussy-Saint-Antoine,93.07,9.3624,Boussy-Saint-Antoine → Épinay-sous-Sénart → Brunoy ... Combs-la-Ville → Quincy-sous-Sénart → Boussy-Saint-Antoine
+TWO_OPT,Champs-Sur-Marne,93.08,13.186,Champs-Sur-Marne → Gournay-sur-Marne → Le Plessis-Trévise ... Vaires-sur-Marne → Noisiel → Champs-Sur-Marne
+TWO_OPT,Orly,93.08,8.6582,Orly → Villeneuve-le-Roi → Ablon-sur-Seine ... Juvisy-sur-Orge → Athis-Mons → Orly
+TWO_OPT,Bagnolet,93.09,12.0279,Bagnolet → Les Lilas → Vincennes ... Charenton-le-Pont → Saint-Mandé → Bagnolet
+TWO_OPT,Cambrai,93.09,13.1189,Cambrai → Neuville-Saint-Rémy → Courchelettes ... Soissons → Saint-Quentin → Cambrai
+TWO_OPT,Mantes-la-Jolie,93.11,10.3744,Mantes-la-Jolie → Limay → Neauphle-le-Château ... Magnanville → Mantes-la-Ville → Mantes-la-Jolie
+TWO_OPT,Limay,93.11,10.2614,Limay → Neauphle-le-Château → Plaisir ... Mantes-la-Ville → Mantes-la-Jolie → Limay
+TWO_OPT,Magnanville,93.11,10.2708,Magnanville → Mantes-la-Ville → Mantes-la-Jolie ... Luisant → Chartres → Magnanville
+TWO_OPT,Cachan,93.12,8.2003,Cachan → L’Haÿ-les-Roses → Fresnes ... Bagneux → Bourg-la-Reine → Cachan
+TWO_OPT,Les Pavillons-sous-Bois,93.13,10.373,Les Pavillons-sous-Bois → Le Raincy → Gagny ... Rosny-sous-Bois → Villemomble → Les Pavillons-sous-Bois
+TWO_OPT,Montigny-lès-Cormeilles,93.13,11.3688,Montigny-lès-Cormeilles → Beauchamp → Saint-Ouen-l’Aumône ... La Frette-sur-Seine → Cormeilles-en-Parisis → Montigny-lès-Cormeilles
+TWO_OPT,Suresnes,93.14,8.3365,Suresnes → Garches → Vaucresson ... Boulogne-Billancourt → Saint-Cloud → Suresnes
+TWO_OPT,Noisy-le-Sec,93.14,12.3625,Noisy-le-Sec → Bobigny → Romainville ... Le Raincy → Villemomble → Noisy-le-Sec
+TWO_OPT,Plaisir,93.18,11.6975,Plaisir → Élancourt → Maurepas ... Les Mureaux → Neauphle-le-Château → Plaisir
+TWO_OPT,Ivry-sur-Seine,93.19,11.9888,Ivry-sur-Seine → Villejuif → Chevilly-Larue ... Gentilly → Le Kremlin-Bicêtre → Ivry-sur-Seine
+TWO_OPT,Deuil-la-Barre,93.19,8.7706,Deuil-la-Barre → Montmagny → Groslay ... Enghien-les-Bains → Montmorency → Deuil-la-Barre
+TWO_OPT,Fâches-Thumesnil,93.21,11.6137,Fâches-Thumesnil → Lille → Wattignies ... Hellemmes-Lille → Ronchin → Fâches-Thumesnil
+TWO_OPT,Bourg-la-Reine,93.22,9.621,Bourg-la-Reine → Bagneux → Fontenay-aux-Roses ... Châtenay-Malabry → Sceaux → Bourg-la-Reine
+TWO_OPT,Toulon,93.23,9.373,Toulon → La Seyne-sur-Mer → Carnoux-en-Provence ... La Garde → La Valette-du-Var → Toulon
+TWO_OPT,La Valette-du-Var,93.23,9.2017,La Valette-du-Var → Toulon → La Seyne-sur-Mer ... Cannes → La Garde → La Valette-du-Var
+TWO_OPT,Fontaines-sur-Saône,93.23,9.3878,Fontaines-sur-Saône → Villefranche-sur-Saône → L’Arbresle ... Écully → Champagne-au-Mont-d’Or → Fontaines-sur-Saône
+TWO_OPT,Vaucresson,93.24,9.9823,Vaucresson → Garches → Suresnes ... Le Chesnay → La Celle-Saint-Cloud → Vaucresson
+TWO_OPT,Versailles,93.25,10.3569,Versailles → Le Chesnay → La Celle-Saint-Cloud ... Voisins-le-Bretonneux → Guyancourt → Versailles
+TWO_OPT,Rezé,93.25,10.0613,Rezé → Nantes → Saint-Sébastien-sur-Loire ... La Montagne → Saint-Herblain → Rezé
+TWO_OPT,La Celle-Saint-Cloud,93.25,10.5456,La Celle-Saint-Cloud → Vaucresson → Garches ... Versailles → Le Chesnay → La Celle-Saint-Cloud
+TWO_OPT,Menucourt,93.25,12.4812,Menucourt → Vauréal → Jouy-le-Moutier ... Vernouillet → Verneuil-sur-Seine → Menucourt
+TWO_OPT,Saint-Nicolas,93.26,11.9973,Saint-Nicolas → Arras → Éleu-dit-Leauwette ... Grenay → Liévin → Saint-Nicolas
+TWO_OPT,Mouvaux,93.27,7.9794,Mouvaux → Halluin → Neuville-en-Ferrain ... Wasquehal → Croix → Mouvaux
+TWO_OPT,Craponne,93.27,12.4985,Craponne → Francheville → Sainte-Foy-lès-Lyon ... Écully → Tassin-la-Demi-Lune → Craponne
+TWO_OPT,Boulogne-Billancourt,93.28,10.3591,Boulogne-Billancourt → Meudon → Clamart ... Vanves → Issy-les-Moulineaux → Boulogne-Billancourt
+TWO_OPT,Vitry-sur-Seine,93.28,14.9746,Vitry-sur-Seine → Thiais → Choisy-le-Roi ... L’Haÿ-les-Roses → Chevilly-Larue → Vitry-sur-Seine
+TWO_OPT,Chelles,93.28,12.5463,Chelles → Champs-Sur-Marne → Gournay-sur-Marne ... Clichy-sous-Bois → Montfermeil → Chelles
+TWO_OPT,Liévin,93.28,12.9745,Liévin → Grenay → Bully-les-Mines ... Arras → Saint-Nicolas → Liévin
+TWO_OPT,Stains,93.29,12.1833,Stains → Pierrefitte-sur-Seine → Saint-Denis ... Arnouville-lès-Gonesse → Garges-lès-Gonesse → Stains
+TWO_OPT,Arras,93.3,10.9845,Arras → Saint-Nicolas → Sallaumines ... Fouquières-lès-Lens → Méricourt → Arras
+TWO_OPT,Bezons,93.3,8.8469,Bezons → Houilles → Montesson ... Rueil-Malmaison → Nanterre → Bezons
+TWO_OPT,Alfortville,93.31,11.2071,Alfortville → Charenton-le-Pont → Vitry-sur-Seine ... Thiais → Choisy-le-Roi → Alfortville
+TWO_OPT,Montigny-le-Bretonneux,93.31,11.8901,Montigny-le-Bretonneux → Saint-Cyr-l’École → Fontenay-le-Fleury ... Guyancourt → Voisins-le-Bretonneux → Montigny-le-Bretonneux
+TWO_OPT,Saint-Jean-de-Braye,93.31,9.6237,Saint-Jean-de-Braye → Fleury-les-Aubrais → Orléans ... Arpajon → Égly → Saint-Jean-de-Braye
+TWO_OPT,Villecresnes,93.33,13.3511,Villecresnes → Boissy-Saint-Léger → Sucy-en-Brie ... Quincy-sous-Sénart → Mandres-les-Roses → Villecresnes
+TWO_OPT,Fouquières-lès-Lens,93.33,11.8944,Fouquières-lès-Lens → Montigny-en-Gohelle → Oignies ... Pont-à-Vendin → Billy-Montigny → Fouquières-lès-Lens
+TWO_OPT,Mandres-les-Roses,93.33,13.4192,Mandres-les-Roses → Villecresnes → Boissy-Saint-Léger ... Combs-la-Ville → Quincy-sous-Sénart → Mandres-les-Roses
+TWO_OPT,Combs-la-Ville,93.34,14.6843,Combs-la-Ville → Quincy-sous-Sénart → Saint-Germain-lès-Corbeil ... Cesson → Savigny-le-Temple → Combs-la-Ville
+TWO_OPT,Dinan,93.34,9.7761,Dinan → Rennes → Angers ... Guingamp → Saint-Brieuc → Dinan
+TWO_OPT,Neauphle-le-Château,93.34,7.7752,Neauphle-le-Château → Plaisir → Les Clayes-sous-Bois ... Lucé → Chartres → Neauphle-le-Château
+TWO_OPT,La Courneuve,93.35,10.5406,La Courneuve → Aubervilliers → Pantin ... Noisy-le-Sec → Bobigny → La Courneuve
+TWO_OPT,Chevilly-Larue,93.35,12.4836,Chevilly-Larue → Thiais → Choisy-le-Roi ... Ivry-sur-Seine → Vitry-sur-Seine → Chevilly-Larue
+TWO_OPT,Beauchamp,93.35,11.3852,Beauchamp → La Frette-sur-Seine → Sartrouville ... Cormeilles-en-Parisis → Montigny-lès-Cormeilles → Beauchamp
+TWO_OPT,Rouelles,93.35,15.1077,Rouelles → Harfleur → Yvetot ... Le Havre → Sainte-Adresse → Rouelles
+TWO_OPT,Saint-Gratien,93.36,9.5078,Saint-Gratien → Eaubonne → Ermont ... Bois-Colombes → Argenteuil → Saint-Gratien
+TWO_OPT,Le Bourget,93.36,10.975,Le Bourget → La Courneuve → Aubervilliers ... Drancy → Bobigny → Le Bourget
+TWO_OPT,Athis-Mons,93.37,7.8282,Athis-Mons → Juvisy-sur-Orge → Viry-Châtillon ... Morsang-sur-Orge → Savigny-sur-Orge → Athis-Mons
+TWO_OPT,Eaubonne,93.37,9.5076,Eaubonne → Ermont → Franconville ... Argenteuil → Sannois → Eaubonne
+TWO_OPT,Serris,93.37,9.1332,Serris → Magny-le-Hongre → Meaux ... Avon → Melun → Serris
+TWO_OPT,Le Blanc-Mesnil,93.4,10.3598,Le Blanc-Mesnil → Drancy → Le Bourget ... Sevran → Aulnay-sous-Bois → Le Blanc-Mesnil
+TWO_OPT,Clichy-sous-Bois,93.4,6.839,Clichy-sous-Bois → Livry-Gargan → Sevran ... Chelles → Montfermeil → Clichy-sous-Bois
+TWO_OPT,Grigny,93.4,11.2817,Grigny → Bondoufle → Fleury-Mérogis ... Évry → Courcouronnes → Grigny
+TWO_OPT,Rosny-sous-Bois,93.41,12.0692,Rosny-sous-Bois → Fontenay-sous-Bois → Nogent-sur-Marne ... Vincennes → Montreuil → Rosny-sous-Bois
+TWO_OPT,Arcueil,93.41,8.538,Arcueil → Montrouge → Malakoff ... Villejuif → Gentilly → Arcueil
+TWO_OPT,Ville-d’Avray,93.41,11.821,Ville-d’Avray → Vaucresson → La Celle-Saint-Cloud ... Rueil-Malmaison → Garches → Ville-d’Avray
+TWO_OPT,Villiers-le-Bel,93.42,12.4544,Villiers-le-Bel → Sarcelles → Saint-Brice-sous-Forêt ... Beaumont-sur-Oise → Ézanville → Villiers-le-Bel
+TWO_OPT,Nîmes,93.43,8.8206,Nîmes → Alès → Jacou ... Aix-en-Provence → Le Pontet → Nîmes
+TWO_OPT,Thiais,93.43,11.2522,Thiais → Choisy-le-Roi → Villeneuve-le-Roi ... Chevilly-Larue → Orly → Thiais
+TWO_OPT,Hœnheim,93.44,10.5008,Hœnheim → Bischheim → Schiltigheim ... Oberhausbergen → Souffelweyersheim → Hœnheim
+TWO_OPT,Flers-lez-Lille,93.44,10.6501,Flers-lez-Lille → Ascq → Hem ... Hellemmes-Lille → Mons-en-Baroeul → Flers-lez-Lille
+TWO_OPT,Saint-Aubin-lès-Elbeuf,93.44,10.9971,Saint-Aubin-lès-Elbeuf → Caudebec-lès-Elbeuf → Évreux ... Sotteville-lès-Rouen → Saint-Étienne-du-Rouvray → Saint-Aubin-lès-Elbeuf
+TWO_OPT,Viry-Châtillon,93.46,11.4371,Viry-Châtillon → Grigny → Bondoufle ... Draveil → Ris-Orangis → Viry-Châtillon
+TWO_OPT,Bouffémont,93.46,12.1901,Bouffémont → Domont → Ézanville ... Persan → Beaumont-sur-Oise → Bouffémont
+TWO_OPT,Clermont-Ferrand,93.47,11.1156,Clermont-Ferrand → Montluçon → Moulins ... Beaumont → Chamalières → Clermont-Ferrand
+TWO_OPT,Beaumont,93.47,10.6439,Beaumont → Chamalières → Clermont-Ferrand ... Alès → Rodez → Beaumont
+TWO_OPT,Meudon,93.5,9.9103,Meudon → Boulogne-Billancourt → Saint-Cloud ... Clamart → Issy-les-Moulineaux → Meudon
+TWO_OPT,Les Mureaux,93.5,11.5588,Les Mureaux → Verneuil-sur-Seine → Vernouillet ... Vauréal → Menucourt → Les Mureaux
+TWO_OPT,Saint-Herblain,93.52,9.7243,Saint-Herblain → La Montagne → Paimbœuf ... Nantes → Rezé → Saint-Herblain
+TWO_OPT,Vichy,93.52,9.8218,Vichy → Roanne → Villefranche-sur-Saône ... Saint-Priest-en-Jarez → Firminy → Vichy
+TWO_OPT,Soisy-sous-Montmorency,93.52,11.6621,Soisy-sous-Montmorency → Eaubonne → Saint-Gratien ... Deuil-la-Barre → Enghien-les-Bains → Soisy-sous-Montmorency
+TWO_OPT,Viroflay,93.52,11.3815,Viroflay → Vaucresson → La Celle-Saint-Cloud ... Igny → Vélizy-Villacoublay → Viroflay
+TWO_OPT,La Madeleine,93.57,10.9654,La Madeleine → Lille → Saint-André ... Marcq-en-Baroeul → Marquette-lès-Lille → La Madeleine
+TWO_OPT,Bois-d’Arcy,93.57,10.2769,Bois-d’Arcy → Fontenay-le-Fleury → Saint-Cyr-l’École ... Montigny-le-Bretonneux → Voisins-le-Bretonneux → Bois-d’Arcy
+TWO_OPT,Creil,93.58,13.2032,Creil → Nogent-sur-Oise → Liancourt ... Goussainville → Fosses → Creil
+TWO_OPT,Sainte-Adresse,93.58,10.516,Sainte-Adresse → Le Havre → Rouelles ... Caen → Hérouville-Saint-Clair → Sainte-Adresse
+TWO_OPT,Villeneuve-le-Roi,93.59,12.3881,Villeneuve-le-Roi → Ablon-sur-Seine → Vigneux-sur-Seine ... Choisy-le-Roi → Orly → Villeneuve-le-Roi
+TWO_OPT,Vigneux-sur-Seine,93.6,7.9133,Vigneux-sur-Seine → Draveil → Ris-Orangis ... Juvisy-sur-Orge → Athis-Mons → Vigneux-sur-Seine
+TWO_OPT,Coulaines,93.6,9.4206,Coulaines → Le Mans → Tours ... Lisieux → Alençon → Coulaines
+TWO_OPT,Sarcelles,93.62,13.0318,Sarcelles → Villiers-le-Bel → Arnouville-lès-Gonesse ... Saint-Brice-sous-Forêt → Groslay → Sarcelles
+TWO_OPT,Poitiers,93.63,10.5586,Poitiers → Tours → Le Mans ... Montaigu → Angers → Poitiers
+TWO_OPT,L’Île-Saint-Denis,93.63,11.1522,L’Île-Saint-Denis → Saint-Denis → Pierrefitte-sur-Seine ... Épinay-sur-Seine → Villeneuve-la-Garenne → L’Île-Saint-Denis
+TWO_OPT,Lens,93.65,12.3137,Lens → Éleu-dit-Leauwette → Liévin ... Sallaumines → Loison-sous-Lens → Lens
+TWO_OPT,Choisy-le-Roi,93.66,10.3697,Choisy-le-Roi → Thiais → Vitry-sur-Seine ... Villeneuve-le-Roi → Orly → Choisy-le-Roi
+TWO_OPT,Carrières-sur-Seine,93.67,10.3015,Carrières-sur-Seine → Levallois-Perret → Neuilly-sur-Seine ... Saint-Ouen → Clichy → Carrières-sur-Seine
+TWO_OPT,Montmorency,93.68,13.4384,Montmorency → Deuil-la-Barre → Montmagny ... Ézanville → Domont → Montmorency
+TWO_OPT,Villemoisson-sur-Orge,93.68,11.3635,Villemoisson-sur-Orge → Villiers-sur-Orge → La Ville-du-Bois ... Savigny-sur-Orge → Morsang-sur-Orge → Villemoisson-sur-Orge
+TWO_OPT,Maurepas,93.69,12.0642,Maurepas → La Verrière → Trappes ... Plaisir → Élancourt → Maurepas
+TWO_OPT,Grenoble,93.7,9.8256,Grenoble → Le Pont-de-Claix → Échirolles ... Saint-Égrève → Fontaine → Grenoble
+TWO_OPT,Enghien-les-Bains,93.71,12.4976,Enghien-les-Bains → Soisy-sous-Montmorency → Eaubonne ... Villeneuve-la-Garenne → Épinay-sur-Seine → Enghien-les-Bains
+TWO_OPT,Égly,93.71,12.0825,Égly → Arpajon → Saint-Germain-lès-Arpajon ... Montereau-faut-Yonne → Montargis → Égly
+TWO_OPT,Fosses,93.73,14.7322,Fosses → Goussainville → Arnouville-lès-Gonesse ... Sevran → Villepinte → Fosses
+TWO_OPT,Le Plessis-Bouchard,93.73,10.2879,Le Plessis-Bouchard → Taverny → Saint-Leu-la-Forêt ... Cormeilles-en-Parisis → Franconville → Le Plessis-Bouchard
+TWO_OPT,Limeil-Brévannes,93.74,13.4744,Limeil-Brévannes → Valenton → Villeneuve-Saint-Georges ... Chennevières-sur-Marne → Bonneuil-sur-Marne → Limeil-Brévannes
+TWO_OPT,Montbéliard,93.74,11.4386,Montbéliard → Audincourt → Sochaux ... Besançon → Vesoul → Montbéliard
+TWO_OPT,Courtry,93.74,11.5299,Courtry → Chelles → Vaires-sur-Marne ... Clichy-sous-Bois → Montfermeil → Courtry
+TWO_OPT,Besançon,93.75,13.4094,Besançon → Vesoul → Montbéliard ... Évian-les-Bains → Thonon-les-Bains → Besançon
+TWO_OPT,Beauvais,93.75,17.7814,Beauvais → Amiens → Longueau ... Liancourt → Clermont → Beauvais
+TWO_OPT,Les Lilas,93.75,9.862,Les Lilas → Bagnolet → Le Pré-Saint-Gervais ... Drancy → Bobigny → Les Lilas
+TWO_OPT,Roissy-en-Brie,93.75,11.6664,Roissy-en-Brie → Lognes → Noisiel ... Cesson → Savigny-le-Temple → Roissy-en-Brie
+TWO_OPT,Caudebec-lès-Elbeuf,93.76,11.3815,Caudebec-lès-Elbeuf → Saint-Aubin-lès-Elbeuf → Saint-Étienne-du-Rouvray ... Magnanville → Évreux → Caudebec-lès-Elbeuf
+TWO_OPT,Talange,93.78,12.2661,Talange → Hagondange → Terville ... Le Ban-Saint-Martin → Metz → Talange
+TWO_OPT,Jœuf,93.78,11.0084,Jœuf → Nilvange → Terville ... Longwy → Villerupt → Jœuf
+TWO_OPT,Vannes,93.79,11.1922,Vannes → Saint-Nazaire → Paimbœuf ... Port-Louis → Auray → Vannes
+TWO_OPT,Auray,93.79,10.7328,Auray → Vannes → Saint-Nazaire ... Lorient → Port-Louis → Auray
+TWO_OPT,Pontoise,93.8,12.1931,Pontoise → Saint-Ouen-l’Aumône → Conflans-Sainte-Honorine ... Andrésy → Éragny → Pontoise
+TWO_OPT,Mantes-la-Ville,93.8,10.6085,Mantes-la-Ville → Magnanville → Chartres ... Limay → Mantes-la-Jolie → Mantes-la-Ville
+TWO_OPT,Le Pré-Saint-Gervais,93.8,13.4459,Le Pré-Saint-Gervais → Pantin → Aubervilliers ... Romainville → Les Lilas → Le Pré-Saint-Gervais
+TWO_OPT,Écully,93.81,8.0308,Écully → Champagne-au-Mont-d’Or → L’Arbresle ... Sainte-Foy-lès-Lyon → Tassin-la-Demi-Lune → Écully
+TWO_OPT,Sèvres,93.82,12.4961,Sèvres → Ville-d’Avray → Garches ... Vélizy-Villacoublay → Chaville → Sèvres
+TWO_OPT,Sainte-Foy-lès-Lyon,93.82,9.4502,Sainte-Foy-lès-Lyon → La Mulatière → Oullins ... Grigny_2 → Saint-Genis-Laval → Sainte-Foy-lès-Lyon
+TWO_OPT,Sceaux,93.82,10.6643,Sceaux → Fontenay-aux-Roses → Châtillon ... Massy → Antony → Sceaux
+TWO_OPT,Barby,93.82,11.8469,Barby → Bassens → Jacob-Bellecombette ... Beausoleil → Menton → Barby
+TWO_OPT,Neuilly-sur-Marne,93.84,8.2696,Neuilly-sur-Marne → Bry-sur-Marne → Le Perreux-Sur-Marne ... Villiers-sur-Marne → Noisy-le-Grand → Neuilly-sur-Marne
+TWO_OPT,Ézanville,93.84,9.4592,Ézanville → Domont → Bouffémont ... Villiers-le-Bel → Goussainville → Ézanville
+TWO_OPT,La Garenne-Colombes,93.85,14.9713,La Garenne-Colombes → Puteaux → Suresnes ... Neuilly-sur-Seine → Courbevoic → La Garenne-Colombes
+TWO_OPT,Lognes,93.87,9.9855,Lognes → Champs-Sur-Marne → Gournay-sur-Marne ... Torcy → Noisiel → Lognes
+TWO_OPT,Nanterre,93.88,12.0018,Nanterre → Bezons → Houilles ... Chatou → Rueil-Malmaison → Nanterre
+TWO_OPT,Brunoy,93.88,7.0096,Brunoy → Épinay-sous-Sénart → Boussy-Saint-Antoine ... Crosne → Montgeron → Brunoy
+TWO_OPT,Vanves,93.89,12.2041,Vanves → Châtillon → Fontenay-aux-Roses ... Montrouge → Malakoff → Vanves
+TWO_OPT,Torcy,93.89,10.6391,Torcy → Bussy-Saint-Georges → Serris ... Le Plessis-Trévise → Roissy-en-Brie → Torcy
+TWO_OPT,Saint-Leu-la-Forêt,93.89,13.4702,Saint-Leu-la-Forêt → Taverny → Persan ... Franconville → Le Plessis-Bouchard → Saint-Leu-la-Forêt
+TWO_OPT,Saint-Étienne-du-Rouvray,93.9,11.346,Saint-Étienne-du-Rouvray → Sotteville-lès-Rouen → Le Grand-Quevilly ... Bonsecours → Le Mesnil-Esnard → Saint-Étienne-du-Rouvray
+TWO_OPT,Chamalières,93.9,13.0346,Chamalières → Beaumont → Vichy ... Montluçon → Clermont-Ferrand → Chamalières
+TWO_OPT,Chambéry,93.91,6.636,Chambéry → Bassens → Barby ... Cognin → Jacob-Bellecombette → Chambéry
+TWO_OPT,Cugnaux,93.95,8.8564,Cugnaux → Villeneuve-Tolosane → La Salvetat-Saint-Gilles ... Colomiers → Tournefeuille → Cugnaux
+TWO_OPT,Saint-Germain-lès-Arpajon,93.95,8.6849,Saint-Germain-lès-Arpajon → Arpajon → Égly ... Saint-Michel-sur-Orge → Brétigny-sur-Orge → Saint-Germain-lès-Arpajon
+TWO_OPT,Neuville-Saint-Rémy,93.95,10.2159,Neuville-Saint-Rémy → Cambrai → Saint-Quentin ... Denain → Lourches → Neuville-Saint-Rémy
+TWO_OPT,Palaiseau,93.96,8.7284,Palaiseau → Igny → Vélizy-Villacoublay ... Bures-sur-Yvette → Orsay → Palaiseau
+TWO_OPT,Le Chesnay,93.96,11.2846,Le Chesnay → La Celle-Saint-Cloud → Vaucresson ... Bures-sur-Yvette → Versailles → Le Chesnay
+TWO_OPT,Sucy-en-Brie,93.96,11.163,Sucy-en-Brie → Ormesson-sur-Marne → Chennevières-sur-Marne ... Limeil-Brévannes → Boissy-Saint-Léger → Sucy-en-Brie
+TWO_OPT,Magny-le-Hongre,93.96,10.7547,Magny-le-Hongre → Meaux → Crégy-lès-Meaux ... Roissy-en-Brie → Serris → Magny-le-Hongre
+TWO_OPT,Le Cannet,93.97,9.1214,Le Cannet → Cagnes-sur-Mer → Saint-André-de-la-Roche ... Le Pontet → Aix-en-Provence → Le Cannet
+TWO_OPT,Orsay,93.97,8.4259,Orsay → Bures-sur-Yvette → Vélizy-Villacoublay ... Arpajon → Égly → Orsay
+TWO_OPT,Perpignan,93.98,14.2537,Perpignan → Valras-Plage → Sète ... Ramonville-Saint-Agne → Castanet-Tolosan → Perpignan
+TWO_OPT,La Garde,93.98,9.2477,La Garde → La Valette-du-Var → Toulon ... Le Cannet → Cannes → La Garde
+TWO_OPT,Bordeaux,93.99,11.0544,Bordeaux → Lormont → Carbon-Blanc ... Eysines → Le Bouscat → Bordeaux
+TWO_OPT,Nevers,93.99,14.944,Nevers → Montargis → Saint-Jean-de-Braye ... Chalon-sur-Saône → Moulins → Nevers
+TWO_OPT,Bègles,93.99,11.2269,Bègles → Villenave-d’Ornon → Talence ... Cenon → Floirac → Bègles
+TWO_OPT,Fleury-les-Aubrais,93.99,7.9129,Fleury-les-Aubrais → Orléans → Saint-Jean-de-la-Ruelle ... Égly → Saint-Jean-de-Braye → Fleury-les-Aubrais
+TWO_OPT,Stiring-Wendel,93.99,12.8298,Stiring-Wendel → Essey-lès-Nancy → Tomblaine ... Oberhausbergen → Lingolsheim → Stiring-Wendel
+TWO_OPT,Villeneuve-Tolosane,93.99,10.0101,Villeneuve-Tolosane → Cugnaux → La Salvetat-Saint-Gilles ... Castanet-Tolosan → Ramonville-Saint-Agne → Villeneuve-Tolosane
+TWO_OPT,Villenave-d’Ornon,94.0,10.9577,Villenave-d’Ornon → Talence → Gradignan ... Floirac → Bègles → Villenave-d’Ornon
+TWO_OPT,Fresnes,94.0,9.4616,Fresnes → Antony → Châtenay-Malabry ... Morangis → Chilly-Mazarin → Fresnes
+TWO_OPT,L’Isle-d’Abeau,94.0,11.0737,L’Isle-d’Abeau → Villefontaine → Pont-de-Chéruy ... Saint-Égrève → La Tour-du-Pin → L’Isle-d’Abeau
+TWO_OPT,Saint-Jean-de-la-Ruelle,94.0,8.0436,Saint-Jean-de-la-Ruelle → Luisant → Lucé ... Fleury-les-Aubrais → Orléans → Saint-Jean-de-la-Ruelle
+TWO_OPT,Domont,94.02,10.7454,Domont → Bouffémont → Saint-Leu-la-Forêt ... Ermont → Eaubonne → Domont
+TWO_OPT,Saint-Denis,94.03,15.6908,Saint-Denis → Deuil-la-Barre → Montmorency ... Aubervilliers → La Courneuve → Saint-Denis
+TWO_OPT,Caluire-et-Cuire,94.03,9.0006,Caluire-et-Cuire → Fontaines-sur-Saône → Villefranche-sur-Saône ... Rillieux-la-Pape → Sathonay-Camp → Caluire-et-Cuire
+TWO_OPT,Francheville,94.03,8.1141,Francheville → Écully → Champagne-au-Mont-d’Or ... L’Arbresle → Craponne → Francheville
+TWO_OPT,Soissons,94.04,12.5485,Soissons → Saint-Quentin → Cambrai ... Reims → Tinqueux → Soissons
+TWO_OPT,Châtenay-Malabry,94.05,10.5439,Châtenay-Malabry → Le Plessis-Robinson → Clamart ... Massy → Verrières-le-Buisson → Châtenay-Malabry
+TWO_OPT,Chartres,94.06,8.5103,Chartres → Lucé → Luisant ... Mantes-la-Ville → Magnanville → Chartres
+TWO_OPT,Les Clayes-sous-Bois,94.06,12.6662,Les Clayes-sous-Bois → Verneuil-sur-Seine → Vernouillet ... Maurepas → La Verrière → Les Clayes-sous-Bois
+TWO_OPT,Montrouge,94.07,11.6399,Montrouge → Malakoff → Vanves ... Châtillon → Bagneux → Montrouge
+TWO_OPT,Montereau-faut-Yonne,94.09,15.515,Montereau-faut-Yonne → Saint-Mammès → Avon ... Saint-André-les-Vergers → Les Noës-près-Troyes → Montereau-faut-Yonne
+TWO_OPT,Nantes,94.1,10.5076,Nantes → Saint-Sébastien-sur-Loire → Montaigu ... Saint-Herblain → Rezé → Nantes
+TWO_OPT,La Rochelle,94.1,8.7853,La Rochelle → Les Sables-d’Olonne → Montaigu ... Angoulême → Poitiers → La Rochelle
+TWO_OPT,Goussainville,94.11,12.6393,Goussainville → Fosses → Creil ... Le Blanc-Mesnil → Aulnay-sous-Bois → Goussainville
+TWO_OPT,Évry,94.12,11.7425,Évry → Courcouronnes → Ris-Orangis ... Corbeil-Essonnes → Saintry-sur-Seine → Évry
+TWO_OPT,Roanne,94.12,12.1025,Roanne → Firminy → Saint-Priest-en-Jarez ... L’Arbresle → Villefranche-sur-Saône → Roanne
+TWO_OPT,Octeville,94.12,9.7933,Octeville → Cherbourg → Bayeux ... Guingamp → Saint-Brieuc → Octeville
+TWO_OPT,Verrières-le-Buisson,94.13,11.7799,Verrières-le-Buisson → Massy → Palaiseau ... Clamart → Le Plessis-Robinson → Verrières-le-Buisson
+TWO_OPT,Avranches,94.13,9.7527,Avranches → Fougères → Laval ... Rennes → Dinan → Avranches
+TWO_OPT,Tours,94.14,10.0884,Tours → Le Mans → Coulaines ... Chartres → Lucé → Tours
+TWO_OPT,Le Plessis-Robinson,94.14,10.1228,Le Plessis-Robinson → Meudon → Boulogne-Billancourt ... Issy-les-Moulineaux → Clamart → Le Plessis-Robinson
+TWO_OPT,Alençon,94.14,12.1747,Alençon → Coulaines → Le Mans ... Caudebec-lès-Elbeuf → Évreux → Alençon
+TWO_OPT,Longueau,94.14,11.8393,Longueau → Amiens → Beauvais ... Saint-Nicolas → Arras → Longueau
+TWO_OPT,Le Raincy,94.15,9.3761,Le Raincy → Gagny → Gournay-sur-Marne ... Chelles → Montfermeil → Le Raincy
+TWO_OPT,Fontenay-aux-Roses,94.16,11.5627,Fontenay-aux-Roses → Châtillon → Malakoff ... Châtenay-Malabry → Sceaux → Fontenay-aux-Roses
+TWO_OPT,Saint-Égrève,94.17,9.5479,Saint-Égrève → Fontaine → Grenoble ... Cognin → La Tour-du-Pin → Saint-Égrève
+TWO_OPT,Menton,94.19,10.175,Menton → Beausoleil → Cap-d’Ail ... Le Pont-de-Claix → Saint-André-de-la-Roche → Menton
+TWO_OPT,Chilly-Mazarin,94.19,11.8647,Chilly-Mazarin → Longjumeau → Villiers-sur-Orge ... Villemoisson-sur-Orge → Épinay-sur-Orge → Chilly-Mazarin
+TWO_OPT,Garches,94.19,11.99,Garches → Vaucresson → La Celle-Saint-Cloud ... Chaville → Ville-d’Avray → Garches
+TWO_OPT,Ablon-sur-Seine,94.19,11.3119,Ablon-sur-Seine → Villeneuve-le-Roi → Orly ... Juvisy-sur-Orge → Athis-Mons → Ablon-sur-Seine
+TWO_OPT,Leuville-sur-Orge,94.19,11.3949,Leuville-sur-Orge → Égly → Arpajon ... La Ville-du-Bois → Montlhéry → Leuville-sur-Orge
+TWO_OPT,Villepinte,94.2,10.61,Villepinte → Goussainville → Fosses ... Livry-Gargan → Sevran → Villepinte
+TWO_OPT,Ermont,94.2,11.9131,Ermont → Saint-Leu-la-Forêt → Taverny ... Franconville → Le Plessis-Bouchard → Ermont
+TWO_OPT,Persan,94.2,14.3275,Persan → Beaumont-sur-Oise → Bouffémont ... Pontoise → Saint-Ouen-l’Aumône → Persan
+TWO_OPT,Saint-Max,94.21,10.9651,Saint-Max → Essey-lès-Nancy → Stiring-Wendel ... Jarville-la-Malgrange → Tomblaine → Saint-Max
+TWO_OPT,Hagondange,94.21,11.245,Hagondange → Talange → Metz ... Nilvange → Terville → Hagondange
+TWO_OPT,Terville,94.21,11.1648,Terville → Hagondange → Talange ... Jœuf → Nilvange → Terville
+TWO_OPT,Le Ban-Saint-Martin,94.21,10.921,Le Ban-Saint-Martin → Longeville-lès-Metz → Montigny-lès-Metz ... Talange → Metz → Le Ban-Saint-Martin
+TWO_OPT,Pérols,94.22,6.9883,Pérols → Montpellier → Castelnau-le-Lez ... Sète → Palavas-les-Flots → Pérols
+TWO_OPT,Nancy,94.23,11.636,Nancy → Saint-Max → Tomblaine ... Heillecourt → Jarville-la-Malgrange → Nancy
+TWO_OPT,Vandœuvre-lès-Nancy,94.23,11.5446,Vandœuvre-lès-Nancy → Heillecourt → Jarville-la-Malgrange ... Villers-lès-Nancy → Neuves-Maisons → Vandœuvre-lès-Nancy
+TWO_OPT,Arnouville-lès-Gonesse,94.23,11.4646,Arnouville-lès-Gonesse → Goussainville → Fosses ... Stains → Garges-lès-Gonesse → Arnouville-lès-Gonesse
+TWO_OPT,Metz,94.24,11.677,Metz → Montigny-lès-Metz → Maxéville ... Longeville-lès-Metz → Le Ban-Saint-Martin → Metz
+TWO_OPT,Champagne-au-Mont-d’Or,94.26,9.0343,Champagne-au-Mont-d’Or → Villefranche-sur-Saône → L’Arbresle ... Tassin-la-Demi-Lune → Écully → Champagne-au-Mont-d’Or
+TWO_OPT,Meyzieu,94.27,8.4441,Meyzieu → Décines-Charpieu → Vaulx-en-Velin ... Bron → Saint-Priest → Meyzieu
+TWO_OPT,Le Mée-sur-Seine,94.28,14.7586,Le Mée-sur-Seine → Cesson → Savigny-le-Temple ... Melun → Dammarie-lè-Lys → Le Mée-sur-Seine
+TWO_OPT,Villefontaine,94.28,10.3278,Villefontaine → L’Isle-d’Abeau → La Tour-du-Pin ... Meyzieu → Pont-de-Chéruy → Villefontaine
+TWO_OPT,Neuville-lès-Dieppe,94.28,6.9206,Neuville-lès-Dieppe → Dieppe → Maromme ... Outreau → Le Portel → Neuville-lès-Dieppe
+TWO_OPT,Jacob-Bellecombette,94.28,9.1399,Jacob-Bellecombette → Cognin → Saint-Égrève ... Bassens → Chambéry → Jacob-Bellecombette
+TWO_OPT,Draveil,94.3,12.7837,Draveil → Vigneux-sur-Seine → Ablon-sur-Seine ... Juvisy-sur-Orge → Athis-Mons → Draveil
+TWO_OPT,Chaville,94.3,11.6109,Chaville → Vélizy-Villacoublay → Bures-sur-Yvette ... Orsay → Igny → Chaville
+TWO_OPT,Orléans,94.31,13.6423,Orléans → Saint-Jean-de-la-Ruelle → Fleury-les-Aubrais ... Nevers → Montluçon → Orléans
+TWO_OPT,Loison-sous-Lens,94.32,15.0036,Loison-sous-Lens → Lens → Éleu-dit-Leauwette ... Longueau → Amiens → Loison-sous-Lens
+TWO_OPT,Saint-Mammès,94.33,14.8742,Saint-Mammès → Avon → Melun ... Montargis → Montereau-faut-Yonne → Saint-Mammès
+TWO_OPT,Aix-les-Bains,94.34,13.7885,Aix-les-Bains → Meythet → Cran-Gévrier ... Bassens → Barby → Aix-les-Bains
+TWO_OPT,Vesoul,94.34,11.9745,Vesoul → Besançon → Thonon-les-Bains ... Audincourt → Montbéliard → Vesoul
+TWO_OPT,Annecy,94.36,12.0178,Annecy → Cran-Gévrier → Meythet ... Saint-Genis-Pouilly → Saint-Julien-en-Genevois → Annecy
+TWO_OPT,Cherbourg,94.36,10.2789,Cherbourg → Octeville → Avranches ... Caen → Bayeux → Cherbourg
+TWO_OPT,Saint-Genis-Pouilly,94.37,9.5655,Saint-Genis-Pouilly → Ferney-Voltaire → Besançon ... Bourg-en-Bresse → Lons-le-Saunier → Saint-Genis-Pouilly
+TWO_OPT,Saint-Fons,94.38,11.4938,Saint-Fons → Pierre-Bénite → Oullins ... Saint-Genis-Laval → Grigny_2 → Saint-Fons
+TWO_OPT,Outreau,94.38,13.4735,Outreau → Le Portel → Neuville-lès-Dieppe ... Calais → Boulogne-sur-Mer → Outreau
+TWO_OPT,La Tour-du-Pin,94.38,9.9528,La Tour-du-Pin → Saint-Égrève → Fontaine ... Villefontaine → L’Isle-d’Abeau → La Tour-du-Pin
+TWO_OPT,La Ville-du-Bois,94.38,11.53,La Ville-du-Bois → Villiers-sur-Orge → Saint-Michel-sur-Orge ... Igny → Palaiseau → La Ville-du-Bois
+TWO_OPT,Le Grand-Quevilly,94.39,11.4869,Le Grand-Quevilly → Saint-Aubin-lès-Elbeuf → Caudebec-lès-Elbeuf ... Saint-Étienne-du-Rouvray → Sotteville-lès-Rouen → Le Grand-Quevilly
+TWO_OPT,Darnétal,94.39,10.5764,Darnétal → Bonsecours → Le Mesnil-Esnard ... Bois-Guillaume → Bihorel → Darnétal
+TWO_OPT,Bihorel,94.39,10.9721,Bihorel → Darnétal → Bonsecours ... Mont-Saint-Aignan → Bois-Guillaume → Bihorel
+TWO_OPT,Beauzelle,94.4,10.9131,Beauzelle → Colomiers → La Salvetat-Saint-Gilles ... Aucamville → Saint-Alban → Beauzelle
+TWO_OPT,Cergy,94.41,10.4604,Cergy → Éragny → Conflans-Sainte-Honorine ... Saint-Ouen-l’Aumône → Pontoise → Cergy
+TWO_OPT,Amiens,94.43,10.8956,Amiens → Longueau → Arras ... Menucourt → Beauvais → Amiens
+TWO_OPT,Fontenay-sous-Bois,94.45,11.9658,Fontenay-sous-Bois → Nogent-sur-Marne → Joinville-le-Pont ... Neuilly-Plaisance → Le Perreux-Sur-Marne → Fontenay-sous-Bois
+TWO_OPT,Igny,94.45,9.9726,Igny → Palaiseau → Massy ... Châtenay-Malabry → Verrières-le-Buisson → Igny
+TWO_OPT,Belfort,94.46,11.448,Belfort → Pfastatt → Kingersheim ... Montbéliard → Sochaux → Belfort
+TWO_OPT,Audincourt,94.46,10.8896,Audincourt → Montbéliard → Sochaux ... Thonon-les-Bains → Évian-les-Bains → Audincourt
+TWO_OPT,Sochaux,94.46,10.8505,Sochaux → Belfort → Pfastatt ... Audincourt → Montbéliard → Sochaux
+TWO_OPT,Pau,94.48,8.223,Pau → Billère → Boucau ... Agen → Tarbes → Pau
+TWO_OPT,Biarritz,94.48,8.1856,Biarritz → Hendaye → Arcachon ... Bayonne → Anglet → Biarritz
+TWO_OPT,Boucau,94.48,7.9623,Boucau → Bayonne → Anglet ... Pau → Billère → Boucau
+TWO_OPT,Villefranche-sur-Saône,94.52,11.9024,Villefranche-sur-Saône → L’Arbresle → Craponne ... Bourg-en-Bresse → Fontaines-sur-Saône → Villefranche-sur-Saône
+TWO_OPT,Eysines,94.53,8.3968,Eysines → Mérignac → Pessac ... Montaigu → La Rochelle → Eysines
+TWO_OPT,Angers,94.54,7.9133,Angers → Le Mans → Coulaines ... Dinan → Rennes → Angers
+TWO_OPT,Agen,94.54,10.1861,Agen → Tarbes → Pau ... Villeneuve-Tolosane → La Salvetat-Saint-Gilles → Agen
+TWO_OPT,Mérignac,94.55,10.2007,Mérignac → Eysines → Arcachon ... Gradignan → Pessac → Mérignac
+TWO_OPT,Puteaux,94.55,13.4901,Puteaux → Suresnes → Garches ... Boulogne-Billancourt → Saint-Cloud → Puteaux
+TWO_OPT,Le Vésinet,94.55,10.6046,Le Vésinet → Croissy-sur-Seine → Bougival ... Montesson → Chatou → Le Vésinet
+TWO_OPT,Riedisheim,94.55,10.259,Riedisheim → Mulhouse → Illzach ... Ostwald → Huningue → Riedisheim
+TWO_OPT,Boissy-Saint-Léger,94.56,11.8763,Boissy-Saint-Léger → Limeil-Brévannes → Valenton ... Brunoy → Yerres → Boissy-Saint-Léger
+TWO_OPT,Évian-les-Bains,94.58,8.7489,Évian-les-Bains → Thonon-les-Bains → Cluses ... Montbéliard → Audincourt → Évian-les-Bains
+TWO_OPT,Vélizy-Villacoublay,94.59,11.9241,Vélizy-Villacoublay → Versailles → Le Chesnay ... Verrières-le-Buisson → Igny → Vélizy-Villacoublay
+TWO_OPT,Éleu-dit-Leauwette,94.6,15.1698,Éleu-dit-Leauwette → Liévin → Grenay ... Longueau → Amiens → Éleu-dit-Leauwette
+TWO_OPT,Franconville,94.61,13.4632,Franconville → Le Plessis-Bouchard → Taverny ... Argenteuil → Sannois → Franconville
+TWO_OPT,Paimbœuf,94.61,7.6772,Paimbœuf → Saint-Nazaire → Vannes ... Saint-Herblain → La Montagne → Paimbœuf
+TWO_OPT,Lyon,94.63,8.835,Lyon → Sainte-Foy-lès-Lyon → La Mulatière ... Saint-Fons → Pierre-Bénite → Lyon
+TWO_OPT,Sète,94.63,10.0255,Sète → Valras-Plage → Perpignan ... Beaumont → Rodez → Sète
+TWO_OPT,Saint-Cloud,94.63,13.6818,Saint-Cloud → Suresnes → Puteaux ... Meudon → Boulogne-Billancourt → Saint-Cloud
+TWO_OPT,Oullins,94.64,8.7304,Oullins → Saint-Genis-Laval → Pierre-Bénite ... Sainte-Foy-lès-Lyon → La Mulatière → Oullins
+TWO_OPT,Tassin-la-Demi-Lune,94.64,13.2133,Tassin-la-Demi-Lune → Écully → Champagne-au-Mont-d’Or ... Francheville → Craponne → Tassin-la-Demi-Lune
+TWO_OPT,Montpellier,94.65,12.135,Montpellier → Castelnau-le-Lez → Jacou ... Palavas-les-Flots → Pérols → Montpellier
+TWO_OPT,Rodez,94.67,11.2902,Rodez → Beaumont → Chamalières ... Sainte-Foy-la-Grande → Agen → Rodez
+TWO_OPT,Bron,94.68,10.446,Bron → Décines-Charpieu → Meyzieu ... Rillieux-la-Pape → Vaulx-en-Velin → Bron
+TWO_OPT,Maubeuge,94.7,11.4514,Maubeuge → Avesnes-sur-Helpe → Charleville-Mézières ... Valenciennes → Marly → Maubeuge
+TWO_OPT,Marly,94.7,10.9761,Marly → Maubeuge → Avesnes-sur-Helpe ... Bruay-sur-l’Escaut → Valenciennes → Marly
+TWO_OPT,Bruay-sur-l’Escaut,94.7,10.8702,Bruay-sur-l’Escaut → Valenciennes → Marly ... Anzin → Beuvrages → Bruay-sur-l’Escaut
+TWO_OPT,Beuvrages,94.7,10.8306,Beuvrages → Bruay-sur-l’Escaut → Valenciennes ... Denain → Anzin → Beuvrages
+TWO_OPT,Brest,94.72,8.5976,Brest → Le Relecq-Kerhuon → Guingamp ... Port-Louis → Lorient → Brest
+TWO_OPT,Saint-Brieuc,94.72,7.2997,Saint-Brieuc → Dinan → Rennes ... Le Relecq-Kerhuon → Guingamp → Saint-Brieuc
+TWO_OPT,Yvetot,94.72,9.4741,Yvetot → Harfleur → Rouelles ... Alençon → Lisieux → Yvetot
+TWO_OPT,Jarville-la-Malgrange,94.72,13.5113,Jarville-la-Malgrange → Heillecourt → Vandœuvre-lès-Nancy ... Saint-Max → Nancy → Jarville-la-Malgrange
+TWO_OPT,Saint-Sébastien-sur-Loire,94.73,10.2976,Saint-Sébastien-sur-Loire → Laval → Fougères ... Angers → Montaigu → Saint-Sébastien-sur-Loire
+TWO_OPT,Mulhouse,94.74,11.1158,Mulhouse → Illzach → Kingersheim ... Huningue → Riedisheim → Mulhouse
+TWO_OPT,Castelnau-le-Lez,94.74,12.1886,Castelnau-le-Lez → Jacou → Le Crès ... Pérols → Montpellier → Castelnau-le-Lez
+TWO_OPT,Palavas-les-Flots,94.74,11.7625,Palavas-les-Flots → Pérols → Montpellier ... Valras-Plage → Sète → Palavas-les-Flots
+TWO_OPT,Saint-Étienne,94.75,12.0594,Saint-Étienne → Saint-Priest-en-Jarez → Firminy ... Rive-de-Gier → Terrenoire → Saint-Étienne
+TWO_OPT,Évreux,94.75,12.4485,Évreux → Caudebec-lès-Elbeuf → Saint-Aubin-lès-Elbeuf ... Luisant → Lucé → Évreux
+TWO_OPT,Terrenoire,94.75,11.6946,Terrenoire → Saint-Étienne → Saint-Priest-en-Jarez ... Grigny_2 → Rive-de-Gier → Terrenoire
+TWO_OPT,Lons-le-Saunier,94.76,11.6199,Lons-le-Saunier → Fontaine-lès-Dijon → Talant ... Ferney-Voltaire → Saint-Genis-Pouilly → Lons-le-Saunier
+TWO_OPT,Ostwald,94.76,15.6895,Ostwald → Strasbourg → Schiltigheim ... Huningue → Lingolsheim → Ostwald
+TWO_OPT,Strasbourg,94.77,16.3076,Strasbourg → Schiltigheim → Bischheim ... Lingolsheim → Oberhausbergen → Strasbourg
+TWO_OPT,Schiltigheim,94.77,16.5042,Schiltigheim → Bischheim → Hœnheim ... Oberhausbergen → Strasbourg → Schiltigheim
+TWO_OPT,Bischheim,94.77,15.8031,Bischheim → Hœnheim → Souffelweyersheim ... Strasbourg → Schiltigheim → Bischheim
+TWO_OPT,Port-Louis,94.77,9.0612,Port-Louis → Auray → Vannes ... Brest → Lorient → Port-Louis
+TWO_OPT,Caen,94.79,7.4743,Caen → Bayeux → Cherbourg ... Lisieux → Hérouville-Saint-Clair → Caen
+TWO_OPT,Châlons-en-Champagne,94.79,14.4605,Châlons-en-Champagne → Reims → Tinqueux ... Saint-André-les-Vergers → Les Noës-près-Troyes → Châlons-en-Champagne
+TWO_OPT,Auchel,94.83,12.078,Auchel → Bergues → Coudekerque-Branche ... Beauvais → Amiens → Auchel
+TWO_OPT,Reims,94.85,14.0425,Reims → Tinqueux → Châlons-en-Champagne ... Longwy → Charleville-Mézières → Reims
+TWO_OPT,Laval,94.85,8.1386,Laval → Angers → Le Mans ... Rennes → Fougères → Laval
+TWO_OPT,Arpajon,94.86,11.6207,Arpajon → Égly → Saint-Jean-de-Braye ... Leuville-sur-Orge → Saint-Germain-lès-Arpajon → Arpajon
+TWO_OPT,Villemomble,94.87,11.4757,Villemomble → Le Raincy → Gagny ... Bondy → Les Pavillons-sous-Bois → Villemomble
+TWO_OPT,Lucé,94.87,11.0374,Lucé → Luisant → Chartres ... Caudebec-lès-Elbeuf → Évreux → Lucé
+TWO_OPT,Beausoleil,94.9,11.0479,Beausoleil → Menton → Échirolles ... Beaulieu-sur-Mer → Cap-d’Ail → Beausoleil
+TWO_OPT,Beaumont-sur-Oise,94.9,13.7552,Beaumont-sur-Oise → Persan → Pontoise ... Domont → Bouffémont → Beaumont-sur-Oise
+TWO_OPT,Cap-d’Ail,94.9,10.9441,Cap-d’Ail → Beausoleil → Menton ... Saint-André-de-la-Roche → Beaulieu-sur-Mer → Cap-d’Ail
+TWO_OPT,Beaulieu-sur-Mer,94.9,11.2614,Beaulieu-sur-Mer → Cap-d’Ail → Beausoleil ... Nice → Saint-André-de-la-Roche → Beaulieu-sur-Mer
+TWO_OPT,Rouen,94.91,7.34,Rouen → Mont-Saint-Aignan → Déville-lès-Rouen ... Bihorel → Bois-Guillaume → Rouen
+TWO_OPT,Sotteville-lès-Rouen,94.91,7.5917,Sotteville-lès-Rouen → Saint-Étienne-du-Rouvray → Le Mesnil-Esnard ... Le Grand-Quevilly → Le Petit-Quevilly → Sotteville-lès-Rouen
+TWO_OPT,Le Petit-Quevilly,94.91,7.5025,Le Petit-Quevilly → Le Grand-Quevilly → Saint-Aubin-lès-Elbeuf ... Sotteville-lès-Rouen → Rouen → Le Petit-Quevilly
+TWO_OPT,Déville-lès-Rouen,94.91,7.3727,Déville-lès-Rouen → Maromme → Yvetot ... Rouen → Mont-Saint-Aignan → Déville-lès-Rouen
+TWO_OPT,Le Mesnil-Esnard,94.91,7.2178,Le Mesnil-Esnard → Bonsecours → Darnétal ... Sotteville-lès-Rouen → Saint-Étienne-du-Rouvray → Le Mesnil-Esnard
+TWO_OPT,Bonsecours,94.91,7.36,Bonsecours → Le Mesnil-Esnard → Saint-Étienne-du-Rouvray ... Bihorel → Darnétal → Bonsecours
+TWO_OPT,Grand-Fort-Philippe,94.91,13.101,Grand-Fort-Philippe → Calais → Boulogne-sur-Mer ... Saint-Pol-sur-Mer → Fort-Mardyck → Grand-Fort-Philippe
+TWO_OPT,Pantin,94.92,14.8781,Pantin → Le Pré-Saint-Gervais → Bellevue ... Saint-Denis → Aubervilliers → Pantin
+TWO_OPT,Bassens,94.92,10.9284,Bassens → Jacob-Bellecombette → Cognin ... Meythet → Barby → Bassens
+TWO_OPT,Aniche,94.93,10.2518,Aniche → Neuville-Saint-Rémy → Cambrai ... Douai → Waziers → Aniche
+TWO_OPT,Nice,94.94,11.5115,Nice → Beaulieu-sur-Mer → Cap-d’Ail ... Cagnes-sur-Mer → Saint-Laurent-du-Var → Nice
+TWO_OPT,Antibes,94.94,11.328,Antibes → Cagnes-sur-Mer → Saint-Laurent-du-Var ... Le Cannet → Vallauris → Antibes
+TWO_OPT,Cannes,94.94,11.7168,Cannes → Le Cannet → Vallauris ... La Valette-du-Var → La Garde → Cannes
+TWO_OPT,Cagnes-sur-Mer,94.94,11.6283,Cagnes-sur-Mer → Saint-Laurent-du-Var → Nice ... Vallauris → Antibes → Cagnes-sur-Mer
+TWO_OPT,Angoulême,94.94,11.034,Angoulême → Sainte-Foy-la-Grande → Carbon-Blanc ... La Rochelle → Poitiers → Angoulême
+TWO_OPT,Saint-Laurent-du-Var,94.94,11.8463,Saint-Laurent-du-Var → Nice → Beaulieu-sur-Mer ... Antibes → Cagnes-sur-Mer → Saint-Laurent-du-Var
+TWO_OPT,Vallauris,94.94,11.6348,Vallauris → Antibes → Cagnes-sur-Mer ... Cannes → Le Cannet → Vallauris
+TWO_OPT,Bry-sur-Marne,94.96,10.2805,Bry-sur-Marne → Champigny-sur-Marne → Chennevières-sur-Marne ... Noisy-le-Grand → Neuilly-sur-Marne → Bry-sur-Marne
+TWO_OPT,Saint-André,94.96,10.2607,Saint-André → Marquette-lès-Lille → La Madeleine ... Lomme → Lambersart → Saint-André
+TWO_OPT,Bondoufle,94.96,11.0087,Bondoufle → Fleury-Mérogis → Grigny ... Courcouronnes → Ris-Orangis → Bondoufle
+TWO_OPT,Jouy-le-Moutier,94.97,9.0755,Jouy-le-Moutier → Cergy → Vauréal ... Andrésy → Chanteloup-les-Vignes → Jouy-le-Moutier
+TWO_OPT,Courbevoic,94.98,8.4779,Courbevoic → Neuilly-sur-Seine → Levallois-Perret ... Meudon → Boulogne-Billancourt → Courbevoic
+TWO_OPT,Lambersart,94.98,10.364,Lambersart → Lomme → Haubourdin ... Armentières → Pérenchies → Lambersart
+TWO_OPT,Firminy,94.98,9.1834,Firminy → Saint-Priest-en-Jarez → Saint-Étienne ... Nîmes → Alès → Firminy
+TWO_OPT,Dunkerque,94.99,7.7805,Dunkerque → Rosendaël → Coudekerque-Branche ... Petite-Synthe → Cappelle-la-Grande → Dunkerque
+TWO_OPT,Coudekerque-Branche,94.99,7.8903,Coudekerque-Branche → Bergues → Auchel ... Dunkerque → Rosendaël → Coudekerque-Branche
+TWO_OPT,Rosendaël,94.99,7.5313,Rosendaël → Coudekerque-Branche → Bergues ... Cappelle-la-Grande → Dunkerque → Rosendaël
+TWO_OPT,Cappelle-la-Grande,94.99,7.7021,Cappelle-la-Grande → Dunkerque → Rosendaël ... Saint-Pol-sur-Mer → Petite-Synthe → Cappelle-la-Grande
+TWO_OPT,Fort-Mardyck,95.01,7.5812,Fort-Mardyck → Saint-Pol-sur-Mer → Petite-Synthe ... Calais → Grand-Fort-Philippe → Fort-Mardyck
+TWO_OPT,Douai,95.02,9.4274,Douai → Waziers → Neuville-Saint-Rémy ... Courcelles-les-Lens → Courchelettes → Douai
+TWO_OPT,Dijon,95.03,12.0432,Dijon → Talant → Fontaine-lès-Dijon ... Chalon-sur-Saône → Chenôve → Dijon
+TWO_OPT,Vaujours,95.04,11.6798,Vaujours → Villeparisis → Crégy-lès-Meaux ... Chelles → Courtry → Vaujours
+TWO_OPT,Vincennes,95.05,9.392,Vincennes → Saint-Mandé → Charenton-le-Pont ... Romainville → Montreuil → Vincennes
+TWO_OPT,Sainte-Foy-la-Grande,95.06,10.1026,Sainte-Foy-la-Grande → Carbon-Blanc → Lormont ... Périgueux → Agen → Sainte-Foy-la-Grande
+TWO_OPT,Le Pontet,95.07,11.2296,Le Pontet → Aix-en-Provence → Marseille ... La Tour-du-Pin → Valence → Le Pontet
+TWO_OPT,Neuves-Maisons,95.08,11.0206,Neuves-Maisons → Villers-lès-Nancy → Maxéville ... Besançon → Vesoul → Neuves-Maisons
+TWO_OPT,Colombes,95.09,9.9856,Colombes → Bois-Colombes → Carrières-sur-Seine ... Épinay-sur-Seine → Gennevilliers → Colombes
+TWO_OPT,Bois-Guillaume,95.09,7.0726,Bois-Guillaume → Bihorel → Darnétal ... Rouen → Mont-Saint-Aignan → Bois-Guillaume
+TWO_OPT,Luisant,95.09,6.6428,Luisant → Lucé → Chartres ... Orléans → Saint-Jean-de-la-Ruelle → Luisant
+TWO_OPT,Courchelettes,95.09,9.5564,Courchelettes → Douai → Waziers ... Arras → Saint-Nicolas → Courchelettes
+TWO_OPT,Talence,95.1,8.1742,Talence → Villenave-d’Ornon → Bègles ... Le Bouscat → Bordeaux → Talence
+TWO_OPT,Cenon,95.1,7.8657,Cenon → Lormont → Carbon-Blanc ... Bègles → Floirac → Cenon
+TWO_OPT,Gradignan,95.1,8.1802,Gradignan → Pessac → Mérignac ... Hendaye → Arcachon → Gradignan
+TWO_OPT,Le Bouscat,95.1,8.1725,Le Bouscat → Bordeaux → Talence ... Mérignac → Eysines → Le Bouscat
+TWO_OPT,Lormont,95.1,7.7309,Lormont → Carbon-Blanc → Angoulême ... Floirac → Cenon → Lormont
+TWO_OPT,Avon,95.11,13.9002,Avon → Melun → Dammarie-lè-Lys ... Montereau-faut-Yonne → Saint-Mammès → Avon
+TWO_OPT,Oignies,95.11,9.3006,Oignies → Wattignies → Lille ... Waziers → Courcelles-les-Lens → Oignies
+TWO_OPT,Gournay-sur-Marne,95.11,10.5046,Gournay-sur-Marne → Champs-Sur-Marne → Lognes ... Courtry → Chelles → Gournay-sur-Marne
+TWO_OPT,Bois-Colombes,95.12,12.7129,Bois-Colombes → Colombes → Bezons ... Levallois-Perret → Carrières-sur-Seine → Bois-Colombes
+TWO_OPT,La Mulatière,95.12,12.9112,La Mulatière → Sainte-Foy-lès-Lyon → Tassin-la-Demi-Lune ... Pierre-Bénite → Oullins → La Mulatière
+TWO_OPT,Sannois,95.13,9.689,Sannois → Argenteuil → Bezons ... Colombes → Bois-Colombes → Sannois
+TWO_OPT,Verneuil-sur-Seine,95.13,10.7789,Verneuil-sur-Seine → Vernouillet → Chanteloup-les-Vignes ... Neuville-lès-Dieppe → Menucourt → Verneuil-sur-Seine
+TWO_OPT,Floirac,95.14,7.575,Floirac → Cenon → Lormont ... Bordeaux → Le Bouscat → Floirac
+TWO_OPT,Cognin,95.15,10.1388,Cognin → Jacob-Bellecombette → Bassens ... Aix-les-Bains → Chambéry → Cognin
+TWO_OPT,Villeneuve-la-Garenne,95.16,9.4665,Villeneuve-la-Garenne → L’Île-Saint-Denis → Saint-Denis ... Clichy → Saint-Ouen → Villeneuve-la-Garenne
+TWO_OPT,Vauréal,95.16,10.3668,Vauréal → Cergy → Pontoise ... Chanteloup-les-Vignes → Jouy-le-Moutier → Vauréal
+TWO_OPT,Saint-André-les-Vergers,95.16,14.4646,Saint-André-les-Vergers → Les Noës-près-Troyes → Troyes ... Chenôve → Chalon-sur-Saône → Saint-André-les-Vergers
+TWO_OPT,Valenton,95.18,13.8001,Valenton → Limeil-Brévannes → Boissy-Saint-Léger ... Montgeron → Yerres → Valenton
+TWO_OPT,Pessac,95.19,8.1569,Pessac → Gradignan → Talence ... Arcachon → Mérignac → Pessac
+TWO_OPT,Carbon-Blanc,95.19,7.8072,Carbon-Blanc → Angoulême → Poitiers ... Cenon → Lormont → Carbon-Blanc
+TWO_OPT,Clamart,95.2,9.5972,Clamart → Le Plessis-Robinson → Châtenay-Malabry ... Vélizy-Villacoublay → Igny → Clamart
+TWO_OPT,Bourg-en-Bresse,95.2,11.1964,Bourg-en-Bresse → Pont-de-Chéruy → Villefontaine ... Jacob-Bellecombette → Cognin → Bourg-en-Bresse
+TWO_OPT,Fontaine-lès-Dijon,95.2,11.2675,Fontaine-lès-Dijon → Talant → Dijon ... Vesoul → Besançon → Fontaine-lès-Dijon
+TWO_OPT,Crosne,95.21,11.6374,Crosne → Montgeron → Yerres ... Valenton → Villeneuve-Saint-Georges → Crosne
+TWO_OPT,Nogent-sur-Marne,95.22,10.3188,Nogent-sur-Marne → Joinville-le-Pont → Saint-Maurice ... Bry-sur-Marne → Le Perreux-Sur-Marne → Nogent-sur-Marne
+TWO_OPT,Le Plessis-Trévise,95.22,12.2272,Le Plessis-Trévise → Champs-Sur-Marne → Gournay-sur-Marne ... Neuilly-sur-Marne → Noisy-le-Grand → Le Plessis-Trévise
+TWO_OPT,Eybens,95.22,11.583,Eybens → Saint-Martin-d’Hères → Meylan ... Saint-Égrève → Grenoble → Eybens
+TWO_OPT,Quincy-sous-Sénart,95.26,7.0363,Quincy-sous-Sénart → Combs-la-Ville → Mandres-les-Roses ... Épinay-sous-Sénart → Boussy-Saint-Antoine → Quincy-sous-Sénart
+TWO_OPT,Montgeron,95.27,10.7405,Montgeron → Yerres → Brunoy ... Villeneuve-Saint-Georges → Crosne → Montgeron
+TWO_OPT,Cluses,95.27,11.2713,Cluses → Évian-les-Bains → Thonon-les-Bains ... Beausoleil → Menton → Cluses
+TWO_OPT,Troyes,95.31,12.0261,Troyes → Saint-André-les-Vergers → Les Noës-près-Troyes ... Châlons-en-Champagne → Vitry-le-François → Troyes
+TWO_OPT,Saint-Jean,95.31,10.8756,Saint-Jean → L’Union → Aucamville ... Limoges → Rodez → Saint-Jean
+TWO_OPT,Saint-Alban,95.35,10.8097,Saint-Alban → Aucamville → Toulouse ... Saint-Jean → L’Union → Saint-Alban
+TWO_OPT,Valras-Plage,95.35,13.9535,Valras-Plage → Sète → Palavas-les-Flots ... Castanet-Tolosan → Perpignan → Valras-Plage
+TWO_OPT,Villeneuve-Saint-Georges,95.36,13.9028,Villeneuve-Saint-Georges → Crosne → Montgeron ... Ablon-sur-Seine → Villeneuve-le-Roi → Villeneuve-Saint-Georges
+TWO_OPT,Saint-Julien-en-Genevois,95.36,10.6616,Saint-Julien-en-Genevois → Aix-les-Bains → Barby ... Saint-Genis-Pouilly → Ferney-Voltaire → Saint-Julien-en-Genevois
+TWO_OPT,Aucamville,95.36,10.7684,Aucamville → Toulouse → Ramonville-Saint-Agne ... Saint-Jean → L’Union → Aucamville
+TWO_OPT,Denain,95.37,11.9492,Denain → Beuvrages → Anzin ... Aniche → Lourches → Denain
+TWO_OPT,Hérouville-Saint-Clair,95.38,8.1173,Hérouville-Saint-Clair → Caen → Bayeux ... Alençon → Lisieux → Hérouville-Saint-Clair
+TWO_OPT,Fontenay-le-Fleury,95.38,8.81,Fontenay-le-Fleury → Saint-Cyr-l’École → Guyancourt ... Le Chesnay → Versailles → Fontenay-le-Fleury
+TWO_OPT,Valenciennes,95.39,14.3848,Valenciennes → Denain → Lourches ... Beuvrages → Anzin → Valenciennes
+TWO_OPT,Saint-André-de-la-Roche,95.4,8.6759,Saint-André-de-la-Roche → Menton → Beausoleil ... Saint-Laurent-du-Var → Nice → Saint-André-de-la-Roche
+TWO_OPT,Croissy-sur-Seine,95.42,6.9932,Croissy-sur-Seine → Bougival → Vaucresson ... Le Port-Marly → Le Vésinet → Croissy-sur-Seine
+TWO_OPT,Bergues,95.43,11.6726,Bergues → Coudekerque-Branche → Rosendaël ... Béthune → Auchel → Bergues
+TWO_OPT,Souffelweyersheim,95.44,8.3064,Souffelweyersheim → Hœnheim → Bischheim ... Stiring-Wendel → Oberhausbergen → Souffelweyersheim
+TWO_OPT,Oberhausbergen,95.44,8.3443,Oberhausbergen → Souffelweyersheim → Hœnheim ... Terville → Stiring-Wendel → Oberhausbergen
+TWO_OPT,Saint-Pol-sur-Mer,95.45,12.0171,Saint-Pol-sur-Mer → Fort-Mardyck → Grand-Fort-Philippe ... Dunkerque → Petite-Synthe → Saint-Pol-sur-Mer
+TWO_OPT,Marseille,95.46,8.9146,Marseille → Aix-en-Provence → Le Pontet ... Carnoux-en-Provence → La Penne-sur-Huveaune → Marseille
+TWO_OPT,Montigny-lès-Metz,95.47,11.7857,Montigny-lès-Metz → Longeville-lès-Metz → Le Ban-Saint-Martin ... Nancy → Saint-Max → Montigny-lès-Metz
+TWO_OPT,Lingolsheim,95.48,8.6809,Lingolsheim → Oberhausbergen → Souffelweyersheim ... Terville → Stiring-Wendel → Lingolsheim
+TWO_OPT,Wattignies,95.48,16.697,Wattignies → Lille → Fâches-Thumesnil ... Courcelles-les-Lens → Oignies → Wattignies
+TWO_OPT,Saint-Brice-sous-Forêt,95.49,9.9418,Saint-Brice-sous-Forêt → Ézanville → Domont ... Pierrefitte-sur-Seine → Groslay → Saint-Brice-sous-Forêt
+TWO_OPT,Le Relecq-Kerhuon,95.49,9.1296,Le Relecq-Kerhuon → Brest → Lorient ... Saint-Brieuc → Guingamp → Le Relecq-Kerhuon
+TWO_OPT,Le Mesnil-le-Roi,95.51,9.871,Le Mesnil-le-Roi → Conflans-Sainte-Honorine → Éragny ... Sartrouville → Maisons-Laffitte → Le Mesnil-le-Roi
+TWO_OPT,Saint-Nazaire,95.52,9.6095,Saint-Nazaire → Paimbœuf → La Montagne ... Dinan → Rennes → Saint-Nazaire
+TWO_OPT,Lorient,95.52,9.5373,Lorient → Port-Louis → Auray ... Le Relecq-Kerhuon → Brest → Lorient
+TWO_OPT,Ris-Orangis,95.52,12.5009,Ris-Orangis → Courcouronnes → Évry ... Vigneux-sur-Seine → Draveil → Ris-Orangis
+TWO_OPT,Le Port-Marly,95.53,11.0534,Le Port-Marly → Le Pecq → Mareil-Marly ... Croissy-sur-Seine → Le Vésinet → Le Port-Marly
+TWO_OPT,Neuilly-sur-Seine,95.54,9.2716,Neuilly-sur-Seine → Courbevoic → Puteaux ... Issy-les-Moulineaux → Boulogne-Billancourt → Neuilly-sur-Seine
+TWO_OPT,Montesson,95.54,11.056,Montesson → Chatou → Croissy-sur-Seine ... Le Port-Marly → Le Vésinet → Montesson
+TWO_OPT,Mareil-Marly,95.55,12.0215,Mareil-Marly → Marly-le-Roi → Le Chesnay ... Le Port-Marly → Le Pecq → Mareil-Marly
+TWO_OPT,Chatou,95.56,11.5028,Chatou → Croissy-sur-Seine → Bougival ... Le Port-Marly → Le Vésinet → Chatou
+TWO_OPT,Saint-Ouen,95.57,9.7159,Saint-Ouen → L’Île-Saint-Denis → Villeneuve-la-Garenne ... Arcueil → Paris → Saint-Ouen
+TWO_OPT,Sathonay-Camp,95.57,10.1019,Sathonay-Camp → Fontaines-sur-Saône → Caluire-et-Cuire ... Vaulx-en-Velin → Rillieux-la-Pape → Sathonay-Camp
+TWO_OPT,Vaulx-en-Velin,95.58,10.653,Vaulx-en-Velin → Rillieux-la-Pape → Sathonay-Camp ... Lyon → Caluire-et-Cuire → Vaulx-en-Velin
+TWO_OPT,Longwy,95.6,10.2336,Longwy → Villerupt → Nilvange ... Longeville-lès-Metz → Jœuf → Longwy
+TWO_OPT,Villerupt,95.6,10.2788,Villerupt → Longwy → Jœuf ... Terville → Nilvange → Villerupt
+TWO_OPT,Argenteuil,95.61,10.837,Argenteuil → Sannois → Ermont ... Bois-Colombes → Colombes → Argenteuil
+TWO_OPT,Toulouse,95.62,10.0167,Toulouse → Ramonville-Saint-Agne → Castanet-Tolosan ... Beauzelle → Blagnac → Toulouse
+TWO_OPT,Ramonville-Saint-Agne,95.62,10.1924,Ramonville-Saint-Agne → Castanet-Tolosan → Perpignan ... Blagnac → Toulouse → Ramonville-Saint-Agne
+TWO_OPT,Romainville,95.63,9.6579,Romainville → Noisy-le-Sec → Bobigny ... Vincennes → Montreuil → Romainville
+TWO_OPT,Carrières-sous-Poissy,95.63,10.3636,Carrières-sous-Poissy → Poissy → Mareil-Marly ... Andrésy → Achères → Carrières-sous-Poissy
+TWO_OPT,Andrésy,95.63,10.4268,Andrésy → Achères → Carrières-sous-Poissy ... Jouy-le-Moutier → Chanteloup-les-Vignes → Andrésy
+TWO_OPT,Châteauroux,95.65,12.1002,Châteauroux → Limoges → Périgueux ... Chamalières → Montluçon → Châteauroux
+TWO_OPT,Garges-lès-Gonesse,95.65,14.0134,Garges-lès-Gonesse → Arnouville-lès-Gonesse → Goussainville ... Villiers-le-Bel → Sarcelles → Garges-lès-Gonesse
+TWO_OPT,Thonon-les-Bains,95.66,12.1334,Thonon-les-Bains → Évian-les-Bains → Audincourt ... Annemasse → Ville-la-Grand → Thonon-les-Bains
+TWO_OPT,Armentières,95.66,12.0189,Armentières → Pérenchies → Lomme ... Montigny-en-Gohelle → Billy-Montigny → Armentières
+TWO_OPT,Saint-Cyr-l’École,95.66,11.8788,Saint-Cyr-l’École → Fontenay-le-Fleury → Bois-d’Arcy ... Voisins-le-Bretonneux → Montigny-le-Bretonneux → Saint-Cyr-l’École
+TWO_OPT,Éragny,95.66,10.2633,Éragny → Conflans-Sainte-Honorine → Le Mesnil-le-Roi ... Achères → Andrésy → Éragny
+TWO_OPT,Petite-Synthe,95.66,9.6701,Petite-Synthe → Saint-Pol-sur-Mer → Fort-Mardyck ... Dunkerque → Cappelle-la-Grande → Petite-Synthe
+TWO_OPT,Fleury-Mérogis,95.66,10.8493,Fleury-Mérogis → Sainte-Geneviève-des-Bois → Brétigny-sur-Orge ... Grigny → Bondoufle → Fleury-Mérogis
+TWO_OPT,Saint-Quentin,95.68,15.3718,Saint-Quentin → Soissons → Crégy-lès-Meaux ... Amiens → Longueau → Saint-Quentin
+TWO_OPT,Melun,95.69,12.1652,Melun → Avon → Saint-Mammès ... Le Mée-sur-Seine → Dammarie-lè-Lys → Melun
+TWO_OPT,Tinqueux,95.73,9.3308,Tinqueux → Reims → Châlons-en-Champagne ... Saint-Quentin → Soissons → Tinqueux
+TWO_OPT,Nogent-sur-Oise,95.75,11.5143,Nogent-sur-Oise → Creil → Fosses ... Clermont → Liancourt → Nogent-sur-Oise
+TWO_OPT,Boulogne-sur-Mer,95.8,10.8618,Boulogne-sur-Mer → Calais → Grand-Fort-Philippe ... Le Portel → Outreau → Boulogne-sur-Mer
+TWO_OPT,Le Portel,95.8,10.8169,Le Portel → Outreau → Boulogne-sur-Mer ... Dieppe → Neuville-lès-Dieppe → Le Portel
+TWO_OPT,Waziers,95.81,10.3223,Waziers → Douai → Courchelettes ... Lourches → Aniche → Waziers
+TWO_OPT,Lisieux,95.83,13.4503,Lisieux → Le Havre → Sainte-Adresse ... Saint-Aubin-lès-Elbeuf → Caudebec-lès-Elbeuf → Lisieux
+TWO_OPT,Maisons-Alfort,95.85,11.2576,Maisons-Alfort → Créteil → Saint-Maurice ... Choisy-le-Roi → Alfortville → Maisons-Alfort
+TWO_OPT,Arcachon,95.85,10.3002,Arcachon → Hendaye → Biarritz ... Pessac → Gradignan → Arcachon
+TWO_OPT,Maxéville,95.85,10.3917,Maxéville → Nancy → Saint-Max ... Neuves-Maisons → Villers-lès-Nancy → Maxéville
+TWO_OPT,Essey-lès-Nancy,95.85,7.9757,Essey-lès-Nancy → Tomblaine → Jarville-la-Malgrange ... Nancy → Saint-Max → Essey-lès-Nancy
+TWO_OPT,Charenton-le-Pont,95.86,9.6224,Charenton-le-Pont → Vitry-sur-Seine → Thiais ... Maisons-Alfort → Alfortville → Charenton-le-Pont
+TWO_OPT,La Montagne,95.86,9.2879,La Montagne → Saint-Herblain → Rezé ... Dinan → Rennes → La Montagne
+TWO_OPT,Drancy,95.87,7.1828,Drancy → Bobigny → Noisy-le-Sec ... Aulnay-sous-Bois → Le Blanc-Mesnil → Drancy
+TWO_OPT,Dieppe,95.92,9.8784,Dieppe → Neuville-lès-Dieppe → Le Portel ... Harfleur → Yvetot → Dieppe
+TWO_OPT,Thorigny-sur-Marne,95.92,7.398,Thorigny-sur-Marne → Montévrain → Serris ... Roissy-en-Brie → Bussy-Saint-Georges → Thorigny-sur-Marne
+TWO_OPT,Bobigny,95.93,11.7335,Bobigny → Noisy-le-Sec → Montreuil ... Le Blanc-Mesnil → Drancy → Bobigny
+TWO_OPT,Clermont,95.94,11.6537,Clermont → Liancourt → Nogent-sur-Oise ... Persan → Beaumont-sur-Oise → Clermont
+TWO_OPT,Les Noës-près-Troyes,95.94,10.697,Les Noës-près-Troyes → Saint-André-les-Vergers → Troyes ... Crégy-lès-Meaux → Meaux → Les Noës-près-Troyes
+TWO_OPT,Villeurbanne,95.95,6.6588,Villeurbanne → Bron → Saint-Priest ... Caluire-et-Cuire → Lyon → Villeurbanne
+TWO_OPT,Montévrain,95.95,7.2458,Montévrain → Serris → Magny-le-Hongre ... Bussy-Saint-Georges → Thorigny-sur-Marne → Montévrain
+TWO_OPT,Pfastatt,95.97,11.9698,Pfastatt → Kingersheim → Illzach ... Sochaux → Belfort → Pfastatt
+TWO_OPT,Groslay,95.97,10.991,Groslay → Montmagny → Pierrefitte-sur-Seine ... Ézanville → Saint-Brice-sous-Forêt → Groslay
+TWO_OPT,Le Kremlin-Bicêtre,95.98,10.2884,Le Kremlin-Bicêtre → Paris → Bellevue ... Ivry-sur-Seine → Villejuif → Le Kremlin-Bicêtre
+TWO_OPT,Montargis,95.99,11.8777,Montargis → Montereau-faut-Yonne → Saint-Mammès ... Moulins → Nevers → Montargis
+TWO_OPT,Avesnes-sur-Helpe,95.99,9.7284,Avesnes-sur-Helpe → Maubeuge → Marly ... Cambrai → Neuville-Saint-Rémy → Avesnes-sur-Helpe
+TWO_OPT,Aubervilliers,96.0,10.1071,Aubervilliers → La Courneuve → Stains ... Le Kremlin-Bicêtre → Bellevue → Aubervilliers
+TWO_OPT,Saint-Martin-d’Hères,96.02,9.688,Saint-Martin-d’Hères → Meylan → Cognin ... Échirolles → Eybens → Saint-Martin-d’Hères
+TWO_OPT,Dammarie-lè-Lys,96.02,12.0231,Dammarie-lè-Lys → Melun → Avon ... Cesson → Le Mée-sur-Seine → Dammarie-lè-Lys
+TWO_OPT,Tomblaine,96.04,10.8169,Tomblaine → Essey-lès-Nancy → Jœuf ... Heillecourt → Jarville-la-Malgrange → Tomblaine
+TWO_OPT,Heillecourt,96.04,10.877,Heillecourt → Jarville-la-Malgrange → Tomblaine ... Nancy → Saint-Max → Heillecourt
+TWO_OPT,Montluçon,96.05,11.1628,Montluçon → Limoges → Châteauroux ... Moulins → Nevers → Montluçon
+TWO_OPT,Bonneuil-sur-Marne,96.07,7.0948,Bonneuil-sur-Marne → Limeil-Brévannes → Valenton ... Sucy-en-Brie → Boissy-Saint-Léger → Bonneuil-sur-Marne
+TWO_OPT,Saint-Ouen-l’Aumône,96.08,11.8606,Saint-Ouen-l’Aumône → Pontoise → Cergy ... Taverny → Beauchamp → Saint-Ouen-l’Aumône
+TWO_OPT,Gentilly,96.08,9.3001,Gentilly → Arcueil → Cachan ... Ivry-sur-Seine → Le Kremlin-Bicêtre → Gentilly
+TWO_OPT,La Seyne-sur-Mer,96.09,11.7143,La Seyne-sur-Mer → Toulon → La Valette-du-Var ... La Penne-sur-Huveaune → Carnoux-en-Provence → La Seyne-sur-Mer
+TWO_OPT,Bellevue,96.09,10.6175,Bellevue → Paris → Montrouge ... Arcueil → Gentilly → Bellevue
+TWO_OPT,Esbly,96.09,12.5412,Esbly → Crégy-lès-Meaux → Meaux ... Serris → Magny-le-Hongre → Esbly
+TWO_OPT,Meaux,96.11,11.9278,Meaux → Crégy-lès-Meaux → Esbly ... Serris → Magny-le-Hongre → Meaux
+TWO_OPT,Liancourt,96.12,13.7665,Liancourt → Clermont → Beauvais ... Creil → Nogent-sur-Oise → Liancourt
+TWO_OPT,La Verrière,96.13,10.2586,La Verrière → Maurepas → Neauphle-le-Château ... Plaisir → Élancourt → La Verrière
+TWO_OPT,Ormesson-sur-Marne,96.15,12.3285,Ormesson-sur-Marne → Le Plessis-Trévise → Champs-Sur-Marne ... Villiers-sur-Marne → Chennevières-sur-Marne → Ormesson-sur-Marne
+TWO_OPT,Limoges,96.16,12.5024,Limoges → Poitiers → Angoulême ... Beaumont → Chamalières → Limoges
+TWO_OPT,Les Sables-d’Olonne,96.18,8.6991,Les Sables-d’Olonne → Montaigu → Saint-Sébastien-sur-Loire ... Carbon-Blanc → La Rochelle → Les Sables-d’Olonne
+TWO_OPT,Créteil,96.22,11.2546,Créteil → Saint-Maur-des-Fossés → Champigny-sur-Marne ... Saint-Maurice → Joinville-le-Pont → Créteil
+TWO_OPT,Lourches,96.22,9.9424,Lourches → Cambrai → Neuville-Saint-Rémy ... Valenciennes → Denain → Lourches
+TWO_OPT,Bayeux,96.28,9.9727,Bayeux → Octeville → Cherbourg ... Hérouville-Saint-Clair → Caen → Bayeux
+TWO_OPT,Bagneux,96.29,11.4052,Bagneux → Montrouge → Arcueil ... Sceaux → Fontenay-aux-Roses → Bagneux
+TWO_OPT,Bondy,96.3,10.3138,Bondy → Les Pavillons-sous-Bois → Le Raincy ... Bobigny → Noisy-le-Sec → Bondy
+TWO_OPT,Noisiel,96.3,8.2439,Noisiel → Vaires-sur-Marne → Torcy ... Champs-Sur-Marne → Lognes → Noisiel
+TWO_OPT,Vaires-sur-Marne,96.3,8.1717,Vaires-sur-Marne → Torcy → Bussy-Saint-Georges ... Lognes → Noisiel → Vaires-sur-Marne
+TWO_OPT,Le Havre,96.31,14.7207,Le Havre → Sainte-Adresse → Rouelles ... Yvetot → Harfleur → Le Havre
+TWO_OPT,Villers-lès-Nancy,96.31,7.871,Villers-lès-Nancy → Vandœuvre-lès-Nancy → Montbéliard ... Vesoul → Neuves-Maisons → Villers-lès-Nancy
+TWO_OPT,L’Haÿ-les-Roses,96.34,12.9681,L’Haÿ-les-Roses → Chevilly-Larue → Villejuif ... Bagneux → Cachan → L’Haÿ-les-Roses
+TWO_OPT,Savigny-sur-Orge,96.35,12.0001,Savigny-sur-Orge → Morsang-sur-Orge → Sainte-Geneviève-des-Bois ... Épinay-sur-Orge → Villemoisson-sur-Orge → Savigny-sur-Orge
+TWO_OPT,Huningue,96.35,11.8922,Huningue → Ostwald → Strasbourg ... Mulhouse → Riedisheim → Huningue
+TWO_OPT,Annemasse,96.36,8.9569,Annemasse → Ville-la-Grand → Thonon-les-Bains ... Gaillard → Ambilly → Annemasse
+TWO_OPT,Pierrefitte-sur-Seine,96.36,7.3922,Pierrefitte-sur-Seine → Montmagny → Deuil-la-Barre ... Saint-Denis → Stains → Pierrefitte-sur-Seine
+TWO_OPT,Cran-Gévrier,96.36,8.9751,Cran-Gévrier → Annecy → Saint-Julien-en-Genevois ... Aix-les-Bains → Meythet → Cran-Gévrier
+TWO_OPT,Ville-la-Grand,96.36,8.9969,Ville-la-Grand → Thonon-les-Bains → Évian-les-Bains ... Ambilly → Annemasse → Ville-la-Grand
+TWO_OPT,Meythet,96.36,9.0088,Meythet → Cran-Gévrier → Annecy ... Barby → Aix-les-Bains → Meythet
+TWO_OPT,Ambilly,96.36,8.9882,Ambilly → Annemasse → Ville-la-Grand ... Ferney-Voltaire → Gaillard → Ambilly
+TWO_OPT,Décines-Charpieu,96.39,12.0674,Décines-Charpieu → Meyzieu → Villefontaine ... Vénissieux → Saint-Priest → Décines-Charpieu
+TWO_OPT,Rueil-Malmaison,96.41,11.004,Rueil-Malmaison → Garches → Suresnes ... Chatou → Nanterre → Rueil-Malmaison
+TWO_OPT,Juvisy-sur-Orge,96.44,10.8436,Juvisy-sur-Orge → Ris-Orangis → Draveil ... Grigny → Viry-Châtillon → Juvisy-sur-Orge
+TWO_OPT,Saint-Maurice,96.44,9.64,Saint-Maurice → Créteil → Valenton ... Alfortville → Maisons-Alfort → Saint-Maurice
+TWO_OPT,Gaillard,96.44,9.8795,Gaillard → Ambilly → Annemasse ... Annecy → Saint-Julien-en-Genevois → Gaillard
+TWO_OPT,La Penne-sur-Huveaune,96.45,13.231,La Penne-sur-Huveaune → Carnoux-en-Provence → La Seyne-sur-Mer ... Marseille → Aix-en-Provence → La Penne-sur-Huveaune
+TWO_OPT,Dugny,96.47,12.8742,Dugny → Garges-lès-Gonesse → Arnouville-lès-Gonesse ... Bobigny → Le Bourget → Dugny
+TWO_OPT,Aix-en-Provence,96.49,12.6984,Aix-en-Provence → Marseille → Perpignan ... Carnoux-en-Provence → La Penne-sur-Huveaune → Aix-en-Provence
+TWO_OPT,Guyancourt,96.5,9.5474,Guyancourt → Voisins-le-Bretonneux → Montigny-le-Bretonneux ... Versailles → Saint-Cyr-l’École → Guyancourt
+TWO_OPT,Sevran,96.52,12.0517,Sevran → Villepinte → Goussainville ... Clichy-sous-Bois → Livry-Gargan → Sevran
+TWO_OPT,Rillieux-la-Pape,96.52,10.8212,Rillieux-la-Pape → Sathonay-Camp → Fontaines-sur-Saône ... Lyon → Caluire-et-Cuire → Rillieux-la-Pape
+TWO_OPT,Guingamp,96.6,9.8523,Guingamp → Le Relecq-Kerhuon → Brest ... Saint-Nazaire → Vannes → Guingamp
+TWO_OPT,Harfleur,96.62,10.2248,Harfleur → Rouelles → Sainte-Adresse ... Dieppe → Yvetot → Harfleur
+TWO_OPT,Bayonne,96.63,10.8441,Bayonne → Boucau → Billère ... Biarritz → Anglet → Bayonne
+TWO_OPT,Anglet,96.63,10.4228,Anglet → Bayonne → Boucau ... Hendaye → Biarritz → Anglet
+TWO_OPT,Hendaye,96.63,10.3695,Hendaye → Biarritz → Anglet ... La Rochelle → Arcachon → Hendaye
+TWO_OPT,Billère,96.63,10.8806,Billère → Pau → Tarbes ... Bayonne → Boucau → Billère
+TWO_OPT,Ferney-Voltaire,96.68,11.5152,Ferney-Voltaire → Saint-Genis-Pouilly → Lons-le-Saunier ... Gaillard → Saint-Julien-en-Genevois → Ferney-Voltaire
+TWO_OPT,Vitry-le-François,96.69,11.6063,Vitry-le-François → Châlons-en-Champagne → Reims ... Vandœuvre-lès-Nancy → Neuves-Maisons → Vitry-le-François
+TWO_OPT,Périgueux,96.72,10.4131,Périgueux → Limoges → Châteauroux ... Carbon-Blanc → Sainte-Foy-la-Grande → Périgueux
+TWO_OPT,La Salvetat-Saint-Gilles,96.75,9.1026,La Salvetat-Saint-Gilles → Tournefeuille → Colomiers ... Villeneuve-Tolosane → Cugnaux → La Salvetat-Saint-Gilles
+TWO_OPT,Anzin,96.78,8.7581,Anzin → Beuvrages → Denain ... Marly → Valenciennes → Anzin
+TWO_OPT,Bougival,96.8,11.5278,Bougival → Croissy-sur-Seine → Le Vésinet ... Vaucresson → Garches → Bougival
+TWO_OPT,Issy-les-Moulineaux,96.81,12.4803,Issy-les-Moulineaux → Clamart → Le Plessis-Robinson ... Malakoff → Vanves → Issy-les-Moulineaux
+TWO_OPT,Carnoux-en-Provence,96.81,13.5111,Carnoux-en-Provence → La Seyne-sur-Mer → Toulon ... Aix-en-Provence → La Penne-sur-Huveaune → Carnoux-en-Provence
+TWO_OPT,Levallois-Perret,96.85,12.5089,Levallois-Perret → Neuilly-sur-Seine → Bois-Colombes ... Gennevilliers → Carrières-sur-Seine → Levallois-Perret
+TWO_OPT,Clichy,96.86,12.8747,Clichy → Gennevilliers → Épinay-sur-Seine ... Carrières-sur-Seine → Levallois-Perret → Clichy
+TWO_OPT,Rennes,96.87,7.5447,Rennes → Saint-Nazaire → Paimbœuf ... Auray → Vannes → Rennes
+TWO_OPT,Villiers-sur-Orge,96.9,7.5976,Villiers-sur-Orge → La Ville-du-Bois → Montlhéry ... Épinay-sur-Orge → Villemoisson-sur-Orge → Villiers-sur-Orge
+TWO_OPT,Béthune,96.93,14.9799,Béthune → Auchel → Bergues ... Pérenchies → Armentières → Béthune
+TWO_OPT,Fougères,96.94,6.5555,Fougères → Laval → Angers ... Avranches → Rennes → Fougères
+TWO_OPT,Savigny-le-Temple,97.02,13.4142,Savigny-le-Temple → Combs-la-Ville → Quincy-sous-Sénart ... Le Mée-sur-Seine → Cesson → Savigny-le-Temple
+TWO_OPT,Cesson,97.02,12.8841,Cesson → Savigny-le-Temple → Combs-la-Ville ... Dammarie-lè-Lys → Le Mée-sur-Seine → Cesson
+TWO_OPT,Moulins,97.16,9.3302,Moulins → Nevers → Chalon-sur-Saône ... Clermont-Ferrand → Vichy → Moulins
+TWO_OPT,Longeville-lès-Metz,97.17,9.276,Longeville-lès-Metz → Le Ban-Saint-Martin → Metz ... Maxéville → Montigny-lès-Metz → Longeville-lès-Metz
+TWO_OPT,Fontaine,97.24,8.9905,Fontaine → Saint-Égrève → Valence ... Le Pont-de-Claix → Grenoble → Fontaine
+TWO_OPT,Meylan,97.27,8.52,Meylan → Saint-Martin-d’Hères → Eybens ... Fontaine → Grenoble → Meylan
+TWO_OPT,Échirolles,97.28,8.5525,Échirolles → Le Pont-de-Claix → Valence ... Eybens → Grenoble → Échirolles
+TWO_OPT,Nilvange,97.38,11.0975,Nilvange → Terville → Hagondange ... Villerupt → Jœuf → Nilvange
+TWO_OPT,Charleville-Mézières,97.69,10.7896,Charleville-Mézières → Avesnes-sur-Helpe → Maubeuge ... Villerupt → Longwy → Charleville-Mézières
+TWO_OPT,Montaigu,97.95,10.4254,Montaigu → Saint-Sébastien-sur-Loire → Rezé ... Carbon-Blanc → La Rochelle → Montaigu
+TWO_OPT,Le Mans,98.61,10.8149,Le Mans → Coulaines → Alençon ... Poitiers → Angers → Le Mans
